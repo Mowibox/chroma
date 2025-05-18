@@ -1,6 +1,6 @@
 # Hugo
-title = "My Docs"
-description = "Congrats on setting up a new Doks project!"
+title = "Chroma"
+description = "Chroma is a website created to give a better view on how things work."
 images = ["cover.png"]
 
 # mainSections
@@ -51,7 +51,7 @@ mainSections = ["docs"]
   scrollSpy = true # true (default) or false
 
   # Multilingual
-  multilingualMode = false # false (default) or true
+  multilingualMode = true # false (default) or true
   showMissingLanguages = true # whether or not to show untranslated languages in the language menu; true (default) or false
 
   # Versioning
@@ -127,9 +127,9 @@ mainSections = ["docs"]
     maskIcon = "mask-icon.svg" # mask-icon.svg (default)
     maskIconColor = "white" # white (default)
   [seo.schemas]
-    type = "Organization" # Organization (default) or Person
+    type = "Person" # Organization (default) or Person
     logo = "favicon-512x512.png" # Logo of Organization — favicon-512x512.png (default)
-    name = "Thulite" # Name of Organization or Person
+    name = "Mowibox" # Name of Organization or Person
     sameAs = [] # E.g. ["https://github.com/thuliteio/thulite", "https://fosstodon.org/@thulite"]
     images = ["cover.png"] # ["cover.png"] (default)
     article = [] # Article sections

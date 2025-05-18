@@ -85,3 +85,15 @@
 [[mounts]]
   source = "static"
   target = "static"
+
+## content
+[[mounts]]
+  source = "content/en"
+  target = "content"
+  lang = "en"
+
+## content
+[[mounts]]
+  source = "content/fr"
+  target = "content"
+  lang = "fr"
