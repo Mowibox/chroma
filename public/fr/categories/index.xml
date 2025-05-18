@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Chroma</title>
-    <link>http://localhost:42467/fr/categories/</link>
+    <link>http://localhost:1313/fr/categories/</link>
     <description>Recent content in Categories on Chroma</description>
     <generator>Hugo</generator>
     <language>fr</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <atom:link href="http://localhost:42467/fr/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/fr/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

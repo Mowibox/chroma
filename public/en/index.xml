@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Welcome to Chroma! on Chroma</title>
-    <link>http://localhost:42467/en/</link>
+    <link>http://localhost:1313/en/</link>
     <description>Recent content in Welcome to Chroma! on Chroma</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
     <lastBuildDate>Thu, 07 Sep 2023 17:19:07 +0200</lastBuildDate>
-    <atom:link href="http://localhost:42467/en/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Privacy Policy</title>
-      <link>http://localhost:42467/en/privacy/</link>
+      <link>http://localhost:1313/en/privacy/</link>
       <pubDate>Thu, 07 Sep 2023 17:19:07 +0200</pubDate>
-      <guid>http://localhost:42467/en/privacy/</guid>
+      <guid>http://localhost:1313/en/privacy/</guid>
       <description></description>
     </item>
   </channel>

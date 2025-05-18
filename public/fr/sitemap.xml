@@ -2,96 +2,106 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:42467/fr/blog/website-launch/</loc>
+    <loc>http://localhost:1313/fr/blog/lancement-du-site/</loc>
     <lastmod>2023-09-07T16:27:22+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/blog/website-launch/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/fr/blog/lancement-du-site/"
+                />
   </url><url>
-    <loc>http://localhost:42467/fr/blog/</loc>
+    <loc>http://localhost:1313/fr/blog/</loc>
     <lastmod>2023-09-07T16:21:44+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:42467/blog/"
+                href="http://localhost:1313/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:42467/fr/blog/"
+                href="http://localhost:1313/fr/blog/"
                 />
   </url><url>
-    <loc>http://localhost:42467/fr/privacy/</loc>
+    <loc>http://localhost:1313/fr/privacy/</loc>
     <lastmod>2023-09-07T17:19:07+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:42467/privacy/"
+                href="http://localhost:1313/privacy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:42467/fr/privacy/"
+                href="http://localhost:1313/fr/privacy/"
                 />
   </url><url>
-    <loc>http://localhost:42467/fr/</loc>
+    <loc>http://localhost:1313/fr/</loc>
     <lastmod>2023-09-07T16:33:54+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:42467/"
+                href="http://localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:42467/fr/"
+                href="http://localhost:1313/fr/"
                 />
   </url><url>
-    <loc>http://localhost:42467/fr/categories/</loc>
+    <loc>http://localhost:1313/fr/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:42467/categories/"
+                href="http://localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:42467/fr/categories/"
+                href="http://localhost:1313/fr/categories/"
                 />
   </url><url>
-    <loc>http://localhost:42467/fr/contributors/</loc>
+    <loc>http://localhost:1313/fr/contributors/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:42467/contributors/"
+                href="http://localhost:1313/contributors/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:42467/fr/contributors/"
+                href="http://localhost:1313/fr/contributors/"
                 />
   </url><url>
-    <loc>http://localhost:42467/fr/tags/</loc>
+    <loc>http://localhost:1313/fr/tags/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:42467/tags/"
+                href="http://localhost:1313/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:42467/fr/tags/"
+                href="http://localhost:1313/fr/tags/"
                 />
   </url>
 </urlset>

@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bienvenue sur Chroma ! on Chroma</title>
-    <link>http://localhost:42467/fr/</link>
+    <link>http://localhost:1313/fr/</link>
     <description>Recent content in Bienvenue sur Chroma ! on Chroma</description>
     <generator>Hugo</generator>
     <language>fr</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
     <lastBuildDate>Thu, 07 Sep 2023 17:19:07 +0200</lastBuildDate>
-    <atom:link href="http://localhost:42467/fr/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/fr/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Website launch</title>
-      <link>http://localhost:42467/fr/blog/website-launch/</link>
+      <title>Lancement du site</title>
+      <link>http://localhost:1313/fr/blog/lancement-du-site/</link>
       <pubDate>Thu, 07 Sep 2023 16:27:22 +0200</pubDate>
-      <guid>http://localhost:42467/fr/blog/website-launch/</guid>
-      <description>You can use blog posts for announcing product updates and features.</description>
+      <guid>http://localhost:1313/fr/blog/lancement-du-site/</guid>
+      <description>J&amp;rsquo;ai le plaisir aujourd&amp;rsquo;hui d&amp;rsquo;annoncer le lancement de Chroma !</description>
     </item>
     <item>
       <title>Privacy Policy</title>
-      <link>http://localhost:42467/fr/privacy/</link>
+      <link>http://localhost:1313/fr/privacy/</link>
       <pubDate>Thu, 07 Sep 2023 17:19:07 +0200</pubDate>
-      <guid>http://localhost:42467/fr/privacy/</guid>
+      <guid>http://localhost:1313/fr/privacy/</guid>
       <description></description>
     </item>
   </channel>
