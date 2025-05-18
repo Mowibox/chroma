@@ -1,0 +1,19 @@
+// Put your custom SCSS code here
+
+/* varela-round-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/varela-round/varela-round-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* varela-round-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/varela-round/varela-round-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
