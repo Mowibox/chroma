@@ -1,5 +1,5 @@
 title = "Chroma"
-baseurl = "http://localhost/"
+baseurl = "https://mowibox.github.io/chroma/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
