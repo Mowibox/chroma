@@ -4,6 +4,9 @@
     <div class="col-lg-12 text-center">
       <h1>{{ .Title }}</h1>
     </div>
+    <div class="text-center">
+      <img class="img-fluid" sizes="100vw" src="chroma.png" width="25%">
+    </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
       <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="{{ ref . "blog/website-launch.md" }}" role="button">{{ i18n "get_started" }}</a>
@@ -49,7 +52,7 @@
         </div>
         <div class="col-lg-5">
           <h2 class="h4">Des cours de Computer Vision</h2>
-          <p>Une section spéciale pour découvrir et apprendre les bases du traitement d'image et du deep learning</p>
+          <p>Une section spéciale pour découvrir et apprendre les bases du traitement d'images et du deep learning</p>
         </div>
         <div class="col-lg-5">
           <h2 class="h4">Une section blog</h2>
