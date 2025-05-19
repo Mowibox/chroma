@@ -2,8 +2,8 @@
 title: "Welcome to Chroma!"
 description: ""
 lead: "Chroma is a website created to give a better view on how things work."
-date: 2023-09-07T16:33:54+02:00
-lastmod: 2023-09-07T16:33:54+02:00
+date:  2025-05-20T01:16:05+02:00
+lastmod:  2025-05-20T01:16:05+02:00
 draft: false
 seo:
   title: "Chroma" # custom title (optional)
