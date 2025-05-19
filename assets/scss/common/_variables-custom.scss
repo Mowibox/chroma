@@ -16,15 +16,11 @@ $font-family-sans-serif:
   "Noto Color Emoji";
 
 
-$primary: rgb(143, 24, 212);
+$primary: rgb(148, 20, 223);
 
 // Dark mode
-$link-color-dark:  rgb(153, 11, 235);
-$button-color-dark: rgb(153, 11, 235);
-
-:root {
-  --bs-body-bg: #801cc2;
-}
+$link-color-dark:  rgb(165, 20, 223);
+$button-color-dark: rgb(165, 20, 223);
 
 :root,
 ::backdrop{
