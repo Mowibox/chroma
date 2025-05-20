@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="tutoriels-list container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-6">{{ .Title }}</h1>
+
+  <!-- Use space-y-6 to add 1.5rem between each card vertically -->
+  <div class="space-y-6">
+    {{ range .Sections }}
+      <article class="cardbox rounded-lg overflow-hidden">
+        <a href="{{ .RelPermalink }}" class="block">
+          {{ with .Params.featuredImage }}
+            <img src="{{ . | relURL }}" alt="{{ .Title }}" class="w-full h-40 object-cover">
+          {{ end }}
+          <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2">{{ .Title }}</h2>
+            <p class="text-gray-400 text-sm">
+              {{ with .Params.description }}
+                {{ . }}
+              {{ else }}
+                {{ .Summary | plainify | truncate 120 }}
+              {{ end }}
+            </p>
+          </div>
+        </a>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

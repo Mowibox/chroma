@@ -17,3 +17,28 @@
   font-weight: 500;
   src: url('/chroma/fonts/varela-round/varela-round-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+.cardbox {
+  margin-bottom: 1.5rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 2px solid rgb(128, 128, 128);
+  background-color: rgba(128,128,128,0.1);
+  transition: box-shadow .2s ease;
+}
+.cardbox:hover {
+  box-shadow: 0 12px 12px 0 rgba(0,0,0,0.24), 0 17px 20px 0 rgba(0,0,0,0.19);
+  border: 2px solid rgb(165, 20, 223);
+	transform: scale(1.01,1.01);
+	transition: 0.2s all;
+}
+
+.cardbox a,
+.cardbox a p {
+  text-decoration: none;
+}
+
+.cardbox a:hover,
+.cardbox a:hover p {
+  text-decoration: none;
+}
