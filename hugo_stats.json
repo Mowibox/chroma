@@ -254,11 +254,16 @@
       "doks-language-current",
       "doks-languages",
       "further-reading",
+      "la-suite-",
       "offcanvasNavMain",
       "offcanvasNavMainLabel",
       "offcanvasNavSection",
       "offcanvasNavSectionLabel",
+      "pourquoi-chroma-",
+      "que-contient-chroma-",
       "query",
+      "question-qui-suis-je-",
+      "qui-suis-je-",
       "search-form",
       "searchModal",
       "searchModalLabel",
@@ -266,7 +271,11 @@
       "searchToggleDesktop",
       "searchToggleMobile",
       "socialMenu",
-      "toc"
+      "toc",
+      "what-does-chroma-include",
+      "whats-next",
+      "who-am-i",
+      "why-chroma"
     ]
   }
 }
