@@ -22,6 +22,8 @@ Hello to everyone reading these few lines! Today marks the **official launch of 
 
 ## Who am I?
 
+![Ousmane THIONGANE](pp.jpg)
+
 My name is [Ousmane THIONGANE](https://ousmanethiongane.framer.website/). At the time of writing, I’m an engineering student at the École Nationale Supérieure de l'Électronique et ses Applications (ENSEA). During my studies, I’ve had the opportunity to explore fields such as Artificial Intelligence, Robotics, and Computer Vision.
 
 ## Why Chroma?
