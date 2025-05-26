@@ -5,31 +5,25 @@ weight: 1
 icon: "laptop"
 ---
 
-# Introduction
 
 
 ## Prérequis
-
-
-
-
 
 ## Les missions
 
 Pour chaque niveau, un montage sera proposé sous la forme ci-dessous :
 
-![Exemple de montage](level1.png)
+{{< figure src="level1.png" alt="Exemple de montage" class="w-full h-auto" >}}
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
-Un [aide-mémoire](#aide-mémoire) est à votre disposition plus bas dans la page.
+Un [aide-mémoire](#aide-mémoire) est à votre disposition plus bas dans la page. Si jamais vous êtes coincés, une [solution](#solutions-des-missions) pour chacune des missions est également proposée
 {{< /callout >}}
-
 
 ### Niveau 1 - Clignotant
 
-#### Montage
+#### Montage niveau 1
 
-![Montage niveau 1](level1.png)
+{{< figure src="level1.png" alt="Montage niveau 1" class="w-full h-auto" >}}
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Faire clignoter la LED en changeant son état toutes les secondes.**
@@ -37,11 +31,13 @@ Un [aide-mémoire](#aide-mémoire) est à votre disposition plus bas dans la pag
 
 _[Solution](#solution-niveau-1---clignotant)_
 
+---
+
 ### Niveau 2 - Tricolore
 
-#### Montage
+#### Montage niveau 2
 
-![Montage niveau 2](level2.png)
+{{< figure src="level2.png" alt="Montage niveau 2" class="w-full h-auto" >}}
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Changer de manière successive l’état des 3 LEDs.**
@@ -49,11 +45,13 @@ _[Solution](#solution-niveau-1---clignotant)_
 
 _[Solution](#solution-niveau-2---tricolore)_
 
+---
+
 ### Niveau 3 - Jour, Nuit, Jour...
 
-#### Montage
+#### Montage niveau 3
 
-![Montage niveau 3](level3.png)
+{{< figure src="level3.png" alt="Montage niveau 3" class="w-full h-auto" >}}
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Commander l’allumage de la LED grâce à un bouton.**
@@ -65,28 +63,31 @@ Peut-être que pout connaître l’état du bouton, une fonction existe pour lir
 
 _[Solution](#solution-niveau-3---jour-nuit-jour)_
 
+---
+
 ### Niveau 4 - Jour, Nuit, version soft
 
-#### Montage
+#### Montage niveau 4
 
-![Montage niveau 4](level4.png)
+{{< figure src="level4.png" alt="Montage niveau 4" class="w-full h-auto" >}}
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Faire varier l’intensité de la LED émise à l’aide d’un potentiomètre.**
 {{< /callout >}}
 
-
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
 La broche du potentiomètre est connectée à un port analogique. Hmm... Analogique, analogique, analog, `analog`...
 {{< /callout >}}
+
+---
 
 _[Solution](#solution-niveau-4---jour-nuit-version-soft)_
 
 ### Niveau 5 - ♪ Joyeux anniversaire ♪
 
-#### Montage
+#### Montage niveau 5
 
-![Montage niveau 5](level5.png)
+{{< figure src="level5.png" alt="Montage niveau 5" class="w-full h-auto" >}}
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Jouer « Joyeux anniversaire » lorsque le bouton est appuyé.**
@@ -94,28 +95,34 @@ _[Solution](#solution-niveau-4---jour-nuit-version-soft)_
 
 #### Fréquences des notes et partition (très) simplifiée de « Joyeux anniversaire » :
 
-| Note   | Do  | Do# | Ré  | Ré# | Mi  | Fa  | Fa# | Sol | Sol# | La  | La# | Si  | Do2 |
-|--------|-----|-----|-----|-----|-----|-----|-----|-----|------|-----|-----|-----|-----|
-| f(Hz) | 262 | 277 | 294 | 311 | 330 | 349 | 370 | 391 | 415  | 440 | 466 | 493 | 523 |
+| Note   | Do  | Do# | Ré  | Ré# | Mi  | Fa  | Fa# |
+|--------|-----|-----|-----|-----|-----|-----|-----|
+| f(Hz)  | 262 | 277 | 294 | 311 | 330 | 349 | 370 |
 
-![Happy birthday](happybirthday.png)
+| Note   | Sol | Sol# | La  | La# | Si  | Do2 |
+|--------|-----|------|-----|-----|-----|-----|
+| f(Hz)  | 391 | 415  | 440 | 466 | 493 | 523 |
+
+{{< figure src="happybirthday.png" alt="Happy Birthday" class="w-full h-auto" >}}
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
-Il y’a 25 notes jouées dans « Joyeux anniversaire ». On peut
-utiliser la méthode bourrin qui serait d’écrire 25 fois les fonctions
-`tone()` & `noTone()` pour chaque note, mais je suis sûr qu’il y’a une
-solution plus rapide ! Dans la partition simplifiée, une couleur de note correspond à une durée différente, pensez à varier les délais entre celles-ci.
+Il y’a 25 notes jouées dans « Joyeux anniversaire ». On pourrait utiliser la méthode bourrin qui serait d’écrire 25 fois les fonctions `tone()` & `noTone()` pour chaque note, mais je suis sûr qu’il y’a une solution plus astucieuse ! Dans la partition simplifiée, une couleur de note correspond à une durée différente, pensez à varier les délais entre celles-ci.
 {{< /callout >}}
 
 _[Solution](#solution-niveau-5----joyeux-anniversaire-)_
 
+---
+
 ## Pour aller plus loin
 
-![Montage niveau 6](level6.png)
+{{< figure src="level6.png" alt="Montage niveau 6" class="w-full h-auto" >}}
+
+---
 
 ## Aide-mémoire
 
 ### Les variables
+
 | Type     | Description                          | Codage     |
 |----------|--------------------------------------|------------|
 | `int`    | Entier naturel                       | 4 octets   |
@@ -124,12 +131,12 @@ _[Solution](#solution-niveau-5----joyeux-anniversaire-)_
 | `double` | Nombre à virgule (double précision)  | 8 octets   |
 
 ### Les opérateurs
+
 | Type          | Opérateurs                                       |
 |---------------|--------------------------------------------------|
 | Arithmétiques | `+`, `-`, `*`, `/`, `%`                          |
 | Affectation   | `=`, `+=`, `-=`, `%=`, `\|=`, `^=`, `<<=`, `>>=` |
 | Logiques      | `&&`, `\|\|` `<`, `>`, `<=`, `>=`, `==`, `!=`    |
-
 
 ### Condition
 
@@ -157,7 +164,6 @@ for(int i = 0; i < 100; i++){
 }
 
 ```
-
 
 ### Directives de préprocesseur
 
@@ -209,7 +215,7 @@ utilisé pour coder sur Arduino est le C++. Il est souvent utilisé pour coder d
 
 ## Solutions des missions
 
-Les codes qui sont écrits dans cette section sont des proposition de correction écrites par mes soins. Ne voyez pas ces solutions comme des dogmes : il existe pleins d'autres façons de coder et d'arriver à une solution.
+Les codes qui sont écrits dans cette section sont des proposition de correction écrites par mes soins. **Ne voyez pas ces solutions comme des dogmes** : il existe pleins d'autres façons de coder et d'arriver à une solution.
 
 À vous de trouver celle qui vous plaira !
 
@@ -232,6 +238,8 @@ void loop() {
 ```
 
 _[Retour à la mission](#niveau-1---clignotant)_
+
+---
 
 ### Solution niveau 2 - Tricolore
 
@@ -266,6 +274,7 @@ void loop() {
 
 _[Retour à la mission](#niveau-2---tricolore)_
 
+---
 
 ### Solution niveau 3 - Jour, Nuit, Jour...
 
@@ -292,6 +301,7 @@ void loop() {
 
 _[Retour à la mission](#niveau-3---jour-nuit-jour)_
 
+---
 
 ### Solution niveau 4 - Jour, Nuit, version soft
 
@@ -313,6 +323,7 @@ void loop() {
 
 _[Retour à la mission](#niveau-4---jour-nuit-version-soft)_
 
+---
 
 ### Solution niveau 5 - ♪ Joyeux anniversaire ♪
 
@@ -368,4 +379,5 @@ void happyBirthday(){
   }
 }
 ```
+
 _[Retour à la mission](#niveau-5----joyeux-anniversaire-)_

@@ -5,10 +5,6 @@ weight: 2
 icon: "chip"
 ---
 
-
-# Introduction
-
-
 ## Prérequis
 
 
