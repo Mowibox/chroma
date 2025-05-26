@@ -5,9 +5,33 @@ weight: 1
 icon: "laptop"
 ---
 
-
+Pour toute remarque ou question, n'hésitez pas m'envoyer un mail ([ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com))
 
 ## Prérequis
+
+### Software
+
+* Un ordinateur avec le logiciel [Arduino IDE](https://www.arduino.cc/en/software/).
+
+### Hardware
+
+#### Le microcontrôleur
+
+* [Une carte à microcôntroleur Arduino (par exemple une Arduino UNO)](https://store.arduino.cc/products/arduino-uno-rev3)
+* [Un câble USB type A-B](https://www.amazon.fr/PremiumCord-Connexion-Scanner-Blindage-Longueur/dp/B07HXSRMGJ/ref=sr_1_7?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&s=computers&sr=1-7)
+
+#### Les composants
+
+Les composants sont assez faciles à retrouver sur les sites de vente en ligne. Un conseil que je peux donner est d'acheter des [kits de composants](https://www.amazon.fr/Elegoo-%C3%89lectronique-Breadboard-Potentiom%C3%A8tre-dapprentissage/dp/B01JD43262/ref=sr_1_12?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-12) qui réunissent déjà les composants de la liste ci-dessous, avec quelques composants supplémentaires que vous pourrez tester de votre côté.
+
+* [Trois LEDs de couleur](_led.jpg)
+* [Un bouton poussoir](_button.jpg)
+* [3 résistances de 220 ohms](_resistor.jpg)
+* [1 résistance de 10 kilo-ohms](_resistor.jpg)
+* [Un potentiomètre](_pot.jpg)
+* [Un buzzer à impédance](_buzzer.jpg)
+* [Une plaque de prototypage (breadboard)](_breadboard.jpg)
+* [Quelques câbles de prototypages](_cables.png)
 
 ## Les missions
 
@@ -15,8 +39,43 @@ Pour chaque niveau, un montage sera proposé sous la forme ci-dessous :
 
 {{< figure src="level1.png" alt="Exemple de montage" class="w-full h-auto" >}}
 
+Essayez de réaliser le branchement du montage. Une fois cela de fait, vous pourrez brancher votre carte Arduino à votre ordinateur et ouvrir le logiciel Arduino IDE. Explorons rapidement l'interface avec un code permettant d'allumer la LED rouge :
+
+{{< figure src="ide.png" alt="IDE" class="w-full h-auto" >}}
+
+* Le bouton de compilation :ballot_box_with_check: permet de vérifier le code pour détecter d’éventuelles erreurs avant de l’envoyer sur la carte.
+* Le bouton de téléversement :arrow_right: envoie le code compilé sur la carte Arduino pour qu’il y soit exécuté.
+
+On définit un entier qui correspond à la broche de la carte sur laquelle on a connecté la LED, ici 2 :
+
+```ino
+const int ledPin = 2;
+```
+
+La LED étant une sortie (c’est-à-dire qu’on envoie du courant depuis la carte Arduino vers la LED pour l’allumer), on configure la broche `ledPin` en tant que telle avec la fonction `pinMode()` :
+
+```ino
+pinMode(ledPin, OUTPUT);
+```
+
+Dans la fonction `loop()`, on utilise `digitalWrite()` pour mettre la LED à l’état haut (HIGH) et ainsi l'allumer :
+
+```ino
+digitalWrite(ledPin, HIGH);
+```
+
+Après compilation et téléversement du code sur la carte, tout le code compris dans la fonction `setup` ne se lancera qu’une seule fois (ici la définition de `ledPin` en sortie numérique). Quant au code compris dans la fonction `loop`, il s’exécutera en boucle indéfiniment !
+
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
-Un [aide-mémoire](#aide-mémoire) est à votre disposition plus bas dans la page. Si jamais vous êtes coincés, une [solution](#solutions-des-missions) pour chacune des missions est également proposée
+Quelques conseils pour bien démarrer :
+
+* Un [aide-mémoire](#aide-mémoire) regroupant la syntaxe et les fonctions utiles est à votre disposition plus bas dans la page.
+* N'oubliez pas les points virgules ";" à la fin de chaque instruction.
+* Vérifiez si le programme est bon avec la coloration syntaxique et le bouton de compilation.
+* Faites attention aux minuscules/MAJUSCULES dans les noms des variables : violet ≠ Violet.
+* Si jamais vous êtes coincés, une [solution](#solutions-des-missions) pour chacune des missions est également proposée.
+* Ne frappez pas votre machine (ou qui que ce soit d'autre) si ça ne fonctionne pas !
+
 {{< /callout >}}
 
 ### Niveau 1 - Clignotant
@@ -58,7 +117,10 @@ _[Solution](#solution-niveau-2---tricolore)_
 {{< /callout >}}
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
-Peut-être que pout connaître l’état du bouton, une fonction existe pour lire l’état d’une broche numérique... Peut-être même qu’elle est dans [l’aide-mémoire](#fonctions-arduino). La vie est bien faite non ?
+
+* Le bouton doit-il être configuré comme une entrée ou une sortie ?
+* Peut-être que pout connaître l’état du bouton, une fonction existe pour lire l’état d’une broche numérique... Peut-être même qu’elle est dans [l’aide-mémoire](#fonctions-arduino). La vie est bien faite non ?
+
 {{< /callout >}}
 
 _[Solution](#solution-niveau-3---jour-nuit-jour)_
@@ -115,7 +177,11 @@ _[Solution](#solution-niveau-5----joyeux-anniversaire-)_
 
 ## Pour aller plus loin
 
+Félicitations si vous êtes arrivés au bout des niveaux ! Si c'était trop facile pour vous vous pouvez essayer de créer un projet à partir de tous les composants que vous possédez. Par exemple pourquoi pas un feu tricolore à luminosité variable qui alerte les piétons d'un son lorsque le feu passe au rouge ? N'hésitez pas parcourir Internet pour trouver des tutoriels qui pourraient vous intéresser
+
 {{< figure src="level6.png" alt="Montage niveau 6" class="w-full h-auto" >}}
+
+Arduino est une plateforme idéale pour pouvoir comprendre rapidement les bases de la programmation embarquée et réaliser de petits projets. Mais si vous voulez aller plus loin, il existe des plateformes plus puissantes comme les **microcontrôleurs STM32**. La prise en main est moins intuitive, mais cela permet de réaliser des projets plus complexes, c'est pourquoi il est utilisé au sein de beaucoup d’entreprises.
 
 ---
 
