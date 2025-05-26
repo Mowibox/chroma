@@ -5,7 +5,12 @@ weight: 1
 icon: "laptop"
 ---
 
-Pour toute remarque ou question, n'hésitez pas m'envoyer un mail ([ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com))
+<img src="/chroma/images/arduino.jpeg" alt="IDE" class="w-full h-auto" />
+La programmation embarquée consiste à programmer des microcontrôleurs, qui sont petits circuits intégrés qui rassemble les éléments essentiels d'un ordinateur. Les microcontrôleurs sont présents dans divers objets de notre quotidien (robots, ordinateurs, voitures...).
+
+Dans cette initiation, vous apprendrez à prendre en main une carte Arduino et son logiciel associé, afin d'assimiler les bases de la programmation embarquée pour vos futurs projets personnels.
+
+_Pour toute remarque ou question, n'hésitez pas m'envoyer un mail ([ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com))_
 
 ## Prérequis
 
@@ -24,24 +29,24 @@ Pour toute remarque ou question, n'hésitez pas m'envoyer un mail ([ousmane.thio
 
 Les composants sont assez faciles à retrouver sur les sites de vente en ligne. Un conseil que je peux donner est d'acheter des [kits de composants](https://www.amazon.fr/Elegoo-%C3%89lectronique-Breadboard-Potentiom%C3%A8tre-dapprentissage/dp/B01JD43262/ref=sr_1_12?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-12) qui réunissent déjà les composants de la liste ci-dessous, avec quelques composants supplémentaires que vous pourrez tester de votre côté.
 
-* [Trois LEDs de couleur](_led.jpg)
-* [Un bouton poussoir](_button.jpg)
-* [3 résistances de 220 ohms](_resistor.jpg)
-* [1 résistance de 10 kilo-ohms](_resistor.jpg)
-* [Un potentiomètre](_pot.jpg)
-* [Un buzzer à impédance](_buzzer.jpg)
-* [Une plaque de prototypage (breadboard)](_breadboard.jpg)
-* [Quelques câbles de prototypages](_cables.png)
+* [Trois LEDs de couleur](/chroma/images/_led.jpg)
+* [Un bouton poussoir](/chroma/images/_button.jpg)
+* [3 résistances de 220 ohms](/chroma/images/_resistor.jpg)
+* [1 résistance de 10 kilo-ohms](/chroma/images/_resistor.jpg)
+* [Un potentiomètre](/chroma/images/_pot.jpg)
+* [Un buzzer à impédance](/chroma/images/_buzzer.jpg)
+* [Une plaque de prototypage (breadboard)](/chroma/images/_breadboard.jpg)
+* [Quelques câbles de prototypages](/chroma/images/_cables.png)
 
 ## Les missions
 
 Pour chaque niveau, un montage sera proposé sous la forme ci-dessous :
 
-{{< figure src="level1.png" alt="Exemple de montage" class="w-full h-auto" >}}
+<img src="/chroma/images/level1.png" alt="Exemple de montage" class="w-full h-auto" />
 
 Essayez de réaliser le branchement du montage. Une fois cela de fait, vous pourrez brancher votre carte Arduino à votre ordinateur et ouvrir le logiciel Arduino IDE. Explorons rapidement l'interface avec un code permettant d'allumer la LED rouge :
 
-{{< figure src="ide.png" alt="IDE" class="w-full h-auto" >}}
+<img src="/chroma/images/ide.png" alt="IDE" class="w-full h-auto" />
 
 * Le bouton de compilation :ballot_box_with_check: permet de vérifier le code pour détecter d’éventuelles erreurs avant de l’envoyer sur la carte.
 * Le bouton de téléversement :arrow_right: envoie le code compilé sur la carte Arduino pour qu’il y soit exécuté.
@@ -82,7 +87,7 @@ Quelques conseils pour bien démarrer :
 
 #### Montage niveau 1
 
-{{< figure src="level1.png" alt="Montage niveau 1" class="w-full h-auto" >}}
+<img src="/chroma/images/level1.png" alt="Niveau 1" class="w-full h-auto" />
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Faire clignoter la LED en changeant son état toutes les secondes.**
@@ -96,7 +101,7 @@ _[Solution](#solution-niveau-1---clignotant)_
 
 #### Montage niveau 2
 
-{{< figure src="level2.png" alt="Montage niveau 2" class="w-full h-auto" >}}
+<img src="/chroma/images/level2.png" alt="Niveau 2" class="w-full h-auto" />
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Changer de manière successive l’état des 3 LEDs.**
@@ -110,7 +115,7 @@ _[Solution](#solution-niveau-2---tricolore)_
 
 #### Montage niveau 3
 
-{{< figure src="level3.png" alt="Montage niveau 3" class="w-full h-auto" >}}
+<img src="/chroma/images/level3.png" alt="Niveau 3" class="w-full h-auto" />
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Commander l’allumage de la LED grâce à un bouton.**
@@ -131,7 +136,7 @@ _[Solution](#solution-niveau-3---jour-nuit-jour)_
 
 #### Montage niveau 4
 
-{{< figure src="level4.png" alt="Montage niveau 4" class="w-full h-auto" >}}
+<img src="/chroma/images/level4.png" alt="Niveau 4" class="w-full h-auto" />
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Faire varier l’intensité de la LED émise à l’aide d’un potentiomètre.**
@@ -149,7 +154,7 @@ _[Solution](#solution-niveau-4---jour-nuit-version-soft)_
 
 #### Montage niveau 5
 
-{{< figure src="level5.png" alt="Montage niveau 5" class="w-full h-auto" >}}
+<img src="/chroma/images/level5.png" alt="Niveau 5" class="w-full h-auto" />
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Jouer « Joyeux anniversaire » lorsque le bouton est appuyé.**
@@ -165,7 +170,7 @@ _[Solution](#solution-niveau-4---jour-nuit-version-soft)_
 |--------|-----|------|-----|-----|-----|-----|
 | f(Hz)  | 391 | 415  | 440 | 466 | 493 | 523 |
 
-{{< figure src="happybirthday.png" alt="Happy Birthday" class="w-full h-auto" >}}
+<img src="/chroma/images/happybirthday.png" alt="Happy Birthday" class="w-full h-auto" />
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
 Il y’a 25 notes jouées dans « Joyeux anniversaire ». On pourrait utiliser la méthode bourrin qui serait d’écrire 25 fois les fonctions `tone()` & `noTone()` pour chaque note, mais je suis sûr qu’il y’a une solution plus astucieuse ! Dans la partition simplifiée, une couleur de note correspond à une durée différente, pensez à varier les délais entre celles-ci.
@@ -179,7 +184,7 @@ _[Solution](#solution-niveau-5----joyeux-anniversaire-)_
 
 Félicitations si vous êtes arrivés au bout des niveaux ! Si c'était trop facile pour vous vous pouvez essayer de créer un projet à partir de tous les composants que vous possédez. Par exemple pourquoi pas un feu tricolore à luminosité variable qui alerte les piétons d'un son lorsque le feu passe au rouge ? N'hésitez pas parcourir Internet pour trouver des tutoriels qui pourraient vous intéresser
 
-{{< figure src="level6.png" alt="Montage niveau 6" class="w-full h-auto" >}}
+<img src="/chroma/images/level6.png" alt="Niveau 6" class="w-full h-auto" />
 
 Arduino est une plateforme idéale pour pouvoir comprendre rapidement les bases de la programmation embarquée et réaliser de petits projets. Mais si vous voulez aller plus loin, il existe des plateformes plus puissantes comme les **microcontrôleurs STM32**. La prise en main est moins intuitive, mais cela permet de réaliser des projets plus complexes, c'est pourquoi il est utilisé au sein de beaucoup d’entreprises.
 
