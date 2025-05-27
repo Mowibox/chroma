@@ -5,7 +5,9 @@ weight: 1
 icon: "laptop"
 ---
 
-<img src="/chroma/images/arduino.jpeg" alt="IDE" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/arduino.jpeg" alt="IDE" class="w-full h-auto" />
+</p>
 
 Embedded programming involves programming microcontrollers, which are small integrated circuits that bring together the essential elements of a computer. Microcontrollers can be found in a variety of everyday objects (robots, computers, cars...).
 
@@ -43,11 +45,15 @@ Components are fairly easy to find on online sales sites. One piece of advice I 
 
 For each level, a circuit diagram will be proposed like the one below:
 
-<img src="/chroma/images/level1.png" alt="Circuit example" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/level1.png" alt="Circuit example" class="w-full h-auto" />
+</p>
 
 Try to build the circuit as shown. Once done, you can connect your Arduino board to your computer and open the Arduino IDE software. Let's explore the interface quickly with a code to turn on the red LED:
 
-<img src="/chroma/images/ide.png" alt="IDE" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/ide.png" alt="IDE" class="w-full h-auto" />
+</p>
 
 * The verify button :ballot_box_with_check: allows you to check your code for errors before sending it to the board.
 * The upload button :arrow_right: sends the compiled code to the Arduino board for execution.
@@ -88,7 +94,9 @@ A few tips to get you started:
 
 #### Level 1 Wiring
 
-<img src="/chroma/images/level1.png" alt="Level 1" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/level1.png" alt="Level 1" class="w-full h-auto" />
+</p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Make the LED blink by changing its state every second.**
@@ -102,7 +110,9 @@ _[Solution](#level-1-solution---blinking)_
 
 #### Level 2 Wiring
 
-<img src="/chroma/images/level2.png" alt="Level 2" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/level2.png" alt="Level 2" class="w-full h-auto" />
+</p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Change the state of the 3 LEDs successively.**
@@ -116,7 +126,9 @@ _[Solution](#level-2-solution---traffic-light)_
 
 #### Level 3 Wiring
 
-<img src="/chroma/images/level3.png" alt="Level 3" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/level3.png" alt="Level 3" class="w-full h-auto" />
+</p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Command the LED to light up using a button.**
@@ -137,7 +149,9 @@ _[Solution](#level-3-solution---day-night-day)_
 
 #### Level 4 Wiring
 
-<img src="/chroma/images/level4.png" alt="Level 4" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/level4.png" alt="Level 4" class="w-full h-auto" />
+</p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Control the LED brightness using a potentiometer.**
@@ -155,6 +169,7 @@ _[Solution](#level-4-solution---day-night-soft-version)_
 
 #### Level 5 Wiring
 
+<p align="center">
 <img src="/chroma/images/level5.png" alt="Level 5" class="w-full h-auto" />
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -171,7 +186,9 @@ _[Solution](#level-4-solution---day-night-soft-version)_
 |--------|-----|------|-----|-----|-----|-----|
 | f(Hz)  | 391 | 415  | 440 | 466 | 493 | 523 |
 
-<img src="/chroma/images/happybirthday.png" alt="Happy Birthday" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/happybirthday.png" alt="Happy Birthday" class="w-full h-auto" />
+</p>
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
 There are 25 notes played in “Happy birthday”. We could use the brute-force method: writing 25 `tone()` & `noTone()` calls, but I'm sure there's a smarter way! In the simplified music sheet, one note color corresponds to a different duration — don't forget to vary delays accordingly.
@@ -188,7 +205,9 @@ If it was too easy for you, try creating a project using all your components.
 For example: a variable brightness traffic light that beeps when it turns red to warn pedestrians?
 Feel free to search the web for fun tutorials.
 
-<img src="/chroma/images/level6.png" alt="Niveau 6" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/level6.png" alt="Niveau 6" class="w-full h-auto" />
+</p>
 
 Arduino is a great platform to learn embedded programming quickly and build small projects.
 But if you want to go further, you may look into **STM32 microcontrollers** — less beginner-friendly but widely used in industry and allows you to carry more complex projects.
@@ -268,7 +287,7 @@ for (int i = 0; i < SIZE; i++) {
 
 | Function                              | Description                                                              |
 |---------------------------------------|--------------------------------------------------------------------------|
-| `pinMode(int pin, INPUT)`             | Set the mode of a pin (`INPUT` = input / `OUTPUT` = output)             |
+| `pinMode(int pin, INPUT)`             | Set the mode of a pin (`INPUT` or `OUTPUT`)             |
 | `digitalWrite(int pin, HIGH)`         | Set a digital pin state (`HIGH` = 1, `LOW` = 0)                          |
 | `digitalRead(int pin)`                | Read the state of a digital pin                                          |
 | `delay(1000)`                         | Wait for 1000 ms (1 second)                                              |
@@ -291,7 +310,7 @@ The programming language used with Arduino is C++. It’s also used to build mob
 
 ## Mission Solutions
 
-These codes are suggested corrections written by me. **Don’t treat them as the only solution**—there are many valid ways to solve the same problem.
+These codes are suggested corrections written by me. **Don’t treat them as the only solution** — there are many valid ways to solve the same problem.
 Find the one that suits you best!
 
 ---

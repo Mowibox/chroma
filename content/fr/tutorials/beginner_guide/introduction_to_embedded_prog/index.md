@@ -5,7 +5,10 @@ weight: 1
 icon: "laptop"
 ---
 
-<img src="/chroma/images/arduino.jpeg" alt="IDE" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/arduino.jpeg" alt="IDE" class="w-full h-auto" />
+</p>
+
 La programmation embarquée consiste à programmer des microcontrôleurs, qui sont de petits circuits intégrés qui rassemblent les éléments essentiels d'un ordinateur. Les microcontrôleurs sont présents dans divers objets de notre quotidien (robots, ordinateurs, voitures...).
 
 Dans cette initiation, vous apprendrez à prendre en main une carte Arduino et son logiciel associé, afin d'assimiler les bases de la programmation embarquée pour vos futurs projets personnels.
@@ -42,11 +45,15 @@ Les composants sont assez faciles à retrouver sur les sites de vente en ligne. 
 
 Pour chaque niveau, un montage sera proposé sous la forme ci-dessous :
 
-<img src="/chroma/images/level1.png" alt="Exemple de montage" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/level1.png" alt="Exemple de montage" class="w-full h-auto" />
+</p>
 
 Essayez de réaliser le branchement du montage. Une fois cela de fait, vous pourrez brancher votre carte Arduino à votre ordinateur et ouvrir le logiciel Arduino IDE. Explorons rapidement l'interface avec un code permettant d'allumer la LED rouge :
 
-<img src="/chroma/images/ide.png" alt="IDE" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/ide.png" alt="IDE" class="w-full h-auto" />
+</p>
 
 * Le bouton de compilation :ballot_box_with_check: permet de vérifier le code pour détecter d’éventuelles erreurs avant de l’envoyer sur la carte.
 * Le bouton de téléversement :arrow_right: envoie le code compilé sur la carte Arduino pour qu’il y soit exécuté.
@@ -77,7 +84,7 @@ Quelques conseils pour bien démarrer :
 * Un [aide-mémoire](#aide-mémoire) regroupant la syntaxe et les fonctions utiles est à votre disposition plus bas dans la page.
 * N'oubliez pas les points virgules ";" à la fin de chaque instruction.
 * Vérifiez si le programme est bon avec la coloration syntaxique et le bouton de compilation.
-* Faites attention aux minuscules/MAJUSCULES dans les noms des variables : violet ≠ Violet.
+* Faites attention aux minuscules/MAJUSCULES (sensibilité à la casse) dans les noms des variables : violet ≠ Violet.
 * Si jamais vous êtes coincés, une [solution](#solutions-des-missions) pour chacune des missions est également proposée.
 * Ne frappez pas votre machine (ou qui que ce soit d'autre) si ça ne fonctionne pas !
 
@@ -87,7 +94,9 @@ Quelques conseils pour bien démarrer :
 
 #### Montage niveau 1
 
-<img src="/chroma/images/level1.png" alt="Niveau 1" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/level1.png" alt="Niveau 1" class="w-full h-auto" />
+</p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Faire clignoter la LED en changeant son état toutes les secondes.**
@@ -101,7 +110,9 @@ _[Solution](#solution-niveau-1---clignotant)_
 
 #### Montage niveau 2
 
-<img src="/chroma/images/level2.png" alt="Niveau 2" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/level2.png" alt="Niveau 2" class="w-full h-auto" />
+</p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Changer de manière successive l’état des 3 LEDs.**
@@ -115,7 +126,9 @@ _[Solution](#solution-niveau-2---tricolore)_
 
 #### Montage niveau 3
 
-<img src="/chroma/images/level3.png" alt="Niveau 3" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/level3.png" alt="Niveau 3" class="w-full h-auto" />
+</p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Commander l’allumage de la LED grâce à un bouton.**
@@ -136,7 +149,9 @@ _[Solution](#solution-niveau-3---jour-nuit-jour)_
 
 #### Montage niveau 4
 
-<img src="/chroma/images/level4.png" alt="Niveau 4" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/level4.png" alt="Niveau 4" class="w-full h-auto" />
+</p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Faire varier l’intensité de la LED émise à l’aide d’un potentiomètre.**
@@ -154,7 +169,9 @@ _[Solution](#solution-niveau-4---jour-nuit-version-soft)_
 
 #### Montage niveau 5
 
-<img src="/chroma/images/level5.png" alt="Niveau 5" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/level5.png" alt="Niveau 5" class="w-full h-auto" />
+</p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Jouer « Joyeux anniversaire » lorsque le bouton est appuyé.**
@@ -170,7 +187,9 @@ _[Solution](#solution-niveau-4---jour-nuit-version-soft)_
 |--------|-----|------|-----|-----|-----|-----|
 | f(Hz)  | 391 | 415  | 440 | 466 | 493 | 523 |
 
-<img src="/chroma/images/happybirthday.png" alt="Happy Birthday" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/happybirthday.png" alt="Happy Birthday" class="w-full h-auto" />
+</p>
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
 Il y’a 25 notes jouées dans « Joyeux anniversaire ». On pourrait utiliser la méthode bourrin qui serait d’écrire 25 fois les fonctions `tone()` & `noTone()` pour chaque note, mais je suis sûr qu’il y’a une solution plus astucieuse ! Dans la partition simplifiée, une couleur de note correspond à une durée différente, pensez à varier les délais entre celles-ci.
@@ -182,9 +201,11 @@ _[Solution](#solution-niveau-5----joyeux-anniversaire-)_
 
 ## Pour aller plus loin
 
-Félicitations si vous êtes arrivés au bout des niveaux ! Si c'était trop facile pour vous vous pouvez essayer de créer un projet à partir de tous les composants que vous possédez. Par exemple pourquoi pas un feu tricolore à luminosité variable qui alerte les piétons d'un son lorsque le feu passe au rouge ? N'hésitez pas parcourir Internet pour trouver des tutoriels qui pourraient vous intéresser
+Félicitations si vous êtes arrivés au bout des niveaux ! Si c'était trop facile pour vous vous pouvez essayer de créer un projet à partir de tous les composants que vous possédez. Par exemple pourquoi pas un feu tricolore à luminosité variable qui alerte les piétons d'un son lorsque le feu passe au rouge ? N'hésitez pas à parcourir Internet pour trouver des tutoriels qui pourraient vous intéresser.
 
-<img src="/chroma/images/level6.png" alt="Niveau 6" class="w-full h-auto" />
+<p align="center">
+  <img src="/chroma/images/level6.png" alt="Niveau 6" class="w-full h-auto" />
+</p>
 
 Arduino est une plateforme idéale pour pouvoir comprendre rapidement les bases de la programmation embarquée et réaliser de petits projets. Mais si vous voulez aller plus loin, il existe des plateformes plus puissantes comme les **microcontrôleurs STM32**. La prise en main est moins intuitive, mais cela permet de réaliser des projets plus complexes, c'est pourquoi il est utilisé au sein de beaucoup d’entreprises.
 
@@ -251,7 +272,7 @@ for(int i = 0; i < 100; i++){
 ### Les tableaux
 
 ```ino
-int tab[SIZE] = {1, 9, 0, 1};
+int tab[SIZE] = {1, 8, 0, 5};
 char tabchar[SIZE2] = {'c', 'h', 'r', 'o', 'm', 'a'};
 
 // Initialisation d'un tableau à 0
