@@ -1,7 +1,7 @@
 ---
 title: "Lancement du site"
 description: ""
-summary: "J'ai le plaisir aujourd'hui d'annoncer le lancement de Chroma !"
+summary: "J'ai le plaisir aujourd'hui de vous annoncer le lancement de Chroma !"
 date:  2025-05-20T01:16:05+02:00
 lastmod:  2025-05-20T01:16:05+02:00
 draft: false

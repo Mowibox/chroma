@@ -30,7 +30,7 @@ _Pour toute remarque ou question, n'hésitez pas m'envoyer un mail ([ousmane.thi
 
 #### Les composants
 
-Les composants sont assez faciles à retrouver sur les sites de vente en ligne. Un conseil que je peux donner est d'acheter des [kits de composants](https://www.amazon.fr/Elegoo-%C3%89lectronique-Breadboard-Potentiom%C3%A8tre-dapprentissage/dp/B01JD43262/ref=sr_1_12?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-12) qui réunissent déjà les composants de la liste ci-dessous, avec quelques composants supplémentaires que vous pourrez tester de votre côté.
+Les composants sont assez faciles à retrouver sur les sites de vente en ligne. Ce que je peux vous conseiller, c'est d'acheter des [kits de composants](https://www.amazon.fr/Elegoo-%C3%89lectronique-Breadboard-Potentiom%C3%A8tre-dapprentissage/dp/B01JD43262/ref=sr_1_12?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-12) qui réunissent déjà les composants de la liste ci-dessous, avec quelques composants supplémentaires que vous pourrez tester de votre côté.
 
 * [Trois LEDs de couleur](/chroma/images/_led.jpg)
 * [Un bouton poussoir](/chroma/images/_button.jpg)
@@ -49,7 +49,7 @@ Pour chaque niveau, un montage sera proposé sous la forme ci-dessous :
   <img src="/chroma/images/level1.png" alt="Exemple de montage" class="w-full h-auto" />
 </p>
 
-Essayez de réaliser le branchement du montage. Une fois cela de fait, vous pourrez brancher votre carte Arduino à votre ordinateur et ouvrir le logiciel Arduino IDE. Explorons rapidement l'interface avec un code permettant d'allumer la LED rouge :
+Essayez de réaliser le branchement du montage. Une fois fait, vous pourrez brancher votre carte Arduino à votre ordinateur et ouvrir le logiciel Arduino IDE. Explorons rapidement l'interface avec un code permettant d'allumer la LED rouge :
 
 <p align="center">
   <img src="/chroma/images/ide.png" alt="IDE" class="w-full h-auto" />
