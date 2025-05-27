@@ -6,11 +6,11 @@ icon: "laptop"
 ---
 
 <img src="/chroma/images/arduino.jpeg" alt="IDE" class="w-full h-auto" />
-La programmation embarquée consiste à programmer des microcontrôleurs, qui sont petits circuits intégrés qui rassemble les éléments essentiels d'un ordinateur. Les microcontrôleurs sont présents dans divers objets de notre quotidien (robots, ordinateurs, voitures...).
+La programmation embarquée consiste à programmer des microcontrôleurs, qui sont de petits circuits intégrés qui rassemblent les éléments essentiels d'un ordinateur. Les microcontrôleurs sont présents dans divers objets de notre quotidien (robots, ordinateurs, voitures...).
 
 Dans cette initiation, vous apprendrez à prendre en main une carte Arduino et son logiciel associé, afin d'assimiler les bases de la programmation embarquée pour vos futurs projets personnels.
 
-_Pour toute remarque ou question, n'hésitez pas m'envoyer un mail ([ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com))_
+_Pour toute remarque ou question, n'hésitez pas m'envoyer un mail ([ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com))._
 
 ## Prérequis
 
@@ -124,7 +124,7 @@ _[Solution](#solution-niveau-2---tricolore)_
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
 
 * Le bouton doit-il être configuré comme une entrée ou une sortie ?
-* Peut-être que pout connaître l’état du bouton, une fonction existe pour lire l’état d’une broche numérique... Peut-être même qu’elle est dans [l’aide-mémoire](#fonctions-arduino). La vie est bien faite non ?
+* Peut-être que pour connaître l’état du bouton, une fonction existe pour lire l’état d’une broche numérique... Peut-être même qu’elle est dans [l’aide-mémoire](#fonctions-arduino). La vie est bien faite non ?
 
 {{< /callout >}}
 
