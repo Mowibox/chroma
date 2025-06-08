@@ -41,8 +41,6 @@ Cette réalisation se fait en deux parties :
 Vous pouvez modifier le cartouche en bas à droite de votre schématique en double-cliquant dessus. On y ajoute en général la date, la version, le titre, son nom en commentaire…
 {{< /callout >}}
 
-### Présentation de l'environnement
-
 ### Placement des composants
 
 Pour notre carte, nous allons avoir besoin de placer les composants nécessaires sur la page. En voici la liste :
@@ -61,7 +59,7 @@ Pour notre carte, nous allons avoir besoin de placer les composants nécessaires
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
-**Ajouter tous les composants nécessaires sur le schématique avec l'outil d'ajout de composants.**
+**Ajouter tous les composants nécessaires sur le schématique comme ci-dessus avec l'outil d'ajout de composants.**
 {{< /callout >}}
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
@@ -72,7 +70,7 @@ Le raccourci-touche "A" permet aussi d’ajouter les composants ! Pour les proc
 
 Nous allons maintenant connecter les composants entre eux avec des fils, mais aussi avec ce qu'on appelle des labels.
 
-Un label local & global permettent de relier des composants sans avoir à le relier explicitement par un fil. C’est très pratique pour améliorer la lisibilité d’un schéma avec beaucoup de composants. Voici par exemple un schéma sans label :
+Un label local & global permettent de relier des composants sans avoir à les relier explicitement par un fil. C’est très pratique pour améliorer la lisibilité d’un schéma avec beaucoup de composants. Voici par exemple un schéma sans label :
 
 <p align="center">
     <img src="/chroma/images/schematic6.jpg" alt="Without label" class="w-full h-auto" />
@@ -101,11 +99,11 @@ Et le même schéma avec un label (les deux schémas sont équivalents !) :
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
-**Relier les composants entre eux avec des fils (W) et des labels (L) et mettre l’alimentation (+5V) et la masse (GND).**
+**Relier les composants entre eux avec des fils (W) et des labels (L) et mettre l’alimentation "+5V" et la masse "GND" (A).**
 {{< /callout >}}
 
 {{< callout context="tip" title="Le saviez-vous ?" icon="outline/message-dots" >}}
-Pour éviter les erreurs plus tard lors de la vérification du schéma, il faut placer un drapeau de puissance (PWR_FLAG) en parallèle au +5V et à la masse, comme sur l'image ci-dessous. Ce drapeau permet de signaler à KiCad d’où viendra l’alimentation.
+Pour éviter les erreurs plus tard lors de la vérification du schéma, il faut placer un drapeau de puissance (PWR_FLAG) en parallèle au +5V et à la masse, comme sur l'image ci-dessous. Ce drapeau permet de signaler à KiCad d’où parviendra l’alimentation.
 {{< /callout >}}
 
 <p align="center">
@@ -113,6 +111,8 @@ Pour éviter les erreurs plus tard lors de la vérification du schéma, il faut 
 </p>
 
 ### Numérotation des composants
+
+Nous allons maintenant attribuer des numéros uniques à chacun des composants pour pouvoir les différencier.
 
 <p align="center">
     <img src="/chroma/images/schematic12.jpg" alt="Annotate component symbol" class="w-full h-auto" />
@@ -128,23 +128,27 @@ Pour éviter les erreurs plus tard lors de la vérification du schéma, il faut 
 
 ### Analyse de la qualité du schéma
 
-Contrôle des règles électriques (ERC)
+Symbole ERC
+
+Votre schéma est maintenant terminé, mais il faut vérifier qu'il n'y a pas d'erreurs sur ce dernier. C'est le rôle du Contrôle des Règles Électriques (dit ERC en anglais pour Electrical Rules Checker).
 
 <p align="center">
     <img src="/chroma/images/schematic14_fr.png" alt="ERC with errors" class="w-full h-auto" />
 </p>
+
+Texte
 
 <p align="center">
     <img src="/chroma/images/schematic15_fr.png" alt="ERC without errors" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
-**Exécuter l’ERC (Electrical Rules Checker) et corriger le schéma jusqu’à ce qu’il n’y ait plus d’erreurs (si existantes).**
+**Exécuter l’ERC et corriger le schéma jusqu’à ce qu’il n’y ait plus d’erreurs (si existantes).**
 {{< /callout >}}
 
 ### Assignation des empreintes
 
-Le schéma est réalisé, mais il faut maintenant donner à chacun des composants une empreinte qui va représenter sa forme et ses dimensions sur la carte électronique. Pour ce faire, on utilise l’outil d’affectation d’empreintes.
+Il faut maintenant donner à chacun des composants une empreinte qui va représenter sa forme et ses dimensions sur la carte électronique. Pour ce faire, on utilise l’outil d’affectation d’empreintes.
 
 <p align="center">
     <img src="/chroma/images/schematic16.jpg" alt="Assign footprints symbol" class="w-full h-auto" />
@@ -160,7 +164,7 @@ L’outil est divisé en trois colonnes :
 2. Les symboles de votre schéma et leur empreinte associée (pas d’empreintes pour le moment)
 3. La liste des empreintes de tous les composants de KiCad
 
-Pour éviter d'avoir un chercher un empreinte parmi l'entièreté des composants de KiCad, vous avez la possibilité d'appliquer 3 filtres de recherche :
+Pour éviter d'avoir un chercher une empreinte parmi toutes celles de KiCad, vous avez la possibilité d'appliquer 3 filtres de recherche :
 
 <p align="center">
     <img src="/chroma/images/schematic18.jpg" alt="Footprint filters" class="w-full h-auto" />
@@ -180,4 +184,4 @@ _Dans cet exemple, vous pouvez activer les 3 filtres en même temps en cochant l
 **Affecter les empreintes indiquées ci-dessus à chacun des composants.**
 {{< /callout >}}
 
-Une fois tout cela de fait et plus aucune erreur sur l’ERC, nous allons pouvoir passer à la conception du PCB dans la partie suivante sur le routage.
+Une fois tout cela de fait et plus aucune erreur sur l’ERC, nous allons pouvoir passer à la conception du PCB dans la partie suivante.

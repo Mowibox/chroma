@@ -7,7 +7,6 @@ icon: "chip"
 
 ## Prérequis
 
-
 ## Objectif
 
 <p align="center">
@@ -16,10 +15,7 @@ icon: "chip"
 
 Le but de cette initiation de réaliser un petit circuit imprimé avec des composants simples (LED, buzzers, résistances…) qui pourrait par la suite être branché et utilisé avec une carte électronique.
 
-Cette réalisation se fait en deux parties :
-
-* **Schématique :** C’est là qu'on réalise le schéma du montage, de la même manière que les montages qui sont proposés dans l'initiation à la programmation embarquée. On peut retrouver ce genre de schémas dans des cours d'électronique.
-* **Routage :** C’est là qu’on choisit la position des différents composants, que l’on connecte entre eux en les routant.
+Dans la section précédente, nous avions déjà réalisé le circuit électronique via l'éditeur de schématique.
 
 ## Routage
 
@@ -64,7 +60,7 @@ Cette réalisation se fait en deux parties :
 {{< /callout >}}
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
-Prévoyez environ 30mm pour pouvoir placer tous les composants à l’intérieur. Vous pouvez aussi tenter de le faire plus petit, la nature vous en sera reconnaissante !
+Prévoyez environ 30mm pour pouvoir placer tous les composants à l’intérieur. Vous pouvez aussi tenter de le faire plus petit, entièrement rond... En d'autres termes, personne ne vous oblige à faire comme sur l'image !
 {{< /callout >}}
 
 ### Plan de masse
@@ -97,23 +93,27 @@ La masse est le signal le plus important du PCB, puisqu’elle se trouvera quasi
 **Placer les composants comme bon vous semble dans les contours de votre carte, puis regénérer le plan de masse (raccourci-touche "B").**
 {{< /callout >}}
 
-{{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
-Vous pouvez commencer à avoir un aperçu 3D de votre carte en allant sur le menu "Affichage" puis "Visu 3D". Qu’elle est belle !
-{{< /callout >}}
-
 <p align="center">
     <img src="/chroma/images/routing10.jpg" alt="3D View" class="w-full h-auto" />
 </p>
 
-{{< callout context="tip" title="Le saviez-vous ?" icon="outline/message-dots" >}}
-Vous pouvez ajuster l’écart entre les points de la grille en faisant un clic droit dans la zone de travail, puis en sélectionnant "Grille". Vous pourrez ainsi placer les composants de manière plus précise.
+{{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
+Vous pouvez commencer à avoir un aperçu 3D de votre carte en allant sur le menu "Affichage" puis "Visu 3D". Qu’elle est belle !
 {{< /callout >}}
 
 <p align="center">
     <img src="/chroma/images/routing11_fr.png" alt="Grid" class="w-full h-auto" />
 </p>
 
+{{< callout context="tip" title="Le saviez-vous ?" icon="outline/message-dots" >}}
+Vous pouvez ajuster l’écart entre les points de la grille en faisant un clic droit dans la zone de travail, puis en sélectionnant "Grille". Vous pourrez ainsi placer les composants de manière plus précise.
+{{< /callout >}}
+
 ### Classes d'équipotentielles
+
+Avant de commencer le routage de la carte, il faut définir ce que l'on appelle des classes d'équipotentielles :
+
+Une équipotentielle
 
 <p align="center">
     <img src="/chroma/images/routing12.jpg" alt="Net classes symbol" class="w-full h-auto" />
@@ -124,16 +124,18 @@ Vous pouvez ajuster l’écart entre les points de la grille en faisant un clic 
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
-**Aller dans les "Options CI" puis dans la section "Classes d'Equipots" et modifier les paramètres suivants de la classe Default :**
+**Aller dans les "Options CI" puis dans la section "Classes d'Equipots" et modifier les paramètres suivants de la classe "Default" :**
 
-* **Clearance : 0.3mm**
-* **Track width : 0.3mm**
-* **Via Size : 0.8mm**
-* **Via Hole : 0.4mm.**
+* **Isolation : 0.3mm**
+* **Largeur de Piste : 0.3mm**
+* **Diamètre de Via : 0.8mm**
+* **Trou de Via : 0.4mm.**
 
 {{< /callout >}}
 
 Ainsi, toutes les pistes des signaux avec la catégorie "Default" auront ces paramètres. Pratique !
+
+Très souvent, les pistes qui vont faire passer l'alimentation du circuit peuvent faire passer des courants plus importants. Cela conduit à une puissance dissipée non négligeable. Pour y remédier, nous allons créer une équipotentielle dédiée aux signaux d'alimentation comme le +5V ou le GND. La largeur de ces pistes sera plus grande pour réduire l'impédance de ligne.
 
 <p align="center">
     <img src="/chroma/images/routing14.jpg" alt="Plus symbol" class="w-full h-auto" />
@@ -142,10 +144,10 @@ Ainsi, toutes les pistes des signaux avec la catégorie "Default" auront ces par
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Avec le premier bouton « + », créer une deuxième classe « Power » et lui attribuer les paramètres :**
 
-* **Clearance : 0.3mm**
-* **Track width : 0.5mm**
-* **Via Size : 1.2mm**
-* **Via Hole : 0.6mm**
+* **Isolation : 0.3mm**
+* **Largeur de Piste : 0.5mm**
+* **Diamètre de Via : 1.2mm**
+* **Trou de Via : 0.6mm**
 {{< /callout >}}
 
 <p align="center">
@@ -175,7 +177,7 @@ Ainsi, toutes les pistes des signaux avec la catégorie "Default" auront ces par
 {{< /callout >}}
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
-Bon courage ! Si vous avez des difficultés à tous relier, il faudra peut-être revoir la position de certains composants, mais sachez que vous pouvez aussi router sur la face arrière "B.Cu".
+Bon courage ! Si vous avez des difficultés à tous relier, il faudra peut-être revoir la position de certains composants, mais sachez que vous pouvez aussi router sur la face arrière "B.Cu". N'hésitez pas à sortir des sentiers battus en testant des choses !
 {{< /callout >}}
 
 <p align="center">
@@ -200,6 +202,8 @@ Vous pouvez écrire du texte sur une des faces de votre PCB (Ctrl + Shift + T) e
 
 ### Analyse de la qualité du routage
 
+De la même manière qu'avec [l'ERC] dans le schématique, il faut vérifier que le routage ne contient aucune erreur : cela se fait avec le Contrôle des Règles de Conception (dit Design Rules Checker en anglais - DRC).
+
 <p align="center">
     <img src="/chroma/images/routing21.jpg" alt="DRC symbol" class="w-full h-auto" />
 </p>
@@ -212,7 +216,7 @@ Vous pouvez écrire du texte sur une des faces de votre PCB (Ctrl + Shift + T) e
 **Exécuter le DRC (Design Rules Checker) et corriger les erreurs éventuelles.**
 {{< /callout >}}
 
-**Et voilà un super PCB !**
+**Et voilà un PCB terminé !**
 
 <p align="center">
     <img src="/chroma/images/schematic1.png" alt="PCB finished" class="w-full h-auto" />
