@@ -13,7 +13,7 @@ La programmation embarquée consiste à programmer des microcontrôleurs, qui so
 
 Dans cette initiation, vous apprendrez à prendre en main une carte Arduino et son logiciel associé, afin d'assimiler les bases de la programmation embarquée pour vos futurs projets personnels.
 
-_Pour toute remarque ou question, n'hésitez pas m'envoyer un mail ([ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com))._
+_Pour toute remarque ou question, n'hésitez pas à m'envoyer un mail ([ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com))._
 
 ## Prérequis
 

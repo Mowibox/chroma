@@ -5,7 +5,13 @@ weight: 3
 icon: "chip"
 ---
 
+<p align="center">
+    <img src="/chroma/images/pcb.png" alt="PCB image" class="w-full h-auto" />
+</p>
+
 ## Prérequis
+
+* Avoir complété [l'initiation à la conception de circuits imprimés - Partie 1]()
 
 ## Objectif
 
@@ -15,7 +21,7 @@ icon: "chip"
 
 Le but de cette initiation de réaliser un petit circuit imprimé avec des composants simples (LED, buzzers, résistances…) qui pourrait par la suite être branché et utilisé avec une carte électronique.
 
-Dans la section précédente, nous avions déjà réalisé le circuit électronique via l'éditeur de schématique.
+Dans la section précédente, nous avions déjà réalisé le circuit électronique via l'éditeur de schématique. Dans cette partie, nous allons préparer le circuit pour sa fabrication en organisant les composants et leurs connexions sur la carte.
 
 ## Routage
 
@@ -113,7 +119,7 @@ Vous pouvez ajuster l’écart entre les points de la grille en faisant un clic 
 
 Avant de commencer le routage de la carte, il faut définir ce que l'on appelle des classes d'équipotentielles :
 
-Une équipotentielle
+> _En électricité, l'équipotentielle est l'ensemble des conducteurs électriques soumis à la même tension électrique, et ne possédant donc pas de différence de potentiel électrique. Une liaison équipotentielle a pour but d'uniformiser le potentiel électrique sur un certain espace. [(Wikipedia)](https://fr.wikipedia.org/wiki/%C3%89quipotentielle#%C3%89lectricit%C3%A9)_
 
 <p align="center">
     <img src="/chroma/images/routing12.jpg" alt="Net classes symbol" class="w-full h-auto" />
@@ -202,7 +208,7 @@ Vous pouvez écrire du texte sur une des faces de votre PCB (Ctrl + Shift + T) e
 
 ### Analyse de la qualité du routage
 
-De la même manière qu'avec [l'ERC] dans le schématique, il faut vérifier que le routage ne contient aucune erreur : cela se fait avec le Contrôle des Règles de Conception (dit Design Rules Checker en anglais - DRC).
+De la même manière qu'avec [l'ERC]() dans le schématique, il faut vérifier que le routage ne contient aucune erreur : cela se fait avec le Contrôle des Règles de Conception (dit Design Rules Checker en anglais - DRC).
 
 <p align="center">
     <img src="/chroma/images/routing21.jpg" alt="DRC symbol" class="w-full h-auto" />

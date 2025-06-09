@@ -5,6 +5,16 @@ weight: 2
 icon: "chip"
 ---
 
+<p align="center">
+    <img src="/chroma/images/pcb.png" alt="PCB image" class="w-full h-auto" />
+</p>
+
+Les circuits imprimés, ou dits PCB (de l'anglais Printed Circuit Board), sont au cœur de l'électronique moderne. C'est un ensemble de couches de cuivre séparées par un matériau isolant, vous les verrez souvent de couleur verte. Ils servent de support pour connecter et maintenir des composants, dans l'optique de construire une carte électronique.
+
+Dans cette initiation, vous apprendrez à utiliser le logiciel KiCad pour concevoir un circuit imprimé simple, depuis le schéma électronique jusqu’au design du circuit pour sa fabrication.
+
+_Pour toute remarque ou question, n'hésitez pas à m'envoyer un mail ([ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com))._
+
 ## Prérequis
 
 * Un ordinateur avec le logiciel KiCad
@@ -12,7 +22,7 @@ icon: "chip"
 
 ## Objectif
 
-Le but de cette initiation de réaliser un petit circuit imprimé avec des composants simples (LED, buzzers, résistances…) qui pourrait par la suite être branché et utilisé avec une carte électronique :
+Le but de cette initiation de réaliser un petit circuit imprimé avec des composants simples (LED, buzzers, résistances…) qui pourrait par la suite être branché et utilisé avec une carte à microcontrôleur :
 
 <p align="center">
     <img src="/chroma/images/schematic1.png" alt="PCB example" class="w-full h-auto" />
@@ -20,7 +30,7 @@ Le but de cette initiation de réaliser un petit circuit imprimé avec des compo
 
 Cette réalisation se fait en deux parties :
 
-* **Schématique :** C’est là qu'on réalise le schéma du montage, de la même manière que les montages qui sont proposés dans [l'initiation à la programmation embarquée.] On peut retrouver ce genre de schémas dans des cours d'électronique.
+* **Schématique :** C’est là qu'on réalise le schéma du montage, de la même manière que les montages qui sont proposés dans [l'initiation à la programmation embarquée.]() On peut retrouver ce genre de schémas dans des cours d'électronique.
 * **Routage :** C’est là qu’on choisit la position des différents composants, que l’on connecte entre eux en les routant.
 
 ## Schématique
@@ -128,15 +138,17 @@ Nous allons maintenant attribuer des numéros uniques à chacun des composants p
 
 ### Analyse de la qualité du schéma
 
-Symbole ERC
-
 Votre schéma est maintenant terminé, mais il faut vérifier qu'il n'y a pas d'erreurs sur ce dernier. C'est le rôle du Contrôle des Règles Électriques (dit ERC en anglais pour Electrical Rules Checker).
+
+<p align="center">
+    <img src="/chroma/images/schematic20.jpg" alt="ERC stmbol" class="w-full h-auto" />
+</p>
 
 <p align="center">
     <img src="/chroma/images/schematic14_fr.png" alt="ERC with errors" class="w-full h-auto" />
 </p>
 
-Texte
+Dans l'exemple ci-dessus, il y'a eu un oubli de connexion entre la LED D1 et la masse. On rajoute alors le fil nécessaire et après relancement du l'ERC, les erreurs disparaissent :
 
 <p align="center">
     <img src="/chroma/images/schematic15_fr.png" alt="ERC without errors" class="w-full h-auto" />
@@ -172,7 +184,7 @@ Pour éviter d'avoir un chercher une empreinte parmi toutes celles de KiCad, vou
 
 1. Filtrage des empreintes définies pour le symbole sélectionné
 2. Filtrage par nombre de broches du symbole sélectionné
-3. Filtrage par librairies sélectionné dans la colonne de gauche
+3. Filtrage par librairies sélectionnées dans la colonne de gauche
 
 _Dans cet exemple, vous pouvez activer les 3 filtres en même temps en cochant les cases associées._
 
