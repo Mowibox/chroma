@@ -186,12 +186,16 @@ Très souvent, les pistes qui vont faire passer l'alimentation du circuit peuven
 Bon courage ! Si vous avez des difficultés à tous relier, il faudra peut-être revoir la position de certains composants, mais sachez que vous pouvez aussi router sur la face arrière "B.Cu". N'hésitez pas à sortir des sentiers battus en testant des choses !
 {{< /callout >}}
 
+{{< callout context="danger" title="Attention" icon="outline/alert-square-rounded" >}}
+Il faut éviter au maximum les angles droits ! Ils créent du rayonnement électromagnétique qui altèreront les performances de votre PCB.
+{{< /callout >}}
+
 <p align="center">
     <img src="/chroma/images/routing18.jpg" alt="Track symbol" class="w-full h-auto" />
 </p>
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
-Une autre alternative serait d’alterner entre les deux couches en passant par un "trou". C’est le rôle d’une via. Lorsque vous tracez une piste, appuyez sur "V" et une via apparaîtra.
+Une autre alternative serait d’alterner entre les deux couches en passant par un "trou". C’est le rôle d’un via. Lorsque vous tracez une piste, appuyez sur "V" et un via apparaîtra.
 {{< /callout >}}
 
 <p align="center">
