@@ -66,7 +66,7 @@ In the previous section, we created the electrical circuit in the schematic edit
 {{< /callout >}}
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
-Allow about 30 mm to fit all components inside. You can also make it smaller or fully round… No one says you must follow the example exactly!
+Allow about a 30mm x 30mm square to fit all components inside. You can also make it smaller or fully round… No one says you must follow the example exactly!
 {{< /callout >}}
 
 ### Ground Plane
@@ -179,12 +179,12 @@ Very often, the tracks carrying the circuit's power supply can carry higher curr
 **Route all tracks as shown by the ratsnest (X).**
 {{< /callout >}}
 
-{{< callout context="caution" title="Tip" icon="outline/bulb" >}}
-If routing is difficult, try repositioning components or using the bottom layer "B.Cu". Feel free to experiment!
-{{< /callout >}}
-
 {{< callout context="danger" title="Warning" icon="outline/alert-square-rounded" >}}
 Avoid 90° trace angles—they cause electromagnetic interference (EMI) and can degrade PCB performance.
+{{< /callout >}}
+
+{{< callout context="caution" title="Tip" icon="outline/bulb" >}}
+If routing is difficult, try repositioning components or using the bottom layer "B.Cu". Feel free to experiment!
 {{< /callout >}}
 
 <p align="center">

@@ -66,7 +66,7 @@ Dans la section précédente, nous avions déjà réalisé le circuit électroni
 {{< /callout >}}
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
-Prévoyez environ 30mm pour pouvoir placer tous les composants à l’intérieur. Vous pouvez aussi tenter de le faire plus petit, entièrement rond... En d'autres termes, personne ne vous oblige à faire comme sur l'image !
+Prévoyez environ un carré de 30 mm x 30 mm pour pouvoir placer tous les composants à l’intérieur. Vous pouvez aussi tenter de le faire plus petit, entièrement rond... En d'autres termes, personne ne vous oblige à faire comme sur l'image !
 {{< /callout >}}
 
 ### Plan de masse
@@ -86,7 +86,7 @@ La masse est le signal le plus important du PCB, puisqu’elle se trouvera quasi
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
-**Sélectionner la couche "F.Cu" et cliquer sur "Add a filled zone". Sélectionner "GND" puis valider, et encadrer le contour du PCB avec. Faire de même avec le Layer "B.Cu".**
+**Sélectionner la couche "F.Cu" et cliquer sur "Tracer Zones Remplies". Sélectionner "GND" puis valider, et encadrer le contour du PCB avec. Faire de même avec la couche "B.Cu".**
 {{< /callout >}}
 
 ### Placement des composants
@@ -182,12 +182,12 @@ Très souvent, les pistes qui vont faire passer l'alimentation du circuit peuven
 **Relier toutes les pistes comme indiquées par le chevelu (X).**
 {{< /callout >}}
 
-{{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
-Bon courage ! Si vous avez des difficultés à tous relier, il faudra peut-être revoir la position de certains composants, mais sachez que vous pouvez aussi router sur la face arrière "B.Cu". N'hésitez pas à sortir des sentiers battus en testant des choses !
-{{< /callout >}}
-
 {{< callout context="danger" title="Attention" icon="outline/alert-square-rounded" >}}
 Il faut éviter au maximum les angles droits avec les pistes ! Ils créent du rayonnement électromagnétique (IEM) qui altèreront les performances de votre PCB.
+{{< /callout >}}
+
+{{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
+Bon courage ! Si vous avez des difficultés à tous relier, il faudra peut-être revoir la position de certains composants, mais sachez que vous pouvez aussi router sur la face arrière "B.Cu". N'hésitez pas à sortir des sentiers battus en testant des choses !
 {{< /callout >}}
 
 <p align="center">
