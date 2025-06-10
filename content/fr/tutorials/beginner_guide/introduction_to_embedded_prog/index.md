@@ -476,6 +476,6 @@ _[Retour à la mission](#niveau-5----joyeux-anniversaire-)_
 
 ## Crédits
 
-* **Auteur:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Dernière mise à jour:** Mai 2025
-* **Contribueurs:**
+* **Auteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Dernière mise à jour :** Mai 2025
+* **Contribueurs :** Loubna LATRECHE

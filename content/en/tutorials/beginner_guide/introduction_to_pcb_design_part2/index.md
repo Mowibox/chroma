@@ -236,4 +236,4 @@ Just like the [ERC]() for schematics, we need to verify your routing with the De
 
 * **Author:** [Ousmane THIONGANE](https://github.com/Mowibox)
 * **Lastest update:** June 2025
-* **Contributors:**
+* **Contributors:** Loubna LATRECHE

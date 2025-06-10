@@ -17,7 +17,7 @@ In this tutorial, we’ll learn how to use the ADC with STM32 Cube IDE.
 * [An STM32 development board](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html)
 * [Two prototyping cables](/chroma/images/_cables.png)
 
-## ADC? Is it like AC/DC?
+## ADC? Like the band AC/DC?
 
 The Analog-to-Digital Converter (ADC) is a system that, as the name suggests, converts an analog signal into a digital signal. The reverse process is done by a Digital-to-Analog Converter (DAC). This allows us to transform voltages into a format that the microcontroller can process and analyze. For example, this is how you can read the values from a potentiometer, a microphone, or a light sensor. If you want to explore this technology further, check out this [webpage](https://dewesoft.com/blog/what-is-adc-converter) that explains ADCs in more depth (and no, I'm not sponsored!).
 
@@ -53,7 +53,14 @@ To do this, connect one analog pin to +5V (here A0) and another to GND (here A1)
     <em style="font-size: 0.95em;">Wiring</em>
 </p>
 
-Next, open CubeIDE, create a new project, and open CubeMX (the `.ioc` window). Identify which pins A0 and A1 correspond to. You can find mappings between "Ax" and "PAx" by looking up the [pinout configuration](https://os.mbed.com/platforms/ST-Nucleo-H7A3ZI-Q/#board-pinout). In my case: A0 ↔ PA3 and A1 ↔ PC0.
+Now, in CubeIDE:
+
+* Create a new project and open CubeMX (.ioc window).
+* Identify which pins correspond to A0 and A1. You can find mappings between "Ax" and "PAx" by checking the [pinout configuration](https://os.mbed.com/platforms/ST-Nucleo-H7A3ZI-Q/#board-pinout) of your board. In my case, A0 ↔ PA3 and A1 ↔ PC0.
+* Then configure each pin as ADC input (e.g., "ADCx_INPx"). My setup:
+
+* PA3: ADC1_INP15
+* PC0: ADC2_INP10
 
 Now configure the pins with an ADC (like "ADCx_INPx"). Here's the config I used:
 
@@ -61,7 +68,7 @@ Now configure the pins with an ADC (like "ADCx_INPx"). Here's the config I used:
 * PC0: ADC2_INP10
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
-Sometimes multiple ADCs are available for a pin. I could have swapped ADC1 and ADC2 or even used ADC3. But make sure not to configure the same ADC on two pins at once!
+Note that a pin may support multiple ADCs. I could’ve swapped ADC1 and ADC2 or even used ADC3. However, make sure **not to configure the same ADC on both pins simultaneously**!
 {{< /callout >}}
 
 In the "ADC" tab on the left, select ADC1 and configure as follows:
@@ -86,11 +93,26 @@ Here's how to program ADC1 in a `.c` file. Programming ADC2 or any other is done
 
 To start ADC conversion, add the two lines below to your `main.c` file (in the "Core/Src" folder):
 
-```c {title="main.c", lineNos=true lineNoStart=65, hl_lines=[4,5]}
+To start ADC conversion, add the lines below in your `main.c` file (in the "Core/Src" folder):
+
+Inside the private variables section:
+
+```c {title="main.c", lineNos=true lineNoStart=43, hl_lines=[6]}
+/* Private variables ---------------------------------------------------------*/
+
+UART_HandleTypeDef huart2;
+
+/* USER CODE BEGIN PV */
+int value_a0;
+/* USER CODE END PV */
+```
+
+Inside the `int main(void){}` function:
+
+```c {title="main.c", lineNos=true lineNoStart=65, hl_lines=[4]}
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  int value_a0;
   HAL_ADC_Start(&hadc1);
   /* USER CODE END 1 */
 ```
@@ -101,7 +123,7 @@ int main(void)
 Be sure to write your code between the "/\* USER CODE BEGIN \*/" and "/\* USER CODE END \*/" tags. Otherwise, your code will be deleted when building!
 {{< /callout >}}
 
-In a loop (e.g. the existing `while(1)`), add the two lines below:
+Inside a loop (e.g. the existing `while(1){}`), add the two lines below:
 
 `HAL_ADC_PollForConversion(&hadc, 1)`; waits for ADC conversion to complete. `value_a0 = HAL_ADC_GetValue(&hadc1)`; retrieves the converted value and stores it in `value_a0`.
 
@@ -126,11 +148,17 @@ Once compiled and uploaded to your board, if you display the values from A0 (`va
     <em style="font-size: 0.95em;">Blue signal: A0, Orange signal: A1</em>
 </p>
 
-To go further, you can try connecting other components to the pins to interpret their values, such as a potentiometer as shown in the [introduction to embedded programming]()
+To go further, you can try connecting connecting other components to these pins, like a potentiometer as shown in the [introduction to embedded programming]()
 
-## Converting ADC values using sensitivity
+## Interpreting ADC values using sensitivity
 
-If you'd rather interpret ADC values as voltages instead of LSBs [(Least Significant Bit)](https://en.wikipedia.org/wiki/Analog-to-digital_converter#:~:text=The%20change%20in%20voltage%20required%20to%20guarantee%20a%20change%20in%20the%20output%20code%20level%20is%20called%20the%20least%20significant%20bit%20(LSB)%20voltage.%20The%20resolution%20Q%20of%20the%20ADC%20is%20equal%20to%20the%20LSB%20voltage.), you'll need the ADC sensitivity. Use the formula:
+If you want to convert ADC readings into human-readable voltages instead of LSBs [(Least Significant Bit)](https://en.wikipedia.org/wiki/Analog-to-digital_converter#:~:text=The%20change%20in%20voltage%20required%20to%20guarantee%20a%20change%20in%20the%20output%20code%20level%20is%20called%20the%20least%20significant%20bit%20(LSB)%20voltage.%20The%20resolution%20Q%20of%20the%20ADC%20is%20equal%20to%20the%20LSB%20voltage.), you'll need the ADC sensitivity. Use the formula:
+
+{{< math class=text-center >}}
+$$
+\text{sensitivity} = \frac{\text{range}}{(2^{\text{resolution}}-1)}
+$$
+{{< /math >}}
 
 Where:
 
@@ -145,7 +173,7 @@ $$
 $$
 {{< /math >}}
 
-So you can multiply this sensitivity by your ADC value to get a voltage reading:
+Then you can multiply this sensitivity by your ADC value to get a voltage reading:
 
 * For 0 LSB: {{< math >}}$0\times sensitivity = 0 \space V${{< /math >}}
 * For 4095 LSB: {{< math >}}$4095\times sensitivity = 5 \space V${{< /math >}}
@@ -155,4 +183,4 @@ So you can multiply this sensitivity by your ADC value to get a voltage reading:
 
 * **Author:** [Ousmane THIONGANE](https://github.com/Mowibox)
 * **Lastest update:** June 2025
-* **Contributors:**
+* **Contributors:** [Gauthier BIEHLER](https://github.com/Minorzar), Loubna LATRECHE

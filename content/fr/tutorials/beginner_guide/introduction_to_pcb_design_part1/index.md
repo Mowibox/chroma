@@ -202,4 +202,4 @@ Une fois tout cela de fait et plus aucune erreur sur l’ERC, nous allons pouvoi
 
 * **Auteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
 * **Dernière mise à jour :** Juin 2025
-* **Contribueurs :**
+* **Contribueurs :** Loubna LATRECHE

@@ -238,4 +238,4 @@ De la même manière qu'avec [l'ERC]() dans le schématique, il faut vérifier q
 
 * **Auteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
 * **Dernière mise à jour :** Juin 2025
-* **Contribueurs :**
+* **Contribueurs :** Loubna LATRECHE

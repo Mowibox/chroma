@@ -202,4 +202,4 @@ Once all footprints are assigned and the ERC shows no errors, we can move on to 
 
 * **Author:** [Ousmane THIONGANE](https://github.com/Mowibox)
 * **Lastest update:** June 2025
-* **Contributors:**
+* **Contributors:** Loubna LATRECHE
