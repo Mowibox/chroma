@@ -1,5 +1,5 @@
 ---
-title: "Initiation à la conception de circuits imprimés - Partie 2"
+title: "Initiation à la conception de circuits imprimés – Partie 2"
 summary: Avec le logiciel KiCad - Routage
 weight: 3
 icon: "chip"
@@ -11,7 +11,7 @@ icon: "chip"
 
 ## Prérequis
 
-* Avoir complété [l'initiation à la conception de circuits imprimés - Partie 1]()
+* Avoir complété [l'initiation à la conception de circuits imprimés – Partie 1]()
 
 ## Objectif
 
@@ -187,7 +187,7 @@ Bon courage ! Si vous avez des difficultés à tous relier, il faudra peut-êtr
 {{< /callout >}}
 
 {{< callout context="danger" title="Attention" icon="outline/alert-square-rounded" >}}
-Il faut éviter au maximum les angles droits ! Ils créent du rayonnement électromagnétique qui altèreront les performances de votre PCB.
+Il faut éviter au maximum les angles droits avec les pistes ! Ils créent du rayonnement électromagnétique (IEM) qui altèreront les performances de votre PCB.
 {{< /callout >}}
 
 <p align="center">

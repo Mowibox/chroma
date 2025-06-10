@@ -1,5 +1,5 @@
 ---
-title: "Introduction à Git et GitHub - Partie 1"
+title: "Introduction à Git et GitHub – Partie 1"
 summary: Comprendre les bases avec des dessins
 weight: 4
 icon: "git"

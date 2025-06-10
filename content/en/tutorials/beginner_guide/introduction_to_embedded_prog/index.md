@@ -13,7 +13,7 @@ Embedded programming involves programming microcontrollers, which are small inte
 
 In this introductory course, you'll learn how to use an Arduino board and its associated software, in order to assimilate the basics of embedded programming for your future personal projects.
 
-_If you have any comments or questions, please don't hesitate to send me an e-mail ([ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com))._
+_For any comments or questions, feel free to email me at [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com)._
 
 ## Prerequisites
 

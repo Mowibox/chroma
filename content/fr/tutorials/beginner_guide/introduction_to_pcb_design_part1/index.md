@@ -1,5 +1,5 @@
 ---
-title: "Initiation à la conception de circuits imprimés - Partie 1"
+title: "Initiation à la conception de circuits imprimés – Partie 1"
 summary: Avec le logiciel KiCad - Schématique
 weight: 2
 icon: "chip"
@@ -17,7 +17,7 @@ _Pour toute remarque ou question, n'hésitez pas à m'envoyer un mail ([ousmane.
 
 ## Prérequis
 
-* Un ordinateur avec le logiciel KiCad
+* Un ordinateur avec le logiciel [KiCad](https://www.kicad.org/)
 * C'est tout !
 
 ## Objectif
@@ -36,11 +36,11 @@ Cette réalisation se fait en deux parties :
 ## Schématique
 
 <p align="center">
-    <img src="/chroma/images/schematic2.jpg" alt="Schematic editor page" class="w-full h-auto" />
+    <img src="/chroma/images/schematic2_fr.png" alt="Schematic editor" class="w-full h-auto" />
 </p>
 
 <p align="center">
-    <img src="/chroma/images/schematic3.jpg" alt="Schematic editor" class="w-full h-auto" />
+    <img src="/chroma/images/schematic3.jpg" alt="Schematic editor page" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
