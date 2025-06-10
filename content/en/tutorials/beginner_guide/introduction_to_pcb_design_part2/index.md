@@ -119,7 +119,7 @@ Right-click on the workspace and select "Grid" to adjust the grid spacing for fi
 
 Before routing, we must define net classes:
 
-> _In electrical engineering, an equipotential set is a group of conductors at the same voltage, thus having no potential difference. An equipotential bonding aims to equalize voltage across a space._ [(Wikipedia)](https://fr.wikipedia.org/wiki/%C3%89quipotentielle#%C3%89lectricit%C3%A9)
+> _In electrical engineering, an equipotential set is a group of conductors at the same voltage, thus having no potential difference. An equipotential bonding aims to equalize voltage across a space._ [(Wikipedia - french)](https://fr.wikipedia.org/wiki/%C3%89quipotentielle#%C3%89lectricit%C3%A9)
 
 <p align="center">
     <img src="/chroma/images/routing12.jpg" alt="Net classes symbol" class="w-full h-auto" />
