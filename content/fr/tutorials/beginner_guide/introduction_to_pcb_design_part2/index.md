@@ -233,3 +233,9 @@ De la même manière qu'avec [l'ERC]() dans le schématique, il faut vérifier q
 </p>
 
 ## Pour aller plus loin
+
+## Crédits
+
+* **Auteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Dernière mise à jour :** Juin 2025
+* **Contribueurs :**

@@ -15,7 +15,7 @@ In this introductory course, you'll learn how to use an Arduino board and its as
 
 _For any comments or questions, feel free to email me at [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com)._
 
-## Prerequisites
+## Requirements
 
 ### Software
 
@@ -317,7 +317,7 @@ Find the one that suits you best!
 
 ### Level 1 Solution - Blinking
 
-```ino
+```ino {lineNos=true lineNoStart=1}
 const int ledPin = 2;
 
 void setup() {
@@ -339,7 +339,7 @@ _[Back to mission](#level-1---blinking)_
 
 ### Level 2 Solution - Traffic Light
 
-```ino
+```ino {lineNos=true lineNoStart=1}
 const int redLed = 2;
 const int yellowLed = 3;
 const int greenLed = 4;
@@ -374,7 +374,7 @@ _[Back to mission](#level-2---traffic-light)_
 
 ### Level 3 Solution - Day, Night, Day...
 
-```ino
+```ino {lineNos=true lineNoStart=1}
 const int ledPin = 2;
 const int buttonPin = 4;
 
@@ -401,7 +401,7 @@ _[Back to mission](#level-3---day-night-day)_
 
 ### Level 4 Solution - Day, Night, soft version
 
-```ino
+```ino {lineNos=true lineNoStart=1}
 const int ledPin = 3;
 const int potPin = A0;
 
@@ -423,7 +423,7 @@ _[Back to mission](#level-4---day-night-soft-version)_
 
 ### Level 5 Solution - ♪ Happy Birthday ♪
 
-```ino
+```ino {lineNos=true lineNoStart=1}
 #define DO 262
 #define RE 294
 #define MI 330
@@ -477,3 +477,9 @@ void happyBirthday(){
 ```
 
 _[Back to mission](#level-5----happy-birthday-)_
+
+## Credits
+
+* **Author:** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Lastest update:** May 2025
+* **Contributors:**

@@ -160,3 +160,9 @@ Les autres noms que vous avez pu voir en gras tout au long de l'histoire **(add,
     <img src="/chroma/images/gitgithub16.jpg" alt="" class="w-full h-auto" />
     </br>
 </p>
+
+## Crédits
+
+* **Auteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Dernière mise à jour :** Mai 2025
+* **Contribueurs :**

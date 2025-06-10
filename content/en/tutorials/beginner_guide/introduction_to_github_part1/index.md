@@ -161,3 +161,9 @@ The other bolded terms you saw throughout the story — **add, commit, push, pul
     <img src="/chroma/images/gitgithub16.jpg" alt="" class="w-full h-auto" />
     </br>
 </p>
+
+## Credits
+
+* **Author:** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Lastest update:** May 2025
+* **Contributors:**

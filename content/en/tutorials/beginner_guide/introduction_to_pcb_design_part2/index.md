@@ -9,7 +9,7 @@ icon: "chip"
     <img src="/chroma/images/pcb.png" alt="PCB image" class="w-full h-auto" />
 </p>
 
-## Prerequisites
+## Requirements
 
 * Completed [Introduction to printed circuit board design – Part 1]()
 
@@ -231,3 +231,9 @@ Just like the [ERC]() for schematics, we need to verify your routing with the De
 </p>
 
 ## Going further
+
+## Credits
+
+* **Author:** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Lastest update:** June 2025
+* **Contributors:**

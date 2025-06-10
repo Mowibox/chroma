@@ -313,7 +313,7 @@ Les codes qui sont écrits dans cette section sont des proposition de correction
 
 ### Solution niveau 1 - Clignotant
 
-```ino
+```ino {lineNos=true lineNoStart=1}
 const int ledPin = 2;
 
 void setup() {
@@ -335,7 +335,7 @@ _[Retour à la mission](#niveau-1---clignotant)_
 
 ### Solution niveau 2 - Tricolore
 
-```ino
+```ino {lineNos=true lineNoStart=1}
 const int redLed = 2;
 const int yellowLed = 3;
 const int greenLed = 4;
@@ -370,7 +370,7 @@ _[Retour à la mission](#niveau-2---tricolore)_
 
 ### Solution niveau 3 - Jour, Nuit, Jour...
 
-```ino
+```ino {lineNos=true lineNoStart=1}
 const int ledPin = 2;
 const int buttonPin = 4;
 
@@ -397,7 +397,7 @@ _[Retour à la mission](#niveau-3---jour-nuit-jour)_
 
 ### Solution niveau 4 - Jour, Nuit, version soft
 
-```ino
+```ino {lineNos=true lineNoStart=1}
 const int ledPin = 3;
 const int potPin = A0;
 
@@ -419,7 +419,7 @@ _[Retour à la mission](#niveau-4---jour-nuit-version-soft)_
 
 ### Solution niveau 5 - ♪ Joyeux anniversaire ♪
 
-```ino
+```ino {lineNos=true lineNoStart=1}
 #define DO 262
 #define RE 294
 #define MI 330
@@ -473,3 +473,9 @@ void happyBirthday(){
 ```
 
 _[Retour à la mission](#niveau-5----joyeux-anniversaire-)_
+
+## Crédits
+
+* **Auteur:** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Dernière mise à jour:** Mai 2025
+* **Contribueurs:**

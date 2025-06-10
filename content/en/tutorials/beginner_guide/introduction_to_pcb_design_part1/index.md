@@ -15,7 +15,7 @@ In this tutorial, you will learn how to use KiCad software to design a simple PC
 
 _For any comments or questions, feel free to email me at [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com)._
 
-## Prerequisites
+## Requirements
 
 * A computer with [KiCad](https://www.kicad.org/) installed
 * That’s it!
@@ -197,3 +197,9 @@ _In this example, you can enable all three filters at once by checking their box
 {{< /callout >}}
 
 Once all footprints are assigned and the ERC shows no errors, we can move on to PCB layout in the next part.
+
+## Credits
+
+* **Author:** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Lastest update:** June 2025
+* **Contributors:**
