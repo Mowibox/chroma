@@ -148,7 +148,7 @@ Pour aller plus loin, vous pouvez essayer de brancher d'autres composants à ces
 
 ## Interpréter des valeurs connues avec la sensitivité
 
-Si vous souhaitez récupérer des valeurs de l'ADC humainement compréhensibles plutôt qu'en LSB [(Least Significant Bit)](https://fr.wikipedia.org/wiki/Bit_de_poids_faible#Signal_num%C3%A9ris%C3%A9), il vous devrez connaître la sensitivité de votre ADC. dont la formule est :
+Si vous souhaitez récupérer des valeurs de l'ADC humainement compréhensibles plutôt qu'en LSB [(Least Significant Bit)](https://fr.wikipedia.org/wiki/Bit_de_poids_faible#Signal_num%C3%A9ris%C3%A9), vous devrez connaître la sensitivité de votre ADC. dont la formule est :
 
 {{< math class=text-center >}}
 $$
