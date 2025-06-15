@@ -51,7 +51,7 @@ sudo groupadd docker
 
 Exemple de sortie si le groupe existe déjà :
 
-```bash
+```bash {title="Terminal"}
 mowibox@chroma$ sudo groupadd docker
 [sudo] password for mowibox:
 groupadd: group 'docker' already exists
@@ -84,7 +84,7 @@ reboot
 
 Et voilà ! Votre docker est prêt à l'emploi. Vous pouvez exécuter la commande `docker run hello-world` dans le terminal pour vous en assurer. Vous devriez obtenir le résultat ci-dessous :
 
-```bash
+```bash {title="Terminal"}
 mowibox@chroma:~$ docker run hello-world
 Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
