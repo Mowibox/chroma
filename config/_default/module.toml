@@ -30,9 +30,9 @@
   target = "assets"
 
 ## content
-[[mounts]]
-  source = "content"
-  target = "content"
+# [[mounts]]
+#   source = "content"
+#   target = "content"
 
 ## data
 [[mounts]]

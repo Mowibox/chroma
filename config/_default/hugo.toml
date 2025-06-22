@@ -87,3 +87,4 @@ copyRight = "Copyright (c) 2020-2024 Thulite"
 [getresource]
 dir = ':resourceDir/_gen'
 maxAge = -1
+
