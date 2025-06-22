@@ -1,7 +1,7 @@
 ---
 title: "Autres"
 summary: La catégorie des inclassables
-weight: 4
+weight: 8000
 icon: "other"
 ---
 
