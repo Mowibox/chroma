@@ -15,7 +15,7 @@ summarylength = 20 # 70 (default)
 # Multilingual
 defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 
 copyRight = "Copyright (c) 2020-2024 Thulite"
 
