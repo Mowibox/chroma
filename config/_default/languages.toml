@@ -9,7 +9,7 @@
 [fr]
   languageName = "Français"
   contentDir = "content/fr"
-  weight = 10
+  weight = 12
   [fr.params]
     languageISO = "FR"
     languageTag = "fr-FR"

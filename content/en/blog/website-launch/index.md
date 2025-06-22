@@ -22,7 +22,10 @@ Hello to everyone reading these few lines! Today marks the **official launch of 
 
 ## Who am I?
 
-![Ousmane THIONGANE](pp.jpg)
+<p align="center">
+    <img src="/chroma/images/pp.jpg" alt="Ousmane THIONGANE picture" class="w-full h-auto" />
+    </br>
+</p>
 
 My name is [Ousmane THIONGANE](https://ousmanethiongane.framer.website/). At the time of writing, I’m an engineering student at the École Nationale Supérieure de l'Électronique et ses Applications (ENSEA). During my studies, I’ve had the opportunity to explore fields such as Artificial Intelligence, Robotics, and Computer Vision.
 
@@ -53,4 +56,3 @@ In a long term, I would also love to make Chroma a collaborative platform: a pla
 🔴🟠🟡🟢🔵🟣
 
 **Thank you for reading, and welcome to Chroma!**
-

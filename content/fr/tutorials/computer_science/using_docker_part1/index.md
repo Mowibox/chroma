@@ -116,7 +116,6 @@ For more examples and ideas, visit:
 
 Le tutoriel suivant explique le concept propre à Docker des images et des conteneurs et vous apprendra à les prendre en main.
 
-
 ## Crédits
 
 * **Auteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
