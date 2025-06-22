@@ -30,17 +30,17 @@
 
 [[main]]
   name = "Tutorials"
-  url = "tutorials/"
+  url = "/en/tutorials/"
   weight = 10
 
 [[main]]
   name = "Computer Vision"
-  url = "computer_vision/"
+  url = "/en/computer_vision/"
   weight = 20
 
 [[main]]
   name = "Blog"
-  url = "blog/"
+  url = "/en/blog/"
   weight = 30
 
 # [[social]]
