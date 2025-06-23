@@ -17,7 +17,7 @@ icon: "docker"
 
 Vous pouvez voir la liste des images au sein de votre docker avec la ligne de commande suivante :
 
-```bash
+```bash {frame="none"}
 docker images
 ```
 

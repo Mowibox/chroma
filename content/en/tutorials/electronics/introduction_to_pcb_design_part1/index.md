@@ -30,7 +30,7 @@ The goal of this tutorial is to create a small PCB with simple components (LEDs,
 
 This project is carried out in two parts:
 
-* **Schematic:** Here we draw the circuit schematic, just like in the [introduction to embedded programming.]() You will find such schematics in electronics courses.
+* **Schematic:** Here we draw the circuit schematic, just like in the [introduction to embedded programming.]({{< relref "tutorials/electronics/introduction_to_embedded_prog" >}}) You will find such schematics in electronics courses.
 * **Routing:** This is where the position of the various components is chosen, and where they are connected together by routing.
 
 ## Schematic

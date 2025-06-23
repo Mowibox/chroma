@@ -11,7 +11,7 @@ icon: "chip"
 
 ## Requirements
 
-* Completed [Introduction to printed circuit board design – Part 1]()
+* Completed [Introduction to printed circuit board design – Part 1]({{< relref "tutorials/electronics/introduction_to_pcb_design_part1" >}})
 
 ## Goal
 
@@ -210,7 +210,7 @@ Add text to your board (Ctrl + Shift + T) and regenerate the ground plane for em
 
 ### Design Rules Check
 
-Just like the [ERC]() for schematics, we need to verify your routing with the Design Rules Checker (DRC).
+Just like the [ERC]({{< relref "tutorials/electronics/introduction_to_pcb_design_part1/#electrical-rules-check">}}) for schematics, we need to verify your routing with the Design Rules Checker (DRC).
 
 <p align="center">
     <img src="/chroma/images/routing21.jpg" alt="DRC symbol" class="w-full h-auto" />
