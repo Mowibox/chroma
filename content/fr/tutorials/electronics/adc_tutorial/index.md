@@ -144,7 +144,7 @@ Après compilation du code et téléversement du code sur la carte, si j'affiche
     <em style="font-size: 0.95em;">Signal bleu : A0, Signal orange : A1</em>
 </p>
 
-Pour aller plus loin, vous pouvez essayer de brancher d'autres composants à ces broches, comme c'est présenté avec un potentiomètre dans [l'initiation à la programmation embarquée.]()
+Pour aller plus loin, vous pouvez essayer de brancher d'autres composants à ces broches, comme c'est présenté avec un potentiomètre dans [l'initiation à la programmation embarquée.]({{< relref "tutorials/electronics/introduction_to_embedded_prog/">}})
 
 ## Interpréter des valeurs connues avec la sensitivité
 

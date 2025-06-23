@@ -11,7 +11,7 @@ icon: "chip"
 
 ## Prérequis
 
-* Avoir complété [l'initiation à la conception de circuits imprimés – Partie 1]()
+* Avoir complété [l'initiation à la conception de circuits imprimés – Partie 1]({{< relref "tutorials/electronics/introduction_to_pcb_design_part1/">}})
 
 ## Objectif
 
@@ -212,7 +212,7 @@ Vous pouvez écrire du texte sur une des faces de votre PCB (Ctrl + Shift + T) e
 
 ### Analyse de la qualité du routage
 
-De la même manière qu'avec [l'ERC]() dans le schématique, il faut vérifier que le routage ne contient aucune erreur : cela se fait avec le Contrôle des Règles de Conception (dit Design Rules Checker en anglais - DRC).
+De la même manière qu'avec [l'ERC]({{< relref "tutorials/electronics/introduction_to_pcb_design_part1/#analyse-de-la-qualité-du-schéma">}}) dans le schématique, il faut vérifier que le routage ne contient aucune erreur : cela se fait avec le Contrôle des Règles de Conception (dit Design Rules Checker en anglais - DRC).
 
 <p align="center">
     <img src="/chroma/images/routing21.jpg" alt="DRC symbol" class="w-full h-auto" />

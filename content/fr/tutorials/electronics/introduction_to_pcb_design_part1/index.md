@@ -30,7 +30,7 @@ Le but de cette initiation de réaliser un petit circuit imprimé avec des compo
 
 Cette réalisation se fait en deux parties :
 
-* **Schématique :** C’est là qu'on réalise le schéma du montage, de la même manière que les montages qui sont proposés dans [l'initiation à la programmation embarquée.]() On peut retrouver ce genre de schémas dans des cours d'électronique.
+* **Schématique :** C’est là qu'on réalise le schéma du montage, de la même manière que les montages qui sont proposés dans [l'initiation à la programmation embarquée.]({{< relref "tutorials/electronics/introduction_to_embedded_prog">}}) On peut retrouver ce genre de schémas dans des cours d'électronique.
 * **Routage :** C’est là qu’on choisit la position des différents composants, que l’on connecte entre eux en les routant.
 
 ## Schématique

@@ -148,7 +148,7 @@ Once compiled and uploaded to your board, if you display the values from A0 (`va
     <em style="font-size: 0.95em;">Blue signal: A0, Orange signal: A1</em>
 </p>
 
-To go further, you can try connecting connecting other components to these pins, like a potentiometer as shown in the [introduction to embedded programming]()
+To go further, you can try connecting connecting other components to these pins, like a potentiometer as shown in the [introduction to embedded programming]({{< relref "tutorials/electronics/introduction_to_embedded_prog/">}})
 
 ## Interpreting ADC values using sensitivity
 
