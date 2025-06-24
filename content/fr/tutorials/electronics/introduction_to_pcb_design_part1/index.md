@@ -198,6 +198,8 @@ _Dans cet exemple, vous pouvez activer les 3 filtres en même temps en cochant l
 
 Une fois tout cela de fait et plus aucune erreur sur l’ERC, nous allons pouvoir passer à la conception du PCB dans la partie suivante.
 
+---
+
 ## Crédits
 
 * **Auteur :** [Ousmane THIONGANE](https://github.com/Mowibox)

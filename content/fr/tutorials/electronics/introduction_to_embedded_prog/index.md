@@ -474,6 +474,8 @@ void happyBirthday(){
 
 _[Retour à la mission](#niveau-5----joyeux-anniversaire-)_
 
+---
+
 ## Crédits
 
 * **Auteur :** [Ousmane THIONGANE](https://github.com/Mowibox)

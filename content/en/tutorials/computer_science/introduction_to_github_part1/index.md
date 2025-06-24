@@ -162,6 +162,8 @@ The other bolded terms you saw throughout the story — **add, commit, push, pul
     </br>
 </p>
 
+---
+
 ## Credits
 
 * **Author:** [Ousmane THIONGANE](https://github.com/Mowibox)

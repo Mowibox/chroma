@@ -198,6 +198,8 @@ _In this example, you can enable all three filters at once by checking their box
 
 Once all footprints are assigned and the ERC shows no errors, we can move on to PCB layout in the next part.
 
+---
+
 ## Credits
 
 * **Author:** [Ousmane THIONGANE](https://github.com/Mowibox)

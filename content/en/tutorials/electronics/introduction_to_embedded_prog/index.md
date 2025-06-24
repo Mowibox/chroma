@@ -478,6 +478,8 @@ void happyBirthday(){
 
 _[Back to mission](#level-5----happy-birthday-)_
 
+---
+
 ## Credits
 
 * **Author:** [Ousmane THIONGANE](https://github.com/Mowibox)

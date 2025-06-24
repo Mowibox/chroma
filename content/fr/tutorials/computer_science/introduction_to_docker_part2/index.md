@@ -236,9 +236,9 @@ docker run -rm <image name>
 Plusieurs flags peuvent être utilisés en même temps !
 {{< /callout >}}
 
----
-
 Avec ces commandes, vous avez déjà de bonnes bases pour comprendre le fonctionnement des images et des conteneurs. Cependant, à chaque fois que l'on crée un nouveau conteneur, on perd tous les changements que l'on aurait pu faire dans un autre avec une image similaire, et nous n'avons donc pour le moment aucun moyen d'y conserver nos données et nos fichiers. C'est la que le Dockerfile intervient, objet du prochain tutoriel.
+
+---
 
 ## Crédits
 

@@ -161,6 +161,8 @@ Les autres noms que vous avez pu voir en gras tout au long de l'histoire **(add,
     </br>
 </p>
 
+---
+
 ## Crédits
 
 * **Auteur :** [Ousmane THIONGANE](https://github.com/Mowibox)

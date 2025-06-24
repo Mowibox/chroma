@@ -179,6 +179,8 @@ Then you can multiply this sensitivity by your ADC value to get a voltage readin
 * For 4095 LSB: {{< math >}}$4095\times sensitivity = 5 \space V${{< /math >}}
 * For 1024 LSB: {{< math >}}$1024\times sensitivity = 1,25 \space V${{< /math >}}
 
+---
+
 ## Credits
 
 * **Author:** [Ousmane THIONGANE](https://github.com/Mowibox)

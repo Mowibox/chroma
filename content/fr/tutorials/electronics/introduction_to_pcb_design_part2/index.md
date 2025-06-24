@@ -234,6 +234,8 @@ De la même manière qu'avec [l'ERC]({{< relref "tutorials/electronics/introduct
 
 ## Pour aller plus loin
 
+---
+
 ## Crédits
 
 * **Auteur :** [Ousmane THIONGANE](https://github.com/Mowibox)

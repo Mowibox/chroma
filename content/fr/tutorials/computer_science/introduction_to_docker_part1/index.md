@@ -114,9 +114,9 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 
----
-
 Le tutoriel suivant explique le concept propre à Docker des images et des conteneurs et vous apprendra à les prendre en main.
+
+---
 
 ## Crédits
 
