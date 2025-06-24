@@ -23,7 +23,7 @@ seo:
     </br>
 </p>
 
-Toujours dans l'optique de faire de Chroma un espace collaboratif, j'annonce aujourd'hui le lancement du **serveur Discord Chroma !**
+Toujours dans l'optique de faire de Chroma un espace collaboratif, j'annonce aujourd'hui le lancement du **serveur Discord Chroma !** :tada:
 
 Ce serveur a pour but de favoriser les discussions avec toutes les personnes intéressées par les thématiques du site — que ce soit pour poser des questions, demander de l’aide sur les tutoriels proposés, ou encore échanger autour de projets variés.
 
@@ -32,7 +32,7 @@ Ce serveur a pour but de favoriser les discussions avec toutes les personnes int
 ## Comment le rejoindre ?
 
 Pour le rejoindre, il vous suffit de cliquer sur l'icône Discord dans le menu de navigation, ou bien directement via ce lien :
-👉 [Rejoindre le serveur Discord](https://discord.gg/CwP7xzzsds)
+:point_right: [Rejoindre le serveur Discord](https://discord.gg/CwP7xzzsds)
 
 🔴🟠🟡🟢🔵🟣
 

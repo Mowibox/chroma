@@ -23,7 +23,7 @@ seo:
     </br>
 </p>
 
-In keeping with the goal of making Chroma a collaborative space, I’m excited to announce the launch of the **Chroma Discord server**! 🎉
+In keeping with the goal of making Chroma a collaborative space, I’m excited to announce the launch of the **Chroma Discord server**! :tada:
 
 This server is designed to foster discussions among anyone interested in the topics explored on the site — whether you're looking to ask questions, get help with tutorials, or simply share and chat about various projects.
 
@@ -32,7 +32,7 @@ This server is designed to foster discussions among anyone interested in the top
 ## How to join?
 
 You can join by clicking the Discord icon in the site’s navigation menu, or directly through this link:
-👉 [Join the Chroma Discord server](https://discord.gg/CwP7xzzsds)
+:point_right: [Join the Chroma Discord server](https://discord.gg/CwP7xzzsds)
 
 🔴🟠🟡🟢🔵🟣
 

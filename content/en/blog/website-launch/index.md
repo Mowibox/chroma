@@ -41,17 +41,17 @@ Just like a color wheel that brings together every hue, I hope Chroma will event
 
 Here’s what you’ll find (or soon find) on this site:
 
-- :question: **Tutorials:** This section offers various tutorials related to the concepts I've explored during my academic journey.
+- :question: [**Tutorials:**]({{< relref "tutorials/">}}) This section offers various tutorials related to the concepts I've explored during my academic journey.
 
-- :eye: **Computer Vision Courses:** Over time, I've developed a strong interest in Computer Vision. To deepen my own understanding and structure my knowledge, I've dedicated an entire section of Chroma to this field. As an engineer, it's important to master the concepts we explore — but even more valuable to be able to explain them to others.
+- :eye: [**Computer Vision Courses:**]({{< relref "computer_vision/">}}) Over time, I've developed a strong interest in Computer Vision. To deepen my own understanding and structure my knowledge, I've dedicated an entire section of Chroma to this field. As an engineer, it's important to master the concepts we explore — but even more valuable to be able to explain them to others.
 
-- :speech_balloon: **A Blog Area:** This is where I’ll share updates about the website and important announcements — like the one you're currently reading.
+- :speech_balloon: [**A Blog Area:**]({{< relref "tutorials/">}}) This is where I’ll share updates about the website and important announcements — like the one you're currently reading.
 
 ## What’s next?
 
 I plan to regularly update the site with new content. While some topics will require a bit of prior knowledge, my goal is to eventually publish content that’s more accessible to beginners as well.
 
-In a long term, I would also love to make Chroma a collaborative platform: a place where anyone can ask questions, share knowledge, or even publish their own materials.
+In a long term, I would also love to **make Chroma a collaborative platform:** a place where anyone can ask questions, share knowledge, or even publish their own materials.
 
 🔴🟠🟡🟢🔵🟣
 
