@@ -24,7 +24,7 @@ Avec Docker, vous allez pouvoir créer une image spécifique de votre applicatio
 ## Installation sous Linux
 
 {{< callout context="note" title="Note" icon="outline/info-circle" >}}
-La procédure d'installation présentée ci-dessous peut-être retrouvée sur le [site officiel de Docker](https://docs.docker.com/engine/install/ubuntu)
+La procédure d'installation présentée ci-dessous peut-être retrouvée sur le [site officiel de Docker.](https://docs.docker.com/engine/install/ubuntu)
 {{< /callout >}}
 
 Sur votre machine, ouvrez un terminal (Ctrl+Alt+T) et entrez les commandes suivantes :
@@ -113,6 +113,8 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
+
+---
 
 Le tutoriel suivant explique le concept propre à Docker des images et des conteneurs et vous apprendra à les prendre en main.
 
