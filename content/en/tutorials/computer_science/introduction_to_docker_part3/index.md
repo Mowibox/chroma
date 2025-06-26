@@ -130,7 +130,7 @@ COPY my_folder/ my_image_folder
 * Copies "my_folder/" from the host into the container as "my_image_folder/".
 
 {{< callout context="danger" title="Heads-up" icon="outline/alert-square-rounded" >}}
-If your host folder is not named "my_folder", adjust this line accordingly!
+If your host folder is not named "my_folder/", adjust this line accordingly!
 {{< /callout >}}
 
 ```Dockerfile {lineNos=true, lineNoStart=14}
