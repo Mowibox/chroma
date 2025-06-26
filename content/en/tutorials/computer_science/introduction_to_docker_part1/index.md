@@ -1,6 +1,6 @@
 ---
-title: "Using Docker – Part 1"
-summary: Introduction to Docker
+title: "Introduction to Docker – Part 1"
+summary: Docker installation
 weight: 1003
 icon: "docker"
 ---
@@ -19,7 +19,13 @@ _"So it's kind of like a [virtual machine](https://cloud.google.com/learn/what-i
 
 Yes and no! A virtual machine isolates an entire system and has its own resources. Docker, however, shares the host system's kernel resources and interacts with containers, which reduces overhead and improves performance.
 
-With Docker, you can create a specific image of your application, which will encapsulate all the necessary dependencies, libraries, operating system, and more. You can then share this Docker image and run it consistently on any system that supports Docker.
+With Docker, you can create a specific image of your application, which will encapsulate all the necessary dependencies, libraries, operating system, and more. You can then share this Docker image and run it consistently on any system that supports Docker. This means you can even run software that normally requires the latest operating system on much older machines — no updates needed.
+
+Say goodbye to the classic:
+
+> “But it works on my machine!”
+
+With Docker, everyone runs the same image, with the same tools, same versions, and same results.
 
 ## Installation on Linux
 

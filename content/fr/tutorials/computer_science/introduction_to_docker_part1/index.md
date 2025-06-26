@@ -1,6 +1,6 @@
 ---
-title: "Utilisation de Docker – Partie 1"
-summary: Introduction à Docker
+title: "Introduction à Docker – Partie 1"
+summary: Installation de Docker
 weight: 5003
 icon: "docker"
 ---
@@ -19,7 +19,13 @@ _"C'est un peu comme une [machine virtuelle](https://cloud.google.com/learn/what
 
 Oui et non ! Une machine virtuelle isole tout un système et dispose de ses propres ressources. Pour Docker, le noyau va partager les ressources de système hôte et interagir avec les conteneurs, ce qui réduit les surcharges et améliore les performances.
 
-Avec Docker, vous allez pouvoir créer une image spécifique de votre application, qui encapsulera toutes les dépendances nécessaires, les bibliothèques, le système d'exploitation... Vous pourrez ensuite partager cette image Docker et l'exécuter de manière cohérente sur n'importe quel système prenant en charge Docker.
+Avec Docker, vous allez pouvoir créer une image spécifique de votre application, qui encapsulera toutes les dépendances nécessaires, les bibliothèques, le système d'exploitation... Vous pourrez ensuite partager cette image Docker et l'exécuter de manière cohérente sur n'importe quel système prenant en charge Docker. Ainsi, vous pourrez exécuter des logiciels conçus pour les dernières versions d'un système d'exploitation sur des machines qui n'ont pas eu de mise à jour depuis des années.
+
+Fini le fameux :
+
+> "Mais... ça marche sur ma machine !"
+
+Tout le monde utilise la même image, avec les mêmes versions, les mêmes dépendances, et donc les mêmes résultats.
 
 ## Installation sous Linux
 

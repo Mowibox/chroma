@@ -1,5 +1,5 @@
 ---
-title: "Utilisation de Docker – Partie 2"
+title: "Introduction à Docker – Partie 2"
 summary: Images & conteneurs
 weight: 5004
 icon: "docker"
@@ -15,7 +15,16 @@ Cette série de tutoriels vous illustrera comment utiliser Docker avec un ordina
 
 ### Image
 
+Si vous êtes familier avec l'informatique, vous avez probablement déjà entendu parler des images disques : ce sont des fichiers qui contiennent une copie fidèle de la structure et des données d'un disque. Par exemple, c'est ce type d'image qui est utilisé pour installer un système d'exploitation sur une machine (les fichiers `.iso`). Flasher une image sur un disque revient à y recréer une copie fidèle de ses données.
+
+Les images Docker reprennent ce même principe.
+Une image Docker est un fichier contenant tous les fichiers, bibliothèques, dépendances, etc., d'un environnement à un instant donné. Comme pour une image disque, on peut la "flasher"  – dans Docker on appelle ça la "lancer" – pour obtenir un système fonctionnel basé sur cette image.
+
 ### Conteneur
+
+Quand on lance une image, on crée un conteneur. Un peu comme un disque sur lequel on aurait flashé une image : on peut accéder au conteneur et y lancer des programmes créer des fichiers etc. Les modifications apportées au conteneur ne modifieront pas l'image d'origine. Les conteneurs peuvent être démarrés ou stoppés à souhait, à la manière d'un ordinateur qu'on allume ou éteint.
+
+Relancer une image revient donc à créer un nouveau conteneur identique au précédent, mais sans les éventuelles modifications.
 
 ## Manipulation sur les images
 
@@ -51,7 +60,7 @@ ros           humble   168e1f658ab5   3 years ago    753MB
 ```
 
 {{< callout context="note" title="Note" icon="outline/info-circle" >}}
-Comme vous avez peut-être pu le constater avec l'image "hello-world" lors du [tutoriel précédent]({{< relref "tutorials/computer_science/introduction_to_docker_part1">}}) si l'on essaie de lancer le conteneur d'une image sans l'avoir ajoutée, elle peut s'ajouter automatiquement.
+Comme vous avez peut-être pu le constater avec l'image "hello-world" lors du [tutoriel précédent]({{< relref "tutorials/computer_science/introduction_to_docker_part1">}}) si l'on essaie de lancer le conteneur d'une image sans l'avoir ajoutée, Docker l'ajoutera automatiquement.
 {{< /callout >}}
 
 ### Suppression d'images
@@ -67,7 +76,7 @@ mowibox@chroma:~$ docker rmi hello-world
 Error response from daemon: conflict: unable to remove repository reference "hello-world" (must force) - container 55ccfd696889 is using its referenced image 74cc54e27dc4
 ```
 
-La suppression n'a pas fonctionné ! Et je parie que de votre côté non plus. Pourquoi ? Parce que nous avons lancé un conteneur qui est encore actif, donc docker ne nous laisse pas supprimer l'image si facilement. Pour tout de même forcer la suppression, utilisez le flag `-f`
+La suppression n'a pas fonctionné ! Et je parie que de votre côté non plus. Pourquoi ? Parce que nous avons lancé un conteneur qui est encore présent (qu'il soit actif ou à l'arrêt), donc docker ne nous laisse pas supprimer l'image si facilement. Pour tout de même forcer la suppression, utilisez le flag `-f`
 
 ```bash {frame="none"}
 docker rmi -f hello-world
@@ -92,7 +101,7 @@ Ainsi, l'image est bien supprimée de la liste.
 
 ### Création de conteneur
 
-Maintenant, essayez de lancer un conteneur de l'image de ROS 2 Humble avec la commande `run`:
+Maintenant, essayez de démarrer un conteneur de l'image de ROS 2 Humble avec la commande `run`:
 
 ```bash {frame="none"}
 docker run ros:humble
@@ -100,11 +109,13 @@ docker run ros:humble
 
 Paradoxalement, si tout c'est bien passé, rien ne s'est passé... Par défaut, Docker va lancer la commande pour ouvrir un conteneur et le quitter dès qu'il a terminé. Pour le déploiement d'applications, par exemple en robotique, c'est le comportement recherché : On lance le protocole, il s'exécute jusqu'à sa fin puis s'arrête.
 
-Mais comme on en est plutôt à la partie développement, nous aimerions pouvoir utiliser un terminal au sein du conteneur, sans qu'il se ferme sytématiquement. Pour ce faire on utilise le flag `-it` (`i` pour interactive et `t` pour tty) :
+Mais comme on en est plutôt à la partie développement, nous aimerions pouvoir utiliser un terminal au sein du conteneur, sans qu'il se ferme sytématiquement. Pour ce faire on utilise les flags `-it` (`i` pour interactive et `t` pour tty) :
 
 ```bash {frame="none"}
 docker run -it ros:humble
 ```
+
+Exemple :
 
 ```bash {title="root@2f7a757d7c23:/"}
 mowibox@chroma:~$ docker run -it ros:humble
@@ -220,13 +231,13 @@ root@a719943a59fc:/#
 
 La commande `docker run` possède quelques flags supplémentaires qui peuvent s'avérer pratiques.
 
-Le flag `--name` permet de définir un nom pour son conteneur. Cela évite de devoir gérer un nom aléatoire à chaque création de conteneur.
+* Le flag `--name` permet de définir un nom pour son conteneur. Cela évite de devoir gérer un nom aléatoire à chaque création de conteneur :
 
 ```bash {frame="none"}
 docker run --name <container_name> <image_name>
 ```
 
-Le flag `-rm` permet de supprimer automatiquement le conteneur une fois que ce dernier est stoppé.
+* Le flag `-rm` permet de supprimer automatiquement le conteneur une fois que ce dernier est stoppé :
 
 ```bash {frame="none"}
 docker run -rm <image name>
