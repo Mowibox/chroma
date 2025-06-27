@@ -75,7 +75,7 @@ Then check if the docker service is enabled:
 systemctl is-enabled docker
 ```
 
-If it is not, you can enable it by entering the following commands:
+If it's not, you can enable it by entering the following commands:
 
 ```bash {frame="none"}
 sudo systemctl enable docker.service

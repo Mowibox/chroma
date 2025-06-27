@@ -95,13 +95,13 @@ Regardons en détail les lignes du fichier pour bien comprendre ce qui s'y passe
 FROM ubuntu:20.04
 ```
 
-* La commande `FROM` permet de spécifier depuis quelle base notre image va être créée, ici ce sera Ubuntu 20:04.
+* La commande `FROM` permet de spécifier à partir de quelle image de base notre image va être créée, ici, ce sera Ubuntu 20:04.
 
 ```Dockerfile {lineNos=true, lineNoStart=4}
 RUN apt-get update && apt-get upgrade -y
 ```
 
-* `RUN` permet de lancer une commande, ici on met à jour et installe les paquets disponibles d'Ubuntu.
+* `RUN` permet de lancer une commande, ici, on met à jour et installe les paquets disponibles d'Ubuntu.
 
 {{< callout context="note" title="Pourquoi utilise-t-on le flag '-y' ?" icon="outline/info-circle" >}}
 Le flag `-y` permet de répondre automatiquement "yes" à toutes les confirmations demandées par la commande. Cela permet d'automatiser le processus sans intervention de votre part.
@@ -111,7 +111,7 @@ Le flag `-y` permet de répondre automatiquement "yes" à toutes les confirmatio
 RUN apt-get install -y git python3-pip nano
 ```
 
-* Ici on installe des outils qui peuvent s'avérer utiles pour le développement:
+* Ici, on installe des outils qui peuvent s'avérer utiles pour le développement:
   * `git` : Pour pouvoir utiliser GitHub/GitLab.
   * `python3-pip` : Pour installer des paquets Python.
   * `nano` pour l'édition de texte dans le terminal.
@@ -148,7 +148,7 @@ Ouvrez un terminal à l'emplacement de votre `Dockerfile`, (par exemple dans le 
 docker build -t <image_name> .
 ```
 
-en remplaçant `<image_name>` par le nom que vous voulez donner à votre image. Le deuxième argument correspond au chemin pour accéder au Dockerfile, comme nous sommes déjà à l'emplacement du fichier, il suffit de mettre un `.` pour dire à docker d'utiliser le répertoire actuel comme répertoire de construction.
+en remplaçant `<image_name>` par le nom que vous voulez donner à votre image. Le deuxième argument correspond au chemin pour accéder au Dockerfile, comme nous sommes déjà à l'emplacement du fichier, il suffit de mettre un `.` pour dire à Docker d'utiliser le répertoire actuel comme répertoire de construction.
 
 Vous verrez ainsi toutes les couches de votre Dockerfile s'exécuter les unes après les autres :
 
@@ -175,7 +175,7 @@ mowibox@chroma:~$ docker build -t my_custom_ubuntu .
  => # Building dependency tree...
 ```
 
-La construction de l'image peut prendre un moment. Une fois terminée, vous pourrez voir votre nouvelle image dans la liste des images avec (`docker images`).
+La construction de l'image peut prendre un moment. Une fois terminée, vous pourrez voir votre nouvelle image dans la liste des images (`docker images`).
 
 Exemple :
 
@@ -226,7 +226,7 @@ boot  etc  lib   lib64  log     mnt    opt              root  run               
 
 On constate notamment que les dossiers "my_image_folder/" et "workspace/" sont bien inclus dans le conteneur.
 
-If you navigate to the “my_image_folder/” folder, you'll find my Python file that you can run:
+Si je navigue vers le dossier « my_image_folder/ », je retrouve mon fichier Python que je peux exécuter :
 
 ```bash {title="root@3d18c90647a5:/"}
 root@3d18c90647a5:/# cd my_image_folder/
@@ -268,7 +268,7 @@ Avec ce tutoriel, vous avez pu appréhender les bases de Docker : création d’
 
 Vous pouvez, par exemple, partager des dossiers/fichiers directement entre la machine hôte et le conteneur en temps réel, plutôt que d'en faire une copie.
 
-On constate également que dans un conteneur Docker, vous êtes défini par défaut en tant que  super-utilisateur (root), c'est pourquoi il n'y pas besoin d'ajouter `sudo` dans vos commandes (`apt install` au lieu de `sudo apt install`). Avoir les pleins pouvoirs peut poser des problèmes de sécurité, c'est pourquoi il est recommandé de définir des utilisateurs non privilégiés avec la commande `USER`.
+On constate également que dans un conteneur Docker, vous êtes définis par défaut en tant que  super-utilisateur (root), c'est pourquoi il n'y pas besoin d'ajouter `sudo` dans vos commandes (`apt install` au lieu de `sudo apt install`). Avoir les pleins pouvoirs peut poser des problèmes de sécurité, c'est pourquoi il est recommandé de définir des utilisateurs non privilégiés avec la commande `USER`.
 
 ```Dockerfile
 RUN useradd -m username

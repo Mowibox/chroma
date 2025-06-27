@@ -139,7 +139,7 @@ RUN mkdir -p /workspace
 
 * This line creates a "/workspace" directory at the container root.
 
-### Construction de l'image
+### Building the image
 
 With the `Dockerfile` ready, we can proceed with building the Docker image.
 
@@ -225,6 +225,8 @@ boot  etc  lib   lib64  log     mnt    opt              root  run               
 ```
 
 If everything goes well, you should see "my_image_folder/" and "workspace/".
+
+If you navigate to the “my_image_folder/”, you'll find the Python file that you can run:
 
 ```bash {title="root@3d18c90647a5:/"}
 root@3d18c90647a5:/# cd my_image_folder/

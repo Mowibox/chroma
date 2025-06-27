@@ -30,7 +30,7 @@ Relancer une image revient donc à créer un nouveau conteneur identique au pré
 
 ### Liste et ajout d'images
 
-Vous pouvez voir la liste des images au sein de votre docker avec la ligne de commande suivante :
+Vous pouvez voir la liste des images au sein de votre Docker avec la ligne de commande suivante :
 
 ```bash {frame="none"}
 docker images
@@ -76,7 +76,7 @@ mowibox@chroma:~$ docker rmi hello-world
 Error response from daemon: conflict: unable to remove repository reference "hello-world" (must force) - container 55ccfd696889 is using its referenced image 74cc54e27dc4
 ```
 
-La suppression n'a pas fonctionné ! Et je parie que de votre côté non plus. Pourquoi ? Parce que nous avons lancé un conteneur qui est encore présent (qu'il soit actif ou à l'arrêt), donc docker ne nous laisse pas supprimer l'image si facilement. Pour tout de même forcer la suppression, utilisez le flag `-f`
+La suppression n'a pas fonctionné ! Et je parie que de votre côté non plus. Pourquoi ? Parce que nous avons lancé un conteneur qui est encore présent (qu'il soit actif ou à l'arrêt), donc Docker ne nous laisse pas supprimer l'image si facilement. Pour tout de même forcer la suppression, utilisez le flag `-f`
 
 ```bash {frame="none"}
 docker rmi -f hello-world
@@ -160,7 +160,7 @@ bash: ros2: command not found
 Pour quitter le conteneur, deux méthodes s'offrent à vous :
 
 * Dans le conteneur : Utilisez le raccourci "CTRL + D" ou la commande `exit`.
-* Avec le second terminal : Utiliser la commande `docker stop <name>`, `<name>` étant le nom du conteneur généré dans la liste des conteneurs. Dans mon cas, le conteneur se nomme "suspicious_black" donc je vais utiliser la commande :
+* Avec le second terminal : Utilisez la commande `docker stop <name>`, `<name>` étant le nom du conteneur généré dans la liste des conteneurs. Dans mon cas, le conteneur se nomme "suspicious_black" donc je vais utiliser la commande :
 
 ```bash {frame="none"}
 docker stop suspicious_black  # Adaptez la commande au nom de votre conteneur
