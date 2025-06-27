@@ -283,4 +283,4 @@ Pour finir, voici une excellente vidéo (en anglais) d'[Articulated Robotics](ht
 
 * **Rédacteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
 * **Dernière mise à jour :** Juin 2025
-* **Relecteurs :**
+* **Relecteur :**

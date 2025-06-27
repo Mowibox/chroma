@@ -167,4 +167,4 @@ Les autres noms que vous avez pu voir en gras tout au long de l'histoire **(add,
 
 * **Rédacteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
 * **Dernière mise à jour :** Mai 2025
-* **Relecteurs :** Loubna LATRECHE
+* **Relecteur :** Loubna LATRECHE
