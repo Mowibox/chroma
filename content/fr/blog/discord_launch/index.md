@@ -2,8 +2,8 @@
 title: "Création d'un Discord"
 description: ""
 summary: "Création et lancement d'un serveur Discord pour Chroma"
-date:  2025-07-01T01:16:05+02:00
-lastmod:  2025-07-01T01:16:05+02:00
+date:  2024-07-01T01:16:05+02:00
+lastmod:  2024-07-01T01:16:05+02:00
 draft: false
 weight: 49
 categories: []

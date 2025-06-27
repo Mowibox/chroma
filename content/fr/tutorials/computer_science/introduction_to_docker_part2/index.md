@@ -22,7 +22,7 @@ Une image Docker est un fichier contenant tous les fichiers, bibliothèques, dé
 
 ### Conteneur
 
-Quand on lance une image, on crée un conteneur. Un peu comme un disque sur lequel on aurait flashé une image : on peut accéder au conteneur et y lancer des programmes créer des fichiers etc. Les modifications apportées au conteneur ne modifieront pas l'image d'origine. Les conteneurs peuvent être démarrés ou stoppés à souhait, à la manière d'un ordinateur qu'on allume ou éteint.
+Quand on lance une image, on crée un conteneur. Un peu comme un disque sur lequel on aurait flashé une image : on peut accéder au conteneur et y lancer des programmes, créer des fichiers, etc. Les modifications apportées au conteneur ne modifieront pas l'image d'origine. Les conteneurs peuvent être démarrés ou stoppés à souhait, à la manière d'un ordinateur qu'on allume ou éteint.
 
 Relancer une image revient donc à créer un nouveau conteneur identique au précédent, mais sans les éventuelles modifications.
 
@@ -107,7 +107,7 @@ Maintenant, essayez de démarrer un conteneur de l'image de ROS 2 Humble avec la
 docker run ros:humble
 ```
 
-Paradoxalement, si tout c'est bien passé, rien ne s'est passé... Par défaut, Docker va lancer la commande pour ouvrir un conteneur et le quitter dès qu'il a terminé. Pour le déploiement d'applications, par exemple en robotique, c'est le comportement recherché : On lance le protocole, il s'exécute jusqu'à sa fin puis s'arrête.
+Paradoxalement, si tout s'est bien passé, rien ne s'est passé... Par défaut, Docker va lancer la commande pour ouvrir un conteneur et le quitter dès qu'il a terminé. Pour le déploiement d'applications, par exemple en robotique, c'est le comportement recherché : On lance le protocole, il s'exécute jusqu'à sa fin puis s'arrête.
 
 Mais comme on en est plutôt à la partie développement, nous aimerions pouvoir utiliser un terminal au sein du conteneur, sans qu'il se ferme sytématiquement. Pour ce faire on utilise les flags `-it` (`i` pour interactive et `t` pour tty) :
 
@@ -255,4 +255,4 @@ Avec ces commandes, vous avez déjà de bonnes bases pour comprendre le fonction
 
 * **Rédacteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
 * **Dernière mise à jour :** Juin 2025
-* **Relecteur :**
+* **Relecteur :** Loubna LATRECHE

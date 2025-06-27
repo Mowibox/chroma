@@ -125,4 +125,4 @@ workon rmvirtualenv venv_name
 
 * **Rédacteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
 * **Dernière mise à jour :** Juin 2025
-* **Relecteur :**
+* **Relecteur :** Loubna LATRECHE

@@ -70,7 +70,7 @@ docker_folder/
 
 Ouvrez le fichier `Dockerfile` dans un éditeur de texte ou un IDE comme [Visual Studio Code](https://code.visualstudio.com/download).
 
-Voilà le contenu que devez mettre au sein du fichier :
+Voilà le contenu que vous devez mettre au sein du fichier :
 
 ```Dockerfile {title="Dockerfile", lineNos=true}
 FROM ubuntu:20.04
