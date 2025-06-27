@@ -185,4 +185,4 @@ Then you can multiply this sensitivity by your ADC value to get a voltage readin
 
 * **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
 * **Lastest update:** June 2025
-* **Reviewer:** [Gauthier BIEHLER](https://github.com/Minorzar), Loubna LATRECHE
+* **Reviewer:**
