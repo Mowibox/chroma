@@ -122,6 +122,6 @@ workon rmvirtualenv venv_name
 
 ## Credits
 
-* **Author:** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
 * **Lastest update:** June 2025
-* **Contributors:**
+* **Reviewer:**

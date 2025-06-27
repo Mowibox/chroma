@@ -253,6 +253,6 @@ Avec ces commandes, vous avez déjà de bonnes bases pour comprendre le fonction
 
 ## Crédits
 
-* **Auteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Rédacteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
 * **Dernière mise à jour :** Juin 2025
-* **Contribueurs :**
+* **Relecteur :**
