@@ -43,7 +43,7 @@ Voici ce que vous pourrez trouver (ou bientôt trouver) sur ce site :
 
 - :question: [**Des Tutoriels :**]({{< relref "tutorials/">}}) Comme son nom l'indique, cette section du site contient différents tutoriels liés aux concepts explorés dans ma scolarité.
 
-- :eye: [**Des cours de Computer Vision :**]({{< relref "computer_vision/">}}) Au cours de ma carrière, je me suis découvert une passion pour la  Vision par Ordinateur (Computer Vision), c'est pourquoi, pour approfondir ma propre compréhension et structurer mes connaissances, j'ai décidé de dédier une section entière de Chroma à cette matière. Quand on est ingénieur, c'est important de s'approprier les concepts que l'on explore, mais c'est encore mieux de réussir à les transmettre.
+- :eye: [**Des cours de Computer Vision :**]({{< relref "computer_vision/">}}) Au cours de ma carrière, je me suis découvert une passion pour la Vision par Ordinateur (Computer Vision), c'est pourquoi, pour approfondir ma propre compréhension et structurer mes connaissances, j'ai décidé de dédier une section entière de Chroma à cette matière. Quand on est ingénieur, c'est important de s'approprier les concepts que l'on explore, mais c'est encore mieux de réussir à les transmettre.
 
 - :speech_balloon: [**Un espace Blog :**]({{< relref "blog/">}}) C'est cet espace que je vais privilégier pour partager les améliorations du site web et les annonces, comme celle que vous lisez actuellement.
 
