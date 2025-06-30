@@ -1,7 +1,7 @@
 ---
 title: "Using the ADC"
 summary: With STM32 Cube IDE software
-weight: 3004
+weight: 2004
 icon: "wave-square"
 ---
 
@@ -184,5 +184,5 @@ Then you can multiply this sensitivity by your ADC value to get a voltage readin
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Lastest update:** June 2025
+* **Latest update:** June 2025
 * **Reviewer:**

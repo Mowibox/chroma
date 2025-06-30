@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Git and GitHub – Part 1"
 summary: Understanding the basics through drawings
-weight: 1001
+weight: 1003
 icon: "git"
 ---
 
@@ -167,5 +167,5 @@ The other bolded terms you saw throughout the story — **add, commit, push, pul
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Lastest update:** May 2025
+* **Latest update:** May 2025
 * **Reviewer:** Loubna LATRECHE, Justine XIANG

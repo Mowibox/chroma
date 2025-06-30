@@ -1,7 +1,7 @@
 ---
 title: "Introduction to printed circuit board design – Part 2"
 summary: With KiCad software - Routing
-weight: 3003
+weight: 2003
 icon: "chip"
 ---
 
@@ -237,5 +237,5 @@ Just like the [ERC]({{< relref "tutorials/electronics/introduction_to_pcb_design
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Lastest update:** June 2025
+* **Latest update:** June 2025
 * **Reviewer:** Loubna LATRECHE

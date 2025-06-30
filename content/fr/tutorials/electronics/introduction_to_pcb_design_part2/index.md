@@ -1,7 +1,7 @@
 ---
 title: "Initiation à la conception de circuits imprimés – Partie 2"
 summary: Avec le logiciel KiCad - Routage
-weight: 6003
+weight: 2003
 icon: "chip"
 ---
 

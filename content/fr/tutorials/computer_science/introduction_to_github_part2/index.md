@@ -1,7 +1,7 @@
 ---
 title: "Introduction à Git et GitHub – Partie 2"
 summary: Mise en pratique de la théorie
-weight: 5002
+weight: 1004
 icon: "github"
 ---
 

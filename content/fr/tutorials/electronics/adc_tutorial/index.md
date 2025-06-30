@@ -1,7 +1,7 @@
 ---
 title: "Tutoriel d'utilisation de l'ADC"
 summary: Avec le logiciel STM32 Cube IDE
-weight: 6004
+weight: 2004
 icon: "wave-square"
 ---
 

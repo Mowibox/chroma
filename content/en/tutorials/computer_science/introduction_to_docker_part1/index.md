@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Docker – Part 1"
 summary: Docker installation
-weight: 1003
+weight: 1006
 icon: "docker"
 ---
 
@@ -127,5 +127,5 @@ The next tutorial explains the Docker concept of images and containers and teach
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Lastest update:** June 2025
+* **Latest update:** June 2025
 * **Reviewer:**

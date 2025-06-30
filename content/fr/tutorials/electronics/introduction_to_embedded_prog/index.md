@@ -1,7 +1,7 @@
 ---
 title: "Initiation à la programmation embarquée"
 summary: Avec le logiciel Arduino
-weight: 6001
+weight: 2001
 icon: "laptop"
 ---
 

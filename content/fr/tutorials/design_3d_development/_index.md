@@ -1,7 +1,7 @@
 ---
 title: "Conception & Développement 3D"
 summary: "Au royaume des axes, le cube est roi"
-weight: 7000
+weight: 3000
 icon: "cube3D"
 ---
 

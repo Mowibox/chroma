@@ -1,7 +1,7 @@
 ---
 title: "Initiation à la conception de circuits imprimés – Partie 1"
 summary: Avec le logiciel KiCad - Schématique
-weight: 6002
+weight: 2002
 icon: "chip"
 ---
 

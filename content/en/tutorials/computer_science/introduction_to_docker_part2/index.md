@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Docker – Part 2"
 summary: Images & containers
-weight: 1004
+weight: 1007
 icon: "docker"
 ---
 
@@ -256,5 +256,5 @@ With these commands, you already have a solid foundation in how images and conta
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Lastest update:** June 2025
+* **Latest update:** June 2025
 * **Reviewer:**

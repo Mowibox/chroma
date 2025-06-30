@@ -1,7 +1,7 @@
 ---
 title: "Setting up a virtual environment"
 summary: With Python
-weight: 1006
+weight: 1005
 icon: "laptop"
 ---
 
@@ -28,25 +28,25 @@ This is known as a **virtual environment**.
 
 * Check that `pip` is installed on your machine:
 
-```bash {frame=none}
+```bash {frame="none"}
 sudo apt-get install python3-pip
 ```
 
 * Install the `virtualenvwrapper` package:
 
-```bash {frame=none}
+```bash {frame="none"}
 sudo pip3 install virtualenvwrapper
 ```
 
 * Once the module is installed, you need to add some configuration lines to your `~/.bashrc file` (a terminal configuration file executed at each session startup). To do this, open `~/.bashrc` with a text editor, for example using Visual Studio Code:
 
-```bash {frame=none}
+```bash {frame="none"}
 sudo code ~/.bashrc
 ```
 
 * After opening the file, add the following lines:
 
-```bashrc {frame=none}
+```bashrc {frame="none"}
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
@@ -58,7 +58,7 @@ Save and close the file. You now have everything you need to start creating virt
 
 To create a virtual environment, run the following command:
 
-```bash {frame=none}
+```bash {frame="none"}
 mkvirtualenv venv_name
 ```
 
@@ -85,13 +85,13 @@ From this point on, any command you run (e.g. `pip install`) will take place wit
 
 When you're done working, you can deactivate the environment by running:
 
-```bash {frame=none}
+```bash {frame="none"}
 deactivate
 ```
 
 If you want to use a specific version of Python installed on your machine, use the `-p` flag to specify it:
 
-```bash {frame=none}
+```bash {frame="none"}
 mkvirtualenv -p python3.x venv_name
 ```
 
@@ -99,7 +99,7 @@ where `x` is the desired version number.
 
 To access an already created virtual environment, use the command:
 
-```bash {frame=none}
+```bash {frame="none"}
 workon venv_name
 ```
 
@@ -114,7 +114,7 @@ my_venv     my_other_venv    my_other_other_venv
 
 Finally, to delete an inactive virtual environment, use the command:
 
-```bash {frame=none}
+```bash {frame="none"}
 workon rmvirtualenv venv_name
 ```
 
@@ -123,5 +123,5 @@ workon rmvirtualenv venv_name
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Lastest update:** June 2025
+* **Latest update:** June 2025
 * **Reviewer:**

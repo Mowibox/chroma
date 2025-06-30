@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Docker – Part 3"
 summary: Dockerfile creation
-weight: 1005
+weight: 1008
 icon: "docker"
 ---
 
@@ -282,5 +282,5 @@ Finally, here's an excellent video from [Articulated Robotics](https://www.youtu
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Lastest update:** June 2025
+* **Latest update:** June 2025
 * **Reviewer:**

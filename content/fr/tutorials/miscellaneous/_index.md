@@ -1,8 +1,9 @@
 ---
 title: "Autres"
 summary: La catégorie des inclassables
-weight: 8000
+weight: 4000
+type: "cardlist"
 icon: "other"
 ---
 
-Coming soon!
+

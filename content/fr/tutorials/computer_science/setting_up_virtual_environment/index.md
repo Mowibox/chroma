@@ -1,7 +1,7 @@
 ---
 title: "Création d'un environnement virtuel"
 summary: Avec Python
-weight: 5006
+weight: 1005
 icon: "laptop"
 ---
 
@@ -28,25 +28,25 @@ C'est ce qu'on appelle **un environnement virtuel.**
 
 * Vérifiez que vous avez bien `pip` installé sur votre machine :
 
-```bash {frame=none}
+```bash {frame="none"}
 sudo apt-get install python3-pip
 ```
 
 * Installez le module `virtualenvwrapper` :
 
-```bash {frame=none}
+```bash {frame="none"}
 sudo pip3 install virtualenvwrapper
 ```
 
 * Une fois le module installé, il faut rajouter des lignes de configuration à votre fichier `~/.bashrc` (fichier de configuration du terminal exécuté à chaque démarrage de session). Pour ce faire, ouvrez `~/.bashrc` avec un éditeur de texte, par exemple avec Visual Studio Code:
 
-```bash {frame=none}
+```bash {frame="none"}
 sudo code ~/.bashrc
 ```
 
 * Après l'avoir ouvert, ajoutez-y les lignes suivantes :
 
-```bashrc {frame=none}
+```bashrc {frame="none"}
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
@@ -58,7 +58,7 @@ Sauvegardez et fermez le fichier. Vous avez maintenant ce qu'il faut pour commen
 
 La commande pour créer un environnement virtuel est la suivante :
 
-```bash {frame=none}
+```bash {frame="one"}
 mkvirtualenv venv_name
 ```
 
@@ -86,13 +86,13 @@ virtualenvwrapper.user_scripts creating /home/mowibox/.virtualenvs/my_venv/bin/g
 
 Une fois votre travail terminé, vous pouvez quitter l'environnement en utilisant la commande :
 
-```bash {frame=none}
+```bash {frame="none"}
 deactivate
 ```
 
 Si vous avez une version de Python installée sur votre machine que vous souhaitez utiliser spécifiquement, utilisez le flag `-p` pour spécifier sa version :
 
-```bash {frame=none}
+```bash {frame="none"}
 mkvirtualenv -p python3.x venv_name
 ```
 
@@ -100,7 +100,7 @@ avec `x`, le numéro de la version désirée.
 
 Pour accéder à un environnement virtuel déjà créé, entrez la commande :
 
-```bash {frame=none}
+```bash {frame="none"}
 workon venv_name
 ```
 
@@ -115,7 +115,7 @@ my_venv     my_other_venv    my_other_other_venv
 
 Enfin, pour supprimer un environnement virtuel inactif, utilisez la commande :
 
-```bash {frame=none}
+```bash {frame="none"}
 workon rmvirtualenv venv_name
 ```
 

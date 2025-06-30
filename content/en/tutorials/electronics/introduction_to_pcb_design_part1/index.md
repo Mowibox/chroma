@@ -1,7 +1,7 @@
 ---
 title: "Introduction to printed circuit board design – Part 1"
 summary: With KiCad software - Schematic
-weight: 3002
+weight: 2002
 icon: "chip"
 ---
 
@@ -203,5 +203,5 @@ Once all footprints are assigned and the ERC shows no errors, we can move on to 
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Lastest update:** June 2025
+* **Latest update:** June 2025
 * **Reviewer:** Loubna LATRECHE

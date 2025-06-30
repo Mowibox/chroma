@@ -1,7 +1,7 @@
 ---
 title: "Introduction to embedded programming"
 summary: With Arduino IDE software
-weight: 3001
+weight: 2001
 icon: "laptop"
 ---
 
@@ -483,5 +483,5 @@ _[Back to mission](#level-5----happy-birthday-)_
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Lastest update:** May 2025
+* **Latest update:** May 2025
 * **Reviewer:** Loubna LATRECHE

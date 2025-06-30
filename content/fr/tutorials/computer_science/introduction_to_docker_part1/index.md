@@ -1,7 +1,7 @@
 ---
 title: "Introduction à Docker – Partie 1"
 summary: Installation de Docker
-weight: 5003
+weight: 1006
 icon: "docker"
 ---
 
@@ -13,24 +13,24 @@ Cette série de tutoriels vous illustrera comment utiliser Docker avec un ordina
 
 ## Docker ?
 
-Docker est un outil open-source qui permet d'empaqueter une application et ses dépendances dans un environnement isolé, (appelé conteneur) pouvant être exécuté sur n'importe quel serveur.
+Docker est un outil open-source qui permet d’empaqueter une application avec toutes ses dépendances dans un environnement isolé (appelé conteneur) pouvant être exécuté sur n’importe quel serveur.
 
-_"C'est un peu comme une [machine virtuelle](https://cloud.google.com/learn/what-is-a-virtual-machine?hl=fr) alors...?"_
+_"C’est un peu comme une [machine virtuelle](https://cloud.google.com/learn/what-is-a-virtual-machine?hl=fr), alors…?"_
 
-Oui et non ! Une machine virtuelle isole tout un système et dispose de ses propres ressources. Pour Docker, le noyau va partager les ressources de système hôte et interagir avec les conteneurs, ce qui réduit les surcharges et améliore les performances.
+Oui et non ! Une machine virtuelle isole un système entier, avec son propre noyau et ses ressources. Docker, en revanche, partage le noyau du système hôte avec ses conteneurs, ce qui réduit les surcharges et améliore les performances.
 
-Avec Docker, vous allez pouvoir créer une image spécifique de votre application, qui encapsulera toutes les dépendances nécessaires, les bibliothèques, le système d'exploitation... Vous pourrez ensuite partager cette image Docker et l'exécuter de manière cohérente sur n'importe quel système prenant en charge Docker. Ainsi, vous pourrez exécuter des logiciels conçus pour les dernières versions d'un système d'exploitation sur des machines qui n'ont pas eu de mise à jour depuis des années.
+Docker vous permet de créer une image de votre application, contenant toutes les bibliothèques, dépendances, outils et même un système d’exploitation. Vous pouvez ensuite l’exécuter de manière cohérente sur n’importe quelle machine compatible avec Docker.
 
 Fini le fameux :
 
-> "Mais... ça marche sur ma machine !"
+> “Mais… ça marche sur ma machine !”
 
-Tout le monde utilise la même image, avec les mêmes versions, les mêmes dépendances, et donc les mêmes résultats.
+Avec Docker, tout le monde utilise la même image, les mêmes versions et obtient les mêmes résultats.
 
 ## Installation sous Linux
 
 {{< callout context="note" title="Note" icon="outline/info-circle" >}}
-La procédure d'installation présentée ci-dessous peut-être retrouvée sur le [site officiel de Docker.](https://docs.docker.com/engine/install/ubuntu)
+La procédure d'installation présentée ci-dessous peut être retrouvée sur le [site officiel de Docker.](https://docs.docker.com/engine/install/ubuntu)
 {{< /callout >}}
 
 Sur votre machine, ouvrez un terminal (Ctrl+Alt+T) et entrez les commandes suivantes :
@@ -82,13 +82,13 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
 
-Une fois toutes les commandes rentrées, vous pouvez redémarrer votre système pour que les modifications soient effectives :
+Une fois toutes les commandes saisies, vous pouvez redémarrer votre système pour que les modifications soient effectives :
 
 ```bash {frame="none"}
 reboot
 ```
 
-Et voilà ! Votre docker est prêt à l'emploi. Vous pouvez exécuter la commande `docker run hello-world` dans le terminal pour vous en assurer. Vous devriez obtenir le résultat ci-dessous :
+Et voilà ! Votre Docker est prêt à l'emploi. Vous pouvez exécuter la commande `docker run hello-world` dans le terminal pour vous en assurer. Vous devriez obtenir le résultat ci-dessous :
 
 ```bash {title="Terminal"}
 mowibox@chroma:~$ docker run hello-world

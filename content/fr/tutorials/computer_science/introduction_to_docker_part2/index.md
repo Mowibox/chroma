@@ -1,7 +1,7 @@
 ---
 title: "Introduction à Docker – Partie 2"
 summary: Images & conteneurs
-weight: 5004
+weight: 1007
 icon: "docker"
 ---
 
