@@ -428,5 +428,5 @@ This section acts as a **cheat sheet**, summarizing all the commands we've just 
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Latest update:** June 2025
+* **Latest update:** Juillet 2025
 * **Reviewer:**

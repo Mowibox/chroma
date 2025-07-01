@@ -1,5 +1,5 @@
 ---
-title: "Utilisation du terminal"
+title: "Utilisation du Terminal"
 summary: Les commandes pratiques
 weight: 1001
 icon: "terminal"
@@ -440,5 +440,5 @@ Cette section fait office **d'aide-mémoire** en résumant l'ensemble des comman
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Dernière mise à jour :** Juin 2025
+* **Dernière mise à jour :** Juillet 2025
 * **Relecteur :**
