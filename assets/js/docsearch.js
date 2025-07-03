@@ -5,7 +5,14 @@ docsearch({
   appId: "TKZVOZXZA2",
   indexName: "mowiboxio",
   apiKey: "eac0e4796e0867dbc1c51ab466a9bc1f",
-  insights: true
+  searchParameters: {
+    // wrap your filter in its own array
+    facetFilters: [
+      [`lang:${window.siteLang}`]
+    ],
+  },
+
+  insights: true,
 });
 
 const onClick = function () {

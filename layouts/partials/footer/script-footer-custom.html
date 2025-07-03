@@ -12,4 +12,13 @@
 {{ end -}}
 */}}
 
-{{ if site.Params.add_ons.docSearch -}} {{ partial "footer/esbuild" (dict "src" "js/docsearch.js" "load" "async" "transpile" false) -}} {{ end -}}
+{{ if site.Params.add_ons.docSearch -}}
+  <script>
+    window.siteLang = "{{ .Site.Language.Lang }}";
+  </script>
+  {{ partial "footer/esbuild" (dict "src" "js/docsearch.js" "load" "async" "transpile" false) -}}
+{{ end -}}
+
+
+
+{{/*  {{ if site.Params.add_ons.docSearch -}} {{ partial "footer/esbuild" (dict "src" "js/docsearch.js" "load" "async" "transpile" false) -}} {{ end -}}  */}}
