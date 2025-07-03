@@ -480,4 +480,4 @@ _[Retour à la mission](#niveau-5----joyeux-anniversaire-)_
 
 * **Rédacteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
 * **Dernière mise à jour :** Mai 2025
-* **Relecteur :** Loubna LATRECHE
+* **Relecteurs :** Loubna LATRECHE, Alexandre PETIT
