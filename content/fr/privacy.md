@@ -7,10 +7,10 @@ lastmod:  2025-07-04T01:16:05+02:00
 draft: false
 type: "legal"
 seo:
-  title: "" # titre personnalisé (optionnel)
-  description: "" # description personnalisée (recommandée)
-  canonical: "" # URL canonique personnalisée (optionnelle)
-  robots: "" # balises robots personnalisées (optionnelles)
+  title: ""
+  description: ""
+  canonical: ""
+  robots: ""
 ---
 
 Cette Politique de Confidentialité décrit nos politiques et procédures concernant la collecte, l'utilisation et la divulgation de vos informations lorsque vous utilisez le Service, ainsi que vos droits à la vie privée et la manière dont la loi vous protège.
@@ -86,19 +86,28 @@ Les Cookies peuvent être "persistants" ou "de session". Les Cookies persistants
 Nous utilisons les deux types de Cookies pour les raisons suivantes :
 
 * **Cookies essentiels / nécessaires**
-  Type : Cookies de session
-  Administré par : Nous
-  Finalité : Fournir les services demandés via le site web et permettre l’utilisation de certaines fonctionnalités (authentification, prévention de la fraude...).
+
+  * Type : Cookies de session
+
+  * Administré par : Nous
+
+  * Finalité : Fournir les services demandés via le site web et permettre l’utilisation de certaines fonctionnalités (authentification, prévention de la fraude...).
 
 * **Cookies d’acceptation de la politique**
-  Type : Cookies persistants
-  Administré par : Nous
-  Finalité : Identifier si les utilisateurs ont accepté l'utilisation des cookies.
+
+  * Type : Cookies persistants
+
+  * Administré par : Nous
+
+  * Finalité : Identifier si les utilisateurs ont accepté l'utilisation des cookies.
 
 * **Cookies de fonctionnalité**
-  Type : Cookies persistants
-  Administré par : Nous
-  Finalité : Mémoriser vos préférences (ex : identifiants, langue...) pour améliorer votre expérience.
+
+  * Type : Cookies persistants
+
+  * Administré par : Nous
+
+  * Finalité : Mémoriser vos préférences (ex : identifiants, langue...) pour améliorer votre expérience.
 
 Pour plus d’informations, consultez notre politique sur les Cookies.
 

@@ -84,27 +84,27 @@ We use both Session and Persistent Cookies for the purposes set out below:
 
 * **Necessary / Essential Cookies**
 
-Type: Session Cookies
+  * Type: Session Cookies
 
-Administered by: Us
+  * Administered by: Us
 
-Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.
+  * Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.
 
 * **Cookies Policy / Notice Acceptance Cookies**
 
-Type: Persistent Cookies
+  * Type: Persistent Cookies
 
-Administered by: Us
+  * Administered by: Us
 
-Purpose: These Cookies identify if users have accepted the use of cookies on the Website.
+  * Purpose: These Cookies identify if users have accepted the use of cookies on the Website.
 
 * **Functionality Cookies**
 
-Type: Persistent Cookies
+  * Type: Persistent Cookies
 
-Administered by: Us
+  * Administered by: Us
 
-Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.
+  * Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.
 
 For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.
 
