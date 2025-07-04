@@ -77,12 +77,12 @@
 #   pageRef = "/docs/resources"
 #   weight = 30
 
-# [[footer]]
-#   name = "Privacy Policy"
-#   url = "/privacy/"
-#   weight = 10
+[[footer]]
+  name = "Privacy Policy"
+  url = "/en/privacy/"
+  weight = 20
 
-# [[footer]]
-#   name = "Terms of Service"
-#   url = "/terms/"
-#   weight = 20
+[[footer]]
+  name = "Terms of Service"
+  url = "/en/terms/"
+  weight = 10
