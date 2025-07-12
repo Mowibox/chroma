@@ -135,9 +135,13 @@ We respect the intellectual property rights of others. If you believe that any m
 By using the Services, you represent and warrant that:
 
 (1) you have the legal capacity and you agree to comply with these Legal Terms;
+
 (2) you are not a minor in the jurisdiction in which you reside;
+
 (3) you will not access the Services through automated or non-human means, whether through a bot, script or otherwise;
+
 (4) you will not use the Services for any illegal or unauthorized purpose; and
+
 (5) your use of the Services will not violate any applicable law or regulation.
 
 If you provide any information that is untrue, inaccurate, not current, or incomplete, we have the right to suspend or terminate your account and refuse any and all current or future use of the Services (or any portion thereof).

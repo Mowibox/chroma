@@ -135,9 +135,13 @@ Nous respectons les droits de propriété intellectuelle d'autrui. Si vous pense
 En utilisant les Services, vous déclarez et garantissez que :
 
 (1) Vous avez la capacité juridique et vous acceptez de vous conformer à ces Conditions Juridiques ;
+
 (2) Vous n'êtes pas mineur dans la juridiction où vous résidez ;
+
 (3) Vous n'accéderez pas aux Services par des moyens automatisés ou non humains, que ce soit via un bot, un script ou autrement ;
+
 (4) Vous n'utiliserez pas les Services à des fins illégales ou non autorisées ; et
+
 (5) Votre utilisation des Services ne violera aucune loi ou réglementation applicable.
 
 Si vous fournissez des informations fausses, inexactes, non actuelles ou incomplètes, nous avons le droit de suspendre ou de résilier votre compte et de refuser tout accès actuel ou futur aux Services (ou à toute partie de ceux-ci).
@@ -227,11 +231,11 @@ Nous nous réservons le droit de :
 
 ## 10. POLITIQUE DE CONFIDENTIALITÉ
 
-Nous accordons de l'importance à la confidentialité. Consultez notre [Politique de confidentialité]({{< relref "privacy">}}). En utilisant les Services, vous acceptez cette politique. Les Services sont hébergés en France. Si vous y accédez depuis d'autres régions, vous consentez au transfert de données vers la France.
+Nous accordons de l'importance à la confidentialité. Consultez notre [Politique de Confidentialité]({{< relref "privacy">}}). En utilisant les Services, vous acceptez cette politique. Les Services sont hébergés en France. Si vous y accédez depuis d'autres régions, vous consentez au transfert de données vers la France.
 
 ## 11. VIOLATIONS DES DROITS D'AUTEUR
 
-Nous respectons les droits d'auteur. Pour signaler une violation, contactez-nous à [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com) avec :
+Nous respectons les droits d'auteur. Pour signaler une violation, contactez-nous à [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com)  avec :
 
 - Identification de l'œuvre protégée
 - Localisation du contenu incriminé
