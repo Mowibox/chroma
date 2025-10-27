@@ -7,7 +7,7 @@ icon: "docker"
 
 <p align="center"> <img src="/chroma/images/docker1.png" alt="Docker" class="w-full h-auto" /> </p>
 
-This tutorial series will show you how to use Docker on a Linux computer. This part focuses on Docker images and containers.
+This tutorial series will show you how to use Docker on a Linux computer. This part focuses on Docker images and containers. The commands used in this section are those specified in the [official Docker documentation.](https://docs.docker.com/reference/cli/docker/)
 
 ## Images and containers – what are they?
 
@@ -255,6 +255,6 @@ With these commands, you already have a solid foundation in how images and conta
 
 ## Credits
 
-* **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Latest update:** June 2025
+* **Writer:** [Ousmane THIONGANE](https://mowibox.github.io/)
+* **Latest update:** September 2025
 * **Reviewer:**

@@ -475,6 +475,6 @@ The programming language used with Arduino is C++. It’s also used to build mob
 
 ## Credits
 
-* **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Writer:** [Ousmane THIONGANE](https://mowibox.github.io/)
 * **Latest update:** May 2025
 * **Reviewer:** Loubna LATRECHE

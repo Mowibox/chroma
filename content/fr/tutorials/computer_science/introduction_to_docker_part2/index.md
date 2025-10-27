@@ -9,7 +9,7 @@ icon: "docker"
     <img src="/chroma/images/docker1.png" alt="Docker" class="w-full h-auto" />
 </p>
 
-Cette série de tutoriels vous illustrera comment utiliser Docker avec un ordinateur sous Linux. Cette partie est consacrée aux images et aux conteneurs Docker.
+Cette série de tutoriels vous illustrera comment utiliser Docker avec un ordinateur sous Linux. Cette partie est consacrée aux images et aux conteneurs Docker. Les commandes utilisées au sein de cette partie sont celles spécifiées dans la [documentation officielle de Docker.](https://docs.docker.com/reference/cli/docker/)
 
 ## Les images, les conteneurs, késako ?
 
@@ -253,6 +253,6 @@ Avec ces commandes, vous avez déjà de bonnes bases pour comprendre le fonction
 
 ## Crédits
 
-* **Rédacteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Dernière mise à jour :** Juin 2025
-* **Relecteur :** Loubna LATRECHE
+* **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
+* **Dernière mise à jour :** September 2025
+* **Relecteur :** Loubna LATRECHE, [Gauthier BIEHLER](https://github.com/Minorzar)

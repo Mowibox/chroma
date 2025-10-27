@@ -474,6 +474,6 @@ utilisé pour coder sur Arduino est le C++. Il est souvent utilisé pour coder d
 
 ## Crédits
 
-* **Rédacteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
 * **Dernière mise à jour :** Mai 2025
 * **Relecteurs :** Loubna LATRECHE, Alexandre PETIT

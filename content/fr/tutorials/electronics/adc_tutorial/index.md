@@ -179,6 +179,6 @@ Il vous suffit, ensuite, de multiplier la sensitivité à votre valeur de sortie
 
 ## Crédits
 
-* **Rédacteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
 * **Dernière mise à jour :** Juin 2025
 * **Relecteurs :** [Gauthier BIEHLER](https://github.com/Minorzar), Loubna LATRECHE

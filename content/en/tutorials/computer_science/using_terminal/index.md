@@ -15,7 +15,7 @@ In this guide, I present the most useful terminal commands along with examples. 
 
 ## Terminal Commands
 
-Let's start by opening a terminal window (PowerShell or Command Prompt (cmd) on Windows). On Linux distributions (and macOS), you can often open it with the “Ctrl + Alt + T” shortcut.
+Let's start by opening a terminal window (PowerShell on Windows). On Linux distributions (and macOS), you can often open it with the “Ctrl + Alt + T” shortcut (or "Cmd + Alt + T").
 
 ### pwd
 
@@ -26,7 +26,7 @@ mowibox@chroma:~$ pwd
 /home/mowibox
 ```
 
-Here, you can see that I’m in the `/home/mowibox` folder.
+Here, you can see that I’m in the `/home/mowibox` folder. This can be useful when you need to copy and paste the current path somewhere.
 
 ### ls
 
@@ -63,18 +63,24 @@ For this tutorial, **we’ll illustrate commands in a Linux terminal**, so if yo
 You can also add the name of a directory after the command to view its contents. Let’s try with the `Documents` folder:
 
 ```bash {title="Terminal"}
-mowibox@chroma:~$ ls Documents/
+mowibox@chroma:~$ ls Documents
 Folder_1  file.txt
 ```
 
 You see the folder `Folder_1` and the text file `file.txt`. And this addition works for many commands we’ll see later!
+
+{{< callout context="danger" title="Warning" icon="outline/alert-square-rounded" >}}
+
+**Be careful with capital letters!** If your folder is called `Documents`, it will be different from `documents` or `dOCumenTs`. The system is said to be **case sensitive**: commands will only work if the name matches exactly.
+
+{{< /callout >}}
 
 ### cd
 
 The `cd` command **changes the current directory**. Let’s enter the `Documents` folder:
 
 ```bash {title="Terminal"}
-mowibox@chroma:~$ cd Documents/
+mowibox@chroma:~$ cd Documents
 mowibox@chroma:~/Documents$
 ```
 
@@ -97,7 +103,7 @@ mowibox@chroma:~$
 This returns you to the folder above `Documents`.
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
-You can go up two levels with `cd ../..`, three levels with `cd ../../..`, and so on!
+You can go up two levels with `cd ../..`, three levels with `cd ../../..`, and so on! Regardless of the current directory, you can also return to the home directory by typing `cd` or `cd ~`.
 {{< /callout >}}
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
@@ -114,7 +120,7 @@ The `mkdir Folder` command **creates the folder `Folder` in the current location
 Let’s create `Folder_2` in `Documents`:
 
 ```bash {title="Terminal"}
-mowibox@chroma:~$ cd Documents/
+mowibox@chroma:~$ cd Documents
 mowibox@chroma:~/Documents$ mkdir Folder_2
 mowibox@chroma:~/Documents$ ls
 Folder_1  Folder_2  file.txt
@@ -154,14 +160,14 @@ Folder_1  Folder_2  Folder_4  file.txt
 ```
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
-To delete a non-empty folder, use `rm -r folder_name`. Since we’re talking about `rm`, let’s move on to that next!
+You can also delete a folder that is not empty with the command `rm -r folder_name`, or even `rm -rf` to force the deletion of a protected folder. Since we’re talking about `rm`, let’s move on to that next!
 {{< /callout >}}
 
 ### rm
 
-The `rm filename.ext` command **removes the file `filename.ext`**. Let’s test it—first create a file.
+The `rm filename.ext` command **removes the file `filename.ext`**. Let’s test it by creating a file.
 
-On Linux, you can use `touch` to create a file (we’ll cover that later). For now, let’s assume `goodbye.txt` exists and that it's nastily deleted (it's only goodbye):
+On Linux, you can use `touch` to create a file (we’ll cover that later). For now, let’s assume `goodbye.txt` exists and that it's nastily deleted (_it's only goodbye_):
 
 ```bash {title="Terminal"}
 mowibox@chroma:~/Documents$ ls
@@ -185,7 +191,7 @@ The `mv` command **moves or renames a file/folder**. Examples:
   Folder_1  Folder_2  Folder_3 file.txt
   ```
 
-* `mv Folder_3/ Folder_1/` moves `Folder_3` into `Folder_1` (since `Folder_1` already exists in the current directory).
+* `mv Folder_3/ Folder_1` moves `Folder_3` into `Folder_1` (since `Folder_1` already exists in the current directory).
 
   ```bash {title="Terminal"}
   mowibox@chroma:~/Documents$ ls
@@ -193,7 +199,7 @@ The `mv` command **moves or renames a file/folder**. Examples:
   mowibox@chroma:~/Documents$ mv Folder_3/ Folder_1
   mowibox@chroma:~/Documents$ ls
   Folder_1  Folder_2  file.txt
-  mowibox@chroma:~/Documents$ ls Folder_1/
+  mowibox@chroma:~/Documents$ ls Folder_1
   Folder_3
   ```
 
@@ -205,7 +211,7 @@ The `mv` command **moves or renames a file/folder**. Examples:
   mowibox@chroma:~/Documents$ mv Folder_2/ Folder_1/Folder_4
   mowibox@chroma:~/Documents$ ls
   Folder_1  file.txt
-  mowibox@chroma:~/Documents$ ls Folder_1/
+  mowibox@chroma:~/Documents$ ls Folder_1
   Folder_3  Folder_4
   ```
 
@@ -218,24 +224,111 @@ If the destination folder exists, **you’ll be prompted before overwriting.**
 The `cp` command **copies a file or folder**. As with `mv`, there are several ways to use it:
 
 * `cp file.txt file_copy.txt` creates a copy in the same directory.
-* `cp file.txt Folder_1/file_copy.txt` copies into `Folder_1` with a new name. Or use cp file.txt Folder_1/ to keep the original name for the copy.
-* `cp -r Folder_1/ Folder_copy/` recursively copies the folder.
+* `cp file.txt Folder_1/file_copy.txt` copies into `Folder_1` with a new name. Or use `cp file.txt Folder_1` to keep the original name for the copy.
+* `cp -r Folder_1/ Folder_copy` creates a copy of the `Folder_1` folder named `Folder_copy`.
 
 ```bash {title="Terminal"}
 mowibox@chroma:~/Documents$ ls
 Folder_1  file.txt
-mowibox@chroma:~/Documents$ ls Folder_1/
+mowibox@chroma:~/Documents$ ls Folder_1
 Folder_3  Folder_4
-mowibox@chroma:~/Documents$ cp -r Folder_1/ Folder_copy/
+mowibox@chroma:~/Documents$ cp -r Folder_1/ Folder_copy
 mowibox@chroma:~/Documents$ ls
 Folder_1  Folder_copy  file.txt
-mowibox@chroma:~/Documents$ ls Folder_copy/
+mowibox@chroma:~/Documents$ ls Folder_copy
 Folder_3  Folder_4
 ```
 
 {{< callout context="danger" title="Warning" icon="outline/alert-square-rounded" >}}
 If the destination already exists, it will be **overwritten without confirmation**!
 {{< /callout >}}
+
+### cat
+
+The `cat` command is used **to display the contents of a file in the terminal.** Let's take a look at the contents of the `file.txt` file, which has been waiting for its moment of glory since the beginning of this tutorial:
+
+```txt {title="file.txt"}
+Hello Chroma!
+
+I love typing commands in a terminal!
+```
+
+We can use `cat` to display its contents:
+
+```bash {title="Terminal"}
+mowibox@chroma:~/Documents$ cat file.txt
+Hello Chroma!
+
+I love typing commands in a terminal!
+```
+
+## Linux‑only Commands
+
+The rest of the tutorial illustrates some commands that are **exclusive to Linux** and may be useful. Equivalents in Windows Powershell are provided where they exist.
+
+### touch
+
+The `touch` command **creates an empty file.** It can have any desired extension: text file (.txt), Python (.py), Markdown (.md)...
+
+```bash {title="Terminal"}
+mowibox@chroma:~/Documents$ touch file_2.txt
+```
+
+### which
+
+The `which` command is used **to display the path of an installed program.** For example, let's find out where the `python3` program is located:
+
+```bash {title="Terminal"}
+mowibox@chroma:~$ which python3
+/usr/bin/python3
+```
+
+The equivalent of the `which` command in Windows Powershell is `Get-Command`.
+
+### find
+
+The `find` command is used to **search for files/folders in the tree.**
+
+```bash {title="Terminal"}
+mowibox@chroma:~/Documents$ find . -name "file.txt"
+./file.txt
+```
+
+Here we search the current directory (`.`) for all files called exactly `file.txt`.
+
+The equivalent of the `find` command in Windows Powershell is `Get-ChildItem` (or `gci`).
+
+{{< callout context="caution" title="Tip" icon="outline/bulb" >}}
+To be case-insensitive ("File", "FILE", "fILE", etc.), you can replace the `name` option with `-iname`.
+{{< /callout >}}
+
+### grep
+
+The `grep` command is used to **search for a word or pattern in a file.** Let's search for the term "Chroma" in the previous file:
+
+```bash {title="Terminal"}
+mowibox@chroma:~/Documents$ grep "Chroma" file.txt
+Hello Chroma!
+```
+
+The system displays the line of interest and highlights the word found.
+
+{{< callout context="caution" title="Tip" icon="outline/bulb" >}}
+Several very useful options can be combined with the `grep` command:
+
+* `-i`: Performs a case-insensitive search
+* `-r` : Searches all sub-folders in the current directory
+* `-n`: Displays the line number of occurrences found.
+
+Here's an example combining all three:
+{{< /callout >}}
+
+```bash {title="Terminal"}
+mowibox@chroma:~/Documents$ grep -irn "chRoMA!"
+file.txt:1:Hello Chroma!
+```
+
+The equivalent of the `grep` command in Windows Powershell is `Select-String`.
 
 ## Access Permissions
 
@@ -273,87 +366,6 @@ In :
   * `rw-`: the owner can read and modify the file (a text file cannot be run as a program, hence the absence of the `x`).
   * `rw-`: the group can also read and modify.
   * `r--`: other users can only read the file.
-
-## Linux‑only Commands
-
-The next commands are **exclusive to Linux**. Windows users can skip to the [summary table](#summary-table-of-commands).
-
-### touch
-
-The `touch` command **creates an empty file.** It can have any desired extension: text file (.txt), Python (.py), Markdown (.md)...
-
-```bash {title="Terminal"}
-mowibox@chroma:~/Documents$ touch file_2.txt
-```
-
-### cat
-
-The `cat` command is used **to display the contents of a file in the terminal.** Let's take a look at the contents of the `file.txt` file, which has been waiting for its moment of glory since the beginning of this tutorial:
-
-```txt {title="file.txt"}
-Hello Chroma!
-
-I love typing commands in a terminal!
-```
-
-We can use `cat` to display its contents:
-
-```bash {title="Terminal"}
-mowibox@chroma:~/Documents$ cat file.txt
-Hello Chroma!
-
-I love typing commands in a terminal!
-```
-
-### which
-
-The `which` command is used **to display the path of an installed program.** For example, let's find out where the `python3` program is located:
-
-```bash {title="Terminal"}
-mowibox@chroma:~$ which python3
-/usr/bin/python3
-```
-
-### find
-
-The `find` command is used to **search for files/folders in the tree.**
-
-```bash {title="Terminal"}
-mowibox@chroma:~/Documents$ find . -name "file.txt"
-./file.txt
-```
-
-Here we search the current directory (`.`) for all files called exactly `file.txt`.
-
-{{< callout context="caution" title="Tip" icon="outline/bulb" >}}
-To be case-insensitive ("File", "FILE", "fILE", etc.), you can replace the `name` option with `-iname`.
-{{< /callout >}}
-
-### grep
-
-The `grep` command is used to **search for a word or pattern in a file.** Let's search for the term "Chroma" in the previous file:
-
-```bash {title="Terminal"}
-mowibox@chroma:~/Documents$ grep "Chroma" file.txt
-Hello Chroma!
-```
-
-The system displays the line of interest and highlights the word found.
-
-{{< callout context="caution" title="Tip" icon="outline/bulb" >}}
-Several very useful options can be combined with the `grep` command:
-
-* `-i`: Performs a case-insensitive search
-* `-r` : Searches all sub-folders in the current directory
-* `-n`: Displays the line number of occurrences found.
-
-Here's an example combining all three:
-{{< /callout >}}
-
-```bash {title="Terminal"}
-mowibox@chroma:~/Documents$ grep -irn "chRoMA!"
-file.txt:1:Hello Chroma!
-```
 
 ### chmod
 
@@ -416,8 +428,8 @@ This section acts as a **cheat sheet**, summarizing all the commands we've just 
 | [`rm`](#rm)       | Remove a file                   | `rm bonjour.txt`               | No          |
 | [`mv`](#mv)       | Move or rename a file/directory | `mv Folder_4/ Folder_3`        | No          |
 | [`cp`](#cp)       | Copy a file or directory        | `cp -r Folder_1/ Folder_copy/` | No          |
+| [`cat`](#cat)     | Display file contents           | `cat file.txt`                 | No         |
 | [`touch`](#touch) | Create an empty file            | `touch file_2.txt`             | Yes         |
-| [`cat`](#cat)     | Display file contents           | `cat file.txt`                 | Yes         |
 | [`which`](#which) | Show path to a program          | `which python3`                | Yes         |
 | [`find`](#find)   | Search for files/folders        | `find . -name "file.txt"`      | Yes         |
 | [`grep`](#grep)   | Search for patterns in files    | `grep "Chroma" file.txt`       | Yes         |
@@ -428,5 +440,5 @@ This section acts as a **cheat sheet**, summarizing all the commands we've just 
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Latest update:** Juillet 2025
-* **Reviewer:**
+* **Latest update:** September 2025
+* **Reviewer:** [Gauthier BIEHLER](https://github.com/Minorzar)
