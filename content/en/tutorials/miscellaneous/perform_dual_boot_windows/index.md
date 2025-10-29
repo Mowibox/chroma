@@ -48,7 +48,7 @@ First, you need to create an installation USB. Plugged into your computer, it wi
     <img src="/chroma/images/dual_boot_3_en.png" alt="Recovery Drive" class="w-full h-auto" />
 </p>
 
-Before modifying your disk, it is **recommended to create a system recovery image**. This will give you a rollback point in case something goes wrong during installation. The procedure is detailed on the [official Microsoft website.](https://support.microsoft.com/en-us/windows/create-a-recovery-drive-abb4691b-5324-6d4a-8766-73fab304c246)
+Before modifying your disk, it's **recommended to create a system recovery image**. This will give you a rollback point in case something goes wrong during installation. The procedure is detailed on the [official Microsoft website.](https://support.microsoft.com/en-us/windows/create-a-recovery-drive-abb4691b-5324-6d4a-8766-73fab304c246)
 
 ## Booting from the USB Drive
 
@@ -93,7 +93,7 @@ Follow the installer steps to complete Ubuntu installation:
 </p>
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
-Ubuntu offers the **"Detect"** Keyboard Layout option. Feel free to type in the test field to verify your layout!
+Ubuntu offers the **"Detect"** Keyboard Layout option to find your configuration interactively. Feel free to type in the test field to verify your layout!
 {{< /callout >}}
 
 * Next, you can connect to the Internet (Ethernet or Wi-Fi), but it's not mandatory for the rest of the installation:
@@ -137,13 +137,17 @@ If you installed without Wi-Fi, the option **"Download and install support for a
     <img src="/chroma/images/dual_boot_14_en.png" alt="Disk setup" class="w-full h-auto" />
 </p>
 
+{{< callout context="caution" title="Tip" icon="outline/bulb" >}}
+Notice the **"Erase disk and install Ubuntu"** option.  This option completely removes Windows and installs Ubuntu as the only operating system on your computer. In other words, from this point on, you already know how to install Ubuntu as the **sole OS** on a machine!
+{{< /callout >}}
+
 * The next page shows a slider to allocate disk space to Ubuntu:
 
 <p align="center">
     <img src="/chroma/images/dual_boot_15_en.png" alt="Ubuntu alongside Windows" class="w-full h-auto" />
 </p>
 
-Here again, it is up to you to decide how much of your total storage you want to allocate to Ubuntu. For example, the computer used in this tutorial has 512 GB of storage. It would therefore be reasonable to allocate at least 100 GB to Ubuntu, in this case around 150 GB. But perhaps you will spend more time on Ubuntu and install a lot of heavy software compared to your Windows system, in which case the Windows partition would be smaller. It's up to you!
+Here again, you can decide how much of your total storage you want to allocate to Ubuntu. For example, the computer used in this tutorial has 512 GB of storage. It would therefore be reasonable to allocate at least 100 GB to Ubuntu, in this case around 150 GB. But perhaps you will spend more time on Ubuntu and install a lot of heavy software compared to your Windows system, in which case the Windows partition would be smaller. It's up to you!
 
 * Fill in your user account details: name, computer's name, username, and password:
 

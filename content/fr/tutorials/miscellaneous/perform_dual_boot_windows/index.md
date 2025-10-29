@@ -137,6 +137,10 @@ Si vous avez choisi de réaliser votre installation sans Wi-Fi, l'option **"Tél
     <img src="/chroma/images/dual_boot_14_fr.png" alt="Disk setup" class="w-full h-auto" />
 </p>
 
+{{< callout context="caution" title="Tip" icon="outline/bulb" >}}
+Remarquez l'option **"Effacer le disque et installer Ubuntu"**. Cette option vous permet de supprimer totalement Windows et d'installer Ubuntu sur votre ordinateur. En d'autres termes, à partir d'ici, vous savez déjà comment installer Ubuntu comme **seul système d'exploitation** sur une machine !
+{{< /callout >}}
+
 * La page suivante vous affichera alors un curseur vous permettant d'allouer un certain espace disque à Ubuntu :
 
 <p align="center">
@@ -145,7 +149,7 @@ Si vous avez choisi de réaliser votre installation sans Wi-Fi, l'option **"Tél
 
 Ici encore, c'est à vous de décider quelle proportion de votre stockage total vous voulez céder à Ubuntu. Par exemple, l'ordinateur utilisé dans ce tutoriel possède 512 Go de stockage. Il serait alors raisonnable de laisser au moins 100 Go à Ubuntu, ici environ 150 Go. Mais peut-être passerez-vous davantage de temps sur Ubuntu, et installerez beaucoup de logiciels lourds par rapport à votre système Windows, la partition Windows serait alors plus petite. À vous de voir !
 
-* Puis, remplissez les informations de votre compte utilisateur : nom, nom d'ordinateur et d'utilisateur et mot de passe :
+* Puis, remplissez les informations de votre compte utilisateur : nom, nom d'ordinateur, nom d'utilisateur et mot de passe :
 
 <p align="center">
     <img src="/chroma/images/dual_boot_16_fr.png" alt="Create your account" class="w-full h-auto" />
