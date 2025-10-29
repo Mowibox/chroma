@@ -254,5 +254,5 @@ Avec ces commandes, vous avez déjà de bonnes bases pour comprendre le fonction
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Dernière mise à jour :** September 2025
+* **Dernière mise à jour :** Octobre 2025
 * **Relecteur :** Loubna LATRECHE, [Gauthier BIEHLER](https://github.com/Minorzar)

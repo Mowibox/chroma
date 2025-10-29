@@ -440,5 +440,5 @@ This section acts as a **cheat sheet**, summarizing all the commands we've just 
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Latest update:** September 2025
+* **Latest update:** October 2025
 * **Reviewer:** [Gauthier BIEHLER](https://github.com/Minorzar)

@@ -256,5 +256,5 @@ With these commands, you already have a solid foundation in how images and conta
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Latest update:** September 2025
+* **Latest update:** October 2025
 * **Reviewer:**
