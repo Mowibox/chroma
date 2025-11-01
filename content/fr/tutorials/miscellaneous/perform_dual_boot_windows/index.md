@@ -80,6 +80,10 @@ Clé en main, vous pouvez redémarrer l'ordinateur pour réaliser l'installation
 
 L'installation d'Ubuntu se fait ensuite en suivant les différentes étapes de l'utilitaire :
 
+{{< callout context="caution" title="Tip" icon="outline/bulb" >}}
+Notez que si vous fermez l'utilitaire d'installation, vous aurez accès à un environnement Ubuntu que vous allez pouvoir entièrement explorer. Pratique pour tester le système avant de vous décider de réellement réaliser le dual-boot ou non !
+{{< /callout >}}
+
 * Commencez par choisir la langue de votre système d'exploitation, puis passez à l'étape suivante :
 
 <p align="center">
@@ -191,4 +195,4 @@ Vous n'avez plus qu'à vous connecter à votre compte utilisateur pour bénéfic
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
 * **Dernière mise à jour :** Octobre 2025
-* **Relecteur :**
+* **Relecteur :** Loubna LATRECHE

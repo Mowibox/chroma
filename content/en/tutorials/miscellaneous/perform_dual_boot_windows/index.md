@@ -80,6 +80,10 @@ With your USB ready, restart your computer to start the Ubuntu installation. In 
 
 Follow the installer steps to complete Ubuntu installation:
 
+{{< callout context="caution" title="Tip" icon="outline/bulb" >}}
+If you close the installation utility, you’ll be able to access a full Ubuntu environment that you can explore freely. This is a great way to try out the system before deciding whether you really want to set up a dual-boot!
+{{< /callout >}}
+
 * Choose your system language:
 
 <p align="center">
