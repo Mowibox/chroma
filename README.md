@@ -44,30 +44,38 @@ Feel free to join our **[Discord community](https://discord.gg/SUQTs6QV3M)**!
 
 Below is a list of people who have contributed to the creation, maintenance, and quality of the Chroma website.
 
-### Website author
+<details>
+<summary>Website author</summary>
 
 The person behind the overall vision and development of the site.
 
 * [Ousmane THIONGANE](https://mowibox.github.io)
 
-### Contributors
+</details>
+
+<details>
+<summary>Contributors</summary>
 
 Those who help maintain the site’s functionality, fix software issues, and improve the platform.
 
-*
+</details>
 
-### Content Authors
+<details>
+<summary>Content Authors</summary>
 
 People who write and publish pages, tutorials, and lessons on the site.
 
-*
+</details>
 
-### Reviewers
+<details>
+<summary>Reviewers</summary>
 
 Those who proofread, review content, and suggest corrections to improve the quality of pages.
 
 * Loubna LATRECHE
 * [Gauthier BIEHLER](https://github.com/Minorzar)
+
+</details>
 
 ## License
 
