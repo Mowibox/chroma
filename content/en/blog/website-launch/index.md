@@ -27,11 +27,11 @@ Hello to everyone reading these few lines! Today marks the **official launch of 
     </br>
 </p>
 
-My name is [Ousmane THIONGANE](https://ousmanethiongane.framer.website/). At the time of writing, I’m an engineering student at the École Nationale Supérieure de l'Électronique et ses Applications (ENSEA). During my studies, I’ve had the opportunity to explore fields such as Artificial Intelligence, Robotics, and Computer Vision.
+My name is [Ousmane THIONGANE](https://mowibox.github.io/). At the time of writing, I’m an engineering student at the École Nationale Supérieure de l'Électronique et ses Applications (ENSEA). During my studies, I’ve had the opportunity to explore fields such as Artificial Intelligence, Robotics, and Computer Vision.
 
 ## Why Chroma?
 
-Chroma a personal space where I can centralize my knowledge and keep a trace of what I learn.
+Chroma is a personal space where I can centralize my knowledge and keep a trace of what I learn.
 
 But Chroma is more than just a portfolio: it’s also a space for knowledge sharing. My goal is to make technical subjects that may look complex more accessible, and to open the door to curious minds eager to dive into projects combining electronics, programming, and much more.
 

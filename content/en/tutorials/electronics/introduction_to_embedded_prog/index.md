@@ -85,7 +85,7 @@ A few tips to get you started:
 * Don't forget the semicolon ";" at the end of each instruction.
 * Use syntax highlighting and the verify button to check your code.
 * Pay attention to lowercase/UPPERCASE (case sensitivity) in variable names: purple ≠ Purple.
-* If you ever get stuck, a [solution](#mission-solutions) for each mission is also provided.
+* If you ever get stuck, a solution for each mission is also provided.
 * Don't hit your computer (or anyone else) if it doesn't work!
 
 {{< /callout >}}
@@ -102,7 +102,29 @@ A few tips to get you started:
 **Make the LED blink by changing its state every second.**
 {{< /callout >}}
 
-_[Solution](#level-1-solution---blinking)_
+{{< details "Level 1 Solution - Blinking" >}}
+
+_These codes are suggested corrections written by me. **Don’t treat them as the only solution** — there are many valid ways to solve the same problem._
+
+_Find the one that suits you best!_
+
+```ino {title = "level_1.ino", lineNos=true lineNoStart=1}
+const int ledPin = 2;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(ledPin, HIGH);
+  delay(1000);
+
+  digitalWrite(ledPin, LOW);
+  delay(1000);
+}
+```
+
+{{< /details >}}
 
 ---
 
@@ -118,7 +140,42 @@ _[Solution](#level-1-solution---blinking)_
 **Change the state of the 3 LEDs successively.**
 {{< /callout >}}
 
-_[Solution](#level-2-solution---traffic-light)_
+{{< details "Level 2 Solution - Traffic Light" >}}
+
+_These codes are suggested corrections written by me. **Don’t treat them as the only solution** — there are many valid ways to solve the same problem._
+
+_Find the one that suits you best!_
+
+```ino {title = "level_2.ino", lineNos=true lineNoStart=1}
+const int redLed = 2;
+const int yellowLed = 3;
+const int greenLed = 4;
+
+void setup() {
+  pinMode(redLed, OUTPUT);
+  pinMode(yellowLed, OUTPUT);
+  pinMode(greenLed, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(redLed, HIGH);
+  digitalWrite(yellowLed, LOW);
+  digitalWrite(greenLed, LOW);
+  delay(1000);
+
+  digitalWrite(redLed, LOW);
+  digitalWrite(yellowLed, HIGH);
+  digitalWrite(greenLed, LOW);
+  delay(1000);
+
+  digitalWrite(redLed, LOW);
+  digitalWrite(yellowLed, LOW);
+  digitalWrite(greenLed, HIGH);
+  delay(1000);
+}
+```
+
+{{< /details >}}
 
 ---
 
@@ -141,7 +198,34 @@ _[Solution](#level-2-solution---traffic-light)_
 
 {{< /callout >}}
 
-_[Solution](#level-3-solution---day-night-day)_
+{{< details "Level 3 Solution - Day, Night, Day..." >}}
+
+_These codes are suggested corrections written by me. **Don’t treat them as the only solution** — there are many valid ways to solve the same problem._
+
+_Find the one that suits you best!_
+
+```ino {title = "level_3.ino", lineNos=true lineNoStart=1}
+const int ledPin = 2;
+const int buttonPin = 4;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+  int buttonState = digitalRead(buttonPin);
+
+  if (buttonState == HIGH){
+    digitalWrite(ledPin, HIGH);
+  }
+  else{
+    digitalWrite(ledPin, LOW);
+  }
+}
+```
+
+{{< /details >}}
 
 ---
 
@@ -161,7 +245,29 @@ _[Solution](#level-3-solution---day-night-day)_
 The potentiometer pin is connected to an analog port. Hmm... Analog... `analog`...
 {{< /callout >}}
 
-_[Solution](#level-4-solution---day-night-soft-version)_
+{{< details "Level 4 Solution - Day, Night, soft version" >}}
+
+_These codes are suggested corrections written by me. **Don’t treat them as the only solution** — there are many valid ways to solve the same problem._
+
+_Find the one that suits you best!_
+
+```ino {title = "level_4.ino", lineNos=true lineNoStart=1}
+const int ledPin = 3;
+const int potPin = A0;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  int potValue = analogRead(potPin);
+  int brightness = map(potValue, 0, 1023, 0, 255);
+
+  analogWrite(ledPin, brightness);
+}
+```
+
+{{< /details >}}
 
 ---
 
@@ -194,7 +300,66 @@ _[Solution](#level-4-solution---day-night-soft-version)_
 There are 25 notes played in “Happy birthday”. We could use the brute-force method: writing 25 `tone()` & `noTone()` calls, but I'm sure there's a smarter way! In the simplified music sheet, one note color corresponds to a different duration — don't forget to vary delays accordingly.
 {{< /callout >}}
 
-_[Solution](#level-5-solution----happy-birthday-)_
+{{< details "Level 5 Solution - ♪ Happy Birthday ♪" >}}
+
+_These codes are suggested corrections written by me. **Don’t treat them as the only solution** — there are many valid ways to solve the same problem._
+
+_Find the one that suits you best!_
+
+```ino {title = "level_5.ino", lineNos=true lineNoStart=1}
+#define DO 262
+#define RE 294
+#define MI 330
+#define FA 349
+#define SOL 392
+#define LA 440
+#define LAd 466
+#define DO2 524
+
+#define SIZE 25
+
+const int buzzerPin = 2;
+const int buttonPin = 4;
+
+int frequences[SIZE] = {
+  DO, DO, RE, DO, FA, MI,
+  DO, DO, RE, DO, SOL, FA,
+  DO, DO, DO2, LA, FA, MI, RE,
+  LAd, LAd, LA, FA, SOL, FA
+
+};
+
+int durations[SIZE] = {
+  400, 200, 500, 500, 500, 900,
+  400, 200, 500, 500, 500, 900,
+  400, 200, 500, 500, 500, 500, 900,
+  400, 200, 500, 500, 500, 900
+};
+
+void setup() {
+  pinMode(buzzerPin, OUTPUT);
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+
+  int buttonState = digitalRead(buttonPin);
+  if (buttonState == HIGH){
+    happyBirthday();
+  }
+}
+
+
+void happyBirthday(){
+  for (int i = 0; i < SIZE; i++) {
+    tone(buzzerPin, frequences[i]);
+    delay(durations[i]);
+    noTone(buzzerPin);
+  }
+}
+```
+
+{{< /details >}}
 
 ---
 
@@ -308,180 +473,8 @@ The programming language used with Arduino is C++. It’s also used to build mob
 
 ---
 
-## Mission Solutions
-
-These codes are suggested corrections written by me. **Don’t treat them as the only solution** — there are many valid ways to solve the same problem.
-Find the one that suits you best!
-
----
-
-### Level 1 Solution - Blinking
-
-```ino {lineNos=true lineNoStart=1}
-const int ledPin = 2;
-
-void setup() {
-  pinMode(ledPin, OUTPUT);
-}
-
-void loop() {
-  digitalWrite(ledPin, HIGH);
-  delay(1000);
-
-  digitalWrite(ledPin, LOW);
-  delay(1000);
-}
-```
-
-_[Back to mission](#level-1---blinking)_
-
----
-
-### Level 2 Solution - Traffic Light
-
-```ino {lineNos=true lineNoStart=1}
-const int redLed = 2;
-const int yellowLed = 3;
-const int greenLed = 4;
-
-void setup() {
-  pinMode(redLed, OUTPUT);
-  pinMode(yellowLed, OUTPUT);
-  pinMode(greenLed, OUTPUT);
-}
-
-void loop() {
-  digitalWrite(redLed, HIGH);
-  digitalWrite(yellowLed, LOW);
-  digitalWrite(greenLed, LOW);
-  delay(1000);
-
-  digitalWrite(redLed, LOW);
-  digitalWrite(yellowLed, HIGH);
-  digitalWrite(greenLed, LOW);
-  delay(1000);
-
-  digitalWrite(redLed, LOW);
-  digitalWrite(yellowLed, LOW);
-  digitalWrite(greenLed, HIGH);
-  delay(1000);
-}
-```
-
-_[Back to mission](#level-2---traffic-light)_
-
----
-
-### Level 3 Solution - Day, Night, Day...
-
-```ino {lineNos=true lineNoStart=1}
-const int ledPin = 2;
-const int buttonPin = 4;
-
-void setup() {
-  pinMode(ledPin, OUTPUT);
-  pinMode(buttonPin, INPUT);
-}
-
-void loop() {
-  int buttonState = digitalRead(buttonPin);
-
-  if (buttonState == HIGH){
-    digitalWrite(ledPin, HIGH);
-  }
-  else{
-    digitalWrite(ledPin, LOW);
-  }
-}
-```
-
-_[Back to mission](#level-3---day-night-day)_
-
----
-
-### Level 4 Solution - Day, Night, soft version
-
-```ino {lineNos=true lineNoStart=1}
-const int ledPin = 3;
-const int potPin = A0;
-
-void setup() {
-  pinMode(ledPin, OUTPUT);
-}
-
-void loop() {
-  int potValue = analogRead(potPin);
-  int brightness = map(potValue, 0, 1023, 0, 255);
-
-  analogWrite(ledPin, brightness);
-}
-```
-
-_[Back to mission](#level-4---day-night-soft-version)_
-
----
-
-### Level 5 Solution - ♪ Happy Birthday ♪
-
-```ino {lineNos=true lineNoStart=1}
-#define DO 262
-#define RE 294
-#define MI 330
-#define FA 349
-#define SOL 392
-#define LA 440
-#define LAd 466
-#define DO2 524
-
-#define SIZE 25
-
-const int buzzerPin = 2;
-const int buttonPin = 4;
-
-int frequences[SIZE] = {
-  DO, DO, RE, DO, FA, MI,
-  DO, DO, RE, DO, SOL, FA,
-  DO, DO, DO2, LA, FA, MI, RE,
-  LAd, LAd, LA, FA, SOL, FA
-
-};
-
-int durations[SIZE] = {
-  400, 200, 500, 500, 500, 900,
-  400, 200, 500, 500, 500, 900,
-  400, 200, 500, 500, 500, 500, 900,
-  400, 200, 500, 500, 500, 900
-};
-
-void setup() {
-  pinMode(buzzerPin, OUTPUT);
-  pinMode(buttonPin, INPUT);
-}
-
-void loop() {
-
-  int buttonState = digitalRead(buttonPin);
-  if (buttonState == HIGH){
-    happyBirthday();
-  }
-}
-
-
-void happyBirthday(){
-  for (int i = 0; i < SIZE; i++) {
-    tone(buzzerPin, frequences[i]);
-    delay(durations[i]);
-    noTone(buzzerPin);
-  }
-}
-```
-
-_[Back to mission](#level-5----happy-birthday-)_
-
----
-
 ## Credits
 
-* **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Writer:** [Ousmane THIONGANE](https://mowibox.github.io/)
 * **Latest update:** May 2025
 * **Reviewer:** Loubna LATRECHE

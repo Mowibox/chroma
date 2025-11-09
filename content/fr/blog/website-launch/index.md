@@ -27,7 +27,7 @@ Bonjour à vous qui lisez ces quelques lignes ! Aujourd'hui marque le **lancemen
     </br>
 </p>
 
-Je m'appelle [Ousmane THIONGANE](https://ousmanethiongane.framer.website/). À l'heure où j'écris ces lignes, je suis étudiant ingénieur à l'École Nationale Supérieure de l'Électronique et ses Applications (ENSEA). Pendant ma scolarité, j'ai eu l'occasion d'explorer des domaines comme l'Intelligence Artificielle, la Robotique ou encore la Computer Vision.
+Je m'appelle [Ousmane THIONGANE](https://mowibox.github.io/). À l'heure où j'écris ces lignes, je suis étudiant ingénieur à l'École Nationale Supérieure de l'Électronique et ses Applications (ENSEA). Pendant ma scolarité, j'ai eu l'occasion d'explorer des domaines comme l'Intelligence Artificielle, la Robotique ou encore la Computer Vision.
 
 ## Pourquoi Chroma ?
 

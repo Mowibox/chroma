@@ -236,6 +236,6 @@ Just like the [ERC]({{< relref "tutorials/electronics/introduction_to_pcb_design
 
 ## Credits
 
-* **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Writer:** [Ousmane THIONGANE](https://mowibox.github.io/)
 * **Latest update:** June 2025
 * **Reviewer:** Loubna LATRECHE

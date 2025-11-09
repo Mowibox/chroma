@@ -281,6 +281,6 @@ Finally, here's an excellent video from [Articulated Robotics](https://www.youtu
 
 ## Credits
 
-* **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Writer:** [Ousmane THIONGANE](https://mowibox.github.io/)
 * **Latest update:** June 2025
 * **Reviewer:**

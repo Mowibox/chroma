@@ -1,5 +1,5 @@
 ---
-title: "Utilisation du terminal"
+title: "Utilisation du Terminal"
 summary: Les commandes pratiques
 weight: 1001
 icon: "terminal"
@@ -15,7 +15,7 @@ Dans ce guide, je vous présente les commandes de terminal les plus utiles, acco
 
 ## Les commandes de terminal
 
-Commençons par ouvrir un terminal (PowerShell ou l'Invite de commandes (cmd) sur Windows). Dans les distributions Linux (et macOS), il est souvent possible de l'ouvrir avec le raccourci clavier "Ctrl + Alt + T".
+Commençons par ouvrir un terminal (PowerShell sur Windows). Dans les distributions Linux (et macOS), il est souvent possible de l'ouvrir avec le raccourci clavier "Ctrl + Alt + T" (ou "Cmd + Alt + T").
 
 ### pwd
 
@@ -26,7 +26,7 @@ mowibox@chroma:~$ pwd
 /home/mowibox
 ```
 
-Ici, on peut voir que je suis au niveau du dossier `/home/mowibox`.
+Ici, on peut voir que je suis au niveau du dossier `/home/mowibox`. Cela peut s'avérer pratique lorsque vous avez besoin de copier-coller le chemin d'accès actuel quelque part.
 
 ### ls
 
@@ -65,18 +65,24 @@ Pour ce tutoriel, **on illustrera les commandes avec un terminal Linux,** donc s
 On peut aussi ajouter le nom d'un répertoire à la suite de la commande pour aller regarder son contenu. Essayons avec le dossier `Documents` :
 
 ```bash {title="Terminal"}
-mowibox@chroma:~$ ls Documents/
+mowibox@chroma:~$ ls Documents
 Dossier_1  file.txt
 ```
 
 On y retrouve le dossier `Dossier_1` ainsi que le fichier texte `file.txt`. Et ce genre d'ajout marche aussi pour d'autres commandes que nous verrons par la suite !
+
+{{< callout context="danger" title="Attention" icon="outline/alert-square-rounded" >}}
+
+**Prenez garde aux majuscules !** Si votre dossier s'appelle `Documents`, alors il sera différent de `documents` ou du `dOCumenTs`. On dit que le système est **sensible à la casse** (case sensitive en anglais) : les commandes ne fonctionneront que si le nom correspond exactement.
+
+{{< /callout >}}
 
 ### cd
 
 La commande `cd` permet de **changer de répertoire courant.** Essayons d'entrer dans le dossier `Documents` :
 
 ```bash {title="Terminal"}
-mowibox@chroma:~$ cd Documents/
+mowibox@chroma:~$ cd Documents
 mowibox@chroma:~/Documents$
 ```
 
@@ -100,6 +106,7 @@ On retourne ainsi au répertoire au-dessus de `Documents`.
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
 Vous pouvez remonter de deux dossiers à la fois avec `cd ../..`, de trois dossiers avec `cd ../../..`, et ainsi de suite !
+Quelque soit le répertoire actuel, vous pouvez également retourner au répertoire principal en tapant `cd` ou `cd ~`.
 {{< /callout >}}
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
@@ -116,7 +123,7 @@ La commande `mkdir Dossier` permet de **créer le dossier `Dossier` dans l'empla
 Essayons de créer le dossier `Dossier_2` dans le répertoire `Documents` :
 
 ```bash {title="Terminal"}
-mowibox@chroma:~$ cd Documents/
+mowibox@chroma:~$ cd Documents
 mowibox@chroma:~/Documents$ mkdir Dossier_2
 mowibox@chroma:~/Documents$ ls
 Dossier_1  Dossier_2  file.txt
@@ -140,7 +147,7 @@ mowibox@chroma:~/Documents$ ls
 5  Dossier  Dossier_1  Dossier_2  Dossier_3  Dossier_4  file.txt
 ```
 
-Ce sont finalement les dossiers `5` et `Dossier` qui ont été créés. C'est pour cela qu'on utilise des tirets simples ('-') ou des tirets-bas ('_') à la place des espaces.
+Ce sont finalement les dossiers `5` et `Dossier` qui ont été créés. C'est pour cela qu'en règle générale, on utilise des tirets simples ('-') ou des tirets-bas ('_') à la place des espaces.
 
 ### rmdir
 
@@ -156,7 +163,7 @@ Dossier_1  Dossier_2  Dossier_4  file.txt
 ```
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
-Vous pouvez également supprimer un dossier qui n'est pas vide avec la commande `rm -r nom_du_dossier`. Et puisque l'on parle de `rm`, utilisons-le dans la section suivante !
+Vous pouvez également supprimer un dossier qui n'est pas vide avec la commande `rm -r nom_du_dossier`, voire `rm -rf` pour forcer la suppression d'un dossier protégé. Et puisque l'on parle de `rm`, utilisons-le dans la section suivante !
 {{< /callout >}}
 
 ### rm
@@ -189,7 +196,7 @@ La commande `mv` permet de **déplacer un dossier/fichier à un endroit différe
   Dossier_1  Dossier_2  Dossier_3  file.txt
   ```
 
-* `mv Dossier_3/ Dossier_1/` déplace le `Dossier_3` dans le `Dossier_1` (car `Dossier_1` existe au sein du répertoire courant).
+* `mv Dossier_3/ Dossier_1` déplace le `Dossier_3` dans le `Dossier_1` (car `Dossier_1` existe au sein du répertoire courant).
 
   ```bash {title="Terminal"}
   mowibox@chroma:~/Documents$ ls
@@ -197,7 +204,7 @@ La commande `mv` permet de **déplacer un dossier/fichier à un endroit différe
   mowibox@chroma:~/Documents$ mv Dossier_3/ Dossier_1
   mowibox@chroma:~/Documents$ ls
   Dossier_1  Dossier_2  file.txt
-  mowibox@chroma:~/Documents$ ls Dossier_1/
+  mowibox@chroma:~/Documents$ ls Dossier_1
   Dossier_3
   ```
 
@@ -209,7 +216,7 @@ La commande `mv` permet de **déplacer un dossier/fichier à un endroit différe
   mowibox@chroma:~/Documents$ mv Dossier_2/ Dossier_1/Dossier_4
   mowibox@chroma:~/Documents$ ls
   Dossier_1  file.txt
-  mowibox@chroma:~/Documents$ ls Dossier_1/
+  mowibox@chroma:~/Documents$ ls Dossier_1
   Dossier_3  Dossier_4
   ```
 
@@ -223,25 +230,114 @@ La commande `cp` permet de **copier un fichier/dossier.** Comme avec `mv`, il y 
 
 * `cp file.txt file_copy.txt` crée une copie du fichier `file.txt` nommée `file_copy.txt` dans le même répertoire.
 
-* `cp file.txt Dossier_1/file_copy.txt` crée une copie de `file.txt` nommée `file_copy.txt` dans le dossier `Dossier_1`. Écrire `cp file.txt Dossier_1/` permet de garder le nom d'origine pour la copie.
+* `cp file.txt Dossier_1/file_copy.txt` crée une copie de `file.txt` nommée `file_copy.txt` dans le dossier `Dossier_1`. Écrire `cp file.txt Dossier_1` permet de garder le nom d'origine pour la copie.
 
-* `cp -r Dossier_1/ Dossier_copy/` crée une copie du dossier `Dossier_1` nommée `Dossier_copy`.
+* `cp -r Dossier_1/ Dossier_copy` crée une copie du dossier `Dossier_1` nommée `Dossier_copy`.
 
 ```bash {title="Terminal"}
 mowibox@chroma:~/Documents$ ls
 Dossier_1  file.txt
-mowibox@chroma:~/Documents$ ls Dossier_1/
+mowibox@chroma:~/Documents$ ls Dossier_1
 Dossier_3  Dossier_4
-mowibox@chroma:~/Documents$ cp -r Dossier_1/ Dossier_copy/
+mowibox@chroma:~/Documents$ cp -r Dossier_1/ Dossier_copy
 mowibox@chroma:~/Documents$ ls
 Dossier_1  Dossier_copy  file.txt
-mowibox@chroma:~/Documents$ ls Dossier_copy/
+mowibox@chroma:~/Documents$ ls Dossier_copy
 Dossier_3  Dossier_4
 ```
 
 {{< callout context="danger" title="Attention" icon="outline/alert-square-rounded" >}}
 Si le fichier ou le dossier de destination existe déjà, il sera **écrasé sans confirmation** !
 {{< /callout >}}
+
+### cat
+
+La commande `cat`, permet **d'afficher le contenu d'un fichier dans le terminal.** Regardons par exemple le contenu du fichier `file.txt` qui attend son heure de gloire depuis le début de ce tutoriel :
+
+```txt {title="file.txt"}
+Bonjour Chroma !
+
+J'aime taper des commandes dans un terminal !
+```
+
+On peut ainsi utiliser `cat` pour afficher son contenu :
+
+```bash {title="Terminal"}
+mowibox@chroma:~/Documents$ cat file.txt
+Bonjour Chroma !
+
+J'aime taper des commandes dans un terminal !
+```
+
+## Quelques commandes exclusives au terminal Linux
+
+La suite du tutoriel illustre quelques commandes **exclusives à Linux** qui peuvent s'avérer utiles. Des équivalents sur le Windows Powershell sont donnés s'ils existent.
+
+### touch
+
+La commande `touch` permet de **créer un fichier.** Il peut être de l'extension de notre choix : fichier texte (.txt), Python (.py), Markdown (.md)...
+
+```bash {title="Terminal"}
+mowibox@chroma:~/Documents$ touch file_2.txt
+mowibox@chroma:~/Documents$ ls
+Dossier_1  Dossier_copy  file.txt file_2.txt
+```
+
+### which
+
+La commande `which` permet **d'afficher le chemin d'un programme installé.** Cherchons par exemple où se situe le programme `python3` :
+
+```bash {title="Terminal"}
+mowibox@chroma:~$ which python3
+/usr/bin/python3
+```
+
+L'équivalent de la commande `which` sur le Powershell Windows est `Get-Command`.
+
+### find
+
+La commande `find` permet de **rechercher des fichiers/dossiers dans l'arborescence.**
+
+```bash {title="Terminal"}
+mowibox@chroma:~/Documents$ find . -name "file.txt"
+./file.txt
+```
+
+Ici on cherche dans le répertoire courant (`.`) tous les fichiers appelés exactement `file.txt`.
+
+L'équivalent de la commande `find` sur le Powershell Windows est `Get-ChildItem` (ou `gci`).
+
+{{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
+Pour ne pas faire de distinction entre majuscules/minuscules ("File", "FILE", "FiLE", etc. on dit que c'est **insensible la casse**) on peut remplacer l'option `name` par `-iname`.
+{{< /callout >}}
+
+### grep
+
+La commande `grep` permet de **rechercher un mot ou un motif dans un fichier.** Recherchons le terme "Chroma" dans le fichier précédent :
+
+```bash {title="Terminal"}
+mowibox@chroma:~/Documents$ grep "Chroma" file.txt
+Bonjour Chroma !
+```
+
+Le système affiche alors la ligne d'intérêt et indique en surbrillance le mot trouvé.
+
+{{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
+Plusieurs options très utiles sont cumulables avec la commande `grep`, en voici quelques unes :
+
+* `-i` : Fait une recherche insensible à la casse
+* `-r` : Fait une recherche dans tous les sous-dossiers du répertoire courant
+* `-n` : Affiche le numéro de ligne des occurences trouvées.
+
+Voilà un exemple combinant les 3 :
+{{< /callout >}}
+
+```bash {title="Terminal"}
+mowibox@chroma:~/Documents$ grep -irn "chRoMA !"
+file.txt:1:Bonjour Chroma !
+```
+
+L'équivalent de la commande `grep` sur le Powershell Windows est `Select-String`.
 
 ## Droits d'accès
 
@@ -279,89 +375,6 @@ Dans :
   * `rw-` : le propriétaire peut lire et modifier le fichier (un fichier texte ne peut pas être lancé comme un programme, d'où l'absence du `x`).
   * `rw-` : le groupe peut également lire et modifier.
   * `r--` : les autres utilisateurs peuvent seulement lire le fichier.
-
-## Quelques commandes exclusives au terminal Linux
-
-La suite du tutoriel illustre quelques commandes **exclusives à Linux** qui peuvent s'avérer utiles. Donc si vous êtes sous Windows, vous pouvez d'ores et déjà passer à la [dernière section](#tableau-récapitulatif-des-commandes).
-
-### touch
-
-La commande `touch` permet de **créer un fichier.** Il peut être de l'extension de notre choix : fichier texte (.txt), Python (.py), Markdown (.md)...
-
-```bash {title="Terminal"}
-mowibox@chroma:~/Documents$ touch file_2.txt
-mowibox@chroma:~/Documents$ ls
-Dossier_1  Dossier_copy  file.txt file_2.txt
-```
-
-### cat
-
-La commande `cat`, permet **d'afficher le contenu d'un fichier dans le terminal.** Regardons par exemple le contenu du fichier `file.txt` qui attend son heure de gloire depuis le début de ce tutoriel :
-
-```txt {title="file.txt"}
-Bonjour Chroma !
-
-J'aime taper des commandes dans un terminal !
-```
-
-On peut ainsi utiliser `cat` pour afficher son contenu :
-
-```bash {title="Terminal"}
-mowibox@chroma:~/Documents$ cat file.txt
-Bonjour Chroma !
-
-J'aime taper des commandes dans un terminal !
-```
-
-### which
-
-La commande `which` permet **d'afficher le chemin d'un programme installé.** Cherchons par exemple où se situe le programme `python3` :
-
-```bash {title="Terminal"}
-mowibox@chroma:~$ which python3
-/usr/bin/python3
-```
-
-### find
-
-La commande `find` permet de **rechercher des fichiers/dossiers dans l'arborescence.**
-
-```bash {title="Terminal"}
-mowibox@chroma:~/Documents$ find . -name "file.txt"
-./file.txt
-```
-
-Ici on cherche dans le répertoire courant (`.`) tous les fichiers appelés exactement `file.txt`.
-
-{{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
-Pour ne pas faire de distinction entre majuscules/minuscules ("File", "FILE", "FiLE", etc. on dit que c'est **insensible la casse**) on peut remplacer l'option `name` par `-iname`.
-{{< /callout >}}
-
-### grep
-
-La commande `grep` permet de **rechercher un mot ou un motif dans un fichier.** Recherchons le terme "Chroma" dans le fichier précédent :
-
-```bash {title="Terminal"}
-mowibox@chroma:~/Documents$ grep "Chroma" file.txt
-Bonjour Chroma !
-```
-
-Le système affiche alors la ligne d'intérêt et indique en surbrillance le mot trouvé.
-
-{{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
-Plusieurs options très utiles sont cumulables avec la commandes `grep`, en voici quelques unes :
-
-* `-i` : Fait une recherche insensible à la casse
-* `-r` : Fait une recherche dans tous les sous-dossiers du répertoire courant
-* `-n` : Affiche le numéro de ligne des occurences trouvées.
-
-Voilà un exemple combinant les 3 :
-{{< /callout >}}
-
-```bash {title="Terminal"}
-mowibox@chroma:~/Documents$ grep -irn "chRoMA !"
-file.txt:1:Bonjour Chroma !
-```
 
 ### chmod
 
@@ -428,8 +441,8 @@ Cette section fait office **d'aide-mémoire** en résumant l'ensemble des comman
 | [`rm`](#rm)       | Supprime un fichier                   | `rm goodbye.txt`                 | Non                 |
 | [`mv`](#mv)       | Déplace ou renomme un fichier/dossier | `mv Dossier_4/ Dossier_3`        | Non                 |
 | [`cp`](#cp)       | Copie un fichier ou dossier           | `cp -r Dossier_1/ Dossier_copy/` | Non                 |
+| [`cat`](#cat)     | Affiche le contenu d'un fichier       | `cat file.txt`                   | Non                 |
 | [`touch`](#touch) | Crée un fichier vide                  | `touch file_2.txt`               | Oui                 |
-| [`cat`](#cat)     | Affiche le contenu d'un fichier       | `cat file.txt`                   | Oui                 |
 | [`which`](#which) | Affiche le chemin d’un programme      | `which python3`                  | Oui                 |
 | [`find`](#find)   | Recherche des fichiers/dossiers       | `find . -name "file.txt"`        | Oui                 |
 | [`grep`](#grep)   | Recherche un motif dans un fichier    | `grep "Chroma" file.txt`         | Oui                 |
@@ -439,6 +452,6 @@ Cette section fait office **d'aide-mémoire** en résumant l'ensemble des comman
 
 ## Crédits
 
-* **Rédacteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Dernière mise à jour :** Juin 2025
-* **Relecteur :**
+* **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
+* **Dernière mise à jour :** Octobre 2025
+* **Relecteur :** [Gauthier BIEHLER](https://github.com/Minorzar)
