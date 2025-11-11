@@ -11,7 +11,7 @@ Dans cette deuxième partie du tutoriel d'introduction à Git et GitHub, nous al
 
 ## Prérequis
 
-* Avoir complété [l'initiation à Git et GitHub – Partie 1.](https://mowibox.github.io/chroma/fr/tutorials/computer_science/introduction_to_github_part1/)
+* Avoir complété [l'initiation à Git et GitHub – Partie 1.]({{< relref "tutorials/computer_science/introduction_to_github_part1/">}})
 
 ## Installation de Git
 
@@ -70,5 +70,5 @@ Utilisez les commandes rm, commit et push pour supprimer un de vos fichiers du p
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Dernière mise à jour :** Octobre 2025
+* **Dernière mise à jour :** Novembre 2025
 * **Relecteur :**
