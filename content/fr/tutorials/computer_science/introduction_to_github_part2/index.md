@@ -13,7 +13,7 @@ Dans cette deuxième partie du tutoriel d'introduction à Git et GitHub, vous re
 
 ## Prérequis
 
-* Avoir complété [l'initiation à Git et GitHub – Partie 1.]({{< relref "tutorials/computer_science/introduction_to_github_part1/">}})
+* Avoir complété [l'initiation à Git et GitHub – Partie 1.]({{< relref "tutorials/computer_science/introduction_to_github_part1">}})
 
 ## Installation de Git
 
@@ -71,23 +71,30 @@ Suivez les étapes détaillées ci-dessus afin de créer un repository.
 
 <p align="center">
     <img src="/chroma/images/gitgithub3.jpg" alt="Local copy" class="w-full h-auto" />
+    </br>
+    <em style="font-size: 0.95em;">Le chariot est l'équivalent de la copie locale du repository.</em>
 </p>
 
-Quelque soit votre système d'exploitation, vous pouvez copier le lien GitHub associé à votre repository.
+Pour le moment votre repository n'est accessible que sur GitHub, il sera plus pratique d'avoir une copie locale sur votre ordinateur pour y ajouter vos fichiers, modifications etc. C'est l'objectif principal de cette section.
+
+Quelque soit votre système d'exploitation, vous pouvez copier le lien GitHub associé à votre repository en cliquant sur Le bouton vert "<> Code" puis sur l'icône "copier". Vérifiez que le lien copié est bien le lien "HTTPS".
 
 <p align="center">
     <img src="/chroma/images/gitgithub21.png" alt="Copy to clipboard" class="w-full h-auto" />
 </p>
 
+Comme les étapes suivantes diffèrent selon que vous soyez sur Windows ou Linux/Mac, la suite de cette introduction est séparée en deux sections. Dans chacune d’elles, je vous montre comment cloner repository-mine en local en utilisant le système d’exploitation correspondant. Vous pouvez ainsi suivre la section adaptée à votre environnement.
 
-Cloner un repository sur Windows
+{{< details "Cloner un repository sur Windows" >}}
 
+{{< /details >}}
 
-Cloner un repository sur Linux
+{{< details "Cloner un repository sur Linux/Mac" >}}
 
+{{< /details >}}
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
-Clonez le repository fraîchement créé en local sur votre machine.
+Clonez votre repository fraîchement créé en local sur votre machine.
 {{< /callout >}}
 
 ## Apport de modifications au projet
@@ -122,5 +129,5 @@ Utilisez les commandes rm, commit et push pour supprimer un de vos fichiers du p
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Dernière mise à jour :** Novembre 2025
+* **Dernière mise à jour :** Octobre 2025
 * **Relecteur :**

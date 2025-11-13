@@ -155,7 +155,7 @@ It’s like GitHub gives you a visual interface to interact with Git commands (G
 * **Repository:** The core element of GitHub. It’s the folder containing all the project’s components. As seen with Chrome & Nickel, a repository can have many collaborators and can be public or private.
 * **Clone:** A clone is a local copy of the repository stored on your own computer instead of online. In the story, that’s "creating a cart." It’s within this local repository that you can work offline.
 
-The other bolded terms you saw throughout the story — **add, commit, push, pull** — are Git commands used to manage files. To better illustrate them, we’ll explore them in the next part of this tutorial by creating our own repository.
+The other bolded terms you saw throughout the story — **add, commit, push, pull** — are Git commands used to manage files. To better illustrate them, we’ll explore them in the [next part]({{< relref "tutorials/computer_science/introduction_to_github_part2">}}) of this tutorial by creating our own repository.
 
 <p align="center">
     <img src="/chroma/images/gitgithub16.jpg" alt="Push-Pull" class="w-full h-auto" />

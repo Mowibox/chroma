@@ -154,7 +154,7 @@ Un peu comme si GitHub vous donnait une représentation visuelle avec une interf
 * **Repository :** Le repository (dépôt) est l'élément fondamental de GitHub. C'est le dossier qui va contenir tous les éléments du projet. Comme on a pu le voir avec Chrome & Nickel, un repository peut avoir plusieurs collaborateurs, ils peuvent donc être publics ou privés.
 * **Clone :** Le clone est une copie locale du repository qui réside localement sur votre ordinateur plutôt qu'en ligne. Dans l'histoire, ça serait l'action de "Créer un chariot". C'est dans ce clone de votre repository qui vous pouvez faire vos modifications hors ligne.
 
-Les autres noms que vous avez pu voir en gras tout au long de l'histoire **(add, commit, push, pull)** sont des commandes Git qui permettent de gérer les fichiers. Pour mieux vous les illustrer, je propose de vous les expliquer dans la partie suivante de ce tutoriel où l'on va manipuler des fichiers en créant notre propre repository.
+Les autres noms que vous avez pu voir en gras tout au long de l'histoire **(add, commit, push, pull)** sont des commandes Git qui permettent de gérer les fichiers. Pour mieux vous les illustrer, je propose de vous les expliquer dans la [partie suivante]({{< relref "tutorials/computer_science/introduction_to_github_part2">}}) de ce tutoriel où l'on va manipuler des fichiers en créant notre propre repository.
 
 <p align="center">
     <img src="/chroma/images/gitgithub16.jpg" alt="Push-Pull" class="w-full h-auto" />
