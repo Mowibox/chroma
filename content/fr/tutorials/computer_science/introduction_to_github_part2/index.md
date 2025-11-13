@@ -6,7 +6,7 @@ icon: "github"
 ---
 
 <p align="center">
-    <img src="/chroma/images/gitgithub17.png" alt="Git and GitHub part 2" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub.png" alt="Git and GitHub part 2" class="w-full h-auto" />
 </p>
 
 Dans cette deuxième partie du tutoriel d'introduction à Git et GitHub, vous rentrerez dans le vif du sujet en manipulant les différents concepts théoriques expliquées au sein de la partie précédente.
