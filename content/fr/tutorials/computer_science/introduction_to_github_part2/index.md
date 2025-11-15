@@ -112,7 +112,7 @@ $ git clone https://github.com/Mowibox/repository-mine.git
 * Il ne me reste plus qu'à exécuter la commande pour voir apparaître le dossier dans mon explorateur de fichiers.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub22.png" alt="Your repository (Windows)" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub23.png" alt="Your repository (Windows)" class="w-full h-auto" />
 </p>
 
 {{< /details >}}
@@ -122,7 +122,7 @@ $ git clone https://github.com/Mowibox/repository-mine.git
 * Sur mon ordinateur, je choisis un emplacement dédié dans l'explorateur de fichiers, par exemple dans mon dossier "Documents". Avec un clic droit dans l'explorateur, je sélectionne l'option "Open in terminal" ce qui me permet d'avoir un terminal ouvert directement dans l'emplacement "Documents" :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub23.png" alt="Open in terminal" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub24.png" alt="Open in terminal" class="w-full h-auto" />
 </p>
 
 ```bash {title="mowibox@chroma:~/Documents"}
@@ -140,7 +140,7 @@ mowibox@chroma:~/Documents$ git clone https://github.com/Mowibox/repository-mine
 * Il ne me reste plus qu'à exécuter la commande pour voir apparaître le dossier dans mon explorateur de fichiers.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub24.png" alt="Your repository (Linux/Mac)" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub25.png" alt="Your repository (Linux/Mac)" class="w-full h-auto" />
 </p>
 
 {{< /details >}}
@@ -151,35 +151,125 @@ Clonez votre repository fraîchement créé en local sur votre machine.
 
 ## Apport de modifications au projet
 
-Maintenant que le repository est
+<p align="center">
+    <img src="/chroma/images/gitgithub4.jpg" alt="Creating file A class="w-full h-auto" />
+</p>
+
+En entrant dans le dossier, vous devriez y apercevoir le fichier "README.md". C'est à l'intérieur qu'il est possible de créer tous les dossiers ou fichiers dont vous aurez besoin pour votre projet. Dans le mien, je vais créer un simple fichier texte nommé, dans lequel j'écris le texte suivant :
+
+``` txt {title="Fichier_A.txt"}
+Hello, World!
+```
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
-Créez un ou plusieurs fichiers au sein du projet. Faites vous plaisir sur le contenu !
+Créez un ou plusieurs fichiers au sein du repository. Faites vous plaisir sur le contenu !
 {{< /callout >}}
 
+Maintenant que mon fichier est en place, constatez que sur GitHub le fichier n'apparaît pas. En effet il faut exécuter une série de commandes pour l'ajouter au repository distant (sur GitHub).
+
+Pour ce faire j'ouvre un terminal au sein du repository de la même manière qu'expliqué précedemment. Puis, j'exécute ensuite les commandes suivantes :
+
+* ```bash {frame="none"}
+  git add .
+  ```
+
+  La commande `git add .` permet d'ajouter tous les fichiers créés ou modifiés à la zone de préparation (qu'on appelle staging area). Le `.` indique à Git d’inclure toutes les modifications présentes dans le dossier courant et ses sous-dossiers.
+
+  <p align="center">
+    <img src="/chroma/images/gitgithub5.jpg" alt="Adding file A" class="w-full h-auto" />
+  </p>
+
+* ```bash {frame="none"}
+  git commit -m "Message"
+  ```
+
+  La commande `git commit -m "Message"` permet d'enregistrer et valider les modifications ajoutées avec `git add`. De manière générale, on ajoute toujours un message descriptif de la modification grâce au flag `-m "Message explicatif"`. Par exemple :
+
+  ```bash {frame="none"}
+  git commit -m "Ajout du fichier A"
+  ```
+
+  <p align="center">
+    <img src="/chroma/images/gitgithub6.jpg" alt="Writing file A commit" class="w-full h-auto" />
+  </p>
+
+* ```bash {frame="none"}
+  git push
+  ```
+
+  La commande `git push` permet d'envoyer les commits sur le repository distant, c'est-à-dire GitHub.
+
+  <p align="center">
+    <img src="/chroma/images/gitgithub8.jpg" alt="Push file A" class="w-full h-auto" />
+  </p>
+
+Au bout des différentes étapes illustrées ci-dessus, je peux finalement voir mon fichier "Fichier_A.txt" et son contenu sur GitHub :
+
+<p align="center">
+    <img src="/chroma/images/gitgithub26_fr.png" alt="Repository after pushing" class="w-full h-auto" />
+</p>
+
+<p align="center">
+    <img src="/chroma/images/gitgithub27_fr.png" alt="File A" class="w-full h-auto" />
+</p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
-Utilisez les commandes add, commit et push pour ajouter vos modifications sur le repository distant.
+Utilisez les commandes `add`, `commit` et `push` pour ajouter vos modifications sur le repository distant.
 N'oubliez pas de spécifier un message avec `-m "Message"` lors du commit !
 {{< /callout >}}
 
+{{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
+Si quelqu’un possède une copie locale de votre repository sur son ordinateur, il pourra récupérer les dernières modifications en utilisant la commande `git pull`.
+Lorsque vous ouvrez un repository, lancez toujours cette commande en premier pour être sûr d’avoir la version la plus à jour.
 
+<p align="center">
+    <img src="/chroma/images/gitgithub10.jpg" alt="Pull" class="w-full h-auto" />
+    </br>
+</p>
+{{< /callout >}}
 
 ## Suppression de fichiers du projet
 
+Sachez que comme pour l'ajout de fichiers, il est possible de supprimer des fichiers. La commande :
+
+```bash {frame="none"}
+git rm nom_du_fichier
+```
+
+vous permet de supprimer un fichier du projet dont vous aurez spécifié le nom. Comme pour `git add`, il faut faire suivre la commande par `git commit`, puis `git push`.
+
+Voilà un exemple où j'ai supprimé le "Fichier_A.txt" en appliquant les différentes commandes :
+
+<p align="center">
+    <img src="/chroma/images/gitgithub28_fr.png" alt="Repository after deleting" class="w-full h-auto" />
+</p>
+
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
-Utilisez les commandes rm, commit et push pour supprimer un de vos fichiers du projet.
+Utilisez les commandes `rm`, `commit` et `push` pour supprimer un de vos fichiers du projet. N'oubliez pas le message de commit !
 {{< /callout >}}
 
-## Récapitulatif des commandes
+{{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
+Une autre méthode de suppression consiste à supprimer le fichier manuellement, puis d'utiliser la commande `git add .` : cela revient à ajouter une modification au projet, qui est la suppression du fichier.
+{{< /callout >}}
 
+## Tableau récapitulatif des commandes
 
-## Pour aller plus loin
+Ce tableau récapitule l'ensemble des fonctions vues au cours de ce tutoriel ainsi que leur utilité. N'hésitez pas à le garder sous la main au début pour vous familiariser avec les commandes !
+
+| Commande                  | Description |
+|---------------------------|-------------|
+| [`git pull`](https://git-scm.com/docs/git-pull)                | Récupère les dernières modifications depuis le repository distant et met à jour votre copie locale. |
+| [`git add`](https://git-scm.com/docs/git-add)                 | Ajoute des fichiers créés ou modifiés à la staging area. |
+| [`git rm`](https://git-scm.com/docs/git-rm)                  | Supprime un fichier du projet et informe Git de cette suppression. |
+| [`git commit`](https://git-scm.com/docs/git-commit) | Enregistre les modifications ajoutées avec un message (`-m "Message"`) décrivant l’action effectuée. |
+| [`git push`](https://git-scm.com/docs/git-push)                | Envoie vos commits vers le repository distant. |
+
+Dans la prochaine partie de cette introduction, nous allons explorer plus en profondeur les fonctionnalités offertes par Git et GitHub en nous attaquant à un concept plus complexe mais très pratique lorsque vous travaillez à plusieurs sur un même projet : les branches & les pull requests.
 
 ---
 
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Dernière mise à jour :** Octobre 2025
+* **Dernière mise à jour :** Novembre 2025
 * **Relecteur :**
