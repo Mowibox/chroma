@@ -97,6 +97,10 @@ mkvirtualenv -p python3.x venv_name
 
 where `x` is the desired version number.
 
+{{< callout context="note" title="Note" icon="outline/target-arrow" >}}
+Of course, this means you must have already downloaded the version you want.
+{{< /callout >}}
+
 To access an already created virtual environment, use the command:
 
 ```bash {frame="none"}
