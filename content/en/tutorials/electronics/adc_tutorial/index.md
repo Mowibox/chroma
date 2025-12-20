@@ -120,7 +120,7 @@ int main(void)
 `HAL_ADC_Start(&hadc1);` starts conversion for ADC1. `int value_a0` is used to store the value read on the A0 pin.
 
 {{< callout context="danger" title="Warning" icon="outline/alert-square-rounded" >}}
-Be sure to write your code between the "/\* USER CODE BEGIN \*/" and "/\* USER CODE END \*/" tags. Otherwise, your code will be deleted when building!
+Be sure to write your code between the "/\* USER CODE BEGIN \*/" and "/\* USER CODE END \*/" tags. Otherwise, your code will be deleted when regenerating!
 {{< /callout >}}
 
 Inside a loop (e.g. the existing `while(1){}`), add the two lines below:

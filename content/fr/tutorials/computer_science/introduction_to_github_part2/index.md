@@ -45,7 +45,7 @@ C'est maintenant que les choses sérieuses vont pouvoir commencer. Je vais d'abo
     <img src="/chroma/images/gitgithub18.png" alt="New repository" class="w-full h-auto" />
 </p>
 
-* Je rentre ensuite les différentes détails de mon repository :
+* Je rentre ensuite les différents détails de mon repository :
   * **Son nom :** Pour rester dans l'histoire de la partie précédente, je vais l'appeler la "repository-mine", mais libre à vous de choisir le nom qui vous plaît !
   {{< callout context="danger" title="Attention" icon="outline/alert-square-rounded" >}}
   Les espaces ne sont pas autorisés dans le nom du repository : il ne peut seulement contenir des lettres ASCII, des chiffres, ainsi que les caractères ".", "_", et "-".

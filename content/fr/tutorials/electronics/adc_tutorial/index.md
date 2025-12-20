@@ -115,7 +115,7 @@ int main(void)
 `HAL_ADC_Start(&hadc1);` vous permettra d'activer la conversion pour l'ADC1, tandis que l'entier défini par `int value_a0` vous servira à stocker les valeurs lues sur la broche 10.
 
 {{< callout context="danger" title="Attention" icon="outline/alert-square-rounded" >}}
-Écrivez bien votre code entre les balises "/\* USER CODE BEGIN \*/" et "/\* USER CODE END \*/". Sinon votre code sera effacé à la compilation du code !
+Écrivez bien votre code entre les balises "/\* USER CODE BEGIN \*/" et "/\* USER CODE END \*/". Sinon votre code sera effacé si vous regénérez vos fichiers !
 {{< /callout >}}
 
 Dans une boucle (Par exemple la boucle `while(1){}` dejà présente dans le fichier), on pourra ajouter les deux lignes suivantes :
