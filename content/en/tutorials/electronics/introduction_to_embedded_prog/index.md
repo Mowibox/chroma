@@ -368,7 +368,7 @@ void happyBirthday(){
 Congrats if you've completed all the levels!
 If it was too easy for you, try creating a project using all your components.
 For example: a variable brightness traffic light that beeps when it turns red to warn pedestrians?
-Feel free to search the web for fun tutorials.
+Feel free to search on the web for fun tutorials.
 
 <p align="center">
   <img src="/chroma/images/level6.png" alt="Niveau 6" class="w-full h-auto" />

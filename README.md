@@ -38,11 +38,9 @@ Contributions are always welcome!
 > [!TIP]
 > Want to share your knowledge and create or review pages for the website? Follow these guidelines _(coming soon!)_ to know how to contribute in the right way!
 
-
 Feel free to join our **[Discord community](https://discord.gg/SUQTs6QV3M)**!
 
 <img width="512" height="288" alt="chromadiscord" src="https://github.com/user-attachments/assets/49a4c669-90a5-4330-8fd2-a797cafe39df" />
-
 
 ## Main contributors
 

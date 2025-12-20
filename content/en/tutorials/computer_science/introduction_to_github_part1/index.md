@@ -35,7 +35,7 @@ One day, Chrome came up with a solution: he created a mine.
 This mine allowed everyone to pick up files contributed and modified by the team in a centralized place, avoiding duplicate chaos. Let’s call this mine the **repository**. To make transferring files easier, Chrome created a local copy of the files from the repository, which he placed in a cart:
 
 <p align="center">
-    <img src="/chroma/images/gitgithub3.jpg" alt="" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub3.jpg" alt="Local copy" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">The cart is a local copy of the mine's content.</em>
 </p>
@@ -43,7 +43,7 @@ This mine allowed everyone to pick up files contributed and modified by the team
 Since Chrome just created the repository, there are no files yet. So naturally, his cart is empty. The next step is to fill it up. For example, Chrome decides to create File A:
 
 <p align="center">
-    <img src="/chroma/images/gitgithub4.jpg" alt="" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub4.jpg" alt="Creating file A" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Chrome creates File A — I think it’s a great file, don’t you?</em>
 </p>
@@ -53,7 +53,7 @@ Pleased with File A, he wants to share it in the mine so his friends can see it.
 First, he prepares File A for sending by **adding (add)** it to his cart:
 
 <p align="center">
-    <img src="/chroma/images/gitgithub5.jpg" alt="" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub5.jpg" alt="Adding file A" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Chrome adds File A.</em>
 </p>
@@ -61,13 +61,13 @@ First, he prepares File A for sending by **adding (add)** it to his cart:
 So his friends don't get lost in the mine, he writes a little note about the change and attaches it to the cart. This **commitment (commit)** officially validates the content of the cart.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub6.jpg" alt="" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub6.jpg" alt="Writing file A commit" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Chrome describes the change: "Added File A." (Trust me, English-speaking friends, this is what's written on the drawing)</em>
 </p>
 
 <p align="center">
-    <img src="/chroma/images/gitgithub7.jpg" alt="" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub7.jpg" alt="Commit file A" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">By attaching the label, he validates the change — ready to go!</em>
 </p>
@@ -75,7 +75,7 @@ So his friends don't get lost in the mine, he writes a little note about the cha
 Once everything is ready, Chrome simply **pushes (push)** his cart into the mine to share it. Easy!
 
 <p align="center">
-    <img src="/chroma/images/gitgithub8.jpg" alt="" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub8.jpg" alt="Push file A" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;"><b>PUSH</b></em>
 </p>
@@ -85,7 +85,7 @@ Once everything is ready, Chrome simply **pushes (push)** his cart into the mine
 Now meet Nickel.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub9.png" alt="" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub9.png" alt="Nickel" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Nickel: Distinguished by his aerodynamic bowler hat!</em>
 </p>
@@ -95,7 +95,7 @@ Nickel is a good friend of Chrome and also loves creating files. When he hears t
 To get File A, Nickel must also create a local copy of the repository, stored in his cart. Then he **pulls (pull)** the content of the mine into his cart:
 
 <p align="center">
-    <img src="/chroma/images/gitgithub10.jpg" alt="" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub10.jpg" alt="Pull" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;"><b>PULL</b></em>
 </p>
@@ -103,7 +103,7 @@ To get File A, Nickel must also create a local copy of the repository, stored in
 Nickel decides to improve File A and, feeling generous, also creates a new File B:
 
 <p align="center">
-    <img src="/chroma/images/gitgithub11.jpg" alt="" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub11.jpg" alt="Modifying files" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Nickel modifies A and creates B — doing the whole alphabet would take too long!</em>
 </p>
@@ -113,7 +113,7 @@ Nickel now follows the same steps as Chrome to share his updates:
 He **adds** the modified A* and the new B files to his cart:
 
 <p align="center">
-    <img src="/chroma/images/gitgithub12.jpg" alt="" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub12.jpg" alt="Add modifications" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Added files A* and B.</em>
 </p>
@@ -121,7 +121,7 @@ He **adds** the modified A* and the new B files to his cart:
 Then he writes a note and attaches it to confirm the changes:
 
 <p align="center">
-    <img src="/chroma/images/gitgithub13.jpg" alt="" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub13.jpg" alt="Commit modifications" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Nickel </b>commits</b> his changes.</em>
 </p>
@@ -129,7 +129,7 @@ Then he writes a note and attaches it to confirm the changes:
 Finally, he **pushes** his cart into the mine:
 
 <p align="center">
-    <img src="/chroma/images/gitgithub14.jpg" alt="" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub14.jpg" alt="Push modifications" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;"><b>PUSH</b></em>
 </p>
@@ -137,14 +137,14 @@ Finally, he **pushes** his cart into the mine:
 If Chrome or any other collaborator wants to get Nickel’s changes, they just need to **pull** the updates:
 
 <p align="center">
-    <img src="/chroma/images/gitgithub15.jpg" alt="" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub15.jpg" alt="Pull modifications" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;"><b>PULL</b></em>
 </p>
 
 Thanks to this mine, everyone can get the latest updates, contribute improvements, validate and share them, avoiding the confusion of traditional methods.
 
-**THE END**
+**THE END.**
 
 ## Git and GitHub - Comparing to the Mine
 
@@ -155,10 +155,10 @@ It’s like GitHub gives you a visual interface to interact with Git commands (G
 * **Repository:** The core element of GitHub. It’s the folder containing all the project’s components. As seen with Chrome & Nickel, a repository can have many collaborators and can be public or private.
 * **Clone:** A clone is a local copy of the repository stored on your own computer instead of online. In the story, that’s "creating a cart." It’s within this local repository that you can work offline.
 
-The other bolded terms you saw throughout the story — **add, commit, push, pull** — are Git commands used to manage files. To better illustrate them, we’ll explore them in the next part of this tutorial by creating our own repository.
+The other bolded terms you saw throughout the story — **add, commit, push, pull** — are Git commands used to manage files. To better illustrate them, we’ll explore them in the [next part]({{< relref "tutorials/computer_science/introduction_to_github_part2">}}) of this tutorial by creating our own repository.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub16.jpg" alt="" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub16.jpg" alt="Push-Pull" class="w-full h-auto" />
     </br>
 </p>
 
