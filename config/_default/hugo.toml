@@ -88,3 +88,6 @@ copyRight = "Copyright (c) 2020-2024 Thulite"
 dir = ':resourceDir/_gen'
 maxAge = -1
 
+[services]
+  [services.googleAnalytics]
+    ID = 'G-WV8QZVDG4Z'
