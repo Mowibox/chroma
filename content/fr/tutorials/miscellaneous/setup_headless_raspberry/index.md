@@ -92,105 +92,17 @@ Quelque soit le réseau que vous choisissez, soyez sûrs qu'il est possible de l
 
 * Branchez la Pi à une alimentation. Vous devriez voir un voyant vert clignoter. Essayons maintenant d'y accéder via notre ordinateur.
 
-## Connexion en SSH
+## Connexion à la Rapsberry Pi
 
 ### La connexion SSH
 
-Le SSH (Secure Shell) est un protocole sécurisé qui permet de se connecter et d'envoyer des commandes à un autre ordinateur à distance. C’est grâce à ce protocole que vous allez pouvoir prendre le contrôle de votre Raspberry Pi depuis votre ordinateur, sans avoir besoin d’écran ni de clavier. Mais pour pouvoir l'utiliser, il vous faudra trouver l'adresse IP de votre Raspberry Pi.
-
-### Trouver l'adresse IP de la Raspberry Pi
-
-Si vous avez suivi l'astuce d'utiliser votre point d'accès mobile pour connecter la Pi au Wi-Fi, alors vous pouvez directement trouver l'adresse dans les paramètres du hotspot : Il suffit de cliquer sur le nom d'hôte de votre Pi dans la liste des périphériques connectés.
-
-_Si vous ne trouvez pas le nom d'hôte de votre Pi dans la liste, vérifiez que vous avez bien configuré votre hotspot Wi-Fi en bande 2,4 GHz._
-
-Si vous avez l'adresse IP, vous pouvez directement passer à la [section suivante](#connexion-à-la-raspberry-pi). Sinon, continuez la lecture.
-
-<p align="center">
-    <img src="/chroma/images/headless10_fr.png" alt="Hotspot tip" class="w-full h-auto" />
-</p>
-
-* Sur votre ordinateur, installez le paquet de contrôle réseau `net-tools` :
-
-``` bash {frame=none}
-sudo apt install net-tools
-```
-
-* Toujours avec votre ordinateur, connectez-vous au même réseau Wi-Fi que celui enregistré lors de la configuration de la Pi. Utilisez ensuite la commande ci-dessous pour afficher les informations réseau de votre ordinateur :
-
-``` bash {frame=none}
-ifconfig
-```
-
-Vous devriez tomber sur une ligne semblable à celle ci :
-
-```bash {title="Terminal", hl_lines=[2]}
-wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet x.x.x.x  netmask 255.255.255.0  broadcast x.x.x.255
-```
-
-Repérez l'interface correspondant à votre connexion réseau (souvent `wlp...` pour le Wi-Fi ou `eth0` pour Ethernet).
-
-À côté de `inet` vous trouverez l'adresse IP locale de votre ordinateur au format `x.x.x.x`. Utilisons la pour trouver l'adresse IP de la Pi.
-
-* Installez l'outil `nmap`:
+Le SSH (Secure Shell) est un protocole sécurisé qui permet de se connecter et d'envoyer des commandes à un autre ordinateur à distance. C’est grâce à ce protocole que vous allez pouvoir prendre le contrôle de votre Raspberry Pi depuis votre ordinateur. Vous pouvez vous y connecter avec la commande :
 
 ```bash {frame=none}
-sudo apt install nmap
+ssh chromapi@chroma.local
 ```
 
-* Lancez un scan réseau avec la commande ci-dessous, en remplaçant `x.x.x.x` par votre adresse IP.
-
-```bash {frame=none}
-nmap -p 22 x.x.x.x/24
-```
-
-{{< callout context="note" title="Que fait cette ligne ?" icon="outline/info-circle" >}}
-`nmap` est un outil qui permet d'explorer les réseaux.
-
-* L'argument `-p 22` indique que l'on ne s'intéresse qu'au port 22, qui correspond au service SSH.
-
-* Le suffixe `/24` après l'adresse IP signifie qu'on scanne toutes les adresses de `x.x.x.1` à `x.x.x.254`. C'est ce qu'on appelle un ["masque de sous-réseau".](https://fr.wikipedia.org/wiki/Sous-r%C3%A9seau)
-
-Autrement dit, cette commande va lister tous les appareils actifs sur le réseau local qui ont le port SSH ouvert — ce qui permet d'identifier facilement la Raspberry Pi.
-{{< /callout >}}
-
-Voici un exemple typique de sortie donnée par cette ligne de commande :
-
-```bash {title="Terminal", hl_lines=[8,9,10,11,12]}
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-07-12 01:20 CEST
-Nmap scan report for _gateway (z.z.z.z)
-Host is up (0.023s latency).
-
-PORT   STATE  SERVICE
-22/tcp closed ssh
-
-Nmap scan report for y.y.y.y
-Host is up (0.071s latency).
-
-PORT   STATE SERVICE
-22/tcp open  ssh
-
-Nmap scan report for mowibox-HP-EliteBook (x.x.x.x)
-Host is up (0.00011s latency).
-
-PORT   STATE  SERVICE
-22/tcp closed ssh
-
-Nmap done: 256 IP addresses (3 hosts up) scanned in 5.26 seconds
-```
-
-* Cherchez une adresse IP avec le port 22 en état `open`. Dans l'exemple du dessus, l'adresse IP de la Raspberry Pi serait `y.y.y.y`.
-
-### Connexion à la Raspberry Pi
-
-Une fois l'adresse IP de votre Pi récupérée, vous pouvez vous y connecter avec la commande :
-
-```bash {frame=none}
-ssh chromapi@x.x.x.x
-```
-
-Remplacez `chromapi` par le nom d'utilisateur que vous avez défini dans Raspberry Pi Imager, et `x.x.x.x` par l’adresse IP de votre Raspberry Pi.
+Remplacez respactivement `chromapi` et `chroma` par le nom d'utilisateur et le nom d'hôte que vous avez défini dans Raspberry Pi Imager.
 
 Lors de la première connexion, le système vous demandera de confirmer l'authenticité de la machine. Répondez "oui" (`yes`/`y`) à la question de connexion, puis entrez le mot de passe que vous avez configuré avec Raspberry Pi Imager.
 
@@ -236,6 +148,10 @@ chromapi@chroma:~$
 ```
 
 Félicitations ! Vous êtes maintenant connecté à votre Raspberry Pi. Il reste encore quelques configurations à réaliser pour qu'elle soit prête à l'usage.
+
+{{< callout context="note" title="Note" icon="outline/info-circle" >}}
+Si vous n’arrivez pas à vous connecter, vérifiez que vous êtes bien connecté au même réseau que la Raspberry Pi et que vous utilisez le Wi-Fi en bande 2,4 GHz.
+{{< /callout >}}
 
 ### Configuration du système
 

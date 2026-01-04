@@ -95,104 +95,17 @@ Make sure your chosen Wi-Fi network uses the 2.4 GHz band — Raspberry Pis cann
 
 * Plug the Pi into a power source. A green LED should blink. Now, let’s try to connect to it from your computer.
 
-## Connecting via SSH
+## Connecting to the Raspberry Pi
 
-### What is SSH?
+### Connecting via SSH
 
-SSH (Secure Shell) is a secure protocol that lets you remotely access and send commands to another computer. That’s how you’ll control your Raspberry Pi from your PC — no screen or keyboard required. But to use SSH, you first need to find your Pi’s IP address.
-
-### Finding the Raspberry Pi’s IP Address
-
-If you used the mobile hotspot trick, you can usually find the Pi's IP address in the hotspot settings — just look for the device name in the connected devices list.
-
-_If your Pi doesn’t show up, check that your hotspot is using the 2.4 GHz band._
-
-If you have the IP address, you can go straight to the [next section](#connecting-to-the-raspberry-pi). Otherwise, continue reading.
-
-<p align="center">
-    <img src="/chroma/images/headless10_en.png" alt="Hotspot tip" class="w-full h-auto" />
-</p>
-
-* On your computer, install the network tool package `net-tools`:
+SSH (Secure Shell) is a secure protocol that lets you remotely access and send commands to another computer. That’s how you’ll control your Raspberry Pi from your PC — no screen or keyboard required. You can connect to it with:
 
 ```bash {frame=none}
-sudo apt install net-tools
+ssh chromapi@chroma.local
 ```
 
-* Connect your computer to the same Wi-Fi network that the Pi will use. Then run the following command to view your network info:
-
-```bash {frame=none}
-ifconfig
-```
-
-You should see something like this:
-
-```bash {title="Terminal", hl_lines=[2]}
-wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet x.x.x.x  netmask 255.255.255.0  broadcast x.x.x.255
-```
-
-Look for the interface matching your network (often `wlp...` for Wi-Fi, or `eth0` for Ethernet).
-
-Next to `inet`, you’ll find your computer’s local IP address — we’ll use that to find the Pi.
-
-* Install the `nmap` tool:
-
-```bash {frame=none}
-sudo apt install nmap
-```
-
-* Launch a network scan, replacing `x.x.x.x` with your own IP:
-
-```bash {frame=none}
-nmap -p 22 x.x.x.x/24
-```
-
-{{< callout context="note" title="What does this command do?" icon="outline/info-circle" >}}
-`nmap` is a network exploration tool.
-
-* The `-p 22` option tells it to scan only port 22, which is used for SSH.
-* The `/24` suffix means we're scanning the full IP range from `x.x.x.1` to `x.x.x.254`. This is a ["subnet mask"](https://en.wikipedia.org/wiki/Subnet).
-
-In short, this command lists all devices on your network that have port 22 open — making it easy to spot the Raspberry Pi.
-{{< /callout >}}
-
-Here’s an example output:
-
-```bash {title="Terminal", hl_lines=[8,9,10,11,12]}
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-07-12 01:20 CEST
-Nmap scan report for _gateway (z.z.z.z)
-Host is up (0.023s latency).
-
-PORT   STATE  SERVICE
-22/tcp closed ssh
-
-Nmap scan report for y.y.y.y
-Host is up (0.071s latency).
-
-PORT   STATE SERVICE
-22/tcp open  ssh
-
-Nmap scan report for mowibox-HP-EliteBook (x.x.x.x)
-Host is up (0.00011s latency).
-
-PORT   STATE  SERVICE
-22/tcp closed ssh
-
-Nmap done: 256 IP addresses (3 hosts up) scanned in 5.26 seconds
-```
-
-* Look for an IP address with port 22 marked as `open`. In this case, the Raspberry Pi’s IP address is `y.y.y.y`.
-
-### Connecting to the Raspberry Pi
-
-Once you have the Pi’s IP address, connect with:
-
-```bash {frame=none}
-ssh chromapi@x.x.x.x
-```
-
-Replace `chromapi` with the username you set in Raspberry Pi Imager, and `x.x.x.x` with the Pi’s IP address.
+Replace `chromapi` and `chroma` with the username and hostname you defined in Raspberry Pi Imager.
 
 The first time, you’ll be asked to confirm the authenticity of the device. Type "yes" and enter the password you set during setup.
 
@@ -217,6 +130,10 @@ chromapi@chroma:~$
 ```
 
 Congratulations! You're now connected to your Raspberry Pi. A few final configuration steps remain before it’s fully ready.
+
+{{< callout context="note" title="Note" icon="outline/info-circle" >}}
+If you are unable to connect, verify that you are connected to the same network as the Raspberry Pi and that you are using 2.4 GHz Wi-Fi.
+{{< /callout >}}
 
 ### System Configuration
 
