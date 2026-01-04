@@ -9,7 +9,7 @@ icon: "github"
     <img src="/chroma/images/gitgithub.png" alt="Git and GitHub part 2" class="w-full h-auto" />
 </p>
 
-Dans cette deuxième partie du tutoriel d'introduction à Git et GitHub, vous rentrerez dans le vif du sujet en manipulant les différents concepts théoriques expliquées au sein de la partie précédente.
+Dans cette deuxième partie du tutoriel d'introduction à Git et GitHub, vous rentrerez dans le vif du sujet en manipulant les différents concepts théoriques expliqués au sein de la partie précédente.
 
 ## Prérequis
 
@@ -31,7 +31,7 @@ Téléchargez Git en choisissant la version appropriée à votre OS (Windows, Li
     <img src="/chroma/images/gitgithub2.jpg" alt="Repository mine" class="w-full h-auto" />
 </p>
 
-Une fois Git installé, la prochaine étape consiste à créer un compte sur la plateforme GitHub. Cela vous permettra de d'initialiser votre premier dépôt (repository).
+Une fois Git installé, la prochaine étape consiste à créer un compte sur la plateforme GitHub. Cela vous permettra d'initialiser votre premier dépôt (repository).
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 Créez un compte GitHub via la [page d'inscription.](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
@@ -83,13 +83,13 @@ Mowibox@CHROMA MINGW64 ~
 $ ssh-keygen -t ed25519 -C "votre_email@exemple.com"
 ```
 
-Vous pouvez appuyer deux trois sur "Entrée" pour accepter l'emplacement par défaut du fichier et ne pas définir de mot de passe (optionel).
+Vous pouvez appuyer trois trois sur "Entrée" pour accepter l'emplacement par défaut du fichier et ne pas définir de mot de passe (optionnel).
 
 * Activez l'agent SSH et ajoutez la clé SSH avec cette commande :
 
 ```bash {title="MINGW64:/c/Users/Mowibox"}
-Mowibox@CHROMA MINGW64 ~ 
-$ ssh-add ~/.ssh/id_ed25519
+Mowibox@CHROMA MINGW64 ~
+$ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 ```
 
@@ -109,7 +109,7 @@ Vous obtiendrez un résultat dans votre terminal qui correspond à votre clé (c
 Et voilà ! Vous pouvez également vérifier que la connexion SSH est bien établie avec GitHub via la commande :
 
 ```bash {title="MINGW64:/c/Users/Mowibox"}
-Mowibox@CHROMA MINGW64 ~ 
+Mowibox@CHROMA MINGW64 ~
 $ ssh -T git@github.com
 Hi Mowibox! You've successfully authenticated, but GitHub does not provide shell access.
 
@@ -128,7 +128,7 @@ $
 mowibox@chroma:~$ ssh-keygen -t ed25519 -C "votre_email@exemple.com"
 ```
 
-Vous pouvez appuyer deux fois sur "Entrée" pour accepter l'emplacement par défaut du fichier et ne pas définir de mot de passe (optionel).
+Vous pouvez appuyer trois fois sur "Entrée" pour accepter l'emplacement par défaut du fichier et ne pas définir de mot de passe (optionnel).
 
 * Activez l'agent SSH et ajoutez la clé SSH avec cette commande :
 
@@ -168,7 +168,7 @@ mowibox@chroma:~$
 mowibox@chroma:~$ ssh-keygen -t ed25519 -C "votre_email@exemple.com"
 ```
 
-Vous pouvez appuyer deux fois sur "Entrée" pour accepter l'emplacement par défaut du fichier et ne pas définir de mot de passe (optionel).
+Vous pouvez appuyer trois fois sur "Entrée" pour accepter l'emplacement par défaut du fichier et ne pas définir de mot de passe (optionnel).
 
 * Activez l'agent SSH et ajoutez la clé SSH avec cette commande :
 
@@ -185,7 +185,7 @@ mowibox@chroma:~$ cat ~/.ssh/id_ed25519.pub
 
 Vous obtiendrez un résultat dans votre terminal qui correspond à votre clé (commence par ssh- et finit par votre adresse mail). Copiez ce résultat en entier.
 
-* Sur GitHub, cliquez sur votre icône dans le coin supérieur droit, et accèdez aux paramètres SSH en cliquant sur "Settings" puis "SSH and GPG keys".
+* Sur GitHub, cliquez sur votre icône dans le coin supérieur droit, et accédez aux paramètres SSH en cliquant sur "Settings" puis "SSH and GPG keys".
 
 * Cliquez ensuite sur "New SSH Key". Donnez un titre à votre clé, mettez le type de clé sur "Authentication Key", puis copiez le résultat précédent dans l'espace dédié puis ajoutez la clé à votre GitHub.
 
@@ -211,9 +211,9 @@ Configurez l'authentification GitHub avec le SSH.
     <em style="font-size: 0.95em;">Le chariot est l'équivalent de la copie locale du repository.</em>
 </p>
 
-Maintenant que tout est configuré, revenez au repository. Pour le moment, votre repository n'est accessible que sur GitHub. Il sera plus pratique d'avoir une copie locale sur votre ordinateur pour y ajouter vos fichiers, modifications etc. C'est l'objectif principal de cette section.
+Maintenant que tout est configuré, revenez au repository. Pour le moment, votre repository n'est accessible que sur GitHub. Il sera plus pratique d'avoir une copie locale sur votre ordinateur pour y ajouter vos fichiers, modifications, etc. C'est l'objectif principal de cette section.
 
-Quel que soit votre système d'exploitation, vous pouvez copier le lien GitHub associé à votre repository en cliquant sur Le bouton vert "<> Code" puis sur l'icône "copier". Vérifiez que le lien copié est bien le lien "SSH".
+Quel que soit votre système d'exploitation, vous pouvez copier le lien GitHub associé à votre repository en cliquant sur le bouton vert "<> Code" puis sur l'icône "copier". Vérifiez que le lien copié est bien le lien "SSH".
 
 <p align="center">
     <img src="/chroma/images/gitgithub21.png" alt="Copy to clipboard" class="w-full h-auto" />
@@ -288,10 +288,10 @@ Clonez votre repository fraîchement créé en local sur votre machine.
 ## Apport de modifications au projet
 
 <p align="center">
-    <img src="/chroma/images/gitgithub4.jpg" alt="Creating file A class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub4.jpg" alt="Creating file A" class="w-full h-auto" />
 </p>
 
-En entrant dans le dossier, vous devriez y apercevoir le fichier "README.md". C'est à l'intérieur qu'il est possible de créer tous les dossiers ou fichiers dont vous aurez besoin pour votre projet. Dans le mien, je vais créer un simple fichier texte nommé, dans lequel j'écris le texte suivant :
+En entrant dans le dossier, vous devriez y apercevoir le fichier "README.md". C'est à l'intérieur qu'il est possible de créer tous les dossiers ou fichiers dont vous aurez besoin pour votre projet. Dans le mien, je vais créer un simple fichier texte nommé `Fichier_A.txt`, dans lequel j'écris le texte suivant :
 
 ``` txt {title="Fichier_A.txt"}
 Hello, World!
@@ -301,9 +301,9 @@ Hello, World!
 Créez un ou plusieurs fichiers au sein du repository. Faites vous plaisir sur le contenu !
 {{< /callout >}}
 
-Maintenant que mon fichier est en place, constatez que sur GitHub le fichier n'apparaît pas. En effet il faut exécuter une série de commandes pour l'ajouter au repository distant (sur GitHub).
+Maintenant que mon fichier est en place, constatez que sur GitHub... le fichier n'apparaît pas. En effet, il faut exécuter une série de commandes pour l'ajouter au repository distant (sur GitHub).
 
-Pour ce faire j'ouvre un terminal au sein du repository de la même manière qu'expliqué précedemment. Puis, j'exécute ensuite les commandes suivantes :
+Pour ce faire j'ouvre un terminal au sein du repository de la même manière qu'expliqué précédemment. Puis, j'exécute ensuite les commandes suivantes :
 
 * ```bash {frame="none"}
   git add .
@@ -339,7 +339,7 @@ Pour ce faire j'ouvre un terminal au sein du repository de la même manière qu'
     <img src="/chroma/images/gitgithub8.jpg" alt="Push file A" class="w-full h-auto" />
   </p>
 
-Au bout des différentes étapes illustrées ci-dessus, je peux finalement voir mon fichier "Fichier_A.txt" et son contenu sur GitHub :
+Au bout des différentes étapes illustrées ci-dessus, je peux finalement voir mon fichier `Fichier_A.txt`, le message de commit et son contenu sur GitHub :
 
 <p align="center">
     <img src="/chroma/images/gitgithub26_fr.png" alt="Repository after pushing" class="w-full h-auto" />
@@ -392,20 +392,20 @@ Une autre méthode de suppression consiste à supprimer le fichier manuellement,
 
 Ce tableau récapitule l'ensemble des fonctions vues au cours de ce tutoriel ainsi que leur utilité. N'hésitez pas à le garder sous la main au début pour vous familiariser avec les commandes !
 
-| Commande                  | Description |
-|---------------------------|-------------|
-| [`git pull`](https://git-scm.com/docs/git-pull)                | Récupère les dernières modifications depuis le repository distant et met à jour votre copie locale. |
-| [`git add`](https://git-scm.com/docs/git-add)                 | Ajoute des fichiers créés ou modifiés à la staging area. |
-| [`git rm`](https://git-scm.com/docs/git-rm)                  | Supprime un fichier du projet et informe Git de cette suppression. |
+| Commande | Description |
+| --------------------------- | ------------- |
+| [`git pull`](https://git-scm.com/docs/git-pull) | Récupère les dernières modifications depuis le repository distant et met à jour votre copie locale. |
+| [`git add`](https://git-scm.com/docs/git-add) | Ajoute des fichiers créés ou modifiés à la staging area. |
+| [`git rm`](https://git-scm.com/docs/git-rm) | Supprime un fichier du projet et informe Git de cette suppression. |
 | [`git commit`](https://git-scm.com/docs/git-commit) | Enregistre les modifications ajoutées avec un message (`-m "Message"`) décrivant l’action effectuée. |
-| [`git push`](https://git-scm.com/docs/git-push)                | Envoie vos commits vers le repository distant. |
+| [`git push`](https://git-scm.com/docs/git-push) | Envoie vos commits vers le repository distant. |
 
-Dans la prochaine partie de cette introduction, nous allons explorer plus en profondeur les fonctionnalités offertes par Git et GitHub en nous attaquant à un concept plus complexe mais très pratique lorsque vous travaillez à plusieurs sur un même projet : les branches & les pull requests.
+Dans la prochaine partie de cette introduction, nous allons explorer plus en profondeur les fonctionnalités offertes par Git et GitHub en nous attaquant à un concept plus complexe mais très pratique lorsque vous travaillez à plusieurs sur un même projet : les issues, les branches & les pull requests.
 
 ---
 
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Dernière mise à jour :** Novembre 2025
+* **Dernière mise à jour :** Janvier 2026
 * **Relecteur :**
