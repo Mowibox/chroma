@@ -168,7 +168,7 @@ Thanks to the display tiles, we can clearly see that the signal period is 20 ms 
 
 ## Modifying the duty cycle
 
-Rather than struggling to modify the Pulse register value (CCR) manually by editing the .ioc file, it is possible to dynamically modify the pulse width directly in the code.
+Rather than struggling to modify the {{< math >}}$Pulse${{< /math >}} value manually by editing the .ioc file, it is possible to dynamically modify the pulse width directly in the code.
 
 The macro `__HAL_TIM_SetCompare(&htimX, TIM_CHANNEL_X, pulse)` allows you to modify the duty cycle value of the channel associated with the selected timer. `pulse` is generally defined to represent the pulse width in microseconds.
 

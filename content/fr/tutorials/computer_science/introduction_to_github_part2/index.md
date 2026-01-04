@@ -78,55 +78,43 @@ Le SSH (Secure Shell) est un protocole sécurisé qui permet de communiquer de m
 * Ouvrez l'application "Git Bash" pour avoir accès au terminal de commandes.
 * Générez une clé SSH en entrant la commande suivante :
 
-```bash {title="MINGW64:/c/Users/Mowibox/"}
-Mowibox@CHROMA MINGW64 ~/ ssh-keygen -t ed25519 -C "votre_email@exemple.com"
+```bash {title="MINGW64:/c/Users/Mowibox"}
+Mowibox@CHROMA MINGW64 ~
+$ ssh-keygen -t ed25519 -C "votre_email@exemple.com"
 ```
 
-Vous pouvez appuyer deux fois sur "Entrée" pour accepter l'emplacement par défaut du fichier et ne pas définir de mot de passe (optionel).
+Vous pouvez appuyer deux trois sur "Entrée" pour accepter l'emplacement par défaut du fichier et ne pas définir de mot de passe (optionel).
 
-* Ouvrez Windows Powershell et lancez la commande suivante pour Activer l'agent SSH:
+* Activez l'agent SSH et ajoutez la clé SSH avec cette commande :
 
-```bash {title="MINGW64:/c/Users/Mowibox/"}
-Mowibox@CHROMA MINGW64 ~/ # start the ssh-agent in the background
-Get-Service -Name ssh-agent | Set-Service -StartupType Manual
-Start-Service ssh-agent
-$
-```
-
-* Dans le terminal Git, ajoutez la clé SSH avec cette commande :
-
-```bash {title="MINGW64:/c/Users/Mowibox/"}
-Mowibox@CHROMA MINGW64 ~/ ssh-add ~/.ssh/id_ed25519
-ssh-add c:/Users/YOU/.ssh/id_ed25519
-$
+```bash {title="MINGW64:/c/Users/Mowibox"}
+Mowibox@CHROMA MINGW64 ~ 
+$ ssh-add ~/.ssh/id_ed25519
+ssh-add ~/.ssh/id_ed25519
 ```
 
 La prochaine étape consiste à ajouter la clé que vous venez de générer sur GitHub. Pour ce faire, exécutez la commande ci-dessous :
 
-```bash {title="MINGW64:/c/Users/Mowibox/"}
-Mowibox@CHROMA MINGW64 ~/
-$
-```
-```bash {title="mowibox@chroma: ~"}
-mowibox@chroma:~$ cat ~/.ssh/id_ed25519.pub
+```bash {title="MINGW64:/c/Users/Mowibox"}
+Mowibox@CHROMA MINGW64 ~
+$ cat ~/.ssh/id_ed25519.pub
 ```
 
-Vous obtiendrez un résultat dans votre terminal qui correspond à votre clé. Copiez ce résultat en entier.
+Vous obtiendrez un résultat dans votre terminal qui correspond à votre clé (commence par ssh- et finit par votre adresse mail). Copiez ce résultat en entier.
 
-* Sur GitHub, accèdez aux paramètres SSH en cliquant sur "Settings" puis "SSH and GPG keys".
+* Sur GitHub, cliquez sur votre icône dans le coin supérieur droit, et accèdez aux paramètres SSH en cliquant sur "Settings" puis "SSH and GPG keys".
 
-* Cliquez ensuite sur "New SSH Key". Donnez un titre à votre clé, mettez le type de clé sur "Authentication Key", puis copiez le résultat précédent dans l'espace dédié puis ajoutez la clé à votre GitHub.
+* Cliquez ensuite sur "New SSH Key". Donnez un titre à votre clé, mettez le type de clé sur "Authentication Key", puis copiez le résultat précédent dans l'espace dédié et ajoutez la clé à votre GitHub.
 
 Et voilà ! Vous pouvez également vérifier que la connexion SSH est bien établie avec GitHub via la commande :
 
-```bash {title="MINGW64:/c/Users/Mowibox/"}
-Mowibox@CHROMA MINGW64 ~/
-$
-```
-```bash {title="mowibox@chroma: ~"}
-mowibox@chroma:~$ ssh -T git@github.com
+```bash {title="MINGW64:/c/Users/Mowibox"}
+Mowibox@CHROMA MINGW64 ~ 
+$ ssh -T git@github.com
 Hi Mowibox! You've successfully authenticated, but GitHub does not provide shell access.
-mowibox@chroma:~$
+
+Mowibox@CHROMA MINGW64 ~
+$
 ```
 
 {{< /details >}}
@@ -155,9 +143,9 @@ La prochaine étape consiste à ajouter la clé que vous venez de générer sur 
 mowibox@chroma:~$ cat ~/.ssh/id_ed25519.pub
 ```
 
-Vous obtiendrez un résultat dans votre terminal qui correspond à votre clé. Copiez ce résultat en entier.
+Vous obtiendrez un résultat dans votre terminal qui correspond à votre clé (commence par ssh- et finit par votre adresse mail). Copiez ce résultat en entier.
 
-* Sur GitHub, accèdez aux paramètres SSH en cliquant sur "Settings" puis "SSH and GPG keys".
+* Sur GitHub, cliquez sur votre icône dans le coin supérieur droit, et accèdez aux paramètres SSH en cliquant sur "Settings" puis "SSH and GPG keys".
 
 * Cliquez ensuite sur "New SSH Key". Donnez un titre à votre clé, mettez le type de clé sur "Authentication Key", puis copiez le résultat précédent dans l'espace dédié puis ajoutez la clé à votre GitHub.
 
@@ -195,9 +183,9 @@ La prochaine étape consiste à ajouter la clé que vous venez de générer sur 
 mowibox@chroma:~$ cat ~/.ssh/id_ed25519.pub
 ```
 
-Vous obtiendrez un résultat dans votre terminal qui correspond à votre clé. Copiez ce résultat en entier.
+Vous obtiendrez un résultat dans votre terminal qui correspond à votre clé (commence par ssh- et finit par votre adresse mail). Copiez ce résultat en entier.
 
-* Sur GitHub, accèdez aux paramètres SSH en cliquant sur "Settings" puis "SSH and GPG keys".
+* Sur GitHub, cliquez sur votre icône dans le coin supérieur droit, et accèdez aux paramètres SSH en cliquant sur "Settings" puis "SSH and GPG keys".
 
 * Cliquez ensuite sur "New SSH Key". Donnez un titre à votre clé, mettez le type de clé sur "Authentication Key", puis copiez le résultat précédent dans l'espace dédié puis ajoutez la clé à votre GitHub.
 
@@ -248,6 +236,8 @@ Mowibox@CHROMA MINGW64 ~/Documents
 $
 ```
 
+_Remarque : Il est aussi possible d'ouvrir directement Git Bash sans passer par l'explorateur, et ensuite se rendre manuellement dans l'emplacement de votre choix via la commande [`cd`.]({{< relref "tutorials/computer_science/using_terminal/#cd">}})._
+
 * La console Git étant lancée, je n'ai plus qu'à exécuter la commande `git clone` suivie de l'adresse SSH copiée précédemment. Dans mon cas, cela donnerait :
 
 ```bash {title="MINGW64:/c/Users/Mowibox/Documents"}
@@ -275,7 +265,7 @@ $ git clone git@github.com:Mowibox/repository-mine.git
 mowibox@chroma:~/Documents$
 ```
 
-_Remarque : Il est aussi possible d'ouvrir directement un terminal sans passer par l'explorateur avec le raccourci "Ctrl + Alt + T" (ou "Cmd + Alt + T"), et ensuite se rendre manuellement dans l'emplacement de votre choix via la commande [`cd`.]({{< relref "tutorials/computer_science/using_terminal/#cd">}})_
+_Remarque : Il est aussi possible d'ouvrir directement un terminal sans passer par l'explorateur avec le raccourci "Ctrl + Alt + T" (ou "Cmd + Alt + T"), et ensuite se rendre manuellement dans l'emplacement de votre choix via la commande [`cd`.]({{< relref "tutorials/computer_science/using_terminal/#cd">}})._
 
 * Le terminal ouvert, je n'ai plus qu'à exécuter la commande `git clone` suivie de l'adresse SSH copiée précédemment. Dans mon cas, cela donnerait :
 

@@ -127,7 +127,7 @@ Pulse = \frac{1}{2} * (19999 + 1) - 1 = 9999
 $$
 {{< /math >}}
 
-Je n'ai plus qu'à ajouter ma valeur calculée dans les paramètres puis générer le code :
+Je n'ai plus qu'à ajouter ma valeur calculée dans les paramètres, puis générer le code :
 
 <p align="center">
     <img src="/chroma/images/pwm10.png" alt="Pulse assignment" class="w-full h-auto" />
@@ -167,7 +167,7 @@ Grâce aux carreaux de l'affichage, on remarque bien que la période du signal e
 
 ## Modification du rapport cyclique
 
-Plutôt que de se faire du mal à modifier la valeur du registre Pulse (CCR) à la main en modifiant le .ioc, il est possible de directement modifier dynamiquement dans le code la largeur de l'impulsion.
+Plutôt que de se faire du mal à modifier la valeur de {{< math >}}$Pulse${{< /math >}} à la main en modifiant le .ioc, il est possible de directement modifier dynamiquement dans le code la largeur de l'impulsion.
 
 La macro `__HAL_TIM_SetCompare(&htimX, TIM_CHANNEL_X, pulse)` permet de modifier la valeur du rapport cyclique du channel associé au timer sélectionné. `pulse` est généralement défini de manière à représenter la largeur de l’impulsion en microsecondes.
 
