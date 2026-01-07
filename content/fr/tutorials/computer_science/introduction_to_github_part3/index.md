@@ -23,9 +23,9 @@ Dans cette dernière partie du tutoriel d'introduction à Git et GitHub, vous
     <img src="/chroma/images/gitgithub2.jpg" alt="Repository mine" class="w-full h-auto" />
 </p>
 
-Tout au long de cette introduction, nous avons illustré nos propos et nos manipulations via la `repository-mine`. De manière générale, une mine est créée pour en extraire des minerais, un filon, un trésor... Ne serait-ce pas une bonne idée d'ajouter un trésor à la `repository-mine` pour lui apporter de la valeur ? En ce sens, j'ai créé au sein du repository un fichier nommé `Notre_Tresor.txt` :
+Tout au long de cette introduction, nous avons illustré nos propos et nos manipulations via la `repository-mine`. De manière générale, une mine est créée pour en extraire des minerais, un filon, un trésor... Ne serait-ce pas une bonne idée d'ajouter un trésor à la `repository-mine` pour lui apporter de la valeur ? En ce sens, j'ai créé au sein du repository un fichier nommé `Notre_Tresor.md` :
 
-```txt {title="Notre_Tresor.txt"}
+```txt {title="Notre_Tresor.md"}
 * "Les limites de l'imagination sont celles qu'on lui impose."
 ```
 
