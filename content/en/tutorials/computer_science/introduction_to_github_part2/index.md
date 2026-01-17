@@ -110,6 +110,11 @@ And that’s it! You can also verify that the SSH connection is properly establi
 ```bash {title="MINGW64:/c/Users/Mowibox"}
 Mowibox@CHROMA MINGW64 ~
 $ ssh -T git@github.com
+```
+
+You will then see a connection confirmation message. Enter “yes,” and if everything went well, you should see the following display:
+
+```bash {title="MINGW64:/c/Users/Mowibox"}
 Hi Mowibox! You've successfully authenticated, but GitHub does not provide shell access.
 
 Mowibox@CHROMA MINGW64 ~
@@ -152,9 +157,17 @@ You will get an output in your terminal corresponding to your key (it starts wit
 And that’s it! You can also verify that the SSH connection is properly established with GitHub using the following command:
 
 ```bash {title="mowibox@chroma: ~"}
-mowibox@chroma:~$ ssh -T git@github.com
+Mowibox@CHROMA MINGW64 ~
+$ ssh -T git@github.com
+```
+
+You will then see a connection confirmation message. Enter “yes,” and if everything went well, you should see the following display:
+
+```bash {title="mowibox@chroma: ~"}
 Hi Mowibox! You've successfully authenticated, but GitHub does not provide shell access.
-mowibox@chroma:~$
+
+Mowibox@CHROMA MINGW64 ~
+$
 ```
 
 {{< /details >}}
@@ -165,7 +178,7 @@ mowibox@chroma:~$
 
 * Generate an SSH key by entering the following command:
 
-```bash {title="mowibox@chroma: ~"}
+```bash {title="mowibox – -zsh – 81x21"}
 mowibox@chroma:~$ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
@@ -173,14 +186,14 @@ You can press "Enter" two or three times to accept the default file location and
 
 * Enable the SSH agent and add the SSH key with the following command:
 
-```bash {title="mowibox@chroma: ~"}
+```bash {title="mowibox – -zsh – 81x21"}
 mowibox@chroma:~$ eval "$(ssh-agent -s)"
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
 
 The next step is to add the key you just generated to GitHub. To do so, run the following command:
 
-```bash {title="mowibox@chroma: ~"}
+```bash {title="mowibox – -zsh – 81x21"}
 mowibox@chroma:~$ cat ~/.ssh/id_ed25519.pub
 ```
 
@@ -192,10 +205,18 @@ You will get an output in your terminal corresponding to your key (it starts wit
 
 And that’s it! You can also verify that the SSH connection is properly established with GitHub using the following command:
 
-```bash {title="mowibox@chroma: ~"}
-mowibox@chroma:~$ ssh -T git@github.com
+```bash {title="mowibox – -zsh – 81x21"}
+Mowibox@CHROMA MINGW64 ~
+$ ssh -T git@github.com
+```
+
+You will then see a connection confirmation message. Enter “yes,” and if everything went well, you should see the following display:
+
+```bash {title="mowibox – -zsh – 81x21"}
 Hi Mowibox! You've successfully authenticated, but GitHub does not provide shell access.
-mowibox@chroma:~$
+
+Mowibox@CHROMA MINGW64 ~
+$
 ```
 
 {{< /details >}}
