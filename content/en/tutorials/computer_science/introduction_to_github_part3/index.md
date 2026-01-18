@@ -32,7 +32,7 @@ Throughout this introduction, we illustrated our explanations and manipulations 
 
 For now, it is not very full, I’ll admit… But it is a phrase that is close to my heart, an important principle on which I base my thinking. Since this phrase has value to me, I can consider it a treasure. It is the first stone of a much larger treasure: the next ones are up to you to add!
 
-The final goal is to fill this shared treasure with your personal touch: it can be a quote you particularly like, a sentence that inspires you, thoughts or words that motivate you daily and that you want to share with others. This file will thus become the core of the repository-mine treasure, enriched by everyone's contributions.
+The final goal is to fill this shared treasure with your personal touch: it can be a quote you particularly like, a sentence that inspires you, thoughts or words that motivate you daily and that you want to share with others. This file will thus become the core of the `repository-mine` treasure, enriched by everyone's contributions.
 
 ## Issues
 
@@ -86,7 +86,7 @@ To illustrate how to create a fork, a new contributor is introduced: **Chromatis
     <img src="/chroma/images/gitgithub33.png" alt="Fork informations" class="w-full h-auto" />
 </p>
 
-* Chromatistí clicks **"Create a fork"** and finally obtains a `repository-mine` identical to the original (notice the icon next to the repository name):
+* Chromatistí clicks **"Create fork"** and finally obtains a `repository-mine` identical to the original (notice the icon next to the repository name):
 
 <p align="center">
     <img src="/chroma/images/gitgithub34.png" alt="Fork repository" class="w-full h-auto" />
@@ -102,15 +102,15 @@ A branch is a parallel line of development that allows working on changes withou
 
 ### Creating a branch
 
-The command `git checkout -b <branch_name>` creates a new branch. For example, if Chromatistí runs:
+The command `git checkout -b <branch_name>` creates a new branch. For example, if Chromatistí opens a terminal on his local repository and runs:
 
 ```bash {frame="none"}
 git checkout -b my-treasure
 ```
 
-a new branch called `my-treasure` is created and checked out. The `Notre_Tresor.md` file can now be modified without affecting the main branch:
+a new branch called `my-treasure` is created and he places it there directly. The `Our_Treasure.md` file can now be modified without affecting the main branch:
 
-```md {title="Our_Treasure.md"}
+```md {title="Our_Treasure.md", hl_lines=[5]}
 # Our Treasure
 
 * "The limits of imagination are those we impose on it."
@@ -125,7 +125,7 @@ a new branch called `my-treasure` is created and checked out. The `Notre_Tresor.
 To apply the changes in Git, you must use the same commands as in the previous part. The only difference is adding the `--set-upstream origin <branch_name>` flag to `git push`:
 
 ```bash {frame="none"}
-git add Notre_Tresor.md
+git add Our_Treasure.md
 git commit -m "Adding my treasure to the common good"
 git push --set-upstream origin my-treasure
 ```

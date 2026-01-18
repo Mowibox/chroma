@@ -85,7 +85,7 @@ Pour illustrer comment créer une fork, un nouveau contributeur est introduit : 
     <img src="/chroma/images/gitgithub33.png" alt="Fork informations" class="w-full h-auto" />
 </p>
 
-* Chromatistí appuie sur **"Create a fork"** et obtient finalement une `repository-mine` identique à l'originale (c'est bien son icône qui est à côté du nom du repository) :
+* Chromatistí appuie sur **"Create fork"** et obtient finalement une `repository-mine` identique à l'originale (c'est bien son icône qui est à côté du nom du repository) :
 
 <p align="center">
     <img src="/chroma/images/gitgithub34.png" alt="Fork repository" class="w-full h-auto" />
@@ -101,7 +101,7 @@ Une branche est une ligne de développement parallèle qui permet de travailler 
 
 ### Création de branche
 
-La commande `git-checkout -b <nom_de_branche>` permet de créer une nouvelle branche. Ainsi, si Chromatistí entre la commande :
+La commande `git-checkout -b <nom_de_branche>` permet de créer une nouvelle branche. Ainsi, si Chromatistí ouvre un terminal dans son repository local et entre la commande :
 
 ```bash {frame="none"}
 git checkout -b mon-tresor
