@@ -77,6 +77,7 @@ Those who proofread, review content, and suggest corrections to improve the qual
 * Loubna LATRECHE
 * [Gauthier BIEHLER](https://github.com/Minorzar)
 * [Justine XIANG](https://github.com/Justine2403)
+* Alexandre PETIT
 
 </details>
 
