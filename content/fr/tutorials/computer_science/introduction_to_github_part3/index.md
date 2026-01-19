@@ -102,7 +102,7 @@ Une branche est une ligne de développement parallèle qui permet de travailler 
 
 ### Création de branche
 
-La commande `git-checkout -b <nom_de_branche>` permet de créer une nouvelle branche. Ainsi, si Chromatistí ouvre un terminal dans son repository local et entre la commande :
+La commande `git checkout -b <nom_de_branche>` permet de créer une nouvelle branche. Ainsi, si Chromatistí ouvre un terminal dans son repository local et entre la commande :
 
 ```bash {frame="none"}
 git checkout -b mon-tresor
