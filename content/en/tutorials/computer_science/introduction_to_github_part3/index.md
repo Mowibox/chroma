@@ -48,7 +48,7 @@ On GitHub, all I have to do is click on the **“Issues”** tab in my repositor
 
 In the image above, you can see the different features of an issue:
 
-* **Title:** "Enrich our treasure." The title summarizes in one sentence what the issue is about.
+* **Title:** "Grow our treasure." The title summarizes in one sentence what the issue is about.
 
 * **Description:** It provides more detail about the issue’s context, explaining what is expected and possibly indicating constraints or suggestions.
 
