@@ -58,20 +58,20 @@ The next step is to modify the relevant files to enrich the shared treasure. How
 
 ## Fork a repository
 
-"Forking" a repository means creating a complete copy of a repository in your own GitHub account. This copy, the "fork," belongs to you: you can make any modifications you want. This is the most common way to contribute to a project without being the original owner.
-
-<p align="center">
-    <img src="/chroma/images/gitgithub30.png" alt="Two mines" class="w-full h-auto" />
-    </br>
-    <em style="font-size: 0.95em;">Forking a repository is like having an identical mine where you can do anything!</em>
-</p>
-
 To illustrate how to create a fork, a new contributor is introduced: **Chromatistí.**
 
 <p align="center">
-    <img src="/chroma/images/gitgithub31.png" alt="Chromatisti" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub30.png" alt="Chromatisti" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Chromatistí!</em>
+</p>
+
+"Forking" a repository means creating a complete copy of a repository in your own GitHub account. This copy, the "fork," belongs to you: you can make any modifications you want. This is the most common way to contribute to a project without being the original owner.
+
+<p align="center">
+    <img src="/chroma/images/gitgithub31.png" alt="Two mines" class="w-full h-auto" />
+    </br>
+    <em style="font-size: 0.95em;">Forking a repository is like having an identical mine where you can do anything!</em>
 </p>
 
 * To create a fork, Chromatistí goes to my repository and clicks the **"Fork"** button:
@@ -119,7 +119,7 @@ a new branch called `my-treasure` is created and he places it there directly. Th
 ```
 
 <p align="center">
-    <img src="/chroma/images/gitgithub35.png" alt="Branch creation" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub35_en.png" alt="Branch creation" class="w-full h-auto" />
 </p>
 
 To apply the changes in Git, you must use the same commands as in the previous part. The only difference is adding the `--set-upstream origin <branch_name>` flag to `git push`:
@@ -163,7 +163,7 @@ git checkout main
 You will then see that the `Our_Treasure.md` file has been restored to its original state.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub38.png" alt="Main branch" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub38_en.png" alt="Main branch" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">You are here!</em>
 </p>
@@ -196,7 +196,7 @@ Changes from the `my-treasure` branch now appear on the `main` branch:
 ```
 
 <p align="center">
-    <img src="/chroma/images/gitgithub39.png" alt="Merging branches" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub39_en.png" alt="Merging branches" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Illustratively: merging the two train branches to have only one mine.</em>
 </p>
@@ -224,7 +224,7 @@ You now have your treasure in the mine! But remember, changes were made in your 
 A pull request is a key GitHub mechanism that proposes merging changes from one branch into another, while providing a space for discussion and review before integration.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub40.png" alt="Pull request on mines" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub40_en.png" alt="Pull request on mines" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">It's like asking to merge the two mines into one.</em>
 </p>
@@ -281,7 +281,7 @@ Create a pull request to merge your changes into the main repository. **Don’t 
 {{< /callout >}}
 
 <p align="center">
-    <img src="/chroma/images/gitgithub40.png" alt="Final graph" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub40_en.png" alt="Final graph" class="w-full h-auto" />
 </p>
 
 ## Going Further

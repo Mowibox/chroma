@@ -57,21 +57,22 @@ La prochaine étape est donc de modifier les fichiers concernés afin d'enrichir
 
 ## Fork un repository
 
+Pour illustrer comment créer une fork, un nouveau contributeur est introduit : **Chromatistí.**
+
+<p align="center">
+    <img src="/chroma/images/gitgithub30.png" alt="Chromatisti" class="w-full h-auto" />
+    </br>
+    <em style="font-size: 0.95em;">Chromatistí !</em>
+</p>
+
 "Forker" un repository consiste à créer une copie complète d'un repository sur votre propre compte GitHub. Cette copie, la "fork", vous appartient : vous pouvez y effectuer toutes les modifications que vous souhaitez. C'est le mode de fonctionnement le plus courant pour contribuer à un projet sans en être propriétaire original.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub30.png" alt="Two mines" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub31.png" alt="Two mines" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Fork un repository, c'est comme avoir une mine identique à l'originale dans laquelle vous pouvez tout faire !</em>
 </p>
 
-Pour illustrer comment créer une fork, un nouveau contributeur est introduit : **Chromatistí.**
-
-<p align="center">
-    <img src="/chroma/images/gitgithub31.png" alt="Chromatisti" class="w-full h-auto" />
-    </br>
-    <em style="font-size: 0.95em;">Chromatistí !</em>
-</p>
 
 * Pour créer une fork, Chromatistí va se rendre sur mon repository et appuyer sur le bouton **"Fork"** :
 
@@ -118,7 +119,7 @@ une nouvelle branche nommée `mon-tresor` et créée et l'y positionne directeme
 ```
 
 <p align="center">
-    <img src="/chroma/images/gitgithub35.png" alt="Branch creation" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub35_fr.png" alt="Branch creation" class="w-full h-auto" />
 </p>
 
 Pour que les modifications soient effectives dans Git, il faut utiliser les mêmes commandes que dans la partie précédente. La seule subtilité à prendre en compte est l'ajout du flag `--set-upstream origin <nom_de_branche>` à la commande `git push` :
@@ -162,7 +163,7 @@ git checkout main
 Vous verrez alors que le fichier `Notre_Tresor.md` est revenu à son état d'origine.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub38.png" alt="Main branch" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub38_fr.png" alt="Main branch" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Vous êtes ici !</em>
 </p>
@@ -195,7 +196,7 @@ Les modifications effectuées dans la branche `mon-tresor` apparaissent désorma
 ```
 
 <p align="center">
-    <img src="/chroma/images/gitgithub39.png" alt="Merging branches" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub39_fr.png" alt="Merging branches" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">De manière imagée : on fusionne les deux branches du train pour n'avoir qu'une seule mine.</em>
 </p>
@@ -223,7 +224,7 @@ Vous avez finalement votre trésor au sein de la mine ! Mais rappelez-vous, les 
 La pull request est un mécanisme fondamental de GitHub qui permet de proposer la fusion de changements d’une branche vers une autre, tout en offrant un espace de discussion et de validation avant leur intégration.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub40.png" alt="Pull request on mines" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub40_fr.png" alt="Pull request on mines" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">C'est comme demander à relier les deux mines pour n'en avoir qu'une seule.</em>
 </p>
@@ -281,7 +282,7 @@ Réalisez une pull request pour intégrer vos modifications au repository princi
 {{< /callout >}}
 
 <p align="center">
-    <img src="/chroma/images/gitgithub40.png" alt="Final graph" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub40_fr.png" alt="Final graph" class="w-full h-auto" />
 </p>
 
 ## Pour aller plus loin
