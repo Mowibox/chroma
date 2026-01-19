@@ -454,4 +454,4 @@ Cette section fait office **d'aide-mémoire** en résumant l'ensemble des comman
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
 * **Dernière mise à jour :** Octobre 2025
-* **Relecteur :** [Gauthier BIEHLER](https://github.com/Minorzar)
+* **Relecteur :** Loubna LATRECHE, [Gauthier BIEHLER](https://github.com/Minorzar)

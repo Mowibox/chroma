@@ -21,7 +21,7 @@ Voici Chrome.
     <em style="font-size: 0.95em;">Chrome : Un charme à toute épreuve !</em>
 </p>
 
-Chrome est un joyeux luron qui aime créer des fichiers et les partager avec ses amis. Avant, il utilisait toutes sortes de méthodes et de stratagèmes loufoques pour leur envoyer ses fichiers (lettre, pigeon voyageur et j'en passe !). Cela fonctionnait, mais dès qu'il voulait modifier son fichier, il était obligé de repasser par tous ses amis pour leur donne la dernière version. Et le problème se posait dans les deux sens : lorsque que l'un de ses amis voulait apporter une modification à son fichier, il devait la faire sur son fichier envoyer puis le renvoyer à Chrome, mais les autres n'avaient pas tout de suite la modification. Pire encore, si tous ses amis lui proposent une version modifiée, il se retrouve avec une multitude de fichiers à gérer !
+Chrome est un joyeux luron qui aime créer des fichiers et les partager avec ses amis. Avant, il utilisait toutes sortes de méthodes et de stratagèmes loufoques pour leur envoyer ses fichiers (lettre, pigeon voyageur et j'en passe !). Cela fonctionnait, mais dès qu'il voulait modifier son fichier, il était obligé de repasser par tous ses amis pour leur donner la dernière version. Et le problème se posait dans les deux sens : lorsque que l'un de ses amis voulait apporter une modification à son fichier, il devait la faire sur son fichier envoyé, puis le renvoyer à Chrome, mais les autres n'avaient pas tout de suite la modification. Pire encore, si tous ses amis lui proposent une version modifiée, il se retrouve avec une multitude de fichiers à gérer !
 
 Un beau jour, Chrome décida d'apporter une solution à son problème en créant une mine :
 
@@ -49,7 +49,7 @@ Puisque Chrome vient de créer le repository, il n'a pas encore créé de fichie
 
 Satisfait de son fichier A, il va donc le partager dans sa mine pour que tous ses amis puissent y jeter un coup d'œil. Il réalise ce partage en plusieurs étapes :
 
-Tout d'abord il prépare le fichier A à l'envoi en **l'ajoutant (add)** à son chariot :
+Tout d'abord, il prépare le fichier A à l'envoi en **l'ajoutant (add)** à son chariot :
 
 <p align="center">
     <img src="/chroma/images/gitgithub5.jpg" alt="Adding file A" class="w-full h-auto" />
