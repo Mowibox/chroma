@@ -1,6 +1,6 @@
 ---
 title: "Introduction à Git et GitHub – Partie 3"
-summary: Issues, branches et pull requests
+summary: Issues, forks, branches et pull requests
 weight: 1005
 icon: "git-branch"
 ---
@@ -55,7 +55,7 @@ Dans l'image ci-dessus on peut voir les différentes caractéristiques d'une iss
 
 La prochaine étape est donc de modifier les fichiers concernés afin d'enrichir le trésor commun. Or, le repository ayant été créé par moi-même, vous ne pouvez pas modifier directement le contenu. Plutôt que de donner un à un les droits d'écriture à chacun, GitHub propose un mécanisme alternatif : **la fork.**
 
-## Fork un repository
+## Les forks
 
 Pour illustrer comment créer une fork, un nouveau contributeur est introduit : **Chromatistí.**
 
@@ -65,7 +65,7 @@ Pour illustrer comment créer une fork, un nouveau contributeur est introduit : 
     <em style="font-size: 0.95em;">Chromatistí !</em>
 </p>
 
-"Forker" un repository consiste à créer une copie complète d'un repository sur votre propre compte GitHub. Cette copie, la "fork", vous appartient : vous pouvez y effectuer toutes les modifications que vous souhaitez. C'est le mode de fonctionnement le plus courant pour contribuer à un projet sans en être propriétaire original.
+"Forker" un repository consiste à créer une copie complète d'un repository sur votre propre compte GitHub. Cette copie, la fork, vous appartient : vous pouvez y effectuer toutes les modifications que vous souhaitez. C'est le mode de fonctionnement le plus courant pour contribuer à un projet sans en être propriétaire original.
 
 <p align="center">
     <img src="/chroma/images/gitgithub31.png" alt="Two mines" class="w-full h-auto" />

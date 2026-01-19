@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Git and GitHub – Part 3"
-summary: Issues, branches and pull requests
+summary: Issues, forks, branches and pull requests
 weight: 1005
 icon: "git-branch"
 ---
@@ -56,7 +56,7 @@ In the image above, you can see the different features of an issue:
 
 The next step is to modify the relevant files to enrich the shared treasure. However, since the repository was created by me, you cannot directly modify its contents. Rather than granting write access to everyone individually, GitHub offers an alternative mechanism: **the fork.**
 
-## Fork a repository
+## Forks
 
 To illustrate how to create a fork, a new contributor is introduced: **Chromatistí.**
 
@@ -66,7 +66,7 @@ To illustrate how to create a fork, a new contributor is introduced: **Chromatis
     <em style="font-size: 0.95em;">Chromatistí!</em>
 </p>
 
-"Forking" a repository means creating a complete copy of a repository in your own GitHub account. This copy, the "fork," belongs to you: you can make any modifications you want. This is the most common way to contribute to a project without being the original owner.
+"Forking" a repository means creating a complete copy of a repository in your own GitHub account. This copy, the fork, belongs to you: you can make any modifications you want. This is the most common way to contribute to a project without being the original owner.
 
 <p align="center">
     <img src="/chroma/images/gitgithub31.png" alt="Two mines" class="w-full h-auto" />
