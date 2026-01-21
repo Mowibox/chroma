@@ -73,7 +73,6 @@ Pour illustrer comment créer une fork, un nouveau contributeur est introduit : 
     <em style="font-size: 0.95em;">Fork un repository, c'est comme avoir une mine identique à l'originale dans laquelle vous pouvez tout faire !</em>
 </p>
 
-
 * Pour créer une fork, Chromatistí va se rendre sur mon repository et appuyer sur le bouton **"Fork"** :
 
 <p align="center">
