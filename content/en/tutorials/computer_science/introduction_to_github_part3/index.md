@@ -102,10 +102,10 @@ A branch is a parallel line of development that allows working on changes withou
 
 ### Creating a branch
 
-The command `git checkout -b <branch_name>` creates a new branch. For example, if Chromatistí opens a terminal on his local repository and runs:
+The command `git switch -c <branch_name>` creates a new branch. For example, if Chromatistí opens a terminal on his local repository and runs:
 
 ```bash {frame="none"}
-git checkout -b my-treasure
+git switch -c my-treasure
 ```
 
 a new branch called `my-treasure` is created and he places it there directly. The `Our_Treasure.md` file can now be modified without affecting the main branch:
@@ -154,10 +154,10 @@ Create a new branch and modify the "Our_Treasure.md" file following these guidel
 * Do not modify other contributions.
   {{< /callout >}}
 
-Use `git checkout <branch_name>` to switch branches. For example, to return to the main branch:
+Use `git switch <branch_name>` to switch branches. For example, to return to the main branch:
 
 ```bash {frame="none"}
-git checkout main
+git switch main
 ```
 
 You will then see that the `Our_Treasure.md` file has been restored to its original state.
@@ -175,13 +175,13 @@ Try switching between branches to see the different changes!
 Merging branches combines changes from two branches into a unified project version. Use `git merge <branch_name>` to do this.
 
 {{< callout context="danger" title="Warning" icon="outline/alert-square-rounded" >}}
-To merge `<branch_name>` into another, you **must be on the destination branch** (the branch that will receive the changes) using `git checkout <destination_branch>`!
+To merge `<branch_name>` into another, you **must be on the destination branch** (the branch that will receive the changes) using `git switch <destination_branch>`!
 {{< /callout >}}
 
 With Chromatistí, this would be:
 
 ```bash {frame="none"}
-git checkout main  # switch to main branch
+git switch main  # switch to main branch
 git merge my-treasure
 ```
 
@@ -297,8 +297,8 @@ As in the previous part, this table summarizes all commands covered in this tuto
 | [`git rm`](https://git-scm.com/docs/git-rm) | Deletes a file from the project and informs Git of this deletion. |
 | [`git commit`](https://git-scm.com/docs/git-commit) | Records the added changes with a message (`-m "Message"`) describing the action performed. |
 | [`git push`](https://git-scm.com/docs/git-push) | Sends your commits to the remote repository. |
-| [`git checkout -b <branch>`](https://git-scm.com/docs/git-checkout) | Creates a new branch from the current branch and checks it out immediately. |
-| [`git checkout <branch>`](https://git-scm.com/docs/git-checkout) | Switches the active branch in the local repository. |
+| [`git switch -c <branch>`](https://git-scm.com/docs/git-switch) | Creates a new branch from the current branch and checks it out immediately. |
+| [`git switch <branch>`](https://git-scm.com/docs/git-switch) | Switches the active branch in the local repository. |
 | [`git push --set-upstream origin <branch>`](https://git-scm.com/docs/git-push) | Pushes the local branch to the remote repository and sets the remote branch as default (*upstream*). |
 | [`git merge <branch>`](https://git-scm.com/docs/git-merge) | Merges the specified branch into the active branch. |
 | [`git branch -d <branch>`](https://git-scm.com/docs/git-branch) | Deletes a local branch only if it has already been merged. |

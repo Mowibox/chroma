@@ -421,7 +421,7 @@ Ce tableau récapitule l'ensemble des fonctions vues au cours de ce tutoriel ain
 | [`git commit`](https://git-scm.com/docs/git-commit) | Enregistre les modifications ajoutées avec un message (`-m "Message"`) décrivant l’action effectuée. |
 | [`git push`](https://git-scm.com/docs/git-push) | Envoie vos commits vers le repository distant. |
 
-Dans la prochaine partie de cette introduction, nous allons explorer plus en profondeur les fonctionnalités offertes par Git et GitHub en nous attaquant à un concept plus complexe mais très pratique lorsque vous travaillez à plusieurs sur un même projet : les issues, les branches & les pull requests.
+Dans la [prochaine partie]({{< relref "tutorials/computer_science/introduction_to_github_part3">}}) de cette introduction, nous allons explorer plus en profondeur les fonctionnalités offertes par Git et GitHub en nous attaquant à un concept plus complexe mais très pratique lorsque vous travaillez à plusieurs sur un même projet : les issues, les branches & les pull requests.
 
 ---
 

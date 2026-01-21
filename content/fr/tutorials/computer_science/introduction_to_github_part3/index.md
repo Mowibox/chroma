@@ -102,10 +102,10 @@ Une branche est une ligne de développement parallèle qui permet de travailler 
 
 ### Création de branche
 
-La commande `git checkout -b <nom_de_branche>` permet de créer une nouvelle branche. Ainsi, si Chromatistí ouvre un terminal dans son repository local et entre la commande :
+La commande `git switch -c <nom_de_branche>` permet de créer une nouvelle branche. Ainsi, si Chromatistí ouvre un terminal dans son repository local et entre la commande :
 
 ```bash {frame="none"}
-git checkout -b mon-tresor
+git switch -c mon-tresor
 ```
 
 une nouvelle branche nommée `mon-tresor` et créée et l'y positionne directement. Il est ainsi possible de modifier le fichier `Notre_Tresor.md` avec une citation, sans altérer la branche principale :
@@ -154,10 +154,10 @@ Créez une nouvelle branche et modifiez le fichier "Notre_Tresor.md" en respecta
 * Ne modifiez pas les contributions des autres.
 {{< /callout >}}
 
-La commande `git checkout <nom_de_branche>`, vous permet de changer de branche active. Par exemple, pour retourner sur la branche principale, il faut écrire :
+La commande `git switch <nom_de_branche>`, vous permet de changer de branche active. Par exemple, pour retourner sur la branche principale, il faut écrire :
 
 ```bash {frame="none"}
-git checkout main
+git switch main
 ```
 
 Vous verrez alors que le fichier `Notre_Tresor.md` est revenu à son état d'origine.
@@ -175,13 +175,13 @@ Essayez de vous déplacer de branche en branche pour voir les différents change
 La fusion de branches permet de combiner les modifications de deux branches afin de créer une version unifiée du projet. La commande `git merge <nom_de_branche>` permet de réaliser cette opération.
 
 {{< callout context="danger" title="Attention" icon="outline/alert-square-rounded" >}}
-Pour fusionner la branche `<nom_de_branche>` avec une autre, il faut **obligatoirement être positionné sur la branche de destination** (celle qui recevra les modifications) avec `git checkout <branche_de_destination>` !
+Pour fusionner la branche `<nom_de_branche>` avec une autre, il faut **obligatoirement être positionné sur la branche de destination** (celle qui recevra les modifications) avec `git switch <branche_de_destination>` !
 {{< /callout >}}
 
 Avec Chromatistí, cela donnerait :
 
 ```bash {frame="none"}
-git checkout main  # déplacement sur la branche main
+git switch main  # déplacement sur la branche main
 git merge mon-tresor
 ```
 
@@ -298,8 +298,8 @@ Comme pour la partie précédente, ce tableau récapitule l'ensemble des fonctio
 | [`git rm`](https://git-scm.com/docs/git-rm) | Supprime un fichier du projet et informe Git de cette suppression. |
 | [`git commit`](https://git-scm.com/docs/git-commit) | Enregistre les modifications ajoutées avec un message (`-m "Message"`) décrivant l’action effectuée. |
 | [`git push`](https://git-scm.com/docs/git-push) | Envoie vos commits vers le repository distant. |
-| [`git checkout -b <branche>`](https://git-scm.com/docs/git-checkout) | Crée une nouvelle branche à partir de la branche courante et s’y positionne immédiatement. |
-| [`git checkout <branche>`](https://git-scm.com/docs/git-checkout) | Change la branche active du repository local. |
+| [`git switch -c <branche>`](https://git-scm.com/docs/git-switch) | Crée une nouvelle branche à partir de la branche courante et s’y positionne immédiatement. |
+| [`git switch <branche>`](https://git-scm.com/docs/git-switch) | Change la branche active du repository local. |
 | [`git push --set-upstream origin <branche>`](https://git-scm.com/docs/git-push) | Pousse la branche locale vers le repository distant et définit la branche distante comme référence par défaut (*upstream*). |
 | [`git merge <branche>`](https://git-scm.com/docs/git-merge) | Fusionne la branche spécifiée avec la branche active. |
 | [`git branch -d <branche>`](https://git-scm.com/docs/git-branch) | Supprime une branche locale uniquement si elle a déjà été fusionnée. |
