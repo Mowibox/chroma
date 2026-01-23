@@ -31,7 +31,7 @@ Tout au long de cette introduction, nous avons illustré nos propos et nos manip
 * "Les limites de l'imagination sont celles qu'on lui impose."
 ```
 
-Pour le moment il n'est pas très rempli, je peux vous l'accorder... Mais il s'agit d'une phrase qui me tient à cœur, un principe important sur lequel je fonde ma manière de penser. Comme cette phrase a de la valeur pour moi, je peux la considérer comme un trésor. C'est la première pierre d'un trésor bien plus grand : les suivantes, c'est à vous de les poser !
+Pour le moment, il n'est pas très rempli, je peux vous l'accorder... Mais il s'agit d'une phrase qui me tient à cœur, un principe important sur lequel je fonde ma manière de penser. Comme cette phrase a de la valeur pour moi, je peux la considérer comme un trésor. C'est la première pierre d'un trésor bien plus grand : les suivantes, c'est à vous de les poser !
 
 Le but final est de remplir ce trésor commun avec votre touche personnelle : cela peut être une citation que vous appréciez particulièrement, une phrase qui vous inspire, des pensées ou des mots de qui vous donnent de la motivation au quotidien et que vous souhaitez partager avec autrui. Ce fichier constituera ainsi le cœur du trésor de la `repository-mine`, enrichi par les contributions de chacun.
 
@@ -47,7 +47,7 @@ Sur GitHub, il me suffit de cliquer sur l'onglet **"Issues"** de mon repository,
     <em style="font-size: 0.95em;"><a href="https://github.com/Mowibox/repository-mine/issues/2">Voir l'issue sur GitHub.</a></em>
 </p>
 
-Dans l'image ci-dessus on peut voir les différentes caractéristiques d'une issue :
+Dans l'image ci-dessus, on peut voir les différentes caractéristiques d'une issue :
 
 * **Un titre :** "Enrichir notre trésor". Le titre permet de résumer en une phrase de quoi l'issue traite.
 * **Une description :** Elle permet d'apporter plus de détail au contexte de l’issue, en expliquant ce qui est attendu et en précisant éventuellement les contraintes ou les pistes à suivre.
@@ -245,7 +245,7 @@ En pratique :
 
 Tout le processus se passe sur GitHub :
 
-* Dans sa fork, Chromatistí appuie sur le bouton **"Contribute"**, puis sur **"Open pull request"**, ce qui lui ouvre une interface dans laquelle il peut écrire un titre et une description à sa proposition :
+* Dans sa fork, Chromatistí appuie sur le bouton **"Contribute"**, puis sur **"Open pull request"**, ce qui ouvre une interface dans laquelle il peut écrire un titre et une description à sa proposition :
 
 <p align="center">
     <img src="/chroma/images/gitgithub41_fr.png" alt="Adding reference" class="w-full h-auto" />
