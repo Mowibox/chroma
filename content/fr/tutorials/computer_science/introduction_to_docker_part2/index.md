@@ -65,7 +65,7 @@ Comme vous avez peut-être pu le constater avec l'image "hello-world" lors du [t
 
 ### Suppression d'images
 
-Pour supprimer une image, par exemple "hello-world", vous pouvez utiliser la commande ci dessous :
+Pour supprimer une image, par exemple "hello-world", vous pouvez utiliser la commande ci-dessous :
 
 ```bash {frame="none"}
 docker rmi hello-world
