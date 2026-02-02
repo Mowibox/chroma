@@ -392,9 +392,9 @@ But if you want to go further, you may look into **STM32 microcontrollers** — 
 
 ### Operators
 
-| Type         | Operators                                     |
-|--------------|-----------------------------------------------|
-| Arithmetic   | `+`, `-`, `*`, `/`, `%`                        |
+| Type         | Operators                                       |
+|--------------|-------------------------------------------------|
+| Arithmetic   | `+`, `-`, `*`, `/`, `%`                         |
 | Assignment   | `=`, `+=`, `-=`, `%=`, `\|=`, `^=`, `<<=`, `>>=`|
 | Logical      | `&&`, `\|\|`, `<`, `>`, `<=`, `>=`, `==`, `!=`  |
 
@@ -452,7 +452,7 @@ for (int i = 0; i < SIZE; i++) {
 
 | Function                              | Description                                                              |
 |---------------------------------------|--------------------------------------------------------------------------|
-| `pinMode(int pin, INPUT)`             | Set the mode of a pin (`INPUT` or `OUTPUT`)             |
+| `pinMode(int pin, INPUT)`             | Set the mode of a pin (`INPUT` or `OUTPUT`)                              |
 | `digitalWrite(int pin, HIGH)`         | Set a digital pin state (`HIGH` = 1, `LOW` = 0)                          |
 | `digitalRead(int pin)`                | Read the state of a digital pin                                          |
 | `delay(1000)`                         | Wait for 1000 ms (1 second)                                              |
@@ -460,7 +460,7 @@ for (int i = 0; i < SIZE; i++) {
 | `analogRead(int pin)`                 | Read the value from an analog pin                                        |
 | `Serial.begin(int baud)`              | Start serial communication (commonly `baud` = 9600)                      |
 | `Serial.println("Chroma")`            | Print “Chroma” to the serial monitor                                     |
-| `map(val, Imin, Imax, Omin, Omax)`    | Rescale a value from range [`Imin`; `Imax`] to [`Omin`; `Omax`]         |
+| `map(val, Imin, Imax, Omin, Omax)`    | Rescale a value from range [`Imin`; `Imax`] to [`Omin`; `Omax`]          |
 | `tone(pin, frequency)`                | Play a sound of frequency `frequency` on a buzzer                        |
 | `noTone(pin)`                         | Stop the sound from the buzzer                                           |
 | `Servo myServo`                       | Create a servo control object                                            |
@@ -476,5 +476,4 @@ The programming language used with Arduino is C++. It’s also used to build mob
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Latest update:** May 2025
 * **Reviewer:** Loubna LATRECHE

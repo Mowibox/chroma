@@ -239,5 +239,4 @@ De la même manière qu'avec [l'ERC]({{< relref "tutorials/electronics/introduct
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Dernière mise à jour :** Juin 2025
 * **Relecteur :** Loubna LATRECHE

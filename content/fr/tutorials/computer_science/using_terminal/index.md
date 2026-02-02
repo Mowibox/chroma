@@ -453,5 +453,4 @@ Cette section fait office **d'aide-mémoire** en résumant l'ensemble des comman
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Dernière mise à jour :** Octobre 2025
 * **Relecteur :** [Gauthier BIEHLER](https://github.com/Minorzar)

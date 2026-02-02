@@ -222,5 +222,4 @@ And of course, this signal generation process works with all compatible componen
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Latest update:** December 2025
 * **Reviewer:**

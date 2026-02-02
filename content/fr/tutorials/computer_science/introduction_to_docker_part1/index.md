@@ -127,5 +127,4 @@ Le tutoriel suivant explique le concept propre à Docker des images et des conte
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Dernière mise à jour :** Juin 2025
 * **Relecteur :** Loubna LATRECHE, [Gauthier BIEHLER](https://github.com/Minorzar)

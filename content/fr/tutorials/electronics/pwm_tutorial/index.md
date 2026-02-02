@@ -221,5 +221,4 @@ Et bien évidemment, ce procédé de génération de signaux marche avec tous le
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Dernière mise à jour :** Décembre 2025
 * **Relecteurs :**

@@ -166,5 +166,4 @@ Les autres noms que vous avez pu voir en gras tout au long de l'histoire **(add,
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Dernière mise à jour :** Mai 2025
 * **Relecteur :** Loubna LATRECHE, [Gauthier BIEHLER](https://github.com/Minorzar)

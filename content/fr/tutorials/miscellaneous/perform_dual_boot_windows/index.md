@@ -1,7 +1,7 @@
 ---
 title: "Réaliser un dual-boot avec Windows"
 summary: Pour avoir Ubuntu et Windows sur une même machine
-weight: 4001
+weight: 4002
 icon: "laptop"
 ---
 
@@ -194,5 +194,4 @@ Vous n'avez plus qu'à vous connecter à votre compte utilisateur pour bénéfic
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Dernière mise à jour :** Octobre 2025
 * **Relecteur :** Loubna LATRECHE

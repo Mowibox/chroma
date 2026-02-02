@@ -425,5 +425,4 @@ In the next part of this introduction, we will explore in more depth the feature
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Latest update:** January 2026
 * **Reviewers:**

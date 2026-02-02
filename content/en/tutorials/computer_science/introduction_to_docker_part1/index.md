@@ -127,5 +127,4 @@ The next tutorial explains the Docker concept of images and containers and teach
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Latest update:** June 2025
 * **Reviewer:**

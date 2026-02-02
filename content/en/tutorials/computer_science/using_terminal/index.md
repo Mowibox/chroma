@@ -428,7 +428,7 @@ This section acts as a **cheat sheet**, summarizing all the commands we've just 
 | [`rm`](#rm)       | Remove a file                   | `rm bonjour.txt`               | No          |
 | [`mv`](#mv)       | Move or rename a file/directory | `mv Folder_4/ Folder_3`        | No          |
 | [`cp`](#cp)       | Copy a file or directory        | `cp -r Folder_1/ Folder_copy/` | No          |
-| [`cat`](#cat)     | Display file contents           | `cat file.txt`                 | No         |
+| [`cat`](#cat)     | Display file contents           | `cat file.txt`                 | No          |
 | [`touch`](#touch) | Create an empty file            | `touch file_2.txt`             | Yes         |
 | [`which`](#which) | Show path to a program          | `which python3`                | Yes         |
 | [`find`](#find)   | Search for files/folders        | `find . -name "file.txt"`      | Yes         |
@@ -440,5 +440,4 @@ This section acts as a **cheat sheet**, summarizing all the commands we've just 
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
-* **Latest update:** October 2025
 * **Reviewer:** [Gauthier BIEHLER](https://github.com/Minorzar)

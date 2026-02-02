@@ -448,22 +448,22 @@ for (int i = 0; i < SIZE; i++) {
 
 ### Fonctions Arduino
 
-| Fonction                              | Description                                           |
-|---------------------------------------|-------------------------------------------------------|
-| `pinMode(int pin, INPUT)`              | Définir le type d’une broche (`INPUT` = entrée/ `OUTPUT` = sortie)         |
-| `digitalWrite(int pin, HIGH)`          | Définir l’état d’une broche numérique (`HIGH` = 1, `LOW` = 0)              |
-| `digitalRead(int pin)`                 | Lire l’état d’une broche numérique                   |
-| `delay(1000)`                          | Attente de 1000 ms (1 seconde)                       |
-| `analogWrite(int pin, int dutyCycle)`  | Création d’un signal PWM de rapport cyclique `dutyCycle` ∈ [0; 255]       |
-| `analogRead(int pin)`                  | Lire la valeur d’une broche analogique               |
-| `Serial.begin(int baud)`               | Initialiser la liaison série (souvent `baud` = 9600)          |
-| `Serial.println("Chroma")`              | Afficher “Chroma” sur le port série                    |
-| `map(val, Imin, Imax, Omin, Omax)`     | Changement d’échelle. Réajuste les valeurs de val ∈ [`Imin`; `Imax`] pour [`Omin`; `Omax`]                       |
-| `tone(pin, frequency)`                 | Jouer une fréquence sonore sur un buzzer de fréquence `frequency`            |
-| `noTone(pin)`                          | Arrêter le son du buzzer                             |
-| `Servo monServo`                       | Créer un objet pour contrôler un servomoteur         |
-| `monServo.attach(pin)`                 | Attacher la broche `pin` à l'objet `monServo`        |
-| `monServo.write(90)`                   | Définir la position du servomoteur (ici 90°)         |
+| Fonction                              | Description                                                                                 |
+|---------------------------------------|---------------------------------------------------------------------------------------------|
+| `pinMode(int pin, INPUT)`             | Définir le type d’une broche (`INPUT` = entrée/ `OUTPUT` = sortie)                          |
+| `digitalWrite(int pin, HIGH)`         | Définir l’état d’une broche numérique (`HIGH` = 1, `LOW` = 0)                               |
+| `digitalRead(int pin)`                | Lire l’état d’une broche numérique                                                          |
+| `delay(1000)`                         | Attente de 1000 ms (1 seconde)                                                              |
+| `analogWrite(int pin, int dutyCycle)  | Création d’un signal PWM de rapport cyclique `dutyCycle` ∈ [0; 255]                         |
+| `analogRead(int pin)`                 | Lire la valeur d’une broche analogique                                                      |
+| `Serial.begin(int baud)`              | Initialiser la liaison série (souvent `baud` = 9600)                                        |
+| `Serial.println("Chroma")`            | Afficher “Chroma” sur le port série                                                         |
+| `map(val, Imin, Imax, Omin, Omax)`    | Changement d’échelle. Réajuste les valeurs de val ∈ [`Imin`; `Imax`] pour [`Omin`; `Omax`]  |
+| `tone(pin, frequency)`                | Jouer une fréquence sonore sur un buzzer de fréquence `frequency`                           |
+| `noTone(pin)`                         | Arrêter le son du buzzer                                                                    |
+| `Servo monServo`                      | Créer un objet pour contrôler un servomoteur                                                |
+| `monServo.attach(pin)`                | Attacher la broche `pin` à l'objet `monServo`                                               |
+| `monServo.write(90)`                  | Définir la position du servomoteur (ici 90°)                                                |
 
 {{< callout context="tip" title="Le saviez-vous ?" icon="outline/message-dots" >}}
 Le langage de programmation
@@ -475,5 +475,4 @@ utilisé pour coder sur Arduino est le C++. Il est souvent utilisé pour coder d
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Dernière mise à jour :** Mai 2025
 * **Relecteurs :** Loubna LATRECHE, Alexandre PETIT

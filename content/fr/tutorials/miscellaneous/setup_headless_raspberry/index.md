@@ -1,7 +1,7 @@
 ---
 title: "Configurer une Raspberry Pi sans écran"
 summary: Avec le protocole SSH
-weight: 4002
+weight: 4003
 icon: "chip"
 ---
 
@@ -189,5 +189,4 @@ Et voilà ! Votre Raspberry Pi est maintenant prête à être utilisée sans éc
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Dernière mise à jour :** Juillet 2025
 * **Relecteur :**

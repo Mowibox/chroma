@@ -308,5 +308,4 @@ Comme pour la partie précédente, ce tableau récapitule l'ensemble des fonctio
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Dernière mise à jour :** Janvier 2026
 * **Relecteur :**

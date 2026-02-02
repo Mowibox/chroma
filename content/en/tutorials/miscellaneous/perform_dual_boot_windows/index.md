@@ -194,5 +194,4 @@ Log in to your user account to start using Linux: **Welcome to Ubuntu!**
 ## Credits
 
 * **Author:** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Last updated:** October 2025
 * **Reviewer:**

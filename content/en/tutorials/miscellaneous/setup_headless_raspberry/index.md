@@ -171,5 +171,4 @@ And that’s it! Your Raspberry Pi is now ready to use — no screen required!
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Latest update:** July 2025
 * **Reviewer:**

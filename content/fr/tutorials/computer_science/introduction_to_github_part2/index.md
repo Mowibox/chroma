@@ -428,5 +428,4 @@ Dans la prochaine partie de cette introduction, nous allons explorer plus en pro
 ## Crédits
 
 * **Rédacteur :** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Dernière mise à jour :** Janvier 2026
 * **Relecteur :**

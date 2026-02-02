@@ -308,5 +308,4 @@ As in the previous part, this table summarizes all commands covered in this tuto
 ## Credits
 
 * **Writer:** [Ousmane THIONGANE](https://mowibox.github.io/)
-* **Latest update:** January 2026
 * **Reviewers:**
