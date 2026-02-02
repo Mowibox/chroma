@@ -240,7 +240,7 @@ Quel que soit votre système d'exploitation, vous pouvez copier le lien GitHub a
     <img src="/chroma/images/gitgithub21.png" alt="Copy to clipboard" class="w-full h-auto" />
 </p>
 
-Comme dans la section précédente, la suite de cette introduction est séparée en plusieurs parties où je vous montre comment et cloner `repository-mine` en local en fonction du système d’exploitation utilisé. Vous pouvez ainsi suivre la séquence d'étapes liée à votre OS.
+Comme dans la section précédente, la suite de cette introduction est séparée en plusieurs parties où je vous montre comment cloner `repository-mine` en local en fonction du système d’exploitation utilisé. Vous pouvez ainsi suivre la séquence d'étapes liée à votre OS.
 
 {{< details "Cloner un repository sur Windows" >}}
 
@@ -324,7 +324,7 @@ Créez un ou plusieurs fichiers au sein du repository. Faites vous plaisir sur l
 
 Maintenant que mon fichier est en place, constatez que sur GitHub... le fichier n'apparaît pas. En effet, il faut exécuter une série de commandes pour l'ajouter au repository distant (sur GitHub).
 
-Pour ce faire j'ouvre un terminal au sein du repository de la même manière qu'expliqué précédemment. Puis, j'exécute ensuite les commandes suivantes :
+Pour ce faire, j'ouvre un terminal au sein du repository de la même manière qu'expliqué précédemment. Puis, j'exécute les commandes suivantes :
 
 * ```bash {frame="none"}
   git add .
@@ -421,7 +421,7 @@ Ce tableau récapitule l'ensemble des fonctions vues au cours de ce tutoriel ain
 | [`git commit`](https://git-scm.com/docs/git-commit) | Enregistre les modifications ajoutées avec un message (`-m "Message"`) décrivant l’action effectuée. |
 | [`git push`](https://git-scm.com/docs/git-push) | Envoie vos commits vers le repository distant. |
 
-Dans la prochaine partie de cette introduction, nous allons explorer plus en profondeur les fonctionnalités offertes par Git et GitHub en nous attaquant à un concept plus complexe mais très pratique lorsque vous travaillez à plusieurs sur un même projet : les issues, les branches & les pull requests.
+Dans la [prochaine partie]({{< relref "tutorials/computer_science/introduction_to_github_part3">}}) de cette introduction, nous allons explorer plus en profondeur les fonctionnalités offertes par Git et GitHub en nous attaquant à un concept plus complexe mais très pratique lorsque vous travaillez à plusieurs sur un même projet : les issues, les branches & les pull requests.
 
 ---
 

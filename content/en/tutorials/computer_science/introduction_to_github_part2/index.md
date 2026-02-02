@@ -418,7 +418,7 @@ This table summarizes all the functions seen throughout this tutorial and their 
 | [`git commit`](https://git-scm.com/docs/git-commit) | Records the added changes with a message (`-m "Message"`) describing the action performed. |
 | [`git push`](https://git-scm.com/docs/git-push) | Sends your commits to the remote repository. |
 
-In the next part of this introduction, we will explore in more depth the features offered by Git and GitHub by tackling a more complex but very practical concept when working with others on the same project: branches & pull requests.
+In the [next part]({{< relref "tutorials/computer_science/introduction_to_github_part3">}}) of this introduction, we will explore in more depth the features offered by Git and GitHub by tackling a more complex but very practical concept when working with others on the same project: branches & pull requests.
 
 ---
 

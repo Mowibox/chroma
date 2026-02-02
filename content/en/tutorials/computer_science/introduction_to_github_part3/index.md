@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Git and GitHub – Part 3"
-summary: Issues, branches and pull requests
+summary: Issues, forks, branches and pull requests
 weight: 1005
 icon: "git-branch"
 ---
@@ -48,7 +48,7 @@ On GitHub, all I have to do is click on the **“Issues”** tab in my repositor
 
 In the image above, you can see the different features of an issue:
 
-* **Title:** "Enrich our treasure." The title summarizes in one sentence what the issue is about.
+* **Title:** "Grow our treasure." The title summarizes in one sentence what the issue is about.
 
 * **Description:** It provides more detail about the issue’s context, explaining what is expected and possibly indicating constraints or suggestions.
 
@@ -56,22 +56,22 @@ In the image above, you can see the different features of an issue:
 
 The next step is to modify the relevant files to enrich the shared treasure. However, since the repository was created by me, you cannot directly modify its contents. Rather than granting write access to everyone individually, GitHub offers an alternative mechanism: **the fork.**
 
-## Fork a repository
-
-"Forking" a repository means creating a complete copy of a repository in your own GitHub account. This copy, the "fork," belongs to you: you can make any modifications you want. This is the most common way to contribute to a project without being the original owner.
-
-<p align="center">
-    <img src="/chroma/images/gitgithub30.png" alt="Two mines" class="w-full h-auto" />
-    </br>
-    <em style="font-size: 0.95em;">Forking a repository is like having an identical mine where you can do anything!</em>
-</p>
+## Forks
 
 To illustrate how to create a fork, a new contributor is introduced: **Chromatistí.**
 
 <p align="center">
-    <img src="/chroma/images/gitgithub31.png" alt="Chromatisti" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub30.png" alt="Chromatisti" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Chromatistí!</em>
+</p>
+
+"Forking" a repository means creating a complete copy of a repository in your own GitHub account. This copy, the fork, belongs to you: you can make any modifications you want. This is the most common way to contribute to a project without being the original owner.
+
+<p align="center">
+    <img src="/chroma/images/gitgithub31.png" alt="Two mines" class="w-full h-auto" />
+    </br>
+    <em style="font-size: 0.95em;">Forking a repository is like having an identical mine where you can do anything!</em>
 </p>
 
 * To create a fork, Chromatistí goes to my repository and clicks the **"Fork"** button:
@@ -102,10 +102,10 @@ A branch is a parallel line of development that allows working on changes withou
 
 ### Creating a branch
 
-The command `git checkout -b <branch_name>` creates a new branch. For example, if Chromatistí opens a terminal on his local repository and runs:
+The command `git switch -c <branch_name>` creates a new branch. For example, if Chromatistí opens a terminal on his local repository and runs:
 
 ```bash {frame="none"}
-git checkout -b my-treasure
+git switch -c my-treasure
 ```
 
 a new branch called `my-treasure` is created and he places it there directly. The `Our_Treasure.md` file can now be modified without affecting the main branch:
@@ -119,7 +119,7 @@ a new branch called `my-treasure` is created and he places it there directly. Th
 ```
 
 <p align="center">
-    <img src="/chroma/images/gitgithub35.png" alt="Branch creation" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub35_en.png" alt="Branch creation" class="w-full h-auto" />
 </p>
 
 To apply the changes in Git, you must use the same commands as in the previous part. The only difference is adding the `--set-upstream origin <branch_name>` flag to `git push`:
@@ -154,16 +154,16 @@ Create a new branch and modify the "Our_Treasure.md" file following these guidel
 * Do not modify other contributions.
   {{< /callout >}}
 
-Use `git checkout <branch_name>` to switch branches. For example, to return to the main branch:
+Use `git switch <branch_name>` to switch branches. For example, to return to the main branch:
 
 ```bash {frame="none"}
-git checkout main
+git switch main
 ```
 
 You will then see that the `Our_Treasure.md` file has been restored to its original state.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub38.png" alt="Main branch" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub38_en.png" alt="Main branch" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">You are here!</em>
 </p>
@@ -175,13 +175,13 @@ Try switching between branches to see the different changes!
 Merging branches combines changes from two branches into a unified project version. Use `git merge <branch_name>` to do this.
 
 {{< callout context="danger" title="Warning" icon="outline/alert-square-rounded" >}}
-To merge `<branch_name>` into another, you **must be on the destination branch** (the branch that will receive the changes) using `git checkout <destination_branch>`!
+To merge `<branch_name>` into another, you **must be on the destination branch** (the branch that will receive the changes) using `git switch <destination_branch>`!
 {{< /callout >}}
 
 With Chromatistí, this would be:
 
 ```bash {frame="none"}
-git checkout main  # switch to main branch
+git switch main  # switch to main branch
 git merge my-treasure
 ```
 
@@ -196,7 +196,7 @@ Changes from the `my-treasure` branch now appear on the `main` branch:
 ```
 
 <p align="center">
-    <img src="/chroma/images/gitgithub39.png" alt="Merging branches" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub39_en.png" alt="Merging branches" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Illustratively: merging the two train branches to have only one mine.</em>
 </p>
@@ -224,7 +224,7 @@ You now have your treasure in the mine! But remember, changes were made in your 
 A pull request is a key GitHub mechanism that proposes merging changes from one branch into another, while providing a space for discussion and review before integration.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub40.png" alt="Pull request on mines" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub40_en.png" alt="Pull request on mines" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">It's like asking to merge the two mines into one.</em>
 </p>
@@ -281,7 +281,7 @@ Create a pull request to merge your changes into the main repository. **Don’t 
 {{< /callout >}}
 
 <p align="center">
-    <img src="/chroma/images/gitgithub40.png" alt="Final graph" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub40_en.png" alt="Final graph" class="w-full h-auto" />
 </p>
 
 ## Going Further
@@ -297,8 +297,8 @@ As in the previous part, this table summarizes all commands covered in this tuto
 | [`git rm`](https://git-scm.com/docs/git-rm) | Deletes a file from the project and informs Git of this deletion. |
 | [`git commit`](https://git-scm.com/docs/git-commit) | Records the added changes with a message (`-m "Message"`) describing the action performed. |
 | [`git push`](https://git-scm.com/docs/git-push) | Sends your commits to the remote repository. |
-| [`git checkout -b <branch>`](https://git-scm.com/docs/git-checkout) | Creates a new branch from the current branch and checks it out immediately. |
-| [`git checkout <branch>`](https://git-scm.com/docs/git-checkout) | Switches the active branch in the local repository. |
+| [`git switch -c <branch>`](https://git-scm.com/docs/git-switch) | Creates a new branch from the current branch and checks it out immediately. |
+| [`git switch <branch>`](https://git-scm.com/docs/git-switch) | Switches the active branch in the local repository. |
 | [`git push --set-upstream origin <branch>`](https://git-scm.com/docs/git-push) | Pushes the local branch to the remote repository and sets the remote branch as default (*upstream*). |
 | [`git merge <branch>`](https://git-scm.com/docs/git-merge) | Merges the specified branch into the active branch. |
 | [`git branch -d <branch>`](https://git-scm.com/docs/git-branch) | Deletes a local branch only if it has already been merged. |

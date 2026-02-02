@@ -1,6 +1,6 @@
 ---
 title: "Introduction à Git et GitHub – Partie 3"
-summary: Issues, branches et pull requests
+summary: Issues, forks, branches et pull requests
 weight: 1005
 icon: "git-branch"
 ---
@@ -31,7 +31,7 @@ Tout au long de cette introduction, nous avons illustré nos propos et nos manip
 * "Les limites de l'imagination sont celles qu'on lui impose."
 ```
 
-Pour le moment il n'est pas très rempli, je peux vous l'accorder... Mais il s'agit d'une phrase qui me tient à cœur, un principe important sur lequel je fonde ma manière de penser. Comme cette phrase a de la valeur pour moi, je peux la considérer comme un trésor. C'est la première pierre d'un trésor bien plus grand : les suivantes, c'est à vous de les poser !
+Pour le moment, il n'est pas très rempli, je peux vous l'accorder... Mais il s'agit d'une phrase qui me tient à cœur, un principe important sur lequel je fonde ma manière de penser. Comme cette phrase a de la valeur pour moi, je peux la considérer comme un trésor. C'est la première pierre d'un trésor bien plus grand : les suivantes, c'est à vous de les poser !
 
 Le but final est de remplir ce trésor commun avec votre touche personnelle : cela peut être une citation que vous appréciez particulièrement, une phrase qui vous inspire, des pensées ou des mots de qui vous donnent de la motivation au quotidien et que vous souhaitez partager avec autrui. Ce fichier constituera ainsi le cœur du trésor de la `repository-mine`, enrichi par les contributions de chacun.
 
@@ -47,7 +47,7 @@ Sur GitHub, il me suffit de cliquer sur l'onglet **"Issues"** de mon repository,
     <em style="font-size: 0.95em;"><a href="https://github.com/Mowibox/repository-mine/issues/2">Voir l'issue sur GitHub.</a></em>
 </p>
 
-Dans l'image ci-dessus on peut voir les différentes caractéristiques d'une issue :
+Dans l'image ci-dessus, on peut voir les différentes caractéristiques d'une issue :
 
 * **Un titre :** "Enrichir notre trésor". Le titre permet de résumer en une phrase de quoi l'issue traite.
 * **Une description :** Elle permet d'apporter plus de détail au contexte de l’issue, en expliquant ce qui est attendu et en précisant éventuellement les contraintes ou les pistes à suivre.
@@ -55,22 +55,22 @@ Dans l'image ci-dessus on peut voir les différentes caractéristiques d'une iss
 
 La prochaine étape est donc de modifier les fichiers concernés afin d'enrichir le trésor commun. Or, le repository ayant été créé par moi-même, vous ne pouvez pas modifier directement le contenu. Plutôt que de donner un à un les droits d'écriture à chacun, GitHub propose un mécanisme alternatif : **la fork.**
 
-## Fork un repository
-
-"Forker" un repository consiste à créer une copie complète d'un repository sur votre propre compte GitHub. Cette copie, la "fork", vous appartient : vous pouvez y effectuer toutes les modifications que vous souhaitez. C'est le mode de fonctionnement le plus courant pour contribuer à un projet sans en être propriétaire original.
-
-<p align="center">
-    <img src="/chroma/images/gitgithub30.png" alt="Two mines" class="w-full h-auto" />
-    </br>
-    <em style="font-size: 0.95em;">Fork un repository, c'est comme avoir une mine identique à l'originale dans laquelle vous pouvez tout faire !</em>
-</p>
+## Les forks
 
 Pour illustrer comment créer une fork, un nouveau contributeur est introduit : **Chromatistí.**
 
 <p align="center">
-    <img src="/chroma/images/gitgithub31.png" alt="Chromatisti" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub30.png" alt="Chromatisti" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Chromatistí !</em>
+</p>
+
+"Forker" un repository consiste à créer une copie complète d'un repository sur votre propre compte GitHub. Cette copie, la fork, vous appartient : vous pouvez y effectuer toutes les modifications que vous souhaitez. C'est le mode de fonctionnement le plus courant pour contribuer à un projet sans en être propriétaire original.
+
+<p align="center">
+    <img src="/chroma/images/gitgithub31.png" alt="Two mines" class="w-full h-auto" />
+    </br>
+    <em style="font-size: 0.95em;">Fork un repository, c'est comme avoir une mine identique à l'originale dans laquelle vous pouvez tout faire !</em>
 </p>
 
 * Pour créer une fork, Chromatistí va se rendre sur mon repository et appuyer sur le bouton **"Fork"** :
@@ -101,10 +101,10 @@ Une branche est une ligne de développement parallèle qui permet de travailler 
 
 ### Création de branche
 
-La commande `git-checkout -b <nom_de_branche>` permet de créer une nouvelle branche. Ainsi, si Chromatistí ouvre un terminal dans son repository local et entre la commande :
+La commande `git switch -c <nom_de_branche>` permet de créer une nouvelle branche. Ainsi, si Chromatistí ouvre un terminal dans son repository local et entre la commande :
 
 ```bash {frame="none"}
-git checkout -b mon-tresor
+git switch -c mon-tresor
 ```
 
 une nouvelle branche nommée `mon-tresor` et créée et l'y positionne directement. Il est ainsi possible de modifier le fichier `Notre_Tresor.md` avec une citation, sans altérer la branche principale :
@@ -118,7 +118,7 @@ une nouvelle branche nommée `mon-tresor` et créée et l'y positionne directeme
 ```
 
 <p align="center">
-    <img src="/chroma/images/gitgithub35.png" alt="Branch creation" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub35_fr.png" alt="Branch creation" class="w-full h-auto" />
 </p>
 
 Pour que les modifications soient effectives dans Git, il faut utiliser les mêmes commandes que dans la partie précédente. La seule subtilité à prendre en compte est l'ajout du flag `--set-upstream origin <nom_de_branche>` à la commande `git push` :
@@ -153,16 +153,16 @@ Créez une nouvelle branche et modifiez le fichier "Notre_Tresor.md" en respecta
 * Ne modifiez pas les contributions des autres.
 {{< /callout >}}
 
-La commande `git checkout <nom_de_branche>`, vous permet de changer de branche active. Par exemple, pour retourner sur la branche principale, il faut écrire :
+La commande `git switch <nom_de_branche>`, vous permet de changer de branche active. Par exemple, pour retourner sur la branche principale, il faut écrire :
 
 ```bash {frame="none"}
-git checkout main
+git switch main
 ```
 
 Vous verrez alors que le fichier `Notre_Tresor.md` est revenu à son état d'origine.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub38.png" alt="Main branch" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub38_fr.png" alt="Main branch" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Vous êtes ici !</em>
 </p>
@@ -174,13 +174,13 @@ Essayez de vous déplacer de branche en branche pour voir les différents change
 La fusion de branches permet de combiner les modifications de deux branches afin de créer une version unifiée du projet. La commande `git merge <nom_de_branche>` permet de réaliser cette opération.
 
 {{< callout context="danger" title="Attention" icon="outline/alert-square-rounded" >}}
-Pour fusionner la branche `<nom_de_branche>` avec une autre, il faut **obligatoirement être positionné sur la branche de destination** (celle qui recevra les modifications) avec `git checkout <branche_de_destination>` !
+Pour fusionner la branche `<nom_de_branche>` avec une autre, il faut **obligatoirement être positionné sur la branche de destination** (celle qui recevra les modifications) avec `git switch <branche_de_destination>` !
 {{< /callout >}}
 
 Avec Chromatistí, cela donnerait :
 
 ```bash {frame="none"}
-git checkout main  # déplacement sur la branche main
+git switch main  # déplacement sur la branche main
 git merge mon-tresor
 ```
 
@@ -195,7 +195,7 @@ Les modifications effectuées dans la branche `mon-tresor` apparaissent désorma
 ```
 
 <p align="center">
-    <img src="/chroma/images/gitgithub39.png" alt="Merging branches" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub39_fr.png" alt="Merging branches" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">De manière imagée : on fusionne les deux branches du train pour n'avoir qu'une seule mine.</em>
 </p>
@@ -223,7 +223,7 @@ Vous avez finalement votre trésor au sein de la mine ! Mais rappelez-vous, les 
 La pull request est un mécanisme fondamental de GitHub qui permet de proposer la fusion de changements d’une branche vers une autre, tout en offrant un espace de discussion et de validation avant leur intégration.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub40.png" alt="Pull request on mines" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub40_fr.png" alt="Pull request on mines" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">C'est comme demander à relier les deux mines pour n'en avoir qu'une seule.</em>
 </p>
@@ -245,7 +245,7 @@ En pratique :
 
 Tout le processus se passe sur GitHub :
 
-* Dans sa fork, Chromatistí appuie sur le bouton **"Contribute"**, puis sur **"Open pull request"**, ce qui lui ouvre une interface dans laquelle il peut écrire un titre et une description à sa proposition :
+* Dans sa fork, Chromatistí appuie sur le bouton **"Contribute"**, puis sur **"Open pull request"**, ce qui ouvre une interface dans laquelle il peut écrire un titre et une description à sa proposition :
 
 <p align="center">
     <img src="/chroma/images/gitgithub41_fr.png" alt="Adding reference" class="w-full h-auto" />
@@ -281,7 +281,7 @@ Réalisez une pull request pour intégrer vos modifications au repository princi
 {{< /callout >}}
 
 <p align="center">
-    <img src="/chroma/images/gitgithub40.png" alt="Final graph" class="w-full h-auto" />
+    <img src="/chroma/images/gitgithub40_fr.png" alt="Final graph" class="w-full h-auto" />
 </p>
 
 ## Pour aller plus loin
@@ -297,8 +297,8 @@ Comme pour la partie précédente, ce tableau récapitule l'ensemble des fonctio
 | [`git rm`](https://git-scm.com/docs/git-rm) | Supprime un fichier du projet et informe Git de cette suppression. |
 | [`git commit`](https://git-scm.com/docs/git-commit) | Enregistre les modifications ajoutées avec un message (`-m "Message"`) décrivant l’action effectuée. |
 | [`git push`](https://git-scm.com/docs/git-push) | Envoie vos commits vers le repository distant. |
-| [`git checkout -b <branche>`](https://git-scm.com/docs/git-checkout) | Crée une nouvelle branche à partir de la branche courante et s’y positionne immédiatement. |
-| [`git checkout <branche>`](https://git-scm.com/docs/git-checkout) | Change la branche active du repository local. |
+| [`git switch -c <branche>`](https://git-scm.com/docs/git-switch) | Crée une nouvelle branche à partir de la branche courante et s’y positionne immédiatement. |
+| [`git switch <branche>`](https://git-scm.com/docs/git-switch) | Change la branche active du repository local. |
 | [`git push --set-upstream origin <branche>`](https://git-scm.com/docs/git-push) | Pousse la branche locale vers le repository distant et définit la branche distante comme référence par défaut (*upstream*). |
 | [`git merge <branche>`](https://git-scm.com/docs/git-merge) | Fusionne la branche spécifiée avec la branche active. |
 | [`git branch -d <branche>`](https://git-scm.com/docs/git-branch) | Supprime une branche locale uniquement si elle a déjà été fusionnée. |
