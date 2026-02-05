@@ -1,8 +1,19 @@
 ---
 title: "Initiation à la conception de circuits imprimés – Partie 1"
-summary: Avec le logiciel KiCad - Schématique
+description: "Avec le logiciel KiCad - Schématique"
+summary: "Première partie d’une initiation à la conception de PCB avec KiCad : création du schéma électronique, placement des composants, labels, ERC et assignation des empreintes."
+date: 2025-06-22
+lastmod: 2026-02-05
+draft: false
 weight: 2002
+toc: true
 icon: "chip"
+
+seo:
+   title: "Schématique de PCB avec KiCad – Tutoriel (Partie 1)"
+   description: "Apprenez à créer un schéma électronique avec KiCad : placement des composants, connexions, labels, vérification ERC et préparation pour le routage du PCB."
+   canonical: "https://mowibox.github.io/chroma/fr/tutorials/electronics/introduction_to_pcb_design_part1/"
+   robots: "index, follow"
 ---
 
 <p align="center">

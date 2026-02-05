@@ -1,8 +1,19 @@
 ---
 title: "Initiation à la conception de circuits imprimés – Partie 2"
-summary: Avec le logiciel KiCad - Routage
+description: "Avec le logiciel KiCad - Routage"
+summary: "Deuxième partie de l’initiation à la conception de PCB avec KiCad : importation du schéma, routage des pistes, plans de masse, classes d’équipotentielles et contrôle des règles de conception."
+date: 2025-07-22
+lastmod: 2026-02-05
+draft: false
 weight: 2003
+toc: true
 icon: "chip"
+
+seo:
+   title: "Routage de PCB avec KiCad – Tutoriel (Partie 2)"
+   description: "Apprenez à router un circuit imprimé avec KiCad : placement des composants, plans de masse, classes d’équipotentielles et vérification DRC pour fabriquer votre PCB."
+   canonical: "https://mowibox.github.io/chroma/fr/tutorials/electronics/introduction_to_pcb_design_part2/"
+   robots: "index, follow"
 ---
 
 <p align="center">

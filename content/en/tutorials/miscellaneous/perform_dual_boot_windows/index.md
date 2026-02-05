@@ -1,8 +1,19 @@
 ---
 title: "Perform a dual-boot with Windows"
-summary: To have Ubuntu and Windows on the same machine
-weight: 4001
+description: "To have Ubuntu and Windows on the same machine"
+summary: "Learn step by step how to install Ubuntu in dual-boot with Windows to enjoy both operating systems on a single machine."
+date: 2025-10-29
+lastmod: 2026-02-05
+draft: false
+weight: 4002
+toc: true
 icon: "laptop"
+
+seo:
+   title: "Install Ubuntu in dual-boot with Windows 11 – Complete guide"
+   description: "Detailed guide to creating a Windows and Ubuntu dual-boot: preparation, USB key, partitioning, and step-by-step installation."
+   canonical: "https://mowibox.github.io/chroma/en/tutorials/miscellaneous/perform_dual_boot_windows/"
+   robots: "index, follow"
 ---
 
 <p align="center">

@@ -1,8 +1,19 @@
 ---
 title: "Introduction à Docker – Partie 2"
-summary: Images & conteneurs
-weight: 1007
+description: "Images & conteneurs"
+summary: "Apprenez à gérer les images et les conteneurs Docker : création, lancement, arrêt, suppression et utilisation de plusieurs terminaux."
+date: 2025-06-22
+lastmod: 2026-02-05
+draft: false
+weight: 1008
+toc: true
 icon: "docker"
+
+seo:
+   title: "Images et conteneurs Docker – Guide pratique sous Linux"
+   description: "Tutoriel étape par étape pour créer, lancer et gérer vos conteneurs Docker ainsi que vos images Docker sur Linux."
+   canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/introduction_to_docker_part2/"
+   robots: "index, follow"
 ---
 
 <p align="center">

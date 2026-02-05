@@ -1,8 +1,19 @@
 ---
 title: "Introduction to printed circuit board design – Part 2"
-summary: With KiCad software - Routing
+description: "With KiCad software - Routing"
+summary: "Part 2 of the introduction to PCB design with KiCad: importing the schematic, routing traces, ground planes, net classes, and checking design rules."
+date: 2025-07-22
+lastmod: 2026-02-05
+draft: false
 weight: 2003
+toc: true
 icon: "chip"
+
+seo:
+   title: "PCB Routing with KiCad – Tutorial (Part 2)"
+   description: "Learn how to route a printed circuit board with KiCad: component placement, ground planes, net classes, and DRC checking to manufacture your PCB."
+   canonical: "https://mowibox.github.io/chroma/en/tutorials/electronics/introduction_to_pcb_design_part2/"
+   robots: "index, follow"
 ---
 
 <p align="center">

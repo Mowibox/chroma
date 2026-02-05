@@ -1,9 +1,21 @@
 ---
 title: "Computer Science"
-summary: We take no responsibility in case of a crash!
-weight: 1000
+description: "We take no responsibility in case of a crash!"
+summary:
 type: "cardlist"
+date: 2025-05-21
+lastmod: 2026-02-05
+draft: false
+weight: 1000
+toc: true
 icon: "computer"
+
+seo:
+   title: ""
+   description: ""
+   canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/"
+   robots: "index, follow"
+
 sidebar:
   collapsed: true
 ---

@@ -1,8 +1,19 @@
 ---
 title: "Introduction à Docker – Partie 1"
-summary: Installation de Docker
-weight: 1006
+description: "Installation de Docker"
+summary: "Apprenez à installer Docker sur Linux et à configurer votre environnement pour créer et exécuter vos premiers conteneurs."
+date: 2025-06-22
+lastmod: 2026-02-05
+draft: false
+weight: 1007
+toc: true
 icon: "docker"
+
+seo:
+   title: "Installation et configuration de Docker sous Linux"
+   description: "Tutoriel détaillé pour installer Docker sur Linux, créer le groupe Docker et vérifier le bon fonctionnement de l'installation."
+   canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/introduction_to_docker_part1/"
+   robots: "index, follow"
 ---
 
 <p align="center">

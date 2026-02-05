@@ -1,8 +1,19 @@
 ---
 title: "Tutoriel d'utilisation de l'ADC"
-summary: Avec le logiciel STM32 Cube IDE
+description: "Avec le logiciel STM32 Cube IDE"
+summary: "Apprenez à configurer et programmer l'ADC sur une carte STM32 avec Cube IDE pour convertir des signaux analogiques en valeurs numériques et les exploiter dans vos projets."
+date: 2025-06-22
+lastmod: 2026-02-05
+draft: false
 weight: 2004
+toc: true
 icon: "wave-square"
+
+seo:
+   title: "Tutoriel ADC STM32 avec Cube IDE – Convertir l'analogique en numérique"
+   description: "Guide pratique pour utiliser l'ADC sur STM32 Cube IDE : configuration, programmation et lecture de signaux analogiques sur microcontrôleur STM32."
+   canonical: "https://mowibox.github.io/chroma/fr/tutorials/electronics/adc_tutorial/"
+   robots: "index, follow"
 ---
 
 <p align="center">

@@ -1,8 +1,19 @@
 ---
 title: "Introduction à Git et GitHub – Partie 1"
-summary: Comprendre les bases avec des dessins
+description: "Comprendre les bases avec des dessins"
+summary: "Explorez le fonctionnement de Git et GitHub à travers une histoire visuelle. Apprenez les concepts de repository, clone, add, commit, push et pull."
+date: 2025-06-22
+lastmod: 2026-02-05
+draft: false
 weight: 1003
+toc: true
 icon: "git"
+
+seo:
+   title: "Guide Git et GitHub – Partie 1"
+   description: "Introduction aux bases de Git et GitHub avec des illustrations et des exemples concrets. Comprenez repository, clone, add, commit, push et pull."
+   canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/introduction_to_github_part1/"
+   robots: "index, follow"
 ---
 
 <p align="center">

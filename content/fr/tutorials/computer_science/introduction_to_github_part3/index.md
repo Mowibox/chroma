@@ -1,8 +1,19 @@
 ---
 title: "Introduction à Git et GitHub – Partie 3"
-summary: Issues, forks, branches et pull requests
+description: "Issues, forks, branches et pull requests"
+summary: "Maîtrisez les fonctionnalités collaboratives avancées de GitHub : créer des issues, forker un repository, travailler sur des branches et proposer des pull requests."
+date: 2026-01-07
+lastmod: 2026-02-05
+draft: false
 weight: 1005
+toc: true
 icon: "git-branch"
+
+seo:
+   title: "Guide Git et GitHub – Partie 3"
+   description: "Découvrez comment gérer des contributions collaboratives sur GitHub grâce aux issues, forks, branches et pull requests."
+   canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/introduction_to_github_part3/"
+   robots: "index, follow"
 ---
 
 <p align="center">

@@ -1,21 +1,22 @@
 ---
 title: "Website launch"
-description: ""
+description: "Discover Chroma, my personal space dedicated to tutorials, computer vision, and technical projects."
 summary: "I'm happy today to announce the launch of Chroma!"
 date:  2025-05-20T01:16:05+02:00
 lastmod:  2025-05-20T01:16:05+02:00
 draft: false
 weight: 50
 categories: []
-tags: []
-contributors: []
+tags: ["launch", "chroma", "tutorials", "computer vision", "blog"]
+contributors: ["Ousmane THIONGANE"]
 pinned: false
 homepage: false
 seo:
-  title: "" # custom title (optional)
-  description: "" # custom description (recommended)
-  canonical: "" # custom canonical URL (optional)
-  robots: "" # custom robot tags (optional)
+  title: "Chroma – Official launch of the website
+" # custom title (optional)
+  description: "Welcome to Chroma, the space dedicated to tutorials, computer vision, and technology projects by Ousmane Thiongane." # custom description (recommended)
+  canonical: "https://mowibox.github.io/chroma/en/blog/website-launch/" # custom canonical URL (optional)
+  robots: "index, follow" # custom robot tags (optional)
 ---
 
 Hello to everyone reading these few lines! Today marks the **official launch of Chroma**, and I’m thrilled to finally share this project with you.

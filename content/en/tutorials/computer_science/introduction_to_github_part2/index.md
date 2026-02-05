@@ -1,8 +1,19 @@
 ---
 title: "Introduction to Git and GitHub – Part 2"
-summary: Putting theory into practice
+description: "Putting theory into practice"
+summary: "Learn how to set up Git, create a repository on GitHub, clone locally, add, modify, and delete files, and push your changes."
+date: 2025-06-22
+lastmod: 2026-02-05
+draft: false
 weight: 1004
+toc: true
 icon: "github"
+
+seo:
+   title: "Git and GitHub Guide – Part 2"
+   description: "Learn how to create a GitHub repository, configure SSH, clone locally, and manage your files with Git."
+   canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/introduction_to_github_part2/"
+   robots: "index, follow"
 ---
 
 <p align="center">

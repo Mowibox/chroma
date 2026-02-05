@@ -1,8 +1,19 @@
 ---
 title: "Using the ADC"
-summary: With STM32 Cube IDE software
+description: "With STM32 Cube IDE software"
+summary: "Learn how to configure and program the ADC on an STM32 board with Cube IDE to convert analog signals into digital values and use them in your projects."
+date: 2025-06-22
+lastmod: 2026-02-05
+draft: false
 weight: 2004
+toc: true
 icon: "wave-square"
+
+seo:
+   title: "STM32 ADC Tutorial with Cube IDE – From Analog to Digital"
+   description: "Practical guide to using the ADC on STM32 Cube IDE: configuration, programming, and reading analog signals on an STM32 microcontroller."
+   canonical: "https://mowibox.github.io/chroma/en/tutorials/electronics/adc_tutorial/"
+   robots: "index, follow"
 ---
 
 <p align="center">

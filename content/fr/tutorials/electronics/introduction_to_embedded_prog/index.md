@@ -1,8 +1,19 @@
 ---
 title: "Initiation à la programmation embarquée"
-summary: Avec le logiciel Arduino
+description: "Avec le logiciel Arduino"
+summary: "Découvrir les bases de la programmation embarquée avec Arduino à travers des montages simples et progressifs : LED, boutons, potentiomètre et buzzer."
+date: 2025-06-22
+lastmod: 2026-02-05
+draft: false
 weight: 2001
+toc: true
 icon: "laptop"
+
+seo:
+   title: "Initiation à la programmation embarquée avec Arduino"
+   description: "Tutoriel d’initiation à la programmation embarquée avec Arduino : microcontrôleurs, montages électroniques et premiers programmes pas à pas."
+   canonical: "https://mowibox.github.io/chroma/fr/tutorials/electronics/introduction_to_embedded_prog/"
+   robots: "index, follow"
 ---
 
 <p align="center">

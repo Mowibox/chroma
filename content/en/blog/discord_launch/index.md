@@ -1,21 +1,21 @@
 ---
 title: "Launching a Discord Server"
-description: ""
+description: "Join the official Chroma Discord server to discuss tutorials, computer vision, and technical projects."
 summary: "Creation and launch of Chroma's official Discord server"
 date:  2025-07-01T01:16:05+02:00
 lastmod:  2025-07-01T01:16:05+02:00
 draft: false
 weight: 49
 categories: []
-tags: []
-contributors: []
+tags: ["discord", "community", "chroma"]
+contributors: ["Ousmane THIONGANE"]
 pinned: false
 homepage: false
 seo:
-  title: "" # custom title (optional)
-  description: "" # custom description (recommended)
-  canonical: "" # custom canonical URL (optional)
-  robots: "" # custom robot tags (optional)
+  title: "Join the official Chroma Discord server" # custom title (optional)
+  description: "Join the discussions on Chroma, ask questions, and exchange ideas about tutorials and projects." # custom description (recommended)
+  canonical: "https://mowibox.github.io/chroma/en/blog/launching-a-discord-server/" # custom canonical URL (optional)
+  robots: "index, follow" # custom robot tags (optional)
 ---
 
 <p align="center">

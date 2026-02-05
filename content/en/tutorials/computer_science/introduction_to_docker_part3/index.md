@@ -1,8 +1,19 @@
 ---
 title: "Introduction to Docker – Part 3"
-summary: Dockerfile creation
-weight: 1008
+description: "Dockerfile creation"
+summary: "Learn how to write a Dockerfile, build a custom Docker image, and launch ready-to-use containers on Linux."
+date: 2025-06-22
+lastmod: 2026-02-05
+draft: false
+weight: 1009
+toc: true
 icon: "docker"
+
+seo:
+   title: "Dockerfile and custom images – Practical guide for Linux"
+   description: "Complete tutorial for creating a Dockerfile, building a custom Docker image, and running containers on Linux."
+   canonical:  "https://mowibox.github.io/chroma/en/tutorials/computer_science/introduction_to_docker_part3/"
+   robots: "index, follow"
 ---
 
 

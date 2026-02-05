@@ -1,8 +1,19 @@
 ---
 title: "Setting up a virtual environment"
-summary: With Python
+description: "With Python"
+summary: "Practical tutorial for creating, activating, using, and deleting Python virtual environments with virtualenvwrapper, while managing different versions of Python."
+date: 2025-06-27
+lastmod: 2026-02-05
+draft: false
 weight: 1006
+toc: true
 icon: "laptop"
+
+seo:
+   title: "Complete guide to creating a Python virtual environment"
+   description: "Learn how to create, activate, and manage Python virtual environments with virtualenvwrapper to isolate your projects and manage different versions of modules."
+   canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/setting_up_virtual_environment/"
+   robots: "index, follow"
 ---
 
 <p align="center">

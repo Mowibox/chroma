@@ -1,8 +1,19 @@
 ---
 title: "Introduction to printed circuit board design – Part 1"
-summary: With KiCad software - Schematic
+description: "With KiCad software - Schematic"
+summary: "Part 1 of an introduction to PCB design with KiCad: creating the electronic schematic, placing components, labels, ERC, and assigning footprints."
+date: 2025-06-22
+lastmod: 2026-02-05
+draft: false
 weight: 2002
+toc: true
 icon: "chip"
+
+seo:
+   title: "PCB Schematic with KiCad – Tutorial (Part 1)"
+   description: "Learn how to create an electronic schematic with KiCad: component placement, connections, labels, ERC verification, and preparation for PCB routing."
+   canonical: "https://mowibox.github.io/chroma/en/tutorials/electronics/introduction_to_pcb_design_part1/"
+   robots: "index, follow"
 ---
 
 <p align="center">

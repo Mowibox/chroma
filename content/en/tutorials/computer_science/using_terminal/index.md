@@ -1,8 +1,19 @@
 ---
 title: "Using the Terminal"
-summary: Practical commands
+description: "Practical commands"
+summary: "Learn how to master basic terminal commands on Linux, macOS, or Windows to navigate, manage your files, and control your system efficiently."
+date: 2025-06-30
+lastmod: 2026-02-05
+draft: false
 weight: 1001
+toc: true
 icon: "terminal"
+
+seo:
+   title: "Complete Guide to Terminal Commands – Linux, macOS, Windows"
+   description: "Hands-on tutorial to learn how to use the terminal: folder navigation, file management, access rights, and essential commands for all systems."
+   canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/using_terminal/"
+   robots: "index, follow"
 ---
 
 <p align="center">

@@ -1,8 +1,19 @@
 ---
 title: "Utilisation du Terminal"
-summary: Les commandes pratiques
+description: "Les commandes pratiques"
+summary: "Apprenez à maîtriser les commandes de base du terminal sur Linux, macOS ou Windows pour naviguer, gérer vos fichiers et contrôler votre système efficacement."
+date: 2025-06-30
+lastmod: 2026-02-05
+draft: false
 weight: 1001
+toc: true
 icon: "terminal"
+
+seo:
+   title: "Guide complet des commandes de terminal – Linux, macOS, Windows"
+   description: "Tutoriel pratique pour apprendre à utiliser le terminal : navigation dans les dossiers, gestion des fichiers, droits d'accès et commandes essentielles pour tous les systèmes."
+   canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/using_terminal/"
+   robots: "index, follow"
 ---
 
 <p align="center">

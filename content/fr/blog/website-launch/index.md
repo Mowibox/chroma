@@ -1,21 +1,21 @@
 ---
 title: "Lancement du site"
-description: ""
+description: "Découvrez Chroma, mon espace personnel dédié aux tutoriels, à la computer vision, et aux projets techniques."
 summary: "J'ai le plaisir aujourd'hui de vous annoncer le lancement de Chroma !"
 date:  2025-05-20T01:16:05+02:00
 lastmod:  2025-05-20T01:16:05+02:00
 draft: false
 weight: 50
 categories: []
-tags: []
-contributors: []
-pinned: false
+tags: ["lancement", "chroma", "tutoriels", "computer vision", "blog"]
+contributors: ["Ousmane THIONGANE"]
+pinned: true
 homepage: false
 seo:
-  title: "" # custom title (optional)
-  description: "" # custom description (recommended)
-  canonical: "" # custom canonical URL (optional)
-  robots: "" # custom robot tags (optional)
+  title: "Chroma – Lancement officiel du site" # custom title (optional)
+  description: "Bienvenue sur Chroma, l'espace dédié aux tutoriels, à la computer vision, et aux projets technologiques par Ousmane Thiongane." # custom description (recommended)
+  canonical: "https://mowibox.github.io/chroma/fr/blog/lancement-du-site/" # custom canonical URL (optional)
+  robots: "index, follow" # custom robot tags (optional)
 ---
 
 Bonjour à vous qui lisez ces quelques lignes ! Aujourd'hui marque le **lancement officiel de Chroma**, et c'est un grand plaisir de pouvoir vous partager mon projet.

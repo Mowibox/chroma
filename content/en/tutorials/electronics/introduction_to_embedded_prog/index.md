@@ -1,8 +1,19 @@
 ---
 title: "Introduction to embedded programming"
-summary: With Arduino IDE software
+description: "With Arduino IDE software"
+summary: "Discover the basics of embedded programming with Arduino through simple, progressive wirings: LEDs, buttons, potentiometers, and buzzers."
+date: 2025-06-22
+lastmod: 2026-02-05
+draft: false
 weight: 2001
+toc: true
 icon: "laptop"
+
+seo:
+   title: "Introduction to embedded programming with Arduino"
+   description: "Introductory tutorial to embedded programming with Arduino: microcontrollers, electronic assemblies, and first step-by-step programs."
+   canonical: "https://mowibox.github.io/chroma/en/tutorials/electronics/introduction_to_embedded_prog/"
+   robots: "index, follow"
 ---
 
 <p align="center">

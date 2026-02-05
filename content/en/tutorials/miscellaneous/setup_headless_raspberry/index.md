@@ -1,10 +1,20 @@
 ---
 
 title: "Set up an headless Raspberry Pi"
-summary: Using SSH protocol
-weight: 4002
+description: "Using SSH protocol"
+summary: "Learn how to install and configure a Raspberry Pi in headless mode with Ubuntu Server and an SSH connection."
+date: 2025-07-12
+lastmod: 2026-02-05
+draft: false
+weight: 4003
+toc: true
 icon: "chip"
 
+seo:
+   title: "Configure a Raspberry Pi without a screen (Headless) with SSH"
+   description: "Step-by-step guide to installing Ubuntu Server on a Raspberry Pi and configuring it without a screen using the SSH protocol."
+   canonical: "https://mowibox.github.io/chroma/en/tutorials/miscellaneous/setup_headless_raspberry/"
+   robots: "index, follow"
 ---
 
 <p align="center">

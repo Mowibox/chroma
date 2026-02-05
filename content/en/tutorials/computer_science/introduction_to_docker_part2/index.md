@@ -1,8 +1,19 @@
 ---
 title: "Introduction to Docker – Part 2"
-summary: Images & containers
-weight: 1007
+description: "Images & containers"
+summary: "Learn how to manage Docker images and containers: creating, launching, stopping, deleting, and using multiple terminals."
+date: 2025-06-22
+lastmod: 2026-02-05
+draft: false
+weight: 1008
+toc: true
 icon: "docker"
+
+seo:
+   title: "Docker images and containers – Practical guide for Linux"
+   description: "Step-by-step tutorial for creating, launching, and managing your Docker containers and Docker images on Linux."
+   canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/introduction_to_docker_part2/"
+   robots: "index, follow"
 ---
 
 <p align="center"> <img src="/chroma/images/docker1.png" alt="Docker" class="w-full h-auto" /> </p>

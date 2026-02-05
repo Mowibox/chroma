@@ -1,8 +1,19 @@
 ---
 title: "Tutoriel de génération de signaux PWM"
-summary: Avec le logiciel STM32 Cube IDE
+description: "Avec le logiciel STM32 Cube IDE"
+summary: "Apprendre à générer un signal PWM avec STM32 Cube IDE pour contrôler un servomoteur SG90."
+date: 2025-12-20
+lastmod: 2026-02-05
+draft: false
 weight: 2005
+toc: true
 icon: "wave-square"
+
+seo:
+   title: "Générer un signal PWM avec STM32 Cube IDE – Tutoriel complet"
+   description: "Guide détaillé pour configurer un signal PWM sur STM32 avec CubeIDE : timers, calcul de fréquence, rapport cyclique et contrôle d’un servomoteur SG90."
+   canonical: "https://mowibox.github.io/chroma/fr/tutorials/electronics/pwm_tutorial/"
+   robots: "index, follow"
 ---
 
 <p align="center">
