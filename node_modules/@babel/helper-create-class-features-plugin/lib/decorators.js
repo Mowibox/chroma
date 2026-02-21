@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.buildNamedEvaluationVisitor = buildNamedEvaluationVisitor;
 exports.default = _default;
 exports.hasDecorators = hasDecorators;
 exports.hasOwnDecorators = hasOwnDecorators;
@@ -36,9 +37,9 @@ function incrementId(id, idx = id.length - 1) {
 function createPrivateUidGeneratorForClass(classPath) {
   const currentPrivateId = [];
   const privateNames = new Set();
-  classPath.traverse({
-    PrivateName(path) {
-      privateNames.add(path.node.id.name);
+  _core.types.traverseFast(classPath.node, node => {
+    if (_core.types.isPrivateName(node)) {
+      privateNames.add(node.id.name);
     }
   });
   return () => {
@@ -369,17 +370,15 @@ function createPrivateBrandCheckClosure(brandName) {
   return _core.types.arrowFunctionExpression([_core.types.identifier("_")], _core.types.binaryExpression("in", _core.types.cloneNode(brandName), _core.types.identifier("_")));
 }
 function usesPrivateField(expression) {
-  {
-    try {
-      _core.types.traverseFast(expression, node => {
-        if (_core.types.isPrivateName(node)) {
-          throw null;
-        }
-      });
-      return false;
-    } catch (_unused) {
-      return true;
-    }
+  try {
+    _core.types.traverseFast(expression, node => {
+      if (_core.types.isPrivateName(node)) {
+        throw null;
+      }
+    });
+    return false;
+  } catch (_unused) {
+    return true;
   }
 }
 function convertToComputedKey(path) {
@@ -451,21 +450,19 @@ function transformClass(path, state, constantSuper, ignoreFunctionLength, classN
   const classIdName = (_path$node$id = path.node.id) == null ? void 0 : _path$node$id.name;
   const setClassName = typeof className === "object" ? className : undefined;
   const usesFunctionContextOrYieldAwait = decorator => {
-    {
-      try {
-        _core.types.traverseFast(decorator, node => {
-          if (_core.types.isThisExpression(node) || _core.types.isSuper(node) || _core.types.isYieldExpression(node) || _core.types.isAwaitExpression(node) || _core.types.isIdentifier(node, {
-            name: "arguments"
-          }) || classIdName && _core.types.isIdentifier(node, {
-            name: classIdName
-          }) || _core.types.isMetaProperty(node) && node.meta.name !== "import") {
-            throw null;
-          }
-        });
-        return false;
-      } catch (_unused2) {
-        return true;
-      }
+    try {
+      _core.types.traverseFast(decorator, node => {
+        if (_core.types.isThisExpression(node) || _core.types.isSuper(node) || _core.types.isYieldExpression(node) || _core.types.isAwaitExpression(node) || _core.types.isIdentifier(node, {
+          name: "arguments"
+        }) || classIdName && _core.types.isIdentifier(node, {
+          name: classIdName
+        }) || _core.types.isMetaProperty(node) && node.meta.name !== "import") {
+          throw null;
+        }
+      });
+      return false;
+    } catch (_unused2) {
+      return true;
     }
   };
   const instancePrivateNames = [];
@@ -572,14 +569,14 @@ function transformClass(path, state, constantSuper, ignoreFunctionLength, classN
     };
   }
   const willExtractSomeElemDecs = hasComputedKeysSideEffects || elemDecsUseFnContext || version !== "2023-11";
-  let needsDeclaraionForClassBinding = false;
+  let needsDeclarationForClassBinding = false;
   let classDecorationsFlag = 0;
   let classDecorations = [];
   let classDecorationsId;
   let computedKeyAssignments = [];
   if (classDecorators) {
     classInitLocal = generateLetUidIdentifier(scopeParent, "initClass");
-    needsDeclaraionForClassBinding = path.isClassDeclaration();
+    needsDeclarationForClassBinding = path.isClassDeclaration();
     ({
       id: classIdLocal,
       path
@@ -1002,7 +999,7 @@ function transformClass(path, state, constantSuper, ignoreFunctionLength, classN
     applyDecsBody.push(...staticClosures.map(expr => _core.types.expressionStatement(expr)));
   }
   path.insertBefore(classAssignments.map(expr => _core.types.expressionStatement(expr)));
-  if (needsDeclaraionForClassBinding) {
+  if (needsDeclarationForClassBinding) {
     const classBindingInfo = scopeParent.getBinding(classIdLocal.name);
     if (!classBindingInfo.constantViolations.length) {
       path.insertBefore(_core.types.variableDeclaration("let", [_core.types.variableDeclarator(_core.types.cloneNode(classIdLocal))]));
@@ -1021,33 +1018,31 @@ function transformClass(path, state, constantSuper, ignoreFunctionLength, classN
 function createLocalsAssignment(elementLocals, classLocals, elementDecorations, classDecorations, classDecorationsFlag, maybePrivateBrandName, setClassName, superClass, state, version) {
   let lhs, rhs;
   const args = [setClassName ? createSetFunctionNameCall(state, setClassName) : _core.types.thisExpression(), classDecorations, elementDecorations];
-  {
-    if (version !== "2023-11") {
-      args.splice(1, 2, elementDecorations, classDecorations);
+  if (version !== "2023-11") {
+    args.splice(1, 2, elementDecorations, classDecorations);
+  }
+  if (version === "2021-12" || version === "2022-03" && !state.availableHelper("applyDecs2203R")) {
+    lhs = _core.types.arrayPattern([...elementLocals, ...classLocals]);
+    rhs = _core.types.callExpression(state.addHelper(version === "2021-12" ? "applyDecs" : "applyDecs2203"), args);
+    return _core.types.assignmentExpression("=", lhs, rhs);
+  } else if (version === "2022-03") {
+    rhs = _core.types.callExpression(state.addHelper("applyDecs2203R"), args);
+  } else if (version === "2023-01") {
+    if (maybePrivateBrandName) {
+      args.push(createPrivateBrandCheckClosure(maybePrivateBrandName));
     }
-    if (version === "2021-12" || version === "2022-03" && !state.availableHelper("applyDecs2203R")) {
-      lhs = _core.types.arrayPattern([...elementLocals, ...classLocals]);
-      rhs = _core.types.callExpression(state.addHelper(version === "2021-12" ? "applyDecs" : "applyDecs2203"), args);
-      return _core.types.assignmentExpression("=", lhs, rhs);
-    } else if (version === "2022-03") {
-      rhs = _core.types.callExpression(state.addHelper("applyDecs2203R"), args);
-    } else if (version === "2023-01") {
-      if (maybePrivateBrandName) {
-        args.push(createPrivateBrandCheckClosure(maybePrivateBrandName));
-      }
-      rhs = _core.types.callExpression(state.addHelper("applyDecs2301"), args);
-    } else if (version === "2023-05") {
-      if (maybePrivateBrandName || superClass || classDecorationsFlag.value !== 0) {
-        args.push(classDecorationsFlag);
-      }
-      if (maybePrivateBrandName) {
-        args.push(createPrivateBrandCheckClosure(maybePrivateBrandName));
-      } else if (superClass) {
-        args.push(_core.types.unaryExpression("void", _core.types.numericLiteral(0)));
-      }
-      if (superClass) args.push(superClass);
-      rhs = _core.types.callExpression(state.addHelper("applyDecs2305"), args);
+    rhs = _core.types.callExpression(state.addHelper("applyDecs2301"), args);
+  } else if (version === "2023-05") {
+    if (maybePrivateBrandName || superClass || classDecorationsFlag.value !== 0) {
+      args.push(classDecorationsFlag);
     }
+    if (maybePrivateBrandName) {
+      args.push(createPrivateBrandCheckClosure(maybePrivateBrandName));
+    } else if (superClass) {
+      args.push(_core.types.unaryExpression("void", _core.types.numericLiteral(0)));
+    }
+    if (superClass) args.push(superClass);
+    rhs = _core.types.callExpression(state.addHelper("applyDecs2305"), args);
   }
   if (version === "2023-11") {
     if (maybePrivateBrandName || superClass || classDecorationsFlag.value !== 0) {
@@ -1096,7 +1091,7 @@ function shouldTransformElement(node) {
 function shouldTransformClass(node) {
   return isDecorated(node) || node.body.body.some(shouldTransformElement);
 }
-function NamedEvaluationVisitoryFactory(isAnonymous, visitor) {
+function buildNamedEvaluationVisitor(needsName, visitor) {
   function handleComputedProperty(propertyPath, key, state) {
     switch (key.type) {
       case "StringLiteral":
@@ -1121,7 +1116,7 @@ function NamedEvaluationVisitoryFactory(isAnonymous, visitor) {
       const id = path.node.id;
       if (id.type === "Identifier") {
         const initializer = (0, _helperSkipTransparentExpressionWrappers.skipTransparentExprWrappers)(path.get("init"));
-        if (isAnonymous(initializer)) {
+        if (needsName(initializer)) {
           const name = id.name;
           visitor(initializer, state, name);
         }
@@ -1131,7 +1126,7 @@ function NamedEvaluationVisitoryFactory(isAnonymous, visitor) {
       const id = path.node.left;
       if (id.type === "Identifier") {
         const initializer = (0, _helperSkipTransparentExpressionWrappers.skipTransparentExprWrappers)(path.get("right"));
-        if (isAnonymous(initializer)) {
+        if (needsName(initializer)) {
           switch (path.node.operator) {
             case "=":
             case "&&=":
@@ -1146,7 +1141,7 @@ function NamedEvaluationVisitoryFactory(isAnonymous, visitor) {
       const id = path.node.left;
       if (id.type === "Identifier") {
         const initializer = (0, _helperSkipTransparentExpressionWrappers.skipTransparentExprWrappers)(path.get("right"));
-        if (isAnonymous(initializer)) {
+        if (needsName(initializer)) {
           const name = id.name;
           visitor(initializer, state, name);
         }
@@ -1160,7 +1155,7 @@ function NamedEvaluationVisitoryFactory(isAnonymous, visitor) {
         } = propertyPath;
         const id = node.key;
         const initializer = (0, _helperSkipTransparentExpressionWrappers.skipTransparentExprWrappers)(propertyPath.get("value"));
-        if (isAnonymous(initializer)) {
+        if (needsName(initializer)) {
           if (!node.computed) {
             if (!isProtoKey(id)) {
               if (id.type === "Identifier") {
@@ -1182,7 +1177,7 @@ function NamedEvaluationVisitoryFactory(isAnonymous, visitor) {
         node
       } = path;
       const initializer = (0, _helperSkipTransparentExpressionWrappers.skipTransparentExprWrappers)(path.get("value"));
-      if (isAnonymous(initializer)) {
+      if (needsName(initializer)) {
         const className = _core.types.stringLiteral("#" + node.key.id.name);
         visitor(initializer, state, className);
       }
@@ -1193,7 +1188,7 @@ function NamedEvaluationVisitoryFactory(isAnonymous, visitor) {
       } = path;
       const id = node.key;
       const initializer = (0, _helperSkipTransparentExpressionWrappers.skipTransparentExprWrappers)(path.get("value"));
-      if (isAnonymous(initializer)) {
+      if (needsName(initializer)) {
         if (!node.computed) {
           if (id.type === "Identifier") {
             visitor(initializer, state, id.name);
@@ -1216,7 +1211,7 @@ function NamedEvaluationVisitoryFactory(isAnonymous, visitor) {
       } = path;
       const id = node.key;
       const initializer = (0, _helperSkipTransparentExpressionWrappers.skipTransparentExprWrappers)(path.get("value"));
-      if (isAnonymous(initializer)) {
+      if (needsName(initializer)) {
         if (!node.computed) {
           if (id.type === "Identifier") {
             visitor(initializer, state, id.name);
@@ -1252,19 +1247,17 @@ function _default({
   loose
 }, version, inherits) {
   var _assumption, _assumption2;
-  {
-    if (version === "2023-11" || version === "2023-05" || version === "2023-01") {
-      assertVersion("^7.21.0");
-    } else if (version === "2021-12") {
-      assertVersion("^7.16.0");
-    } else {
-      assertVersion("^7.19.0");
-    }
+  if (version === "2023-11" || version === "2023-05" || version === "2023-01") {
+    assertVersion("^7.21.0");
+  } else if (version === "2021-12") {
+    assertVersion("^7.16.0");
+  } else {
+    assertVersion("^7.19.0");
   }
   const VISITED = new WeakSet();
   const constantSuper = (_assumption = assumption("constantSuper")) != null ? _assumption : loose;
   const ignoreFunctionLength = (_assumption2 = assumption("ignoreFunctionLength")) != null ? _assumption2 : loose;
-  const namedEvaluationVisitor = NamedEvaluationVisitoryFactory(isDecoratedAnonymousClassExpression, visitClass);
+  const namedEvaluationVisitor = buildNamedEvaluationVisitor(isDecoratedAnonymousClassExpression, visitClass);
   function visitClass(path, state, className) {
     var _node$id;
     if (VISITED.has(path)) return;
@@ -1288,11 +1281,9 @@ function _default({
           declaration
         } = path.node;
         if ((declaration == null ? void 0 : declaration.type) === "ClassDeclaration" && isDecorated(declaration)) {
+          var _path$splitExportDecl;
           const isAnonymous = !declaration.id;
-          {
-            var _path$splitExportDecl;
-            (_path$splitExportDecl = path.splitExportDeclaration) != null ? _path$splitExportDecl : path.splitExportDeclaration = require("@babel/traverse").NodePath.prototype.splitExportDeclaration;
-          }
+          (_path$splitExportDecl = path.splitExportDeclaration) != null ? _path$splitExportDecl : path.splitExportDeclaration = require("@babel/traverse").NodePath.prototype.splitExportDeclaration;
           const updatedVarDeclarationPath = path.splitExportDeclaration();
           if (isAnonymous) {
             visitClass(updatedVarDeclarationPath, state, _core.types.stringLiteral("default"));
@@ -1304,10 +1295,8 @@ function _default({
           declaration
         } = path.node;
         if ((declaration == null ? void 0 : declaration.type) === "ClassDeclaration" && isDecorated(declaration)) {
-          {
-            var _path$splitExportDecl2;
-            (_path$splitExportDecl2 = path.splitExportDeclaration) != null ? _path$splitExportDecl2 : path.splitExportDeclaration = require("@babel/traverse").NodePath.prototype.splitExportDeclaration;
-          }
+          var _path$splitExportDecl2;
+          (_path$splitExportDecl2 = path.splitExportDeclaration) != null ? _path$splitExportDecl2 : path.splitExportDeclaration = require("@babel/traverse").NodePath.prototype.splitExportDeclaration;
           path.splitExportDeclaration();
         }
       },
