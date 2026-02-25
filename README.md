@@ -32,8 +32,8 @@ A personal website initiative to document and share technical knowledge in compu
 
 Contributions are always welcome!
 
-* Report Issues: Found a bug or have a feature request? Create a new issue [here.](https://github.com/Mowibox/chroma/issues/new/choose)
-* Fix Bugs & Add Features: Find out where you can lend a hand by checking out [existing issues.](https://github.com/Mowibox/chroma/issues)
+* **Report Issues:** Found a bug or have a feature request? Create a new issue [here.](https://github.com/Mowibox/chroma/issues/new/choose)
+* **Fix Bugs & Add Features:** Find out where you can lend a hand by checking out [existing issues.](https://github.com/Mowibox/chroma/issues)
 
 > [!TIP]
 > Want to share your knowledge and create or review pages for the website? Follow these guidelines _(coming soon!)_ to know how to contribute in the right way!
