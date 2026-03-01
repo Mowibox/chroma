@@ -235,7 +235,7 @@ Nous accordons de l'importance à la confidentialité. Consultez notre [Politiqu
 
 ## 11. VIOLATIONS DES DROITS D'AUTEUR
 
-Nous respectons les droits d'auteur. Pour signaler une violation, contactez-nous à [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com)  avec :
+Nous respectons les droits d'auteur. Pour signaler une violation, contactez-nous à [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com) avec :
 
 - Identification de l'œuvre protégée
 - Localisation du contenu incriminé

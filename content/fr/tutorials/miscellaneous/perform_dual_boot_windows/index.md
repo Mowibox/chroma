@@ -91,7 +91,7 @@ Clé en main, vous pouvez redémarrer l'ordinateur pour réaliser l'installation
 
 L'installation d'Ubuntu se fait ensuite en suivant les différentes étapes de l'utilitaire :
 
-{{< callout context="caution" title="Tip" icon="outline/bulb" >}}
+{{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
 Notez que si vous fermez l'utilitaire d'installation, vous aurez accès à un environnement Ubuntu que vous allez pouvoir entièrement explorer. Pratique pour tester le système avant de vous décider de réellement réaliser le dual-boot ou non !
 {{< /callout >}}
 
