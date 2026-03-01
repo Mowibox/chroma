@@ -1,7 +1,7 @@
 ---
 title: "Comment contribuer à Chroma ?"
 description: "Tout ce qu’il faut savoir pour contribuer à Chroma et partager vos tutoriels"
-summary: 
+summary: "Ce guide explique comment contribuer à Chroma : proposer des idées, signaler des bugs, rédiger des tutoriels et participer au développement du site via GitHub et Discord."
 date: 2026-03-01
 lastmod: 2026-03-01
 draft: false
@@ -10,28 +10,30 @@ toc: true
 icon: "heart-handshake"
 
 seo:
-   title: ""
-   description: ""
-   canonical: ""
+   title: "Contribuer à Chroma – Guide du contributeur"
+   description: "Découvrez comment contribuer à Chroma : retours, rédaction de tutoriels, installation de l’environnement de développement et soumission de pull requests."
+   canonical: "https://mowibox.github.io/chroma/fr/tutorials/miscellaneous/how_to_contribute/"
    noindex: false
    robots: "index, follow"
 
 ---
 
 <p align="center">
-    <img src="/chroma/images/contribute1.png" alt="Contribuing to Chroma" class="w-full h-auto" />
+    <img src="/chroma/images/contribute1.jpg" alt="Contributing to Chroma" class="w-full h-auto" />
 </p>
+
+Ce guide a pour vocation de vous accompagner pas à pas dans le processus de contribution à Chroma. Que ce soit en proposant des idées, en identifiant des problèmes ou en rédigeant vos propres pages, il y a toujours un moyen de donner un coup de main !
 
 ## Donner un retour : questions, suggestions
 
-La première manière de contribuer
+La première manière de contribuer à l'amélioration du site est de partager vos retours et vos propositions d'améliorations. Pour ce faire, deux voies s'offrent à vous :
 
-[🔍 Review and Feedback](https://discord.com/channels/1383790297594728518/1386648737366937701)
-https://github.com/Mowibox/chroma/issues
+* **Sur Discord :** Le canal [🔍 Review and Feedback](https://discord.com/channels/1383790297594728518/1386648737366937701) vous permet de poser vos questions, discuter avec les autres collaborateurs et proposer vos idées pour améliorer le site.
+* **Sur GitHub :** Si vous constatez un bug, n'hésitez pas à créer une [issue sur le repository de Chroma.](https://github.com/Mowibox/chroma/issues/new/choose)
 
 ## Contribuer au développement de Chroma
 
-Si votre objectif de contribution est de rédiger un nouveau tutoriel, réecrire une partie d'un tutoriel déjà existant, ou encore plonger dans le code source du site pour aider à son amélioration, il est possible de configurer un environement de développement sur son ordinateur en local.
+Si votre objectif de contribution est de rédiger un nouveau tutoriel, réécrire une partie d'un tutoriel déjà existant, ou encore plonger dans le code source du site pour aider à son amélioration, il est possible de configurer un environnement de développement sur son ordinateur en local.
 
 ### Prérequis
 
@@ -56,7 +58,7 @@ Toujours au sein du répertoire du projet, exécutez la commande ci-dessous pour
 npm run dev
 ```
 
-Si tout c'est bien passé, cela va afficher un message dans votre terminal avec le lien cliquable vers votre site local (à une adresse de type localhost) :
+Si tout s'est bien passé, cela va afficher un message dans votre terminal avec le lien cliquable vers votre site local (à une adresse localhost) :
 
 ```bash {title="Terminal"}
 Watching for changes in /.../chroma/{assets,content,i18n,layouts,node_modules,package.json,static}
@@ -122,11 +124,11 @@ Les différents dossiers et fichiers de Chroma sont organisés de la manière su
 
 * `assets/` regroupe les ressources sources (SCSS, JavaScript, style, etc.) utilisées pour le site.
 * `config/` regroupe les fichiers de configuration et paramètres généraux du site.
-* `content/` contient l’ensemble des pages du site, organisées par langue (`en/` et `fr/`).
+* `content/` contient l’ensemble des pages du site, organisées par langue (`fr/` et `en/`).
 * `i18n/` contient les fichiers de traduction.
 * `static/` contient les fichiers statiques du site (images, gifs, icônes, etc.).
 
-De manière générale, c'est le dossier `tutorials/` qui vous intéressera, lui-même contenant quatre dossiers en fonction du thème du tutoriel : Informatique (`computer_science/`), Électronique (`electronics/`), Conception & développement 3D (`design_3d_development/`), et Autres (`miscellaneous/`). Mais il n'est pas exclu que votre contribution puisse concerner d'autres parties du site, par exemple s'il y'a des [issues connues.](https://github.com/Mowibox/chroma/issues)
+De manière générale, c'est le dossier `tutorials/` qui vous intéressera, lui-même contenant quatre dossiers en fonction du thème du tutoriel : Informatique (`computer_science/`), Électronique (`electronics/`), Conception & développement 3D (`design_3d_development/`), et Autres (`miscellaneous/`). Mais il n'est pas exclu que votre contribution puisse concerner d'autres parties du site, par exemple s'il y a des [issues connues.](https://github.com/Mowibox/chroma/issues)
 
 ### Écrire un tutoriel
 
@@ -135,7 +137,7 @@ La section suivante détaille les différentes étapes pour créer et mettre en 
 | Étape | Description |
 | ------ | ------------ |
 | [Extensions VSCode](#extensions-visual-studio-code-utiles-pour-le-développement-du-site) | Installer les extensions utiles pour le développement du site |
-| [Ajout du tutoriel](#ajout-du-tutoriel-dans-les-dossiers) | Créer le dossier et le fichier `index.md` du tutoriel |
+| [Ajout du tutoriel](#ajout-du-tutoriel-dans-les-dossiers) | Créer le dossier et le fichier `index.md` de votre tutoriel |
 | [Avant-propos](#avant-propos) | Renseigner le _front-matter_ (title, description, date, weight, etc.) |
 | [Convention des poids](#convention-des-poids-de-page) | Définir la position du tutoriel dans la liste grâce au champ `weight` |
 | [Mise en forme du contenu](#mise-en-forme-du-contenu) | Rédiger le tutoriel en Markdown avec la structure recommandée |
@@ -183,7 +185,7 @@ Le lien internet sera alors de la forme suivante : `https://mowibox.github.io/ch
 
 #### Avant-propos
 
-Chaque page de tutoriel commence par un avant-propos (aussi appelé _front-matter_), encadré par des tirets `---`. Les différents champs sont détaillés ci-deesous :
+Chaque page de tutoriel commence par un avant-propos (aussi appelé _front-matter_), encadré par des tirets `---`. Les différents champs sont détaillés ci-dessous :
 
 ```md
 ---
@@ -211,22 +213,22 @@ seo:
 * `description` : Décrit votre contenu en **une courte phrase.** Utilisée notamment pour l'aperçu dans la liste des tutoriels.
 * `summary` : Décrit votre tutoriel avec un peu plus de détail, en 2-3 phrases.
 * `date` : La date à laquelle vous avez commencé à écrire votre tutoriel, **au format YYYY-MM-JJ.**
-* `lastmod` : La date de denrière modification du tutoriel, **au format YYYY-MM-JJ.**
+* `lastmod` : La date de dernière modification du tutoriel, **au format YYYY-MM-JJ.**
 * `draft` : Rend le tutoriel visible ou non lors de la prévisualisation. Par défaut, il est visible (`false`).
 * `weight` : Définit l'ordre d'affichage de votre contenu dans la liste des tutoriels. La manière de le remplir est détaillée dans la [section suivante.](#convention-des-poids-de-page)
 * `toc` : Affiche la table des matières de la page. Par défaut, elle est affichée (`true`).
 * `icon` : Vous pouvez rajouter une nouvelle icône en allant dans [Tabler Icons](https://tabler.io/icons). Il s'agira de l'icône qui illustrera votre page dans la liste des tutoriels {{< callout context="danger" title="Attention" icon="outline/alert-square-rounded" >}}
-Attention, il faut que la couleur de l'icône soit **#a514e9** et doit être ajoutée dans le dossier static/icons.
+Attention, il faut que la couleur de l'icône soit **#a514e9** et doit être ajoutée dans le dossier `static/icons`.
 {{< /callout >}}
 
 * `seo.title` : Titre optimisé pour les moteurs de recherche. Il peut être différent de `title`.
-* `seo.decription` : Description affichée dans les résultats de moteur de recherche.
+* `seo.description` : Description affichée dans les résultats de moteur de recherche.
 * `seo.canonical` : URL canonique de la page
 * `seo.noindex` : Gère l’indexation de la page par les moteurs de recherche. Activé par défaut (`false`).
 * `seo.robots` : Indique aux moteurs de recherche comment indexer la page.
 
 <p align="center">
-    <img src="/chroma/images/contribute2.png" alt="Tutorial cardlist example" class="w-full h-auto" />
+    <img src="/chroma/images/contribute2_fr.png" alt="Tutorial cardlist example" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Exemple d'aperçu de tutoriel dans la liste. Les champs title, description et icon, sont sollicités</em>
 </p>
@@ -241,7 +243,9 @@ L'ordre des tutoriels est défini dans l'avant-propos grâce au champ `weight`. 
 
 #### Mise en forme du contenu
 
-La rédaction de contenu se fait principalement avec le langage [Markdown,](https://fr.wikipedia.org/wiki/Markdown) qui a l'avantage d'être assez facile à prendre en main, c'est d'ailleurs le langage utilisé pour les [README](https://github.com/Mowibox/chroma/blob/main/README.md) sur GitHub.
+La rédaction de contenu se fait principalement avec le langage [Markdown,](https://fr.wikipedia.org/wiki/Markdown) qui a l'avantage d'être assez facile à prendre en main, c'est d'ailleurs le langage utilisé pour les [fichiers README](https://github.com/Mowibox/chroma/blob/main/README.md) sur GitHub.
+
+Pour aller plus loin et exploiter toutes les fonctionnalités du site, la documentation de Doks (en anglais) propose des guides détaillés sur la création de contenu :
 
 * La section [Authoring content](https://getdoks.org/docs/basics/authoring-content/) vous permet d'apprendre les bases : structurer votre texte, gérer les titres, paragraphes, listes etc.
 * Pour insérer du contenu dynamique comme des notes, astuces, boutons ou autres spécificités, utilisez les [shortcodes.](https://getdoks.org/docs/basics/shortcodes/)
@@ -253,7 +257,7 @@ N’hésitez pas à combiner les fonctionnalités de Markdown et des shortcodes 
 
 #### Ajout d'images
 
-L'ensemble des images du site dédiées aux pages sont stockées dans le dossier [`static/images/`.](https://github.com/Mowibox/chroma/tree/main/static/images) Pour intégrer une image du dossier dans votre page, adaptez le bloc HTML suivant :
+L'ensemble des images du site dédiées aux pages sont stockées dans le dossier [`static/images/`.](https://github.com/Mowibox/chroma/tree/main/static/images) Pour intégrer une image du dossier dans votre page, adaptez le bloc HTML suivant à votre besoin :
 
 ```html {title="Ajout d'images"}
 <p align="center">
@@ -263,10 +267,11 @@ L'ensemble des images du site dédiées aux pages sont stockées dans le dossier
 
 Où `image1.jpg` est le nom de l'image. Si vous voulez rajouter une nouvelle image, il suffit donc de rajouter l'image en question dans le dossier `static/images` pour qu'elle soit utilisable. Comme pour le reste du site, certains points sont à respecter lors de l'ajout d'images :
 
-* L'image **pas dépasser 2 MB**.
-* L'image utilisée doit être **libre de droit.**
-* Pour le nom de l'image, il est préférable **la nommer en rapport avec le tutoriel que vous écrivez.** Par exemple, les images de ce tutoriel sont nommées `contribute1.png`, `contribute2.png`. Cela permet de retrouver plus facilement dans quel tutoriel l'image est utilisée.
-* Le champ `alt` doit contenir une **très courte description du contenu de l'image en anglais.**
+* L’image ne doit **pas dépasser 2 MB.**
+* L’image utilisée doit être **libre de droit.**
+* Il est préférable de **nommer l’image en lien avec le tutoriel que vous écrivez.** Par exemple, les images de ce tutoriel sont nommées `contribute1.jpg`, `contribute2.png`, etc. Cela permet de retrouver plus facilement dans quel tutoriel l’image est utilisée.
+* Si certaines images peuvent être utilisées dans plusieurs tutoriels, vous pouvez leur donner un nom plus générique, tout en ajoutant un tiret du bas (`_`) au début pour les distinguer (ex : `_buzzer.jpg`).
+* Le champ `alt` doit contenir une **très courte description du contenu de l’image en anglais.**
 
 Il est aussi possible d'ajouter une légende à votre image en utilisant le bloc HTML ci-dessous :
 
@@ -279,9 +284,9 @@ Il est aussi possible d'ajouter une légende à votre image en utilisant le bloc
 ```
 
 <p align="center">
-    <img src="/chroma/icons/contribute3.png" alt="Image caption example" class="w-full h-auto" />
+    <img src="/chroma/images/contribute3.jpg" alt="Image caption example" class="w-full h-auto" />
     </br>
-    <em style="font-size: 0.95em;">Une image avec une légende</em>
+    <em style="font-size: 0.95em;">Une image avec une légende.</em>
 </p>
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
@@ -301,7 +306,7 @@ Les gifs et les icônes suivent le même principe et ont leur dossier dédié (`
 * **Relecteur :**
 ```
 
-Tout d'abord, remarquez qu'il y a une ligne séparatrice (`---`) permettant de scinder le tutoriel et les crédits. Il y a ensuite les différents champs qui sont à compléter :
+Tout d’abord, remarquez qu’il y a une ligne séparatrice (`---`) permettant de scinder le tutoriel et les crédits. Il y a ensuite les différents champs qui sont à compléter :
 
 * **Rédacteur :** C'est vous ! Il peut il y avoir plusieurs auteurs, séparés par des virgules.
 * **Relecteur :** Ce sont les personnes qui ont relu votre tutoriel et vous ont proposé des suggestions. Inutile de vous indiquer comme tel si vous êtes rédacteur. Si vous n'avez pas de relecteurs, le champ peut être laissé vide, mais il doit être présent dans tous les cas.
@@ -311,11 +316,11 @@ Tout d'abord, remarquez qu'il y a une ligne séparatrice (`---`) permettant de s
 Satisfait de votre tutoriel ? Il ne vous reste plus qu'à réaliser une pull request afin qu'un collaborateur puisse vérifier le tutoriel ! Le titre de la pull request doit être explicite, par exemple :
 
 * "Ajout du tutoriel "Initiation à Python" - FR"
-* "Suggestion de correction dans le tutoriel "Utilisation du terminal" - EN"
+* "Suggestion de correction dans le tutoriel "Using the terminal" - EN"
 * "Amélioration de l'interface de visualisation des tutoriels"
 * etc.
 
-La description de la pull request doit expliquer brièvement les modifications apportés ou les ajouts par cette denrière. Une fois la pull request envoyée, un contributeur viendra vérifier que tous points expliqués dans cette page sont vérifiés. Dans le cas contraire, vous recevrez un message vous expliquant ce qu'il faut modifier pour que votre pull request soit acceptée. Si tout est correct, les modifications seront directement intégrées au site principal.
+La description de la pull request doit expliquer brièvement les modifications apportées ou les ajouts par cette dernière. Une fois la pull request envoyée, un contributeur viendra vérifier que tous les points expliqués dans cette page sont vérifiés. Dans le cas contraire, vous recevrez un message vous expliquant ce qu'il faut modifier pour que votre pull request soit acceptée. Si tout est correct, les modifications seront directement intégrées au site principal.
 
 **Bravo et merci !**
 

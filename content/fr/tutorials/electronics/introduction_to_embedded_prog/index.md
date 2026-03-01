@@ -378,7 +378,7 @@ void happyBirthday(){
 
 ## Pour aller plus loin
 
-Félicitations si vous êtes arrivés au bout des niveaux ! Si c'était trop facile pour vous vous pouvez essayer de créer un projet à partir de tous les composants que vous possédez. Par exemple pourquoi pas un feu tricolore à luminosité variable qui alerte les piétons d'un son lorsque le feu passe au rouge ? N'hésitez pas à parcourir Internet pour trouver des tutoriels qui pourraient vous intéresser.
+Félicitations si vous êtes arrivé au bout des niveaux ! Si c'était trop facile pour vous, vous pouvez essayer de créer un projet à partir de tous les composants que vous possédez. Par exemple, pourquoi pas un feu tricolore à luminosité variable qui alerte les piétons d'un son lorsque le feu passe au rouge ? N'hésitez pas à parcourir Internet pour trouver des tutoriels qui pourraient vous intéresser.
 
 <p align="center">
   <img src="/chroma/images/level6.png" alt="Niveau 6" class="w-full h-auto" />
