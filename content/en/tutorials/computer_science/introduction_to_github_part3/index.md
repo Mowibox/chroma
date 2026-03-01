@@ -13,6 +13,7 @@ seo:
    title: "Git and GitHub Guide – Part 3"
    description: "Learn how to manage collaborative contributions on GitHub using issues, forks, branches, and pull requests."
    canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/introduction_to_github_part3/"
+   noindex: false
    robots: "index, follow"
 ---
 

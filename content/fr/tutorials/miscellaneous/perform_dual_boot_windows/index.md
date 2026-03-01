@@ -13,6 +13,7 @@ seo:
    title: "Installer Ubuntu en dual-boot avec Windows 11 – Guide complet"
    description: "Guide détaillé pour créer un dual-boot Windows et Ubuntu : préparation, clé USB, partitionnement et installation étape par étape."
    canonical: "https://mowibox.github.io/chroma/fr/tutorials/miscellaneous/perform_dual_boot_windows/"
+   noindex: false
    robots: "index, follow"
 ---
 

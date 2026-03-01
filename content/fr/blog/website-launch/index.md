@@ -15,6 +15,7 @@ seo:
   title: "Chroma – Lancement officiel du site" # custom title (optional)
   description: "Bienvenue sur Chroma, l'espace dédié aux tutoriels, à la computer vision, et aux projets technologiques par Ousmane Thiongane." # custom description (recommended)
   canonical: "https://mowibox.github.io/chroma/fr/blog/lancement-du-site/" # custom canonical URL (optional)
+  noindex: false
   robots: "index, follow" # custom robot tags (optional)
 ---
 

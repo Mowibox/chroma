@@ -14,6 +14,7 @@ seo:
    title: ""
    description: ""
    canonical: "https://mowibox.github.io/chroma/fr/tutorials/design_3d_development/"
+   noindex: false
    robots: "index, follow"
 
 sidebar:

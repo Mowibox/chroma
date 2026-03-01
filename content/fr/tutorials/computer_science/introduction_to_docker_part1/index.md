@@ -13,6 +13,7 @@ seo:
    title: "Installation et configuration de Docker sous Linux"
    description: "Tutoriel détaillé pour installer Docker sur Linux, créer le groupe Docker et vérifier le bon fonctionnement de l'installation."
    canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/introduction_to_docker_part1/"
+   noindex: false
    robots: "index, follow"
 ---
 

@@ -12,5 +12,6 @@ seo:
    title: ""
    description: ""
    canonical: ""
+   noindex: false
    robots: "index, follow"
 ---

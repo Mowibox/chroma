@@ -13,6 +13,7 @@ seo:
    title: "Guide Git et GitHub – Partie 2"
    description: "Découvrez comment créer un repository GitHub, configurer le SSH, cloner en local et gérer vos fichiers avec Git."
    canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/introduction_to_github_part2/"
+   noindex: false
    robots: "index, follow"
 ---
 

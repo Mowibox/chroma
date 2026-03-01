@@ -15,6 +15,7 @@ seo:
   title: "Rejoignez le serveur Discord officiel de Chroma" # custom title (optional)
   description: "Participez aux discussions sur Chroma, posez vos questions, échangez autour des tutoriels et des projets." # custom description (recommended)
   canonical: "https://mowibox.github.io/chroma/fr/blog/création-dun-discord/" # custom canonical URL (optional)
+  noindex: false
   robots: "index, follow" # custom robot tags (optional)
 ---
 

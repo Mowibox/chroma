@@ -9,5 +9,6 @@ seo:
   title: "Chroma – Documentation on computer science, electronics, and computer vision"
   description: “Chroma is a personal initiative to document and share technical knowledge in computer science, electronics, and computer vision.”
   canonical: “https://mowibox.github.io/chroma/en/”
+  noindex: false
   robots: “index, follow”
 ---

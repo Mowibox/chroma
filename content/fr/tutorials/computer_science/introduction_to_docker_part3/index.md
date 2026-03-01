@@ -13,6 +13,7 @@ seo:
    title: "Dockerfile et images personnalisées – Guide pratique sous Linux"
    description: "Tutoriel complet pour créer un Dockerfile, construire une image Docker customisée et exécuter des conteneurs sur Linux."
    canonical:  "https://mowibox.github.io/chroma/fr/tutorials/computer_science/introduction_to_docker_part3/"
+   noindex: false
    robots: "index, follow"
 ---
 

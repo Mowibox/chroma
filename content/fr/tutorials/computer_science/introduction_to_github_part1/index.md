@@ -13,6 +13,7 @@ seo:
    title: "Guide Git et GitHub – Partie 1"
    description: "Introduction aux bases de Git et GitHub avec des illustrations et des exemples concrets. Comprenez repository, clone, add, commit, push et pull."
    canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/introduction_to_github_part1/"
+   noindex: false
    robots: "index, follow"
 ---
 

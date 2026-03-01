@@ -12,6 +12,7 @@ seo:
    title: ""
    description: ""
    canonical: "https://mowibox.github.io/chroma/fr/computer_vision/"
+   noindex: false
    robots: "index, follow"
 ---
 

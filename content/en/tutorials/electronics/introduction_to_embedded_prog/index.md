@@ -13,6 +13,7 @@ seo:
    title: "Introduction to embedded programming with Arduino"
    description: "Introductory tutorial to embedded programming with Arduino: microcontrollers, electronic assemblies, and first step-by-step programs."
    canonical: "https://mowibox.github.io/chroma/en/tutorials/electronics/introduction_to_embedded_prog/"
+   noindex: false
    robots: "index, follow"
 ---
 

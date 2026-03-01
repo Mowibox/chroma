@@ -14,6 +14,7 @@ seo:
    title: "Configure a Raspberry Pi without a screen (Headless) with SSH"
    description: "Step-by-step guide to installing Ubuntu Server on a Raspberry Pi and configuring it without a screen using the SSH protocol."
    canonical: "https://mowibox.github.io/chroma/en/tutorials/miscellaneous/setup_headless_raspberry/"
+   noindex: false
    robots: "index, follow"
 ---
 

@@ -16,6 +16,7 @@ seo:
 " # custom title (optional)
   description: "Welcome to Chroma, the space dedicated to tutorials, computer vision, and technology projects by Ousmane Thiongane." # custom description (recommended)
   canonical: "https://mowibox.github.io/chroma/en/blog/website-launch/" # custom canonical URL (optional)
+  noindex: false
   robots: "index, follow" # custom robot tags (optional)
 ---
 

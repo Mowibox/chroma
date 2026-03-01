@@ -13,6 +13,7 @@ seo:
    title: "Complete Guide to Terminal Commands – Linux, macOS, Windows"
    description: "Hands-on tutorial to learn how to use the terminal: folder navigation, file management, access rights, and essential commands for all systems."
    canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/using_terminal/"
+   noindex: false
    robots: "index, follow"
 ---
 

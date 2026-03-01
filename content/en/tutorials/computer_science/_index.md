@@ -14,6 +14,7 @@ seo:
    title: ""
    description: ""
    canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/"
+   noindex: false
    robots: "index, follow"
 
 sidebar:

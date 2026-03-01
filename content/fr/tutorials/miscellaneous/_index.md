@@ -14,6 +14,7 @@ seo:
    title: ""
    description: ""
    canonical: "https://mowibox.github.io/chroma/fr/tutorials/miscellaneous/"
+   noindex: false
    robots: "index, follow"
 
 sidebar:

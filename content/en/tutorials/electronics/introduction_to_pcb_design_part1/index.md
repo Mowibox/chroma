@@ -13,6 +13,7 @@ seo:
    title: "PCB Schematic with KiCad – Tutorial (Part 1)"
    description: "Learn how to create an electronic schematic with KiCad: component placement, connections, labels, ERC verification, and preparation for PCB routing."
    canonical: "https://mowibox.github.io/chroma/en/tutorials/electronics/introduction_to_pcb_design_part1/"
+   noindex: false
    robots: "index, follow"
 ---
 

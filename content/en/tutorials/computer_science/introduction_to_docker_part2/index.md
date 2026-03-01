@@ -13,6 +13,7 @@ seo:
    title: "Docker images and containers – Practical guide for Linux"
    description: "Step-by-step tutorial for creating, launching, and managing your Docker containers and Docker images on Linux."
    canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/introduction_to_docker_part2/"
+   noindex: false
    robots: "index, follow"
 ---
 

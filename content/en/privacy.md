@@ -10,6 +10,7 @@ seo:
   title: "" # custom title (optional)
   description: "" # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
+  noindex: false
   robots: "" # custom robot tags (optional)
 ---
 

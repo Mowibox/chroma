@@ -15,5 +15,6 @@ seo:
   title: "" # custom title (optional)
   description: "" # custom description (recommended)
   canonical: "https://mowibox.github.io/chroma/en/blog/" # custom canonical URL (optional)
+  noindex: false
   robots: "index, follow" # custom robot tags (optional)
 ---

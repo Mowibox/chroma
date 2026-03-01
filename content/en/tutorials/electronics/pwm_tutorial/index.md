@@ -13,6 +13,7 @@ seo:
    title: "Generating a PWM signal with STM32 Cube IDE – Complete tutorial"
    description: "Detailed guide to configuring a PWM signal on STM32 with CubeIDE: timers, frequency calculation, duty cycle, and control of an SG90 servomotor."
    canonical: "https://mowibox.github.io/chroma/en/tutorials/electronics/pwm_tutorial/"
+   noindex: false
    robots: "index, follow"
 ---
 

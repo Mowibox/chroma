@@ -13,6 +13,7 @@ seo:
    title: "Initiation à la programmation embarquée avec Arduino"
    description: "Tutoriel d’initiation à la programmation embarquée avec Arduino : microcontrôleurs, montages électroniques et premiers programmes pas à pas."
    canonical: "https://mowibox.github.io/chroma/fr/tutorials/electronics/introduction_to_embedded_prog/"
+   noindex: false
    robots: "index, follow"
 ---
 
