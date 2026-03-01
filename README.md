@@ -36,7 +36,7 @@ Contributions are always welcome!
 * **Fix Bugs & Add Features:** Find out where you can lend a hand by checking out [existing issues.](https://github.com/Mowibox/chroma/issues)
 
 > [!TIP]
-> Want to share your knowledge and create or review pages for the website? Follow these guidelines _(coming soon!)_ to know how to contribute in the right way!
+> Want to share your knowledge and create or review pages for the website? Follow these [guidelines](https://mowibox.github.io/chroma/en/tutorials/miscellaneous/how_to_contribute/) to know how to contribute in the right way!
 
 Feel free to join our **[Discord community](https://discord.gg/SUQTs6QV3M)**!
 
