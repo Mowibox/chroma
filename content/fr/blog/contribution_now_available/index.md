@@ -2,8 +2,8 @@
 title: "La contribution est maintenant disponible !"
 description: "Chroma s'ouvre aux contributions : tutoriels, retours, et développement du site."
 summary: "Bonne nouvelle : il est maintenant possible de contribuer à Chroma, que ce soit via des retours, des issues GitHub ou la rédaction de tutoriels."
-date:  2025-03-03
-lastmod:  2025-03-03
+date:  2026-03-03
+lastmod:  2026-03-03
 draft: false
 weight: 48
 categories: []
