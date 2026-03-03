@@ -229,7 +229,7 @@ Please note that the icon color must be **#a514e9** and must be added to the `st
 <p align="center">
     <img src="/chroma/images/contribute2_en.png" alt="Tutorial cardlist example" class="w-full h-auto" />
     </br>
-    <em style="font-size: 0.95em;">Example of a tutorial preview in the list. Fields title, description, and icon are required</em>
+    <em style="font-size: 0.95em;">Example of a tutorial preview in the list. Fields title, description, and icon are used.</em>
 </p>
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
@@ -248,9 +248,11 @@ To go further and take advantage of all the site's features, the Doks documentat
 
 * [Authoring content](https://getdoks.org/docs/basics/authoring-content/) explains text structuring, headings, paragraphs, lists, etc.
 * Use [shortcodes](https://getdoks.org/docs/basics/shortcodes/) for notes, tips, buttons, and dynamic content.
-* For writing code code, see [Code blocks.](https://getdoks.org/docs/built-ins/code-blocks/)
+* For writing code, see [Code blocks.](https://getdoks.org/docs/built-ins/code-blocks/)
 * For mathemarical expressions, use [Math support.](https://getdoks.org/docs/built-ins/math/)
 * Diagrams and schematics are possible via [Diagrams.](https://getdoks.org/docs/built-ins/diagrams/)
+
+Feel free to combine Markdown features and Doks shortcodes to give your tutorial a visual identity. And speaking of visuals, here’s the section about images!
 
 #### Adding Images
 
@@ -262,7 +264,7 @@ All images on the site dedicated to pages are stored in the [`static/images/`.](
 </p>
 ```
 
-Where `image1.jpg` is the name of the image. If you want to add a new image, simply add the image in question to the `static/images` folder so that it can be used. As with the rest of the site, there are certain points to bear in mind when adding images:
+Where `image1.jpg` is the name of the image. If you want to add a new image, simply add the image in question to the `static/images/` folder so that it can be used. As with the rest of the site, there are certain points to bear in mind when adding images:
 
 * The image must **not exceed 2 MB.**
 * The image used must be **royalty-free.**
@@ -287,7 +289,7 @@ You can also add a caption to your image using the HTML block below:
 </p>
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
-Gifs and icons follow the same rules (`static/icons`, `static/gifs`).
+Gifs and icons follow the same rules (`static/icons/`, `static/gifs/`).
 {{< /callout >}}
 
 #### Page Credits

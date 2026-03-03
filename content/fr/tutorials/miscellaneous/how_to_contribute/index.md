@@ -230,7 +230,7 @@ Attention, il faut que la couleur de l'icône soit **#a514e9** et doit être ajo
 <p align="center">
     <img src="/chroma/images/contribute2_fr.png" alt="Tutorial cardlist example" class="w-full h-auto" />
     </br>
-    <em style="font-size: 0.95em;">Exemple d'aperçu de tutoriel dans la liste. Les champs title, description et icon, sont sollicités</em>
+    <em style="font-size: 0.95em;">Exemple d'aperçu de tutoriel dans la liste. Les champs title, description et icon, sont sollicités.</em>
 </p>
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
@@ -265,7 +265,7 @@ L'ensemble des images du site dédiées aux pages sont stockées dans le dossier
 </p>
 ```
 
-Où `image1.jpg` est le nom de l'image. Si vous voulez rajouter une nouvelle image, il suffit donc de rajouter l'image en question dans le dossier `static/images` pour qu'elle soit utilisable. Comme pour le reste du site, certains points sont à respecter lors de l'ajout d'images :
+Où `image1.jpg` est le nom de l'image. Si vous voulez rajouter une nouvelle image, il suffit donc de rajouter l'image en question dans le dossier `static/images/` pour qu'elle soit utilisable. Comme pour le reste du site, certains points sont à respecter lors de l'ajout d'images :
 
 * L’image ne doit **pas dépasser 2 MB.**
 * L’image utilisée doit être **libre de droit.**
@@ -290,12 +290,12 @@ Il est aussi possible d'ajouter une légende à votre image en utilisant le bloc
 </p>
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
-Les gifs et les icônes suivent le même principe et ont leur dossier dédié (`static/icons`, `static/gifs`).
+Les gifs et les icônes suivent le même principe et ont leur dossier dédié (`static/icons/`, `static/gifs/`).
 {{< /callout >}}
 
 #### Crédits de fin de page
 
-À la fin de chaque page du site (comme celle-ci), il faut ajouter une section consacrée aux crédits de la page, en voici le format :
+À la fin de chaque page du site (comme celle-ci), il faut ajouter une section consacrée aux crédits de la page, voici le format :
 
 ```md {title="Format des crédits"}
 ---
