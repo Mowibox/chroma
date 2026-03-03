@@ -33,7 +33,7 @@ Whether you want to share ideas, suggest improvements, or add your own tutorials
 
 ## Complete guide
 
-A detailed guide on how to contribute is available here: [How to Contribute to Chroma](https://mowibox.github.io/chroma/en/tutorials/miscellaneous/how_to_contribute/)
+A detailed guide on how to contribute is available here: [How to contribute to Chroma?](https://mowibox.github.io/chroma/en/tutorials/miscellaneous/how_to_contribute/)
 
 🔴🟠🟡🟢🔵🟣
 
