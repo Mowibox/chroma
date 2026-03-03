@@ -17,7 +17,7 @@ defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
 defaultContentLanguageInSubdir = true
 
-copyRight = "Copyright (c) 2020-2024 Thulite"
+copyRight = "Copyright (c) 2025 Chroma"
 
 [build.buildStats]
   enable = true
@@ -42,7 +42,7 @@ copyRight = "Copyright (c) 2020-2024 Thulite"
   rel  = "sitemap"
 
 [sitemap]
-  changefreq = "monthly"
+  changefreq = "weekly"
   filename = "sitemap.xml"
   priority = 0.5
 
@@ -58,6 +58,8 @@ copyRight = "Copyright (c) 2020-2024 Thulite"
 
 [permalinks]
   blog = "/blog/:slug/"
+  tutorials = "/tutorials/:sections[1:]/:slug/"
+  computer_vision = "/computer_vision/:slug/"
   # docs = "/docs/:sections[1:]/:slug/"
 
 [minify.tdewolff.html]

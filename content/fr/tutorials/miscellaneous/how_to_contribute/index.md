@@ -155,7 +155,7 @@ Si vous utilisez VSCode, voici une liste non-exhaustive d'extensions qui peuvent
 
 #### Ajout du tutoriel dans les dossiers
 
-Pour créer un tutoriel, vous devez créer un dossier contenant un fichier `index.md`. Identifiez d'abord le thème de votre tutoriel afin de le mettre dans le bon dossier (Informatique, Électronique, etc.). Le lien internet qui pointera vers votre page aura le nom de votre dossier. Pour faciliter la visibilité et la structure du site, deux points sont à respecter lors du nommage :
+Pour créer un tutoriel, vous devez créer un dossier contenant un fichier `index.md`. Identifiez d'abord le thème de votre tutoriel afin de le mettre dans le bon dossier (Informatique, Électronique, etc.). Pour faciliter la visibilité et la structure du site, deux points sont à respecter lors du nommage :
 
 * Le nom du dossier doit être en **anglais**. Cela facilite la gestion de l'internationalisation fr/en.
 * Le nom du dossier ne doit pas être trop long.
@@ -168,7 +168,7 @@ La commande `hugo new content content/<chemin_du_dossier>/index.md` vous permet 
 hugo new content content/fr/tutorials/electronics/introduction_to_embedded_prog/index.md
 ```
 
-Le lien internet sera alors de la forme suivante : `https://mowibox.github.io/chroma/fr/tutorials/electronics/introduction_to_embedded_prog/`
+Le lien internet sera alors de la forme suivante : `https://mowibox.github.io/chroma/fr/tutorials/electronics/initiation-à-la-programmation-embarquée/`
 
 ```text {title="Arborescence du tutoriel"}
 .
