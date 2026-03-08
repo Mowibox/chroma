@@ -2,8 +2,8 @@
 
 A personal website initiative to document and share technical knowledge in computer science, electronics, and computer vision.
 
+![Website](https://custom-icon-badges.demolab.com/badge/Website-Online-brightgreen?logo=chroma)
 ![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)
-![Website](https://img.shields.io/badge/Website-Online-brightgreen?)
 ![Discord](https://img.shields.io/discord/1383790297594728518?color=7289DA&logo=discord&logoColor=white&label=Discord)
 ![Languages](https://img.shields.io/badge/Languages-FR%2FEN-blue?logo=read-the-docs)
 ![Issues](https://img.shields.io/github/issues/Mowibox/chroma)
