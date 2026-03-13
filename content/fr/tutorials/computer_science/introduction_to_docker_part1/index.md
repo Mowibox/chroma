@@ -1,6 +1,5 @@
 ---
 title: "Introduction à Docker – Partie 1"
-slug: "test de docker"
 description: "Installation de Docker"
 summary: "Apprenez à installer Docker sur Linux et à configurer votre environnement pour créer et exécuter vos premiers conteneurs."
 date: 2025-06-22

@@ -154,7 +154,7 @@ If you use VSCode, here is a non-exhaustive list of extensions that can help pro
 
 #### Adding the Tutorial to the Folders
 
-To create a tutorial, create a folder containing an `index.md` file. First identify the theme of your tutorial to place it in the correct folder (Computer Science, Electronics, etc.). There is two rules for folder naming:
+To create a tutorial, create a folder containing an `index.md` file. First identify the theme of your tutorial to place it in the correct folder (Computer Science, Electronics, etc.). The URL of your page will match the folder name. There is two rules for folder naming:
 
 * The folder name must be in **English** to simplify fr/en localization.
 * Keep folder names reasonably short.
@@ -167,7 +167,7 @@ You can use the command `hugo new content content/<folder_path>/index.md` to cre
 hugo new content content/en/tutorials/electronics/introduction_to_embedded_prog/index.md
 ```
 
-The URL will be: `https://mowibox.github.io/chroma/en/tutorials/electronics/introduction-to-embedded-programing/`
+The URL will be: `https://mowibox.github.io/chroma/en/tutorials/electronics/introduction_to_embedded_prog/`
 
 ```text {title="Tutorial Folder Structure"}
 .

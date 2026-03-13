@@ -58,8 +58,8 @@ copyRight = "Copyright (c) 2025 Chroma"
 
 [permalinks]
   blog = "/blog/:slug/"
-  tutorials = "/tutorials/:sections[1:]/:slug/"
-  computer_vision = "/computer_vision/:slug/"
+  # tutorials = "/tutorials/:sections[1:]/:slug/"
+  # computer_vision = "/computer_vision/:slug/"
   # docs = "/docs/:sections[1:]/:slug/"
 
 [minify.tdewolff.html]
