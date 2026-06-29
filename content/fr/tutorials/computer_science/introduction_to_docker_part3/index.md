@@ -27,7 +27,7 @@ Cette série de tutoriels vous illustrera comment utiliser Docker avec un ordina
 
 Dans le [tutoriel précédent]({{< relref "tutorials/computer_science/introduction_to_docker_part2">}}), nous avions constaté qu'à chaque nouvelle création de conteneur, on perdait toutes les modifications que l'on aurait pu faire dans un conteneur issu de la même image, puisque l'image de base restait inchangée.
 
-Pour faire des changements permantents à une image, l'idée est de créer une image customisée sur la base de l'image existante. C'est précisément le rôle du Dockerfile.
+Pour faire des changements permanents à une image, l'idée est de créer une image customisée sur la base de l'image existante. C'est précisément le rôle du Dockerfile.
 
 Le Dockerfile est un fichier texte contenant une série d'instructions permettant de construire une nouvelle image Docker. Grâce à lui, tous les conteneurs lancés à partir de l'image customisée inclueront déjà les modifications spécifiées dans le Dockerfile. Regardons plus en détail comment le rédiger.
 
@@ -51,7 +51,7 @@ ID=ubuntu
 
 On voit ici que la version d'Ubuntu est 24.04. Regardons comment faire pour créer une image basée sur la version 20.04.
 
-Choissisez un emplacment et créez-y un dossier au nom de votre choix (manuellement ou via un terminal avec la commande `mkdir <folder_name>`). Dans cet exemple, je vais sobrement le nommer "docker_folder/".
+Choississez un emplacement et créez-y un dossier au nom de votre choix (manuellement ou via un terminal avec la commande `mkdir <folder_name>`). Dans cet exemple, je vais sobrement le nommer "docker_folder/".
 
 Dans ce dossier :
 
@@ -69,7 +69,7 @@ c = a + b
 print(f"{a} + {b} = {c}")
 ```
 
-L'arborescense de votre dossier devrait donc ressembler à celle-ci :
+L'arborescence de votre dossier devrait donc ressembler à celle-ci :
 
 ```plaintext
 docker_folder/
