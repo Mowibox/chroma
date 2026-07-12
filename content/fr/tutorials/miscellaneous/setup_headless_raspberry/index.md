@@ -9,7 +9,7 @@ weight: 4003
 toc: true
 icon: "chip"
 contributors: ["Ousmane THIONGANE"]
-categories: ["systèmes-embarqués"]
+categories: ["systemes-embarques"]
 tags: ["raspberry-pi", "ssh"]
 
 seo:

@@ -9,7 +9,7 @@ weight: 2005
 toc: true
 icon: "wave-square"
 contributors: ["Ousmane THIONGANE"]
-categories: ["systèmes-embarqués"]
+categories: ["systemes-embarques"]
 tags: ["stm32", "pwm"]
 
 seo:

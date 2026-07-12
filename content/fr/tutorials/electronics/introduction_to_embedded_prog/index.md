@@ -9,7 +9,7 @@ weight: 2001
 toc: true
 icon: "laptop"
 contributors: ["Ousmane THIONGANE"]
-categories: ["systèmes-embarqués"]
+categories: ["systemes-embarques"]
 tags: ["arduino", "microcontrôleur"]
 
 seo:

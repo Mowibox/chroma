@@ -9,7 +9,7 @@ weight: 2003
 toc: true
 icon: "chip"
 contributors: ["Ousmane THIONGANE"]
-categories: ["systèmes-embarqués"]
+categories: ["conception-pcb"]
 tags: ["kicad", "routage"]
 
 seo:

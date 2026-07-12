@@ -9,7 +9,7 @@ weight: 2004
 toc: true
 icon: "wave-square"
 contributors: ["Ousmane THIONGANE"]
-categories: ["systèmes-embarqués"]
+categories: ["systemes-embarques"]
 tags: ["stm32", "adc"]
 
 seo:
