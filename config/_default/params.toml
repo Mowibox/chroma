@@ -8,7 +8,7 @@ mainSections = ["tutorials", "computer_vision", "blog"]
 
 # Enable mathematical rendering on every page (unless you set the `math` parameter to `false` in front matter)
 math = true # false (default) or true
-mathEngine = "MathJax" # "KaTeX" (default) or "MathJax"
+mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
 
 [social]
   twitter = "getdoks"

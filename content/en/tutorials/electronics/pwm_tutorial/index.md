@@ -95,28 +95,26 @@ Howaver, according to the [SG90 servo datasheet](http://www.ee.ic.ac.uk/pcheung/
 
 To do this, the following formula is used:
 
-{{< math class=text-center >}}
 $$
 f_{TIM} = \frac{f_{APB}}{(PSC+1)(ARR+1)}
 $$
-{{< /math >}}
 
 Where:
 
-* {{< math >}}$f_{TIM}${{< /math >}} is the timer frequency.
-* {{< math >}}$f_{APB}${{< /math >}} is the frequency of the bus feeding the timer (here 80 MHz).
-* {{< math >}}$PSC${{< /math >}} (prescaler) is a register that divides the timer's input frequency.
-* {{< math >}}$ARR${{< /math >}} (auto-reload register) defines the timer's maximum count.
+* \(f_{TIM}\) is the timer frequency.
+* \(f_{APB}\) is the frequency of the bus feeding the timer (here 80 MHz).
+* \(PSC\) (prescaler) is a register that divides the timer's input frequency.
+* \(ARR\) (auto-reload register) defines the timer's maximum count.
 
-Knowing {{< math >}}$f_{APB}${{< /math >}}, you just need to find a combination of PSC and ARR to get {{< math >}}$f_{TIM} = 50${{< /math >}} Hz. This can be done manually or using [online calculators](https://deepbluembedded.com/stm32-timer-calculator/).
+Knowing \(f_{APB}\), you just need to find a combination of PSC and ARR to get \(f_{TIM} = 50\) Hz. This can be done manually or using [online calculators](https://deepbluembedded.com/stm32-timer-calculator/).
 
-In this example, a suitable combination is {{< math >}}$PSC = 79${{< /math >}} and {{< math >}}$ARR = 19999${{< /math >}}.
+In this example, a suitable combination is \(PSC = 79\) and \(ARR = 19999\).
 
 {{< callout context="tip" title="Did you know?" icon="outline/message-dots" >}}
-Several combinations can achieve 50 Hz. Note that the higher the value of {{< math >}}$ARR${{< /math >}}, the better the PWM resolution.
+Several combinations can achieve 50 Hz. Note that the higher the value of \(ARR\), the better the PWM resolution.
 {{< /callout >}}
 
-Once {{< math >}}$PSC${{< /math >}} and {{< math >}}$ARR${{< /math >}} are determined, enter these values in TIM3 under **Parameter Settings**:
+Once \(PSC\) and \(ARR\) are determined, enter these values in TIM3 under **Parameter Settings**:
 
 <p align="center">
     <img src="/chroma/images/pwm9.png" alt="PSC & ARR assignment" class="w-full h-auto" />
@@ -124,21 +122,17 @@ Once {{< math >}}$PSC${{< /math >}} and {{< math >}}$ARR${{< /math >}} are deter
 
 ## Duty Cycle
 
-The {{< math >}}$Pulse${{< /math >}} parameter is used to control the duty cycle of the PWM signal. In the same way as for dividing the frequency, there is a formula to calculate the value to enter in the {{< math >}}$Pulse${{< /math >}} register based on the desired duty cycle {{< math >}}$\alpha${{< /math >}}:
+The \(Pulse\) parameter is used to control the duty cycle of the PWM signal. In the same way as for dividing the frequency, there is a formula to calculate the value to enter in the \(Pulse\) register based on the desired duty cycle \(\alpha\):
 
-{{< math class=text-center >}}
 $$
 Pulse = \alpha * (ARR + 1) - 1
 $$
-{{< /math >}}
 
 For example, to set a 50% duty cycle with my values:
 
-{{< math class=text-center >}}
 $$
 Pulse = \frac{1}{2} * (19999 + 1) - 1 = 9999
 $$
-{{< /math >}}
 
 Enter this value in the timer parameters and generate the code:
 
@@ -175,12 +169,12 @@ If you have an oscilloscope, you can still observe the PWM signal from your pin:
     <img src="/chroma/images/pwm11.png" alt="Oscilloscope display" class="w-full h-auto" />
 </p>
 
-Thanks to the display tiles, we can clearly see that the signal period is 20 ms (i.e., 50 Hz). The duty cycle is {{< math >}}$\frac{1}{2}${{< /math >}}.
+Thanks to the display tiles, we can clearly see that the signal period is 20 ms (i.e., 50 Hz). The duty cycle is \(\frac{1}{2}\).
 {{< /details >}}
 
 ## Modifying the duty cycle
 
-Rather than struggling to modify the {{< math >}}$Pulse${{< /math >}} value manually by editing the .ioc file, it is possible to dynamically modify the pulse width directly in the code.
+Rather than struggling to modify the \(Pulse\) value manually by editing the .ioc file, it is possible to dynamically modify the pulse width directly in the code.
 
 The macro `__HAL_TIM_SetCompare(&htimX, TIM_CHANNEL_X, pulse)` allows you to modify the duty cycle value of the channel associated with the selected timer. `pulse` is generally defined to represent the pulse width in microseconds.
 

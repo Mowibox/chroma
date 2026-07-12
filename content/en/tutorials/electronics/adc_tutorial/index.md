@@ -43,15 +43,13 @@ The Analog-to-Digital Converter (ADC) is a system that, as the name suggests, co
 
 1. **Sampling:** The analog signal is sampled at regular time intervals (sampling frequency).
 2. **Quantization:** Each sampled value is approximated to the nearest discrete value in the binary range.
-3. **Encoding:** The quantized values are encoded into a sequence of bits. The resolution of the ADC, expressed in bits, determines how many quantization levels are possible. If we denote {{< math >}}$n${{< /math >}} as the number of bits, the number of levels is:
+3. **Encoding:** The quantized values are encoded into a sequence of bits. The resolution of the ADC, expressed in bits, determines how many quantization levels are possible. If we denote \(n\)  as the number of bits, the number of levels is:
 
-{{< math class=text-center >}}
 $$
 \text{resolution} = 2^n
 $$
-{{< /math >}}
 
-For example, on the STM32 board used in this tutorial ([NUCLEO H7A3ZI-Q](https://www.st.com/en/evaluation-tools/nucleo-h7a3zi-q.html)), the ADC is 12-bit: it can represent {{< math >}}$2^{12} = 4096${{< /math >}} levels (from 0 to 4095).
+For example, on the STM32 board used in this tutorial ([NUCLEO H7A3ZI-Q](https://www.st.com/en/evaluation-tools/nucleo-h7a3zi-q.html)), the ADC is 12-bit: it can represent \(2^{12} = 4096\) levels (from 0 to 4095).
 
 ## Configuration
 
@@ -166,11 +164,9 @@ To go further, you can try connecting connecting other components to these pins,
 
 If you want to convert ADC readings into human-readable voltages instead of LSBs [(Least Significant Bit)](https://en.wikipedia.org/wiki/Analog-to-digital_converter#:~:text=The%20change%20in%20voltage%20required%20to%20guarantee%20a%20change%20in%20the%20output%20code%20level%20is%20called%20the%20least%20significant%20bit%20(LSB)%20voltage.%20The%20resolution%20Q%20of%20the%20ADC%20is%20equal%20to%20the%20LSB%20voltage.), you'll need the ADC sensitivity. Use the formula:
 
-{{< math class=text-center >}}
 $$
 \text{sensitivity} = \frac{\text{range}}{(2^{\text{resolution}}-1)}
 $$
-{{< /math >}}
 
 Where:
 
@@ -179,17 +175,15 @@ Where:
 
 In my case, my voltage values range from 0 to 5V for a 12-bit ADC. So range = 5V, resolution = 12 bits, that gives us:
 
-{{< math class=text-center >}}
 $$
 \text{sensitivity} = \frac{\text{5}}{(2^{12}-1)} = 0,0012210012 \space V.LSB^{-1}
 $$
-{{< /math >}}
 
 Then you can multiply this sensitivity by your ADC value to get a voltage reading:
 
-* For 0 LSB: {{< math >}}$0\times sensitivity = 0 \space V${{< /math >}}
-* For 4095 LSB: {{< math >}}$4095\times sensitivity = 5 \space V${{< /math >}}
-* For 1024 LSB: {{< math >}}$1024\times sensitivity = 1,25 \space V${{< /math >}}
+* For 0 LSB: \(0\times sensitivity = 0 \space V\)
+* For 4095 LSB: \(4095\times sensitivity = 5 \space V\)
+* For 1024 LSB: \(1024\times sensitivity = 1,25 \space V\)
 
 ---
 

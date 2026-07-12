@@ -43,15 +43,13 @@ Le Convertisseur Analogique Numérique (CAN) ou en anglais Analog Digital Conver
 
 1. **Échantillonnage :** Le signal analogique est prélevé à des intervalles de temps réguliers (fréquence d'échantillonnage).
 2. **Quantification :** Chaque échantillon récupéré est quantifié, c'est-à-dire qu'il est approximé à la valeur discrète la plus proche dans sa plage de valeurs binaires possibles.
-3. **Codage :** Les valeurs quantifiées sont ensuite codées en une séquence de bits. La résolution du CAN, exprimée en bits, détermine le nombre de niveaux de quantification possibles. Si on note {{< math >}}$n${{< /math >}} le nombre de bits du CAN, alors on peut déterminer le nombre de niveaux de quantification avec la formule suivante :
+3. **Codage :** Les valeurs quantifiées sont ensuite codées en une séquence de bits. La résolution du CAN, exprimée en bits, détermine le nombre de niveaux de quantification possibles. Si on note \(n\) le nombre de bits du CAN, alors on peut déterminer le nombre de niveaux de quantification avec la formule suivante :
 
-{{< math class=text-center >}}
 $$
 \text{resolution} = 2^n
 $$
-{{< /math >}}
 
-Par exemple, sur la carte STM32 que je vais utiliser pour ce tutoriel (la [NUCLEO H7A3ZI-Q](https://www.st.com/en/evaluation-tools/nucleo-h7a3zi-q.html)), il s'agit d'un CAN de 12 bits : il peut représenter {{< math >}}$2^{12} = 4096${{< /math >}} niveaux différents (de 0 à 4095).
+Par exemple, sur la carte STM32 que je vais utiliser pour ce tutoriel (la [NUCLEO H7A3ZI-Q](https://www.st.com/en/evaluation-tools/nucleo-h7a3zi-q.html)), il s'agit d'un CAN de 12 bits : il peut représenter \(2^{12} = 4096\) niveaux différents (de 0 à 4095).
 
 ## Configuration
 
@@ -162,11 +160,9 @@ Pour aller plus loin, vous pouvez essayer de brancher d'autres composants à ces
 
 Si vous souhaitez récupérer des valeurs de l'ADC humainement compréhensibles plutôt qu'en LSB [(Least Significant Bit)](https://fr.wikipedia.org/wiki/Bit_de_poids_faible#Signal_num%C3%A9ris%C3%A9), vous devrez connaître la sensitivité de votre ADC. dont la formule est :
 
-{{< math class=text-center >}}
 $$
 \text{sensitivity} = \frac{\text{range}}{(2^{\text{resolution}}-1)}
 $$
-{{< /math >}}
 
 Avec :
 
@@ -175,17 +171,15 @@ Avec :
 
 Dans mon cas, mes valeurs de tensions vont de 0 à 5V pour un ADC de 12 bits, donc range = 5 et resolution = 12, ce qui donne :
 
-{{< math class=text-center >}}
 $$
 \text{sensitivity} = \frac{\text{5}}{(2^{12}-1)} = 0,0012210012 \space V.LSB^{-1}
 $$
-{{< /math >}}
 
 Il vous suffit, ensuite, de multiplier la sensitivité à votre valeur de sortie de l'ADC pour la tension correspondante.
 
-* Pour 0 LSB : {{< math >}}$0\times sensitivity = 0 \space V${{< /math >}}
-* Pour 4095 LSB : {{< math >}}$4095\times sensitivity = 5 \space V${{< /math >}}
-* Pour 1024 LSB : {{< math >}}$1024\times sensitivity = 1,25 \space V${{< /math >}}
+* Pour 0 LSB : \(0\times sensitivity = 0 \space V\)
+* Pour 4095 LSB : \(4095\times sensitivity = 5 \space V\)
+* Pour 1024 LSB : \(1024\times sensitivity = 1,25 \space V\)
 
 ---
 

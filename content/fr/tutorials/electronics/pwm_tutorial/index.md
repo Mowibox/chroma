@@ -94,28 +94,26 @@ Or, en se basant sur la [documentation d'un servomoteur SG90](http://www.ee.ic.a
 
 Pour ce faire, la formule suivante est utilisée :
 
-{{< math class=text-center >}}
 $$
 f_{TIM} = \frac{f_{APB}}{(PSC+1)(ARR+1)}
 $$
-{{< /math >}}
 
 où :
 
-* {{< math >}}$f_{TIM}${{< /math >}} correspond à la fréquence du timer.
-* {{< math >}}$f_{APB}${{< /math >}} correspond à la fréquence du bus alimentant le timer (ici 80 MHz).
-* {{< math >}}$PSC${{< /math >}} (prescaler) est un registre qui divise la fréquence d'entrée du timer.
-* {{< math >}}$ARR${{< /math >}} (auto-reload register) est un registre définissant la valeur maximale du compteur.
+* \(f_{TIM}\) correspond à la fréquence du timer.
+* \(f_{APB}\) correspond à la fréquence du bus alimentant le timer (ici 80 MHz).
+* \(PSC\) (prescaler) est un registre qui divise la fréquence d'entrée du timer.
+* \(ARR\) (auto-reload register) est un registre définissant la valeur maximale du compteur.
 
-Comme {{< math >}}$f_{APB}${{< /math >}} est connu, il suffit donc de trouver une combinaison de PSC et ARR qui donne {{< math >}}$f_{TIM} = 50 Hz${{< /math >}}. Le calcul peut se faire à la main ou via des [calculateurs](https://deepbluembedded.com/stm32-timer-calculator/) déjà préfaits en ligne.
+Comme \(f_{APB}\) est connu, il suffit donc de trouver une combinaison de PSC et ARR qui donne \(f_{TIM} = 50 Hz\). Le calcul peut se faire à la main ou via des [calculateurs](https://deepbluembedded.com/stm32-timer-calculator/) déjà préfaits en ligne.
 
-Dans mon cas, j'obtiens une combinaison convenable avec {{< math >}}$PSC = 79${{< /math >}} et {{< math >}}$ARR = 19999${{< /math >}}.
+Dans mon cas, j'obtiens une combinaison convenable avec \(PSC = 79\) et \(ARR = 19999\).
 
 {{< callout context="tip" title="Le saviez-vous ?" icon="outline/message-dots" >}}
-Plusieurs combinaisons peuvent fonctionner pour atteindre une fréquence de 50 Hz. Retenez que plus la valeur de {{< math >}}$ARR${{< /math >}} est élevée, plus la résolution du signal PWM sera élevée.
+Plusieurs combinaisons peuvent fonctionner pour atteindre une fréquence de 50 Hz. Retenez que plus la valeur de \(ARR\) est élevée, plus la résolution du signal PWM sera élevée.
 {{< /callout >}}
 
-Une fois les valeurs de {{< math >}}$PSC${{< /math >}} et {{< math >}}$ARR${{< /math >}} déterminées, retournez dans les paramètres de TIM3 pour y intégrer leurs valeurs dans la section "Parameter Settings" :
+Une fois les valeurs de \(PSC\) et \(ARR\) déterminées, retournez dans les paramètres de TIM3 pour y intégrer leurs valeurs dans la section "Parameter Settings" :
 
 <p align="center">
     <img src="/chroma/images/pwm9.png" alt="PSC & ARR assignment" class="w-full h-auto" />
@@ -123,21 +121,17 @@ Une fois les valeurs de {{< math >}}$PSC${{< /math >}} et {{< math >}}$ARR${{< /
 
 ## Le rapport cyclique
 
-Le paramètre {{< math >}}$Pulse${{< /math >}} permet de contrôler le rapport cyclique du signal PWM. De la même manière que pour diviser la fréquence, il existe une formule qui permet de calculer la valeur à rentrer dans le registre {{< math >}}$Pulse${{< /math >}} en fonction du rapport cyclique choisi {{< math >}}$\alpha${{< /math >}} :
+Le paramètre \(Pulse\) permet de contrôler le rapport cyclique du signal PWM. De la même manière que pour diviser la fréquence, il existe une formule qui permet de calculer la valeur à rentrer dans le registre \(Pulse\) en fonction du rapport cyclique choisi \(\alpha\) :
 
-{{< math class=text-center >}}
 $$
 Pulse = \alpha * (ARR + 1) - 1
 $$
-{{< /math >}}
 
 Par exemple, si je veux un rapport cyclique de 50%, il me suffit d'appliquer la formule avec mes valeurs :
 
-{{< math class=text-center >}}
 $$
 Pulse = \frac{1}{2} * (19999 + 1) - 1 = 9999
 $$
-{{< /math >}}
 
 Je n'ai plus qu'à ajouter ma valeur calculée dans les paramètres, puis générer le code :
 
@@ -174,12 +168,12 @@ Si vous possédez un oscilloscope, vous pouvez quand même observer le signal PW
     <img src="/chroma/images/pwm11.png" alt="Oscilloscope display" class="w-full h-auto" />
 </p>
 
-Grâce aux carreaux de l'affichage, on remarque bien que la période du signal est de 20 ms (soit, 50 Hz). Le rapport cyclique est de {{< math >}}$\frac{1}{2}${{< /math >}}.
+Grâce aux carreaux de l'affichage, on remarque bien que la période du signal est de 20 ms (soit, 50 Hz). Le rapport cyclique est de \(\frac{1}{2}\).
 {{< /details >}}
 
 ## Modification du rapport cyclique
 
-Plutôt que de se faire du mal à modifier la valeur de {{< math >}}$Pulse${{< /math >}} à la main en modifiant le .ioc, il est possible de directement modifier dynamiquement dans le code la largeur de l'impulsion.
+Plutôt que de se faire du mal à modifier la valeur de \(Pulse\) à la main en modifiant le .ioc, il est possible de directement modifier dynamiquement dans le code la largeur de l'impulsion.
 
 La macro `__HAL_TIM_SetCompare(&htimX, TIM_CHANNEL_X, pulse)` permet de modifier la valeur du rapport cyclique du channel associé au timer sélectionné. `pulse` est généralement défini de manière à représenter la largeur de l’impulsion en microsecondes.
 

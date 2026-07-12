@@ -98,7 +98,7 @@ npx shx rm -rf public resources hugo_stats.json .hugo_build.lock
 
 The Chroma folders and files are organized as follows:
 
-```text {title="Structure de Chroma"}
+```text {title="Chroma Structure"}
 .
 ├── assets/
 ├── config/
