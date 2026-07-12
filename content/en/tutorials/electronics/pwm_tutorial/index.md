@@ -91,7 +91,7 @@ In the top **Clock Configuration** tab, you can see the frequencies at which the
     <img src="/chroma/images/pwm8.png" alt="Clock configuration" class="w-full h-auto" />
 </p>
 
-Howaver, according to the [SG90 servo datasheet](http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf), the signal frequency should be around 50 Hz. The timer's current frequency is far from 50 Hz, but fortunately, it is possible to divide the timer frequency to reach the desired value.
+However, according to the [SG90 servo datasheet](http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf), the signal frequency should be around 50 Hz. The timer's current frequency is far from 50 Hz, but fortunately, it is possible to divide the timer frequency to reach the desired value.
 
 To do this, the following formula is used:
 
