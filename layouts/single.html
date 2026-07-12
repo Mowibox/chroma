@@ -80,10 +80,18 @@
 			{{ else -}}
 				{{ .Content }}
 			{{ end -}}
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				{{ if site.Params.doks.lastMod -}}
+					{{ partial "main/last-modified.html" . }}
+				{{ end -}}
+				{{ if site.Params.doks.editPage -}}
+					{{ partial "main/edit-page.html" . }}
+				{{ end -}}
+			</div>
 			{{ if .Params.categories -}}
 			<div class="page-taxonomies mt-4">
 				{{ with .Params.categories -}}
-				<div class="tag-list-single mb-1">
+				<div class="tag-list-single mb-5">
 					{{ range $index, $category := . -}}
 						{{- $categoryPage := $.Site.GetPage "taxonomyTerm" (printf "categories/%s" (urlize $category)) -}}
 						{{ if $categoryPage -}}
@@ -96,14 +104,7 @@
 				{{ end -}}
 			</div>
 			{{ end -}}
-			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
-				{{ if site.Params.doks.lastMod -}}
-					{{ partial "main/last-modified.html" . }}
-				{{ end -}}
-				{{ if site.Params.doks.editPage -}}
-					{{ partial "main/edit-page.html" . }}
-				{{ end -}}
-			</div>
+
 			{{ partial "main/docs-navigation.html" . }}
 			<!--
 			{{ if not .Site.Params.options.collapsibleSidebar -}}
