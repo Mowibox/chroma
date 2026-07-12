@@ -37,9 +37,9 @@ Si votre objectif de contribution est de rédiger un nouveau tutoriel, réécrir
 
 ### Prérequis
 
-* Node.js — [version 20.11 ou supérieure (LTS).](https://nodejs.org/en/download)
-* Hugo — [version 0.143.1.](https://github.com/gohugoio/hugo/releases/tag/v0.143.1)
-* Hugo extended — [version 0.143.1.](https://github.com/gohugoio/hugo/releases/tag/v0.143.1)
+* Node.js — [version 24.18.0 ou supérieure (LTS).](https://nodejs.org/en/download)
+* Hugo — [version 0.161.1](https://github.com/gohugoio/hugo/releases/tag/v0.161.1)
+* Hugo extended — [version 0.161.1](https://github.com/gohugoio/hugo/releases/tag/v0.161.1)
 * Un IDE comme [Visual Studio Code.](https://code.visualstudio.com/)
 * Savoir utiliser GitHub (forks, issues, pull requests) — un [tutoriel]({{< relref "tutorials/computer_science/introduction_to_github_part1">}}) est disponible sur le site.
 

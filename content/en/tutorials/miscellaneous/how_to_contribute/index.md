@@ -37,9 +37,9 @@ If your goal is to write a new tutorial, rewrite part of an existing one, or div
 
 ### Prerequisites
 
-* Node.js — [version 20.11 or higher (LTS).](https://nodejs.org/en/download)
-* Hugo — [version 0.143.1.](https://github.com/gohugoio/hugo/releases/tag/v0.143.1)
-* Hugo extended — [version 0.143.1.](https://github.com/gohugoio/hugo/releases/tag/v0.143.1)
+* Node.js — [version 24.18.0 or higher (LTS).](https://nodejs.org/en/download)
+* Hugo — [version 0.161.1](https://github.com/gohugoio/hugo/releases/tag/v0.161.1)
+* Hugo extended — [version 0.161.1](https://github.com/gohugoio/hugo/releases/tag/v0.161.1)
 * An IDE such as [Visual Studio Code.](https://code.visualstudio.com/)
 * Basic GitHub knowledge (forks, issues, pull requests) — a [tutorial]({{< relref "tutorials/computer_science/introduction_to_github_part1">}}) is available on the site.
 
