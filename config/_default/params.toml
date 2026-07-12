@@ -77,7 +77,7 @@ mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
   imageSingle = true # true (default) or false
 
   # Repository
-  editPage = true # false (default) or true
+  editPage = false # false (default) or true
   lastMod = true # false (default) or true
   repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
   docsRepo = "https://github.com/Mowibox/chroma"
