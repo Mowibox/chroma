@@ -1,13 +1,13 @@
 [en]
-  languageName = "English"
-  contentDir = "content"
+  label = "English"
+  contentDir = "content/en"
   weight = 10
   [en.params]
     languageISO = "EN"
     languageTag = "en-US"
 
 [fr]
-  languageName = "Français"
+  label = "Français"
   contentDir = "content/fr"
   weight = 12
   [fr.params]
@@ -15,7 +15,7 @@
     languageTag = "fr-FR"
 
 [de]
-  languageName = "German"
+  label = "German"
   contentDir = "content/de"
   weight = 15
   [de.params]
@@ -25,7 +25,7 @@
     alertText = 'Neue Version ist da! <a class="alert-link stretched-link" href="https://getdoks.org/blog/doks-v0.5/">Doks v0.5</a>'
 
 [nl]
-  languageName = "Nederlands"
+  label = "Nederlands"
   contentDir = "content/nl"
   weight = 20
   [nl.params]

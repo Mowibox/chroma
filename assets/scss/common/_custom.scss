@@ -18,28 +18,104 @@
   src: url('/chroma/fonts/varela-round/varela-round-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+:root {
+  --c-glass: #bbbbbc;
+  --c-light: #ffffff;
+  --c-dark: #000000;
+
+  --glass-reflex-light: 1;
+  --glass-reflex-dark: 2;
+
+  --glass-hover-glow: rgba(183, 20, 223, 0.15);
+  --glass-hover-border: rgba(200, 0, 255, 0.5);
+
+  /* Paramètres d'opacité ajustables */
+  --glass-bg-opacity: 8%;
+  --glass-glare-top: rgba(255, 255, 255, 0.3);
+  --glass-glare-bottom: rgba(255, 255, 255, 0.05);
+}
+
+html[data-bs-theme="dark"] {
+  --glass-reflex-light: 0.3;
+  --glass-reflex-dark: 4;
+
+  --glass-hover-glow: rgba(183, 20, 223, 0.15);
+  --glass-hover-border: rgba(200, 0, 255, 0.8);
+
+  --glass-bg-opacity: 3%;
+  --glass-glare-top: rgba(255, 255, 255, 0.08);
+  --glass-glare-bottom: rgba(255, 255, 255, 0.01);
+}
+
 .cardbox {
+  position: relative;
   margin-bottom: 1.5rem;
   border-radius: 0.75rem;
   overflow: hidden;
-  border: 2px solid rgb(128, 128, 128);
-  background-color: rgba(128,128,128,0.1);
-  transition: box-shadow .2s ease;
+
+  background-color: color-mix(in srgb, var(--c-glass) var(--glass-bg-opacity), transparent);
+
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 10%), transparent),
+    inset 1.8px 3px 0px -2px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 90%), transparent),
+    inset -2px -2px 0px -2px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 80%), transparent),
+    inset -3px -8px 1px -6px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 60%), transparent),
+    inset -0.3px -1px 4px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 12%), transparent),
+    inset -1.5px 2.5px 0px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 20%), transparent),
+    inset 0px 3px 4px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 20%), transparent),
+    0px 1px 5px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent),
+    0px 6px 16px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 8%), transparent);
+
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+
+  transition: background-color 400ms cubic-bezier(1, 0.0, 0.4, 1),
+              box-shadow 400ms cubic-bezier(1, 0.0, 0.4, 1),
+              transform 300ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 1;
 }
+
+.cardbox::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--glass-glare-top) 0%, transparent 40%, transparent 60%, var(--glass-glare-bottom) 100%);
+  z-index: -2;
+  pointer-events: none;
+}
+
+.cardbox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(to top, var(--glass-hover-glow) 0%, transparent 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+}
+
 .cardbox:hover {
-  box-shadow: 0 12px 12px 0 rgba(0,0,0,0.24), 0 17px 20px 0 rgba(0,0,0,0.19);
-  border: 2px solid rgb(165, 20, 223);
-	transform: scale(1.01,1.01);
-	transition: 0.2s all;
+  transform: translateY(-4px);
+  box-shadow:
+    inset 0 0 0 1px var(--glass-hover-border),
+    inset 1.8px 3px 0px -2px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 100%), transparent),
+    inset -2px -2px 0px -2px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 90%), transparent),
+    inset -3px -8px 1px -6px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 70%), transparent),
+    inset -0.3px -1px 4px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 15%), transparent),
+    inset -1.5px 2.5px 0px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 25%), transparent),
+    inset 0px 3px 4px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 25%), transparent),
+    0px 8px 24px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 12%), transparent);
+}
+
+.cardbox:hover::before {
+  opacity: 1;
 }
 
 .cardbox a,
 .cardbox a p {
-  text-decoration: none;
-}
-
-.cardbox a:hover,
-.cardbox a:hover p {
   text-decoration: none;
 }
 
@@ -48,7 +124,6 @@
   padding-right: 0.5rem;
   max-width: 95%;
 }
-
 
 // DocSearch
 

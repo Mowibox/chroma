@@ -31,3 +31,7 @@ figcaption {
 .blur-up.lazyloaded {
     filter: unset;
 }
+
+.markdown-svg {
+  background-color: var(--markdown-svg, transparent);
+}
