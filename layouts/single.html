@@ -1,0 +1,120 @@
+{{ define "main" }}
+	<div class="row flex-xl-nowrap">
+		{{ if (in site.Params.doks.sectionNav .Section) -}}
+		<div class="col-lg-5 col-xl-4 docs-sidebar{{ if ne site.Params.doks.navbarSticky true }} docs-sidebar-top{{ end }}{{ if site.Params.doks.headerBar }} docs-sidebar-offset{{ end }} d-none d-lg-block">
+			{{ if site.Params.doks.sectionSwitcher -}}
+				{{ partial "sidebar/section-switcher.html" . }}
+			{{ end -}}
+			{{ partial "sidebar/section-menu.html" . }}
+		</div>
+		{{ end -}}
+		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
+			<div class="col container-fw d-lg-flex flex-lg-row justify-content-center mx-auto">
+		{{ end }}
+		{{ if ne .Params.toc false -}}
+		<nav class="docs-toc{{ if ne site.Params.doks.navbarSticky true }} docs-toc-top{{ end }}{{ if site.Params.doks.headerBar }} docs-toc-offset{{ end }} d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			{{ partial "sidebar/docs-toc-desktop.html" . }}
+		</nav>
+		{{ end -}}
+		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") .Params.toc -}}
+		<main class="docs-content col-lg-16 col-xl-9">
+		{{ else -}}
+		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
+		{{ end -}}
+			{{ if ne .Params.toc false -}}
+			<nav class="toc-mobile toc-mobile-sticky d-xl-none" aria-label="Quaternary navigation">
+				{{ partial "sidebar/docs-toc-mobile.html" . }}
+			</nav>
+			{{ end -}}
+			{{ if site.Params.doks.breadcrumbTrail -}}
+				<!-- https://discourse.gohugo.io/t/breadcrumb-navigation-for-highly-nested-content/27359/6 -->
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						{{ partial "main/breadcrumb" . -}}
+						<li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+					</ol>
+				</nav>
+			{{ end }}
+			<div class="page-header d-flex flex-row justify-content-between align-items-start">
+				<div>
+					<h1 class="mb-1">{{ .Title }}</h1>
+					<!-- <p class="lead">{{ .Params.lead | safeHTML }}</p> -->
+
+					{{ with .Params.contributors -}}
+					{{ $last := sub (len .) 1 -}}
+					<p class="text-muted small mt-0 mb-4">
+						{{ i18n "by" }}&nbsp;
+						{{- range $index, $contributor := . -}}
+							{{- if gt $index 0 }}{{ if eq $index $last }} and {{ else }}, {{ end }}{{ end -}}
+							{{- $contributorPage := $.Site.GetPage "taxonomyTerm" (printf "contributors/%s" (urlize $contributor)) -}}
+							{{ if $contributorPage -}}
+								<a href="{{ $contributorPage.RelPermalink }}">{{ $contributor }}</a>
+							{{ else -}}
+								<a href="{{ "/contributors/" | relLangURL }}{{ $contributor | urlize }}/">{{ $contributor }}</a>
+							{{ end -}}
+						{{ end -}}
+					</p>
+					{{ end -}}
+
+					{{ with .Params.tags -}}
+					<div class="tag-list-single mt-0 mb-3">
+						{{ range $index, $tag := . -}}
+							{{- $tagPage := $.Site.GetPage "taxonomyTerm" (printf "tags/%s" (urlize $tag)) -}}
+							{{ if $tagPage -}}
+								<a class="btn btn-light" href="{{ $tagPage.RelPermalink }}" role="button">{{ $tag }}</a>
+							{{ else -}}
+								<a class="btn btn-light" href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}/" role="button">{{ $tag }}</a>
+							{{ end -}}
+						{{ end -}}
+					</div>
+					{{ end -}}
+				</div>
+				{{ if site.Params.doks.aiButtons -}}
+				<div>
+					{{ partial "main/ai-buttons.html" . }}
+				</div>
+				{{ end -}}
+			</div>
+			{{ if site.Params.doks.headlineHash -}}
+				{{ partial "main/headline-hash" .Content }}
+			{{ else -}}
+				{{ .Content }}
+			{{ end -}}
+			{{ if .Params.categories -}}
+			<div class="page-taxonomies mt-4">
+				{{ with .Params.categories -}}
+				<div class="tag-list-single mb-1">
+					{{ range $index, $category := . -}}
+						{{- $categoryPage := $.Site.GetPage "taxonomyTerm" (printf "categories/%s" (urlize $category)) -}}
+						{{ if $categoryPage -}}
+							<a class="btn btn-light" href="{{ $categoryPage.RelPermalink }}" role="button">{{ $category }}</a>
+						{{ else -}}
+							<a class="btn btn-light" href="{{ "/categories/" | relLangURL }}{{ $category | urlize }}/" role="button">{{ $category }}</a>
+						{{ end -}}
+					{{ end -}}
+				</div>
+				{{ end -}}
+			</div>
+			{{ end -}}
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				{{ if site.Params.doks.lastMod -}}
+					{{ partial "main/last-modified.html" . }}
+				{{ end -}}
+				{{ if site.Params.doks.editPage -}}
+					{{ partial "main/edit-page.html" . }}
+				{{ end -}}
+			</div>
+			{{ partial "main/docs-navigation.html" . }}
+			<!--
+			{{ if not .Site.Params.options.collapsibleSidebar -}}
+				{{ partial "main/docs-navigation.html" . }}
+			{{ else -}}
+				<div class="my-n3"></div>
+			{{ end -}}
+			-->
+		</main>
+		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
+			</div>
+		{{ end }}
+	</div>
+{{ end }}
