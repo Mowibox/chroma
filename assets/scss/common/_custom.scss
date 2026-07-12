@@ -29,7 +29,6 @@
   --glass-hover-glow: rgba(183, 20, 223, 0.15);
   --glass-hover-border: rgba(200, 0, 255, 0.5);
 
-  /* Paramètres d'opacité ajustables */
   --glass-bg-opacity: 8%;
   --glass-glare-top: rgba(255, 255, 255, 0.3);
   --glass-glare-bottom: rgba(255, 255, 255, 0.05);
@@ -46,13 +45,14 @@ html[data-bs-theme="dark"] {
   --glass-glare-top: rgba(255, 255, 255, 0.08);
   --glass-glare-bottom: rgba(255, 255, 255, 0.01);
 }
-
 .cardbox {
   position: relative;
   margin-bottom: 1.5rem;
   border-radius: 0.75rem;
   overflow: hidden;
 
+  /* Fusion de l'éblouissement (glare) et de la couleur de base pour libérer ::after */
+  background-image: linear-gradient(135deg, var(--glass-glare-top) 0%, transparent 40%, transparent 60%, var(--glass-glare-bottom) 100%);
   background-color: color-mix(in srgb, var(--c-glass) var(--glass-bg-opacity), transparent);
 
   box-shadow:
@@ -75,16 +75,7 @@ html[data-bs-theme="dark"] {
   z-index: 1;
 }
 
-.cardbox::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(135deg, var(--glass-glare-top) 0%, transparent 40%, transparent 60%, var(--glass-glare-bottom) 100%);
-  z-index: -2;
-  pointer-events: none;
-}
-
+/* Couche 1 : Incandescence Violette (Glow) */
 .cardbox::before {
   content: "";
   position: absolute;
@@ -97,21 +88,59 @@ html[data-bs-theme="dark"] {
   pointer-events: none;
 }
 
+/* Couche 2 : Masque vectoriel pour la bordure Arc-en-ciel animée */
+/* Couche 2 : Masque vectoriel pour la bordure Arc-en-ciel animée */
+/* Couche 2 : Masque vectoriel pour la bordure Arc-en-ciel animée + Néon */
+.cardbox::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #00ff00, #00ffff, #0000ff, #8000ff, #ff0080);
+  background-size: 200% 100%;
+  
+  /* Masque standard (CSS moderne) */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  
+  /* Propriétés de composition */
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+}
+
+@keyframes rainbowPan {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
 .cardbox:hover {
   transform: translateY(-4px);
+  /* Maintien strict de 9 couches pour garantir l'interpolation mathématique */
   box-shadow:
-    inset 0 0 0 1px var(--glass-hover-border),
+    inset 0 0 0 1px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 10%), transparent),
     inset 1.8px 3px 0px -2px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 100%), transparent),
     inset -2px -2px 0px -2px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 90%), transparent),
     inset -3px -8px 1px -6px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 70%), transparent),
     inset -0.3px -1px 4px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 15%), transparent),
     inset -1.5px 2.5px 0px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 25%), transparent),
     inset 0px 3px 4px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 25%), transparent),
+    0px 1px 5px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent),
     0px 8px 24px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 12%), transparent);
 }
 
 .cardbox:hover::before {
   opacity: 1;
+}
+
+.cardbox:hover::after {
+  opacity: 1;
+  animation: rainbowPan 2.5s linear infinite;
 }
 
 .cardbox a,
