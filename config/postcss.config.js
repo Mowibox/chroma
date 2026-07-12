@@ -1,5 +1,6 @@
 import autoprefixer from 'autoprefixer';
 import purgeCSSPlugin from '@fullhuman/postcss-purgecss';
+import whitelister from 'purgecss-whitelister';
 
 const purgecss = purgeCSSPlugin({
     content: ['./hugo_stats.json'],
