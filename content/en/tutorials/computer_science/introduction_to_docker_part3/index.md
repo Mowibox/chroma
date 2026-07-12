@@ -8,6 +8,9 @@ draft: false
 weight: 1009
 toc: true
 icon: "docker"
+contributors: ["Ousmane THIONGANE"]
+categories: ["devops"]
+tags: ["docker", "dockerfile"]
 
 seo:
    title: "Dockerfile and custom images – Practical guide for Linux"

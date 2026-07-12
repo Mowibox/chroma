@@ -8,6 +8,9 @@ draft: false
 weight: 1003
 toc: true
 icon: "git"
+contributors: ["Ousmane THIONGANE"]
+categories: ["version-control"]
+tags: ["git", "github"]
 
 seo:
    title: "Guide Git et GitHub – Partie 1"

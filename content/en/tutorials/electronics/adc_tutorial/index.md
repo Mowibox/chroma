@@ -8,6 +8,9 @@ draft: false
 weight: 2004
 toc: true
 icon: "wave-square"
+contributors: ["Ousmane THIONGANE"]
+categories: ["embedded-systems"]
+tags: ["stm32", "adc"]
 
 seo:
    title: "STM32 ADC Tutorial with Cube IDE – From Analog to Digital"

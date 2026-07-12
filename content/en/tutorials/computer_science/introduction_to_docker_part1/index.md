@@ -8,6 +8,9 @@ draft: false
 weight: 1007
 toc: true
 icon: "docker"
+contributors: ["Ousmane THIONGANE"]
+categories: ["devops"]
+tags: ["docker", "linux"]
 
 seo:
    title: "Installing and configuring Docker on Linux"

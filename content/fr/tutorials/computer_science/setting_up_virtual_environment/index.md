@@ -8,6 +8,9 @@ draft: false
 weight: 1006
 toc: true
 icon: "laptop"
+contributors: ["Ousmane THIONGANE"]
+categories: ["python"]
+tags: ["python", "environnement-virtuel"]
 
 seo:
    title: "Guide complet pour créer un environnement virtuel Python"

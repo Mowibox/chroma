@@ -8,6 +8,9 @@ draft: false
 weight: 2002
 toc: true
 icon: "chip"
+contributors: ["Ousmane THIONGANE"]
+categories: ["pcb-design"]
+tags: ["kicad", "schematic"]
 
 seo:
    title: "PCB Schematic with KiCad – Tutorial (Part 1)"

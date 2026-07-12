@@ -8,6 +8,9 @@ draft: false
 weight: 1001
 toc: true
 icon: "terminal"
+contributors: ["Ousmane THIONGANE"]
+categories: ["outils-cli"]
+tags: ["terminal", "linux", "windows"]
 
 seo:
    title: "Guide complet des commandes de terminal – Linux, macOS, Windows"

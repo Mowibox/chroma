@@ -8,6 +8,9 @@ draft: false
 weight: 2003
 toc: true
 icon: "chip"
+contributors: ["Ousmane THIONGANE"]
+categories: ["pcb-design"]
+tags: ["kicad", "routing"]
 
 seo:
    title: "PCB Routing with KiCad – Tutorial (Part 2)"

@@ -8,6 +8,9 @@ draft: false
 weight: 1004
 toc: true
 icon: "github"
+contributors: ["Ousmane THIONGANE"]
+categories: ["version-control"]
+tags: ["git", "github", "ssh"]
 
 seo:
    title: "Git and GitHub Guide – Part 2"

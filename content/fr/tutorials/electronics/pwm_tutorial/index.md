@@ -8,6 +8,9 @@ draft: false
 weight: 2005
 toc: true
 icon: "wave-square"
+contributors: ["Ousmane THIONGANE"]
+categories: ["systèmes-embarqués"]
+tags: ["stm32", "pwm"]
 
 seo:
    title: "Générer un signal PWM avec STM32 Cube IDE – Tutoriel complet"

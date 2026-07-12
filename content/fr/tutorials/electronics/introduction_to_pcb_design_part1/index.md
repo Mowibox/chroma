@@ -8,6 +8,9 @@ draft: false
 weight: 2002
 toc: true
 icon: "chip"
+contributors: ["Ousmane THIONGANE"]
+categories: ["conception-pcb"]
+tags: ["kicad", "schématique"]
 
 seo:
    title: "Schématique de PCB avec KiCad – Tutoriel (Partie 1)"

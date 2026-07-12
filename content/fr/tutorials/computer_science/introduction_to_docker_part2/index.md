@@ -8,6 +8,9 @@ draft: false
 weight: 1008
 toc: true
 icon: "docker"
+contributors: ["Ousmane THIONGANE"]
+categories: ["devops"]
+tags: ["docker", "conteneurs"]
 
 seo:
    title: "Images et conteneurs Docker – Guide pratique sous Linux"

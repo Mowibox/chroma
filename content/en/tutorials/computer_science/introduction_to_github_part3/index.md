@@ -8,6 +8,9 @@ draft: false
 weight: 1005
 toc: true
 icon: "git-branch"
+contributors: ["Ousmane THIONGANE"]
+categories: ["version-control"]
+tags: ["git", "github", "collaboration"]
 
 seo:
    title: "Git and GitHub Guide – Part 3"

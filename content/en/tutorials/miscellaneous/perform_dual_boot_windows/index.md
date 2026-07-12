@@ -8,6 +8,9 @@ draft: false
 weight: 4002
 toc: true
 icon: "laptop"
+contributors: ["Ousmane THIONGANE"]
+categories: ["operating-system"]
+tags: ["dual-boot", "windows", "linux", "ubuntu"]
 
 seo:
    title: "Install Ubuntu in dual-boot with Windows 11 – Complete guide"

@@ -8,6 +8,9 @@ draft: false
 weight: 2001
 toc: true
 icon: "laptop"
+contributors: ["Ousmane THIONGANE"]
+categories: ["embedded-systems"]
+tags: ["arduino", "microcontroller"]
 
 seo:
    title: "Introduction to embedded programming with Arduino"

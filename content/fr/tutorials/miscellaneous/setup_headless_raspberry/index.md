@@ -8,6 +8,9 @@ draft: false
 weight: 4003
 toc: true
 icon: "chip"
+contributors: ["Ousmane THIONGANE"]
+categories: ["systèmes-embarqués"]
+tags: ["raspberry-pi", "ssh"]
 
 seo:
    title: "Configurer une Raspberry Pi sans écran (Headless) avec SSH"

@@ -8,6 +8,9 @@ draft: false
 weight: 4001
 toc: true
 icon: "heart-handshake"
+contributors: ["Ousmane THIONGANE"]
+categories: ["community"]
+tags: ["chroma", "contribution"]
 
 seo:
    title: "Contribute to Chroma – Contributor's Guide"

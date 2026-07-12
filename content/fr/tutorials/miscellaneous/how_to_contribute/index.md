@@ -8,9 +8,9 @@ draft: false
 weight: 4001
 toc: true
 icon: "heart-handshake"
-# categories: ["electronics"]
-# tags: ["arduino", "pwm"]
-# contributors: ["Ousmane THIONGANE"]
+contributors: ["Ousmane THIONGANE"]
+categories: ["community"]
+tags: ["chroma", "contribution"]
 
 seo:
    title: "Contribuer à Chroma – Guide du contributeur"

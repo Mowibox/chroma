@@ -8,6 +8,9 @@ draft: false
 weight: 2003
 toc: true
 icon: "chip"
+contributors: ["Ousmane THIONGANE"]
+categories: ["systèmes-embarqués"]
+tags: ["kicad", "routage"]
 
 seo:
    title: "Routage de PCB avec KiCad – Tutoriel (Partie 2)"
