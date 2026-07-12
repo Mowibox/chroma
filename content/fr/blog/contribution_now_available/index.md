@@ -33,7 +33,7 @@ Que vous souhaitiez partager vos idées, proposer des améliorations ou alimente
 
 ## Le guide complet
 
-Le guide détaillé pour savoir comment contribuer est disponible à cette adresse : [Comment contribuer à Chroma ?](https://mowibox.github.io/chroma/fr/tutorials/miscellaneous/how_to_contribute/)
+Le guide détaillé pour savoir comment contribuer est disponible à cette adresse : [Comment contribuer à Chroma ?]({{< relref "tutorials/miscellaneous/how_to_contribute/">}})
 
 🔴🟠🟡🟢🔵🟣
 

@@ -67,7 +67,7 @@ Si tout s'est bien passé, cela va afficher un message dans votre terminal avec 
 Watching for changes in /.../chroma/{assets,content,i18n,layouts,node_modules,package.json,static}
 Watching for config changes in /.../chroma/config/_default, /home/mowibox/Documents/WorkspaceU/Git_folders/chroma/config/_default/menus
 Start building sites … 
-hugo v0.143.1-0270364a347b2ece97e0321782b21904db515ecc+extended linux/amd64 BuildDate=2025-02-04T08:57:38Z VendorInfo=gohugoio
+hugo v0.164.0-ce2470e7012b5ab5fc4e10ebe4027e9f8d9e00dc+extended linux/amd64 BuildDate=2026-07-06T16:39:30Z VendorInfo=gohugoio
 
 
                    | EN  | FR
@@ -201,6 +201,9 @@ draft: false
 weight:
 toc: true
 icon: ""
+contributors: [""]
+categories: [""]
+tags: ["", ""]
 
 seo:
    title: ""
@@ -223,6 +226,11 @@ seo:
 * `icon` : Vous pouvez rajouter une nouvelle icône en allant dans [Tabler Icons](https://tabler.io/icons). Il s'agira de l'icône qui illustrera votre page dans la liste des tutoriels {{< callout context="danger" title="Attention" icon="outline/alert-square-rounded" >}}
 Attention, il faut que la couleur de l'icône soit **#a514e9** et doit être ajoutée dans le dossier `static/icons`.
 {{< /callout >}}
+* `contributors` : Liste les personnes ayant rédigé ou participé à la page. Plusieurs contributeurs peuvent être renseignés, séparés par des virgules.
+* `categories` : Catégorie principale du tutoriel. Une seule catégorie est généralement suffisante : elle sert à regrouper les tutoriels par grand thème (ex : `systèmes-embarqués`, `devops`, `gestion-de-version`). {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
+ Consultez les catégories déjà existantes avant d'en créer une nouvelle afin éviter les doublons !
+{{< /callout >}}
+* `tags` : Mots-clés plus précis liés au contenu du tutoriel, au format. Contrairement à `categories`, plusieurs tags peuvent être renseignés (au moins 2 ou 3) pour affiner la recherche par thématique.
 
 * `seo.title` : Titre optimisé pour les moteurs de recherche. Il peut être différent de `title`.
 * `seo.description` : Description affichée dans les résultats de moteur de recherche.

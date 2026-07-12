@@ -66,7 +66,7 @@ If everything went well, your terminal will display a message with a clickable l
 Watching for changes in /.../chroma/{assets,content,i18n,layouts,node_modules,package.json,static}
 Watching for config changes in /.../chroma/config/_default, /home/mowibox/Documents/WorkspaceU/Git_folders/chroma/config/_default/menus
 Start building sites … 
-hugo v0.143.1-0270364a347b2ece97e0321782b21904db515ecc+extended linux/amd64 BuildDate=2025-02-04T08:57:38Z VendorInfo=gohugoio
+hugo v0.164.0-ce2470e7012b5ab5fc4e10ebe4027e9f8d9e00dc+extended linux/amd64 BuildDate=2026-07-06T16:39:30Z VendorInfo=gohugoio
 
 
                    | EN  | FR
@@ -200,6 +200,9 @@ draft: false
 weight:
 toc: true
 icon: ""
+contributors: [""]
+categories: [""]
+tags: ["", ""]
 
 seo:
    title: ""
@@ -222,6 +225,11 @@ seo:
 * `icon`: You can add a new icon by going to [Tabler Icons](https://tabler.io/icons). This will be the icon that illustrates your page in the list of tutorials {{< callout context="danger" title="Warning" icon="outline/alert-square-rounded" >}}
 Please note that the icon color must be **#a514e9** and must be added to the `static/icons` folder.
 {{< /callout >}}
+* `contributors`: Lists the people who wrote or contributed to the page. Multiple contributors can be listed, separated by commas.
+* `categories`: The tutorial’s main category. One category is usually sufficient: it’s used to group tutorials by broad topic (e.g., `embedded-systems`, `devops`, `version-control`). {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
+ Check existing categories before creating a new one to avoid duplicates!
+{{< /callout >}}
+* `tags`: More specific keywords related to the tutorial’s content and format. Unlike `categories`, multiple tags can be entered (at least 2 or 3) to refine the search by topic.
 
 * `seo.title`: Title optimized for search engines. It may differ from `title`.
 * `seo.description`: Description displayed in search engine results.
