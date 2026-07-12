@@ -10,7 +10,7 @@ toc: true
 icon: "laptop"
 contributors: ["Ousmane THIONGANE"]
 categories: ["systemes-embarques"]
-tags: ["arduino", "microcontrôleur"]
+tags: ["arduino", "microcontroleur"]
 
 seo:
    title: "Initiation à la programmation embarquée avec Arduino"
