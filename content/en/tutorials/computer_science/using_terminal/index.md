@@ -454,5 +454,5 @@ This section acts as a **cheat sheet**, summarizing all the commands we've just 
 
 ## Credits
 
-* **Writer:** [Ousmane THIONGANE](https://github.com/Mowibox)
+* **Writer:** [Ousmane THIONGANE](https://mowibox.github.io/)
 * **Reviewer:** [Gauthier BIEHLER](https://github.com/Minorzar)
