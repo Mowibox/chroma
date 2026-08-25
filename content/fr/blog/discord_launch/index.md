@@ -1,7 +1,7 @@
 ---
 title: "Création d'un Discord"
 description: "Rejoignez le serveur Discord officiel de Chroma pour échanger autour des tutoriels, de la Computer Vision et de projets techniques"
-summary: "Création et lancement d'un serveur Discord pour Chroma"
+summary: "Création et lancement d'un serveur Discord pour Chroma."
 date:  2025-07-01T01:16:05+02:00
 lastmod:  2025-07-01T01:16:05+02:00
 draft: false

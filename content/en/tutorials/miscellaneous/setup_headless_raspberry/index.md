@@ -1,6 +1,6 @@
 ---
 
-title: "Set up an headless Raspberry Pi"
+title: "Set up a headless Raspberry Pi"
 description: "Using SSH protocol"
 summary: "Learn how to install and configure a Raspberry Pi in headless mode with Ubuntu Server and an SSH connection."
 date: 2025-07-12
@@ -36,7 +36,7 @@ This tutorial offers an alternative method to configure your Raspberry Pi withou
 * A computer running Linux — for example, Ubuntu.
 * The [Raspberry Pi Imager](https://www.raspberrypi.com/software/) software.
 * A microSD card: The size depends on your use case, but 8–16 GB is a reasonable minimum to get started.
-* An SD card reader: It can be [external](/chroma/images/_sdcardreader.jpg), but some computers have one built in.
+* A SD card reader: It can be [external](/chroma/images/_sdcardreader.jpg), but some computers have one built in.
 
 ## Preparing the SD Card
 

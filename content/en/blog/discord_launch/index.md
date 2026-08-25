@@ -1,7 +1,7 @@
 ---
 title: "Launching a Discord Server"
 description: "Join the official Chroma Discord server to discuss tutorials, computer vision, and technical projects."
-summary: "Creation and launch of Chroma's official Discord server"
+summary: "Creation and launch of Chroma's official Discord server."
 date:  2025-07-01T01:16:05+02:00
 lastmod:  2025-07-01T01:16:05+02:00
 draft: false
