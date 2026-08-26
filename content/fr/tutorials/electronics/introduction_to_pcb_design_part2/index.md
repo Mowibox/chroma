@@ -14,7 +14,7 @@ tags: ["kicad", "routage"]
 
 seo:
    title: "Routage de PCB avec KiCad – Tutoriel (Partie 2)"
-   description: "Apprenez à router un circuit imprimé avec KiCad : placement des composants, plans de masse, classes d’équipotentielles et vérification DRC pour fabriquer votre PCB."
+   description: "Apprenez à router un circuit imprimé avec KiCad : placement des composants, plans de masse, classes d'équipotentielles et vérification DRC."
    canonical: "https://mowibox.github.io/chroma/fr/tutorials/electronics/introduction_to_pcb_design_part2/"
    noindex: false
    robots: "index, follow"

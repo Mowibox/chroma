@@ -14,7 +14,7 @@ tags: ["git", "github", "collaboration"]
 
 seo:
    title: "Git and GitHub Guide – Part 3"
-   description: "Learn how to manage collaborative contributions on GitHub using issues, forks, branches, and pull requests."
+   description: "Learn how to manage collaborative contributions on GitHub using issues, forks, branches, and pull requests, the workflow behind most open-source projects."
    canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/introduction_to_github_part3/"
    noindex: false
    robots: "index, follow"

@@ -14,7 +14,7 @@ tags: ["kicad", "routing"]
 
 seo:
    title: "PCB Routing with KiCad – Tutorial (Part 2)"
-   description: "Learn how to route a printed circuit board with KiCad: component placement, ground planes, net classes, and DRC checking to manufacture your PCB."
+   description: "Learn how to route a printed circuit board with KiCad: component placement, ground planes, net classes, and DRC checks before manufacturing your PCB."
    canonical: "https://mowibox.github.io/chroma/en/tutorials/electronics/introduction_to_pcb_design_part2/"
    noindex: false
    robots: "index, follow"

@@ -1,6 +1,6 @@
 ---
 title: Computer Vision
-description:
+description: "Bientôt disponible : des tutoriels de vision par ordinateur sur le traitement d'image, la détection et le suivi, dans la série documentaire de Chroma."
 summary:
 date: 2025-06-10
 lastmod: 2026-02-05

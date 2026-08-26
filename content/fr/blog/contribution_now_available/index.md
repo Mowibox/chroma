@@ -13,7 +13,7 @@ pinned: true
 homepage: false
 seo:
   title: "Chroma – Contribution ouverte !" # custom title (optional)
-  description: "Chroma est désormais ouvert aux contributions : tutoriels, feedback, développement du site et plus encore." # custom description (recommended)
+  description: "Chroma est désormais ouvert aux contributions : rédigez des tutoriels, partagez vos retours et aidez au développement du site, une pull request à la fois." # custom description (recommended)
   canonical: "https://mowibox.github.io/chroma/fr/blog/la-contribution-est-maintenant-disponible/" # custom canonical URL (optional)
   noindex: false
   robots: "index, follow" # custom robot tags (optional)

@@ -1,6 +1,6 @@
 ---
 title: "Terms of service"
-description: ""
+description: "The Terms of Service governing your use of Chroma: acceptable use, intellectual property, contributions, liability, and how disputes are handled."
 summary: ""
 date:  2025-07-04T01:16:05+02:00
 lastmod:  2025-07-04T01:16:05+02:00

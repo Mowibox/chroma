@@ -12,10 +12,9 @@ icon: "chip"
 
 seo:
    title: ""
-   description: ""
    canonical: "https://mowibox.github.io/chroma/en/tutorials/electronics/"
    noindex: false
-   robots: "index, follow"
+   description: "So you don't blow a fuse. Tutorials on embedded programming, PCB design, ADC, and PWM signals for electronics projects that actually work."
 
 sidebar:
   collapsed: true

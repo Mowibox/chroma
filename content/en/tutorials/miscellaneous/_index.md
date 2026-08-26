@@ -12,10 +12,9 @@ icon: "other"
 
 seo:
    title: ""
-   description: ""
    canonical: "https://mowibox.github.io/chroma/en/tutorials/miscellaneous/"
    noindex: false
-   robots: "index, follow"
+   description: "The category for the unclassifiable: dual-boot setups, headless Raspberry Pi configs, and other useful tricks that didn't fit elsewhere."
 
 sidebar:
   collapsed: true

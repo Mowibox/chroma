@@ -12,10 +12,9 @@ icon: "cube3D"
 
 seo:
    title: ""
-   description: ""
    canonical: "https://mowibox.github.io/chroma/en/tutorials/design_3d_development/"
    noindex: false
-   robots: "index, follow"
+   description: "In the kingdom of axes, the cube is king. Tutorials on 3D design and development tools, for makers who like to model before they build."
 
 sidebar:
   collapsed: true

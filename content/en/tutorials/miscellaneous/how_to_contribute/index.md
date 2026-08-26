@@ -15,7 +15,7 @@ tags: ["chroma", "contribution"]
 seo:
    title: "Contribute to Chroma – Contributor's Guide"
    description: "Learn how to contribute to Chroma: feedback, tutorial writing, setting up a development environment, and submitting pull requests."
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/miscellaneous/how_to_contribute/"
+   canonical: "https://mowibox.github.io/chroma/en/tutorials/miscellaneous/how_to_contribute/"
    noindex: false
    robots: "index, follow"
 

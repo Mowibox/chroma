@@ -12,10 +12,9 @@ icon: "computer"
 
 seo:
    title: ""
-   description: ""
    canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/"
    noindex: false
-   robots: "index, follow"
+   description: "Nous déclinons toute responsabilité en cas de crash ! Tutoriels pratiques sur le terminal, Git, GitHub, Docker et les environnements virtuels Python."
 
 sidebar:
   collapsed: true

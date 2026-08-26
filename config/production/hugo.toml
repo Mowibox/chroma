@@ -1,2 +1,8 @@
 # Overrides for production environment
-baseurl = "/"
+# NOTE: intentionally NOT overriding baseurl here. This used to hardcode "/",
+# which silently produced root-relative <loc>/<link rel=canonical> values
+# (e.g. "/en/sitemap.xml" instead of "https://mowibox.github.io/chroma/en/sitemap.xml")
+# whenever a build ran without an explicit --baseURL flag. CI always passes
+# --baseURL (highest precedence), so this override was never needed for the
+# real deploy — it only made local/plain `hugo` builds unsafe to trust.
+# Falls back to the correct absolute baseurl in config/_default/hugo.toml.

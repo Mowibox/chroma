@@ -14,7 +14,7 @@ tags: ["python", "virtual-env"]
 
 seo:
    title: "Complete guide to creating a Python virtual environment"
-   description: "Learn how to create, activate, and manage Python virtual environments with virtualenvwrapper to isolate your projects and manage different versions of modules."
+   description: "Learn how to create, activate, and manage Python virtual environments with virtualenvwrapper to isolate your projects and their dependencies."
    canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/setting_up_virtual_environment/"
    noindex: false
    robots: "index, follow"

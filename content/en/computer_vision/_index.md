@@ -1,6 +1,6 @@
 ---
 title: Computer Vision
-description:
+description: "Coming soon: computer vision tutorials and projects covering image processing, detection, and tracking, from Chroma's hands-on documentation series."
 summary:
 date: 2025-06-10
 lastmod: 2026-02-05

@@ -1,6 +1,6 @@
 ---
 title: "Politique de Confidentialité"
-description: ""
+description: "Cette politique de confidentialité explique quelles données Chroma collecte lors de l'utilisation du site, pourquoi, et les droits dont vous disposez."
 summary: ""
 date:  2025-07-04T01:16:05+02:00
 lastmod:  2025-07-04T01:16:05+02:00

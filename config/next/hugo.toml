@@ -1,2 +1,2 @@
 # Overrides for next environment
-baseurl = "/"
+# See config/production/hugo.toml: not overriding baseurl for the same reason.

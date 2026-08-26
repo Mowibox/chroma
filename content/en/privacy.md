@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-description: ""
+description: "This Privacy Policy explains what data Chroma collects when you use the site, why it's collected, and the rights you have over your personal information."
 summary: ""
 date:  2025-07-04T01:16:05+02:00
 lastmod:  2025-07-04T01:16:05+02:00

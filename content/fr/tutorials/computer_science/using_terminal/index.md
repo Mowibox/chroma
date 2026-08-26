@@ -14,7 +14,7 @@ tags: ["terminal", "linux", "windows"]
 
 seo:
    title: "Guide complet des commandes de terminal – Linux, macOS, Windows"
-   description: "Tutoriel pratique pour apprendre à utiliser le terminal : navigation dans les dossiers, gestion des fichiers, droits d'accès et commandes essentielles pour tous les systèmes."
+   description: "Tutoriel pratique pour apprendre le terminal : navigation, gestion des fichiers, droits d'accès et commandes essentielles pour tout système Unix."
    canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/using_terminal/"
    noindex: false
    robots: "index, follow"

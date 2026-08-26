@@ -12,10 +12,9 @@ icon: "other"
 
 seo:
    title: ""
-   description: ""
    canonical: "https://mowibox.github.io/chroma/fr/tutorials/miscellaneous/"
    noindex: false
-   robots: "index, follow"
+   description: "La catégorie des inclassables : dual-boot, configuration d'un Raspberry Pi headless, et autres astuces utiles qui ne rentraient nulle part ailleurs."
 
 sidebar:
   collapsed: true

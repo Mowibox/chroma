@@ -1,6 +1,6 @@
 ---
 title: "Conditions d'utilisation"
-description: ""
+description: "Les Conditions d'utilisation régissant votre usage de Chroma : usage acceptable, propriété intellectuelle, contributions, responsabilité et litiges."
 summary: ""
 date: 2025-07-04T01:16:05+02:00
 lastmod: 2025-07-04T01:16:05+02:00

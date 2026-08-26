@@ -47,13 +47,13 @@ copyRight = "Copyright (c) 2026 Chroma"
   mediaType = "text/plain"
 
 # Add output format for section sitemap.xml
-# [outputFormats.sitemap]
-#   mediaType = "application/xml"
-#   baseName = "sitemap"
-#   isHTML = false
-#   isPlainText = true
-#   noUgly = true
-#   rel  = "sitemap"
+[outputFormats.sitemap]
+  mediaType = "application/xml"
+  baseName = "sitemap"
+  isHTML = false
+  isPlainText = true
+  noUgly = true
+  rel  = "sitemap"
 
 [sitemap]
   changefreq = "monthly"

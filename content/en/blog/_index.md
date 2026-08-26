@@ -1,6 +1,6 @@
 ---
 title: "Blog"
-description: ""
+description: "News, behind-the-scenes updates, and announcements about Chroma: new tutorials, community milestones, and what's coming next for the site."
 summary: ""
 date:  2025-05-20T01:16:05+02:00
 lastmod:  2025-05-20T01:16:05+02:00

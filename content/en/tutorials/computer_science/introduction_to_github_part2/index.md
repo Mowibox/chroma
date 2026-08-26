@@ -14,7 +14,7 @@ tags: ["git", "github", "ssh"]
 
 seo:
    title: "Git and GitHub Guide – Part 2"
-   description: "Learn how to create a GitHub repository, configure SSH, clone locally, and manage your files with Git."
+   description: "Learn how to create a GitHub repository, configure SSH, clone it locally, and manage your files with Git, from your very first commit onward."
    canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/introduction_to_github_part2/"
    noindex: false
    robots: "index, follow"

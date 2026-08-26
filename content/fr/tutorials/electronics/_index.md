@@ -12,10 +12,9 @@ icon: "chip"
 
 seo:
    title: ""
-   description: ""
    canonical: "https://mowibox.github.io/chroma/fr/tutorials/electronics/"
    noindex: false
-   robots: "index, follow"
+   description: "Pour éviter de péter un ou plusieurs câbles. Tutoriels sur la programmation embarquée, la conception de PCB, l'ADC et les signaux PWM."
 
 sidebar:
   collapsed: true

@@ -14,7 +14,7 @@ tags: ["docker", "dockerfile"]
 
 seo:
    title: "Dockerfile and custom images – Practical guide for Linux"
-   description: "Complete tutorial for creating a Dockerfile, building a custom Docker image, and running containers on Linux."
+   description: "Complete tutorial for creating a Dockerfile, building a custom Docker image, and running containers on Linux, from source code to a working image."
    canonical:  "https://mowibox.github.io/chroma/en/tutorials/computer_science/introduction_to_docker_part3/"
    noindex: false
    robots: "index, follow"
