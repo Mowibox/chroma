@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-{{- range .Site.RegularPages -}}
+{{- range where .Site.Pages "Kind" "in" (slice "page" "home" "section") -}}
 {{- if not .Sitemap.Disable }}
 <url>
   <loc>{{ .Permalink }}</loc>

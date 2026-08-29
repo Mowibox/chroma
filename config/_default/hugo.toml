@@ -24,9 +24,14 @@ copyRight = "Copyright (c) 2026 Chroma"
 [outputs]
   home = ["html", "rss", "sitemap", "searchIndex", "llms"]
   page = ["html", "markdown"]
-  section = ["html", "rss", "sitemap"]
-  taxonomy = ["html", "rss", "sitemap"]
-  term = ["html", "rss", "sitemap"]
+  # "sitemap" removed here: these per-section/taxonomy/term sitemap.xml files
+  # are never referenced by the root sitemapindex (only en/sitemap.xml and
+  # fr/sitemap.xml are), by robots.txt, or by any page — they were orphaned
+  # output invisible to Google. The real per-language sitemaps (built by
+  # layouts/_default/sitemap.xml) now include home + section pages directly.
+  section = ["html", "rss"]
+  taxonomy = ["html", "rss"]
+  term = ["html", "rss"]
 
 [outputFormats.searchIndex]
   mediaType = "application/json"
