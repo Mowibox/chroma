@@ -1,6 +1,6 @@
 # Chroma
 
-A personal website initiative to document and share technical knowledge in computer science, electronics, and computer vision.
+A personal website initiative to document and share technical knowledge in computer science, electronics, and robotics.
 
 ![Website](https://custom-icon-badges.demolab.com/badge/Website-Online-brightgreen?logo=chroma)
 ![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)
@@ -23,7 +23,7 @@ A personal website initiative to document and share technical knowledge in compu
 ## Key features
 
 * [**A tutorial section**](https://mowibox.github.io/chroma/en/tutorials/) to bring together and share all the know-how on electronics, computing and many other subjects.
-* [**Computer vision lessons**](https://mowibox.github.io/chroma/en/computer_vision/) to discover and learn the fundamentals of image processing and deep learning.
+* [**Chromapi project**](https://mowibox.github.io/chroma/en/chromapi/) An open-source robot to discover robotics and locomotion.
 * [**A blog section**](https://mowibox.github.io/chroma/en/blog/) to keep up to date with website news and new content.
 * [**Search Bar with DocSearch**](https://docsearch.algolia.com/) features recent page history and favorite pages. Powered by Algolia.
 * **Multilingal support** available in French and English.

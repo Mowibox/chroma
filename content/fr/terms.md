@@ -18,7 +18,7 @@ seo:
 
 Nous sommes Chroma ("Société", "nous", "notre"). Nous exploitons le site web [https://mowibox.github.io/chroma/](https://mowibox.github.io/chroma/) (le "Site"), ainsi que tout autre produit et service connexe qui fait référence ou renvoie à ces conditions juridiques (les "Conditions Juridiques") (collectivement, les "Services").
 
-Chroma est un site web destiné à documenter et partager des connaissances techniques en informatique, électronique et vision par ordinateur.
+Chroma est un site web destiné à documenter et partager des connaissances techniques en informatique, électronique et robotique.
 
 Vous pouvez nous contacter par email à [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com).
 

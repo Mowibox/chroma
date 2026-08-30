@@ -34,8 +34,8 @@
   weight = 10
 
 [[main]]
-  name = "Computer Vision"
-  url = "/fr/computer_vision/"
+  name = "Chromapi"
+  url = "/fr/chromapi/"
   weight = 20
 
 [[main]]

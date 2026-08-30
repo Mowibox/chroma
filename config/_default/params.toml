@@ -4,7 +4,7 @@ description = "Chroma is a website created to give a better view on how things w
 images = ["cover.png"]
 
 # mainSections
-mainSections = ["tutorials", "computer_vision", "blog"]
+mainSections = ["tutorials", "chromapi", "blog"]
 
 # Enable mathematical rendering on every page (unless you set the `math` parameter to `false` in front matter)
 math = true # false (default) or true
@@ -49,7 +49,7 @@ mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
 
   # Nav
   sectionSwitcher = false # true or false (default)
-  sectionNav = ["content", "tutorials", "computer_vision"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
+  sectionNav = ["content", "tutorials", "chromapi"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
   toTopButton = true # false (default) or true
   breadcrumbTrail = false # false (default) or true
   headlineHash = true # true (default) or false

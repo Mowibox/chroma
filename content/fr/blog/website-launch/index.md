@@ -7,7 +7,7 @@ lastmod:  2025-05-20T01:16:05+02:00
 draft: false
 weight: 50
 categories: []
-tags: ["lancement", "chroma", "tutoriels", "computer vision", "blog"]
+tags: ["lancement", "chroma", "tutoriels", "robotique", "blog"]
 contributors: ["Ousmane THIONGANE"]
 pinned: true
 homepage: false
@@ -42,9 +42,9 @@ Mais Chroma ne se limite pas qu'à un simple portfolio : c'est également un esp
 
 Voici ce que vous pourrez trouver (ou bientôt trouver) sur ce site :
 
-- :question: [**Des Tutoriels :**]({{< relref "tutorials/">}}) Comme son nom l'indique, cette section du site contient différents tutoriels liés aux concepts explorés dans ma scolarité.
+- :question: [**Des Tutoriels :**]({{< relref "tutorials/">}}) Comme son nom l'indique, cette section du site contient différents tutoriels liés aux concepts explorés dans ma scolarité. Quand on est ingénieur, c’est important de s’approprier les concepts que l’on explore, mais c’est encore mieux de réussir à les transmettre.
 
-- :eye: [**Des cours de Computer Vision :**]({{< relref "computer_vision/">}}) Au cours de ma carrière, je me suis découvert une passion pour la Vision par Ordinateur (Computer Vision), c'est pourquoi, pour approfondir ma propre compréhension et structurer mes connaissances, j'ai décidé de dédier une section entière de Chroma à cette matière. Quand on est ingénieur, c'est important de s'approprier les concepts que l'on explore, mais c'est encore mieux de réussir à les transmettre.
+- :robot: [**Chromapi :**]({{< relref "/chromapi/" >}}) Au cours de ma formation, je me suis découvert une passion pour la robotique. C'est pourquoi je conçois Chromapi : un robot quadrupède open source qui me sert (et peut-être à vous aussi !) de terrain de jeu pour expérimenter, apprendre et mettre en pratique mes connaissances en électronique, mécanique, informatique et intelligence artificielle.
 
 - :speech_balloon: [**Un espace Blog :**]({{< relref "blog/">}}) C'est cet espace que je vais privilégier pour partager les améliorations du site web et les annonces, comme celle que vous lisez actuellement.
 

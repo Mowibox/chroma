@@ -148,6 +148,16 @@ html[data-bs-theme="dark"] {
   text-decoration: none;
 }
 
+// Chromapi logo is a plain white icon: invisible on the light theme's light
+// background, so invert it in light mode and restore it as-is in dark mode.
+.chromapi-logo {
+  filter: invert(1);
+}
+
+html[data-bs-theme="dark"] .chromapi-logo {
+  filter: none;
+}
+
 .wrap.container-lg {
   padding-left: 0.5rem;
   padding-right: 0.5rem;

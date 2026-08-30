@@ -7,7 +7,7 @@ lastmod:  2025-05-20T01:16:05+02:00
 draft: false
 weight: 50
 categories: []
-tags: ["launch", "chroma", "tutorials", "computer vision", "blog"]
+tags: ["launch", "chroma", "tutorials", "robotics", "blog"]
 contributors: ["Ousmane THIONGANE"]
 pinned: false
 homepage: false
@@ -45,7 +45,7 @@ Here’s what you’ll find (or soon find) on this site:
 
 - :question: [**Tutorials:**]({{< relref "tutorials/">}}) This section offers various tutorials related to the concepts I've explored during my academic journey.
 
-- :eye: [**Computer Vision Courses:**]({{< relref "computer_vision/">}}) Over time, I've developed a strong interest in Computer Vision. To deepen my own understanding and structure my knowledge, I've dedicated an entire section of Chroma to this field. As an engineer, it's important to master the concepts we explore — but even more valuable to be able to explain them to others.
+- :robot: [**Chromapi:**]({{< relref "/chromapi/" >}}) During my studies, I discovered a passion for robotics. That’s why I’m developing Chromapi: an open-source quadruped robot that serves as a playground for me (and maybe for you, too!) to experiment, learn, and put my knowledge of electronics, mechanics, computer science, and artificial intelligence into practice.
 
 - :speech_balloon: [**A Blog Area:**]({{< relref "tutorials/">}}) This is where I’ll share updates about the website and important announcements — like the one you're currently reading.
 
