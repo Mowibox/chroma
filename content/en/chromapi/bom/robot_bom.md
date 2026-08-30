@@ -5,7 +5,7 @@ summary: "The parts to buy for building Chromapi: battery, compute, camera, serv
 date: 2026-08-29
 lastmod: 2026-08-30
 draft: false
-weight: 10
+weight: 60
 toc: true
 icon: "shopping-cart"
 contributors: ["Ousmane THIONGANE"]

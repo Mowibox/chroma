@@ -5,7 +5,7 @@ summary: "Le protocole de bridge UART entre le Raspberry Pi et la carte mère ST
 date: 2026-08-29
 lastmod: 2026-08-30
 draft: false
-weight: 20
+weight: 80
 toc: true
 icon: "network"
 contributors: ["Ousmane THIONGANE"]

@@ -5,7 +5,7 @@ summary: "Où trouver la conception mécanique de Chromapi : le document Onshape
 date: 2026-08-29
 lastmod: 2026-08-29
 draft: false
-weight: 60
+weight: 50
 toc: true
 icon: "cube3D"
 contributors: ["Ousmane THIONGANE"]

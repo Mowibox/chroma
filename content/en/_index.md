@@ -1,7 +1,7 @@
 ---
 title: "Welcome to Chroma!"
 description: "Chroma documents and shares technical knowledge in computer science, electronics, and robotics — including the Chromapi open-source robot."
-lead: "Chroma is a website created to give a better view on how things work."
+lead: "Some color in electronics, code, and robotics."
 date:  2025-05-20T01:16:05+02:00
 lastmod:  2026-08-29T01:16:05+02:00
 draft: false

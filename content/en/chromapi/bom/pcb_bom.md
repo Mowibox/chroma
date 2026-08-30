@@ -5,7 +5,7 @@ summary: "Interactive Bill of Materials for the Chromapi motherboard: components
 date: 2026-08-29
 lastmod: 2026-08-30
 draft: false
-weight: 20
+weight: 70
 toc: true
 icon: "chip"
 contributors: ["Ousmane THIONGANE"]

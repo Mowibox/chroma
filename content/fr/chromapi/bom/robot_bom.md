@@ -5,7 +5,7 @@ summary: "Liste des pièces à acheter pour construire Chromapi au-delà du PCB 
 date: 2026-08-29
 lastmod: 2026-08-29
 draft: false
-weight: 10
+weight: 60
 toc: true
 icon: "shopping-cart"
 contributors: ["Ousmane THIONGANE"]
