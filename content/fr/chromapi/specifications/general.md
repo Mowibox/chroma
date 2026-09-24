@@ -3,7 +3,7 @@ title: "Spécifications générales"
 description: "Deux cartes, un seul protocole de bridge."
 summary: "L'architecture globale de calcul et de contrôle de Chromapi : carte mère STM32, Raspberry Pi, et répartition des rôles."
 date: 2026-08-29
-lastmod: 2026-08-29
+lastmod: 2026-09-25
 draft: false
 weight: 10
 toc: true
@@ -18,39 +18,48 @@ seo:
    robots: "index, follow"
 ---
 
-Coming soon!
-
-<script type="text/plain" hidden>
 <p align="center">
-    <img src="/chroma/images/chromapi/chromapi_motherboard.png" alt="Carte mère personnalisée de Chromapi" width="360" />
+    <img src="/chroma/gifs/chromapi_play.gif" alt="Chromapi Pool Play" />
 </p>
 
-Chromapi répartit le contrôle entre deux cartes, reliées par un bridge UART personnalisé :
+## Caractéristiques clés
 
-| Carte | Rôle |
+* Robot quadrupède à 12 degrés de liberté : 4 pattes de 3 DoF
+* 12 servomoteurs série Feetech STS3215 sur un bus unique à 1 Mbps
+* Carte mère personnalisée dédiée au temps réel : contrôle moteur, IMU et gestion de l'alimentation
+* Raspberry Pi 4 embarquée pour le contrôle haut niveau, la vision et l'audio
+* Batterie 2S 18650 rechargeable en USB-C directement sur le robot
+* IMU, caméra grand-angle et microphone pour la perception
+* Haut-parleur et anneau de 18 LEDs RGB pour l'expressivité
+* Structure entièrement imprimable en 3D (PLA & TPU), poids d'environ 1,5 kg
+* 100 % open source : matériel, firmware et logiciel
+
+## Dimensions et masse
+
+| Propriété | Valeur |
 | :--- | :--- |
-| **STM32G431KBT6** (carte mère personnalisée) | Tâches temps réel : contrôle des servos, fusion de l'IMU, surveillance de l'alimentation |
-| **Raspberry Pi 4 Model B** | Contrôle haut niveau, SDK Python et (à terme) vision |
+| Dimensions en position debout (L × l × h) | ≈ 40 × 35 × 15 cm |
+| Masse totale | ≈ 1,5 kg |
+| Longueur d'un segment coxa | 69 mm |
+| Longueur d'un segment fémur | 68 mm |
+| Longueur d'un segment tibia | 112 mm |
 
-Les deux communiquent via un protocole de bridge personnalisé à **1 Mbps** — voir
-[Protocole de communication]({{</* relref "chromapi/documentation/protocol/" */>}}) pour le format des trames et le jeu
-de commandes.
+{{< callout context="note" title="Note" icon="outline/info-circle" >}}
+Ces valeurs sont calculées à partir du modèle de simulation (URDF/MJCF), ainsi que de la CAO. Elles peuvent légèrement différer sur le robot réel selon les réglages d'impression et le câblage.
+{{< /callout >}}
 
 ## Calcul
 
-| Composant | Détail |
+Chromapi répartit le contrôle entre deux cartes, reliées par un protocole de bridge UART personnalisé à 1Mbps :
+
+| Carte | Rôle |
 | :--- | :--- |
-| MCU | STM32G431KBT6 (Arm Cortex-M4) |
-| Ordinateur hôte | Raspberry Pi 4 Model B |
-| Liaison inter-cartes | Protocole de bridge UART personnalisé, 1 Mbps |
+| STM32G431KBT6 (Arm Cortex-M4, carte mère personnalisée) | Tâches temps réel : contrôle des servomoteurs, fusion de l'IMU, surveillance de l'alimentation, anneau de LEDs |
+| Raspberry Pi 4 Model B | Contrôle haut niveau, locomotion, SDK Python, audio et vision |
 
-## Logiciel
+## Logiciels
 
-* Framework de contrôle, cinématique et utilitaires matériels : Python, dans
-  [`chromapi`](https://github.com/Mowibox/chromapi)
-* Firmware : projet généré par STM32Cube avec des pilotes écrits à la main, dans
-  [`chromapi_motherboard`](https://github.com/Mowibox/chromapi_motherboard)
-
-Pour le détail électrique, actionneurs, audio et capteurs, voir les autres pages de cette
-section.
-</script>
+| Composants | Dépôt |
+| :--- | :--- |
+| Framework de contrôle, cinématique, locomotion et modèles de simulation | [`chromapi`](https://github.com/Mowibox/chromapi) |
+| Firmware de la carte mère et conception du PCB | [`chromapi_motherboard`](https://github.com/Mowibox/chromapi_motherboard) |

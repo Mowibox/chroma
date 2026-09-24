@@ -26,7 +26,7 @@ seo:
 
 The full Chromapi assembly is available through this Onshape document:
 
-👉 [Chromapi — 3D model](https://cad.onshape.com/documents/3b2f6609101a115f427bb3a2/w/dda5699ddfe216cfbe74c22b/e/50bb405a7750d04ab1c412db?renderMode=0&uiState=6a7266a5caff22fc791d5f8b)
+👉 [Chromapi - 3D model](https://cad.onshape.com/documents/3b2f6609101a115f427bb3a2/w/dda5699ddfe216cfbe74c22b/e/50bb405a7750d04ab1c412db?renderMode=0&uiState=6a7266a5caff22fc791d5f8b)
 
 ## Simulation models
 
