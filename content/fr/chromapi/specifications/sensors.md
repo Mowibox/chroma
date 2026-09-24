@@ -1,6 +1,6 @@
 ---
 title: "Capteurs, audio & périphériques"
-description: "IMU, caméra, LEDs, ventilateur — tout ce qui capte ou affiche."
+description: "IMU, caméra, LEDs, ventilateur: tout ce qui capte ou affiche."
 summary: "L'IMU, les contacteurs de pied, la caméra grand-angle, l'audio I2S, l'anneau de LEDs RGB et le ventilateur de Chromapi, avec leurs interfaces."
 date: 2026-08-29
 lastmod: 2026-09-25
