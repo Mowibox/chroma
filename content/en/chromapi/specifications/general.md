@@ -3,7 +3,7 @@ title: "General specifications"
 description: "Two boards, one bridge protocol."
 summary: "The overall compute and control architecture of Chromapi: STM32 motherboard, Raspberry Pi, and how they split responsibilities."
 date: 2026-08-29
-lastmod: 2026-09-25
+lastmod: 2026-10-12
 draft: false
 weight: 10
 toc: true
@@ -50,7 +50,7 @@ These values are computed from the simulation model (URDF/MJCF) and from the CAD
 
 ## Compute
 
-Chromapi splits control between two boards, linked by a custom UART bridge protocol at 1Mbps:
+Chromapi splits control between two boards, linked by a custom UART bridge protocol at 2 Mbps:
 
 | Board | Role |
 | :--- | :--- |

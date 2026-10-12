@@ -3,7 +3,7 @@ title: "Spécifications générales"
 description: "Deux cartes, un seul protocole de bridge."
 summary: "L'architecture globale de calcul et de contrôle de Chromapi : carte mère STM32, Raspberry Pi, et répartition des rôles."
 date: 2026-08-29
-lastmod: 2026-09-25
+lastmod: 2026-10-12
 draft: false
 weight: 10
 toc: true
@@ -50,7 +50,7 @@ Ces valeurs sont calculées à partir du modèle de simulation (URDF/MJCF), ains
 
 ## Calcul
 
-Chromapi répartit le contrôle entre deux cartes, reliées par un protocole de bridge UART personnalisé à 1Mbps :
+Chromapi répartit le contrôle entre deux cartes, reliées par un protocole de bridge UART personnalisé à 2 Mbps :
 
 | Carte | Rôle |
 | :--- | :--- |

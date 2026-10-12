@@ -3,7 +3,7 @@ title: "Protocole de communication"
 description: "Comment le Raspberry Pi et le STM32 se parlent."
 summary: "Le protocole de bridge UART entre le Raspberry Pi et la carte mère STM32, et le protocole de bus servo Feetech qu'il relaie."
 date: 2026-08-29
-lastmod: 2026-08-30
+lastmod: 2026-10-12
 draft: false
 weight: 80
 toc: true
@@ -21,7 +21,7 @@ seo:
 Coming soon!
 
 <script type="text/plain" hidden>
-Le Raspberry Pi et le STM32 de la carte mère communiquent ensemble via un protocole personnalisé, à **1 Mbps** (J'aurais bien appelé ce protocole **chromaping**, tiens...)
+Le Raspberry Pi et le STM32 de la carte mère communiquent ensemble via un protocole personnalisé, à **2 Mbps** (J'aurais bien appelé ce protocole **chromaping**, tiens...)
 
 L'implémentation de référence se trouve dans les fichiers [`bridge.h`](https://github.com/Mowibox/chromapi_motherboard/blob/main/firmware/chromapi_stm32_core/Core/Inc/bridge.h) & [`bridge.c`](https://github.com/Mowibox/chromapi_motherboard/blob/main/firmware/chromapi_stm32_core/Core/Src/bridge.c) côté firmware, et
 [`motherboard_bridge.py`](https://github.com/Mowibox/chromapi/blob/main/src/chromapi/hardware/motherboard_bridge.py)
@@ -37,7 +37,7 @@ sequenceDiagram
     RPi->>MCU: SYNC(0x55,0xAA) · LEN · CMD · PAYLOAD · CRC
     MCU-->>RPi: SYNC(0x55,0xAA) · LEN · REPONSE · PAYLOAD · CRC
 
-    Note over RPi,MCU: UART1 · 1 Mbps
+    Note over RPi,MCU: UART1 · 2 Mbps
 {{</* /kroki */>}}
 
 La communication suit strictement un modèle **question-réponse** : le Raspberry Pi est

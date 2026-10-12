@@ -3,7 +3,7 @@ title: "Capteurs, audio & périphériques"
 description: "IMU, caméra, LEDs, ventilateur: tout ce qui capte ou affiche."
 summary: "L'IMU, les contacteurs de pied, la caméra grand-angle, l'audio I2S, l'anneau de LEDs RGB et le ventilateur de Chromapi, avec leurs interfaces."
 date: 2026-08-29
-lastmod: 2026-09-25
+lastmod: 2026-10-12
 draft: false
 weight: 40
 toc: true
@@ -41,7 +41,7 @@ Cette page liste l'ensemble des capteurs et périphériques embarqués sur Chrom
 | Plage de l'accéléromètre | ±3 g |
 | Plage du gyroscope | ±1000 °/s |
 | Fréquence d'échantillonnage | 400 Hz |
-| Filtre de fusion | Filtre de Mahony à 100 Hz |
+| Filtre de fusion | Filtre de Mahony à 400 Hz |
 | Sortie | Accélération, vitesse angulaire et orientation (quaternion) |
 
 {{< callout context="note" title="Note" icon="outline/info-circle" >}}
@@ -93,7 +93,7 @@ Les contacteurs de pied ne sont pas utilisés dans la v1 de Chromapi.
 ## Architecture de communication
 
 ```mermaid
-%%{init: {'themeVariables': {'edgeLabelBackground':'transparent'}}}%%
+%%{init: {'themeCSS': '.edgeLabel, .edgeLabel p, .labelBkg { background-color: transparent !important; } .edgeLabel rect { fill: transparent !important; }'}}%%
 flowchart LR
     RPI["Raspberry Pi"]
     MCU["STM32G431KBT6<br/>SYSCLK · 160 MHz"]
@@ -105,10 +105,10 @@ flowchart LR
     AUDIO["Haut-parleur + Microphone<br/>MAX98357A / ICS-43434"]
     FAN(["Ventilateur<br/>Noctua NF-A4x10"])
 
-    RPI <-->|"Protocole de bridge<br/>UART1 · 1 Mbps · boucle à 100 Hz"| MCU
+    RPI -->|"Protocole de bridge<br/>UART1 · 2 Mbps · boucle à 100 Hz"| MCU
     MCU <-->|"Série half-duplex<br/>USART2 · 1 Mbps · 200 Hz"| SERVOS
-    MCU <-->|"SPI1 · 5 MHz · 400 Hz"| IMU
-    MCU <-->|"I2C1 · 400 kHz · 10 Hz"| PWR
+    MCU <-->|"SPI1 · 5 MHz · 400 Hz (Mahony AHRS)"| IMU
+    MCU <-->|"I2C1 · 400 kHz · 10 Hz poll"| PWR
     MCU -->|"PWM+DMA · 800 kHz"| LED
 
     RPI -->|"CSI-2"| CAM

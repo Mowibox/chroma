@@ -3,7 +3,7 @@ title: "Sensors & peripherals"
 description: "IMU, camera, LEDs, fan: everything that senses or shows."
 summary: "Chromapi's IMU, foot contact switches, wide-angle camera, RGB LED ring, and cooling fan, with their interfaces."
 date: 2026-08-29
-lastmod: 2026-09-25
+lastmod: 2026-10-12
 draft: false
 weight: 40
 toc: true
@@ -41,7 +41,7 @@ This page lists all the sensors and peripherals embedded in Chromapi.
 | Accelerometer range | ±3 g |
 | Gyroscope range | ±1000 °/s |
 | Sampling rate | 400 Hz |
-| Fusion filter | Mahony filter at 100 Hz |
+| Fusion filter | Mahony filter at 400 Hz |
 | Output | Acceleration, angular velocity and orientation (quaternion) |
 
 {{< callout context="note" title="Note" icon="outline/info-circle" >}}
@@ -93,7 +93,7 @@ Foot contact switches are not used in Chromapi v1.
 ## Communication architecture
 
 ```mermaid
-%%{init: {'themeVariables': {'edgeLabelBackground':'transparent'}}}%%
+%%{init: {'themeCSS': '.edgeLabel, .edgeLabel p, .labelBkg { background-color: transparent !important; } .edgeLabel rect { fill: transparent !important; }'}}%%
 flowchart LR
     RPI["Raspberry Pi"]
     MCU["STM32G431KBT6<br/>SYSCLK · 160 MHz"]
@@ -105,10 +105,10 @@ flowchart LR
     AUDIO["Speaker + Microphone<br/>MAX98357A / ICS-43434"]
     FAN(["Fan<br/>Noctua NF-A4x10"])
 
-    RPI <-->|"Custom bridge protocol<br/>UART1 · 1 Mbps · 100 Hz control loop"| MCU
+    RPI -->|"Custom bridge protocol<br/>UART1 · 2 Mbps · 100 Hz control loop"| MCU
     MCU <-->|"Half-duplex serial<br/>USART2 · 1 Mbps · 200 Hz"| SERVOS
-    MCU <-->|"SPI1 · 5 MHz · 400 Hz"| IMU
-    MCU <-->|"I2C1 · 400 kHz · 10 Hz"| PWR
+    MCU <-->|"SPI1 · 5 MHz · 400 Hz (Mahony AHRS)"| IMU
+    MCU <-->|"I2C1 · 400 kHz · 10 Hz poll"| PWR
     MCU -->|"PWM+DMA · 800 kHz"| LED
 
     RPI -->|"CSI-2"| CAM

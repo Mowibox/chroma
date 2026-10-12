@@ -3,7 +3,7 @@ title: "Caractéristiques électriques"
 description: "D'un pack 18650 à une carte mère qui fonctionne."
 summary: "Source d'alimentation, charge, protection et régulation sur la carte mère de Chromapi : pack 2S 18650, charge USB-C et rails 5V/3.3V."
 date: 2026-08-29
-lastmod: 2026-09-25
+lastmod: 2026-10-12
 draft: false
 weight: 20
 toc: true
@@ -71,7 +71,7 @@ La tension actuelle qui traverse Chromapi est constamment affichée grâce à un
 ## Architecture d'alimentation
 
 ```mermaid
-%%{init: {'themeVariables': {'edgeLabelBackground':'transparent'}}}%%
+%%{init: {'themeCSS': '.edgeLabel, .edgeLabel p, .labelBkg { background-color: transparent !important; } .edgeLabel rect { fill: transparent !important; }'}}%%
 flowchart TD
     CHG[["Charge USB-C<br/>CN3302"]] -.->|"charge → B+ ≈ 7,2–8,4V"| CELLS[("Batterie<br/>18650 x2")]
     CELLS -->|"B+/BM/B-"| HY["HY2120<br/>Protection BMS"]
