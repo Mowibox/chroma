@@ -105,7 +105,7 @@ flowchart LR
     AUDIO["Haut-parleur + Microphone<br/>MAX98357A / ICS-43434"]
     FAN(["Ventilateur<br/>Noctua NF-A4x10"])
 
-    RPI -->|"Protocole de bridge<br/>UART1 · 2 Mbps · boucle à 100 Hz"| MCU
+    RPI <-->|"Protocole de bridge<br/>UART1 · 2 Mbps · boucle à 100 Hz"| MCU
     MCU <-->|"Série half-duplex<br/>USART2 · 1 Mbps · 200 Hz"| SERVOS
     MCU <-->|"SPI1 · 5 MHz · 400 Hz (Mahony AHRS)"| IMU
     MCU <-->|"I2C1 · 400 kHz · 10 Hz poll"| PWR
