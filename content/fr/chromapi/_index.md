@@ -18,7 +18,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/chromapi/chromapi_logo.png" alt="Logo Chromapi" width="300" class="chromapi-logo" />
+    <img src="/chroma/images/chromapi/chromapi_logo.png" alt="Logo Chromapi" width="300" />
 </p>
 
 **Chromapi** est un robot quadrupède que je conçois, construis et documente de zéro, en allant de la conception électronique au développement logiciel, en passant par la modélisation 3D et l'intelligence artificielle. Je l'ai pensé comme une plateforme de recherche qui permet d'explorer les concepts fondamentaux en robotique, comme la locomotion, l'apprentissage par renforcement et l'interaction homme-machine.

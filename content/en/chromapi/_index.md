@@ -18,7 +18,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/chromapi/chromapi_logo.png" alt="Chromapi logo" width="300" class="chromapi-logo" />
+    <img src="/chroma/images/chromapi/chromapi_logo.png" alt="Chromapi logo" width="300" />
 </p>
 
 **Chromapi** is a 4-legged robot I'm designing, building, and documenting from scratch, going from the electronic design to the software development, through 3D modeling and artificial intelligence. I think of it as a research platform to explore core robotics concepts, like locomotion, reinforcement learning, and human-robot interaction.
