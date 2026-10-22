@@ -5,6 +5,7 @@
   [en.params]
     languageISO = "EN"
     languageTag = "en-US"
+    footer = 'Content licensed under <a class="text-muted" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · Code under <a class="text-muted" href="https://github.com/Mowibox/chroma/blob/main/LICENSE">MIT</a>'
 
 [fr]
   label = "Français"
@@ -13,6 +14,7 @@
   [fr.params]
     languageISO = "FR"
     languageTag = "fr-FR"
+    footer = 'Contenu sous licence <a class="text-muted" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · Code sous <a class="text-muted" href="https://github.com/Mowibox/chroma/blob/main/LICENSE">MIT</a>'
 
 [de]
   label = "German"

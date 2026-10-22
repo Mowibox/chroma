@@ -3,7 +3,7 @@ title: "Conditions d'utilisation"
 description: "Les Conditions d'utilisation régissant votre usage de Chroma : usage acceptable, propriété intellectuelle, contributions, responsabilité et litiges."
 summary: ""
 date: 2025-07-04T01:16:05+02:00
-lastmod: 2025-07-04T01:16:05+02:00
+lastmod: 2026-10-22T20:30:00+02:00
 draft: false
 type: "legal"
 seo:
@@ -37,6 +37,7 @@ Nous vous recommandons d'imprimer une copie de ces Conditions Juridiques pour vo
 - [1. NOS SERVICES](#1-nos-services)
 - [2. DROITS DE PROPRIÉTÉ INTELLECTUELLE](#2-droits-de-propriété-intellectuelle)
   - [Notre propriété intellectuelle](#notre-propriété-intellectuelle)
+  - [Licences ouvertes](#licences-ouvertes)
   - [Votre utilisation de nos Services](#votre-utilisation-de-nos-services)
   - [Vos soumissions et contributions](#vos-soumissions-et-contributions)
   - [Violation des droits d'auteur](#violation-des-droits-dauteur)
@@ -84,6 +85,10 @@ Nous sommes propriétaires ou titulaires de licence de tous les droits de propri
 Notre Contenu et nos Marques sont protégés par les lois sur le droit d'auteur et les marques (ainsi que par diverses autres lois relatives à la propriété intellectuelle et à la concurrence déloyale) et par des traités aux États-Unis et dans le monde entier.
 
 Le Contenu et les Marques sont fournis dans ou via les Services "TELS QUELS" pour votre usage personnel, non commercial ou à des fins professionnelles internes uniquement.
+
+### Licences ouvertes
+
+Nonobstant le reste de cette section, et sauf mention contraire, les textes, images et médias publiés sur les Services sont placés sous [licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0), et le code source du site est placé sous [licence MIT](https://github.com/Mowibox/chroma/blob/main/LICENSE). Vous pouvez utiliser le Contenu selon les termes de ces licences, qui prévalent sur les restrictions ci-dessous. En cas de réutilisation, citez le ou les auteurs et ajoutez un lien vers la page d'origine. Les marques, logos et contenus de tiers, y compris les images publiées sous leur propre licence, restent la propriété de leurs détenteurs respectifs.
 
 ### Votre utilisation de nos Services
 

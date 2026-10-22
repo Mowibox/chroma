@@ -3,7 +3,7 @@ title: "Actuators specifications"
 description: "12 servomotors on a shared RS485 bus."
 summary: "Chromapi's 12 Feetech STS3215-C001 servomotors, the RS485 bus wiring between them, and the servo polling rate."
 date: 2026-08-29
-lastmod: 2026-09-25
+lastmod: 2026-10-22
 draft: false
 weight: 30
 toc: true
@@ -30,7 +30,7 @@ seo:
 | No-load speed | 0.22 s/60° at 7.4V |
 | Weight | 55 g |
 | Position sensor | 12-bit magnetic encoder (4096 steps/rev, ≈ 0.088°/step) |
-| Available feedback | Position, speed, load, voltage, temperature |
+| Available feedback | Position, speed, load, voltage, temperature, current |
 
 {{< callout context="tip" title="Tip" icon="outline/bulb" >}}
 Chromapi's architecture is permissive enough to use the 12V version of the STS3215 if you need more torque, provided the power supply is adapted accordingly.
@@ -61,9 +61,9 @@ Servomotor IDs on the bus are assigned leg by leg:
 | :--- | :--- |
 | Bus type | Half-duplex serial (Feetech protocol) |
 | Baud rate | 1 Mbps |
-| Reading rate | 200 Hz (synchronized read of the 12 servomotors) |
+| Bus cycle | 200 Hz (synchronized write of the targets, then synchronized read of the 12 servomotors) |
 
-The STM32 polls the 12 servomotors with a single synchronized read frame, then sends their state back to the Raspberry Pi. Commands sent by the Raspberry Pi are re-encoded into Feetech frames and relayed on the bus: see the [communication protocol]({{< relref "chromapi/documentation/protocol/" >}}) for more details on how communication works.
+Every 5 ms, the STM32 first sends the pending position and torque targets to the 12 servomotors in a single synchronized write frame, then reads their position, speed, load, voltage, temperature and current back with a single synchronized read frame. The resulting state is then streamed to the Raspberry Pi at the end of each cycle. Other commands sent by the Raspberry Pi are re-encoded into Feetech frames and relayed on the bus: see the [communication protocol]({{< relref "chromapi/documentation/protocol/" >}}) for more details on how communication works.
 
 ## Resources
 

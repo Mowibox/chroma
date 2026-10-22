@@ -3,7 +3,7 @@ title: "Sensors & peripherals"
 description: "IMU, camera, LEDs, fan: everything that senses or shows."
 summary: "Chromapi's IMU, foot contact switches, wide-angle camera, RGB LED ring, and cooling fan, with their interfaces."
 date: 2026-08-29
-lastmod: 2026-10-12
+lastmod: 2026-10-22
 draft: false
 weight: 40
 toc: true
@@ -40,9 +40,10 @@ This page lists all the sensors and peripherals embedded in Chromapi.
 | Interface | SPI at 5 MHz |
 | Accelerometer range | ±3 g |
 | Gyroscope range | ±1000 °/s |
-| Sampling rate | 400 Hz |
+| Output data rate | 400 Hz (accelerometer), 1000 Hz (gyroscope) |
+| Reading rate | 400 Hz |
 | Fusion filter | Mahony filter at 400 Hz |
-| Output | Acceleration, angular velocity and orientation (quaternion) |
+| Output | Acceleration, raw and bias-corrected angular velocity, orientation (quaternion) |
 
 {{< callout context="note" title="Note" icon="outline/info-circle" >}}
 At startup, the Mahony filter calibrates the accelerometer and gyroscope biases over 500 samples: the robot must therefore stay still during initialization.

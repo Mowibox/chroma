@@ -279,7 +279,8 @@ L'ensemble des images du site dédiées aux pages sont stockées dans le dossier
 Où `image1.jpg` est le nom de l'image. Si vous voulez rajouter une nouvelle image, il suffit donc de rajouter l'image en question dans le dossier `static/images/` pour qu'elle soit utilisable. Comme pour le reste du site, certains points sont à respecter lors de l'ajout d'images :
 
 * L’image ne doit **pas dépasser 2 MB.**
-* L’image utilisée doit être **libre de droit.**
+* L’image doit être **de vous, ou publiée sous une licence compatible** (CC0, CC BY ou CC BY-SA). Les images sous licence Pas d'Utilisation Commerciale (NC), Pas de Modification (ND), ou sans licence, ne peuvent pas être utilisées. Pour une image tierce, indiquez son auteur, sa source et sa licence dans la légende.
+* En contribuant, vous acceptez que vos textes et images soient publiés sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), comme le reste du contenu du site.
 * Il est préférable de **nommer l’image en lien avec le tutoriel que vous écrivez.** Par exemple, les images de ce tutoriel sont nommées `contribute1.jpg`, `contribute2.png`, etc. Cela permet de retrouver plus facilement dans quel tutoriel l’image est utilisée.
 * Si certaines images peuvent être utilisées dans plusieurs tutoriels, vous pouvez leur donner un nom plus générique, tout en ajoutant un tiret du bas (`_`) au début pour les distinguer (ex : `_buzzer.jpg`).
 * Le champ `alt` doit contenir une **très courte description du contenu de l’image en anglais.**

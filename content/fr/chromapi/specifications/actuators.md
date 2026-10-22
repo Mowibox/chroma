@@ -3,7 +3,7 @@ title: "Spécifications des actionneurs"
 description: "12 servomoteurs sur un même bus RS485."
 summary: "Les 12 servomoteurs Feetech STS3215-C001 de Chromapi, le câblage du bus RS485 et la fréquence de lecture."
 date: 2026-08-29
-lastmod: 2026-09-25
+lastmod: 2026-10-22
 draft: false
 weight: 30
 toc: true
@@ -30,7 +30,7 @@ seo:
 | Vitesse à vide | 0,22 s/60° à 7,4V |
 | Poids | 55 g |
 | Capteur de position | Encodeur magnétique 12 bits (4096 pas/tour, ≈ 0,088°/pas) |
-| Retours disponibles | Position, vitesse, charge, tension, température |
+| Retours disponibles | Position, vitesse, charge, tension, température, courant |
 
 {{< callout context="tip" title="Astuce" icon="outline/bulb" >}}
 L'architecture de Chromapi est assez permissive pour utiliser la version 12V du STS3215 si vous avez besoin de plus de couple, à condition d'adapter l'alimentation en conséquence.
@@ -61,9 +61,9 @@ Les identifiants des servomoteurs sur le bus sont attribués patte par patte :
 | :--- | :--- |
 | Type de bus | Série half-duplex (protocole Feetech) |
 | Débit | 1 Mbps |
-| Fréquence de lecture | 200 Hz (lecture synchronisée des 12 servomoteurs) |
+| Cycle du bus | 200 Hz (écriture synchronisée des consignes, puis lecture synchronisée des 12 servomoteurs) |
 
-Le STM32 interroge les 12 servomoteurs en une seule trame de lecture synchronisée, puis renvoie leur état au Raspberry Pi. Les commandes envoyées par le Raspberry Pi sont réencodées en trames Feetech et relayées sur le bus : voir le [protocole de communication]({{< relref "chromapi/documentation/protocol/" >}}) pour plus de détails sur le fonctionnement de la communication.
+Toutes les 5 ms, le STM32 envoie d'abord les consignes de position et de couple en attente aux 12 servomoteurs dans une seule trame d'écriture synchronisée, puis relit leur position, vitesse, charge, tension, température et courant en une seule trame de lecture synchronisée. L'état obtenu est ensuite transmis au Raspberry Pi à la fin de chaque cycle. Les autres commandes envoyées par le Raspberry Pi sont réencodées en trames Feetech et relayées sur le bus : voir le [protocole de communication]({{< relref "chromapi/documentation/protocol/" >}}) pour plus de détails sur le fonctionnement de la communication.
 
 ## Ressources
 

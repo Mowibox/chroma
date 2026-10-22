@@ -3,7 +3,7 @@ title: "Capteurs, audio & périphériques"
 description: "IMU, caméra, LEDs, ventilateur: tout ce qui capte ou affiche."
 summary: "L'IMU, les contacteurs de pied, la caméra grand-angle, l'audio I2S, l'anneau de LEDs RGB et le ventilateur de Chromapi, avec leurs interfaces."
 date: 2026-08-29
-lastmod: 2026-10-12
+lastmod: 2026-10-22
 draft: false
 weight: 40
 toc: true
@@ -40,9 +40,10 @@ Cette page liste l'ensemble des capteurs et périphériques embarqués sur Chrom
 | Interface | SPI à 5 MHz |
 | Plage de l'accéléromètre | ±3 g |
 | Plage du gyroscope | ±1000 °/s |
-| Fréquence d'échantillonnage | 400 Hz |
+| Fréquence de sortie des données | 400 Hz (accéléromètre), 1000 Hz (gyroscope) |
+| Fréquence de lecture | 400 Hz |
 | Filtre de fusion | Filtre de Mahony à 400 Hz |
-| Sortie | Accélération, vitesse angulaire et orientation (quaternion) |
+| Sortie | Accélération, vitesse angulaire brute et corrigée du biais, orientation (quaternion) |
 
 {{< callout context="note" title="Note" icon="outline/info-circle" >}}
 Au démarrage, le filtre de Mahony calibre les biais de l'accéléromètre et du gyroscope sur 500 échantillons : le robot doit donc rester immobile pendant l'initialisation.

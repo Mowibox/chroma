@@ -3,7 +3,7 @@ title: "Terms of service"
 description: "The Terms of Service governing your use of Chroma: acceptable use, intellectual property, contributions, liability, and how disputes are handled."
 summary: ""
 date:  2025-07-04T01:16:05+02:00
-lastmod:  2025-07-04T01:16:05+02:00
+lastmod: 2026-10-22T20:30:00+02:00
 draft: false
 type: "legal"
 seo:
@@ -37,6 +37,7 @@ We recommend that you print a copy of these Legal Terms for your records.
 - [1. OUR SERVICES](#1-our-services)
 - [2. INTELLECTUAL PROPERTY RIGHTS](#2-intellectual-property-rights)
   - [Our intellectual property](#our-intellectual-property)
+  - [Open licenses](#open-licenses)
   - [Your use of our Services](#your-use-of-our-services)
   - [Your submissions and contributions](#your-submissions-and-contributions)
   - [Copyright infringement](#copyright-infringement)
@@ -84,6 +85,10 @@ We are the owner or the licensee of all intellectual property rights in our Serv
 Our Content and Marks are protected by copyright and trademark laws (and various other intellectual property rights and unfair competition laws) and treaties in the United States and around the world.
 
 The Content and Marks are provided in or through the Services "AS IS" for your personal, non-commercial use or internal business purpose only.
+
+### Open licenses
+
+Notwithstanding the rest of this section, unless otherwise stated, the text, images and media published on the Services are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0), and the source code of the website is licensed under the [MIT License](https://github.com/Mowibox/chroma/blob/main/LICENSE). You may use the Content under the terms of these licenses, which prevail over the restrictions below. When reusing the Content, credit its author(s) and link to the original page. Third-party trademarks, logos and materials, including images published under their own license, remain the property of their respective owners.
 
 ### Your use of our Services
 

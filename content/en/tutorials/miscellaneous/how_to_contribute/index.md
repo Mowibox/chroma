@@ -278,7 +278,8 @@ All images on the site dedicated to pages are stored in the [`static/images/`.](
 Where `image1.jpg` is the name of the image. If you want to add a new image, simply add the image in question to the `static/images/` folder so that it can be used. As with the rest of the site, there are certain points to bear in mind when adding images:
 
 * The image must **not exceed 2 MB.**
-* The image used must be **royalty-free.**
+* The image must be **your own, or published under a compatible license** (CC0, CC BY or CC BY-SA). Images under a NonCommercial (NC) or NoDerivatives (ND) license, or without a license, cannot be used. For a third-party image, add its author, source and license in the caption.
+* By contributing, you agree that your text and images are published under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license, like the rest of the site's content.
 * It is preferable to **name the image in relation to the tutorial you are writing.** For example, the images in this tutorial are named `contribute1.jpg`, `contribute2.png`, etc. This makes it easier to find which tutorial the image is used in.
 * If certain images can be used in several tutorials, you can give them a more generic name, while adding an underscore (`_`) at the beginning to distinguish them (e.g., `_buzzer.jpg`).
 * The `alt` field must contain a **very short description of the image content in English.**
