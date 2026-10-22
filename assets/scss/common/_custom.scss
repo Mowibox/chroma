@@ -148,6 +148,13 @@ html[data-bs-theme="dark"] {
   text-decoration: none;
 }
 
+// Top header bar: violet → pink in both themes (overrides Doks' yellow/vermilion
+// light and accent/green dark gradients)
+.header-bar,
+html[data-bs-theme="dark"] .header-bar {
+  border-image-source: linear-gradient(83.21deg, $primary 0%, #ff3ea5 100%);
+}
+
 .wrap.container-lg {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
