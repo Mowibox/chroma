@@ -1,6 +1,6 @@
 ---
 title: "Spécifications générales"
-description: "Deux cartes, un seul protocole de bridge."
+description: "La description globale de Chromapi."
 summary: "L'architecture globale de calcul et de contrôle de Chromapi : carte mère STM32, Raspberry Pi, et répartition des rôles."
 date: 2026-08-29
 lastmod: 2026-10-12

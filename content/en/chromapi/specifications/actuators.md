@@ -1,7 +1,7 @@
 ---
 title: "Actuators specifications"
-description: "12 servomotors on a shared RS485 bus."
-summary: "Chromapi's 12 Feetech STS3215-C001 servomotors, the RS485 bus wiring between them, and the servo polling rate."
+description: "12 servomotors on a shared half-duplex TTL serial bus."
+summary: "Chromapi's 12 Feetech STS3215-C001 servomotors, the half-duplex TTL bus wiring between them, and the servo polling rate."
 date: 2026-08-29
 lastmod: 2026-10-22
 draft: false
@@ -12,7 +12,7 @@ contributors: ["Ousmane THIONGANE"]
 
 seo:
    title: ""
-   description: "Chromapi's 12 Feetech STS3215-C001 servomotors, the RS485 bus wiring between them, and the servo polling rate."
+   description: "Chromapi's 12 Feetech STS3215-C001 servomotors, the half-duplex TTL bus wiring between them, and the servo polling rate."
    canonical: "https://mowibox.github.io/chroma/en/chromapi/specifications/actuators/"
    noindex: false
    robots: "index, follow"

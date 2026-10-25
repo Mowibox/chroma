@@ -1,7 +1,7 @@
 ---
 title: "Spécifications des actionneurs"
-description: "12 servomoteurs sur un même bus RS485."
-summary: "Les 12 servomoteurs Feetech STS3215-C001 de Chromapi, le câblage du bus RS485 et la fréquence de lecture."
+description: "12 servomoteurs sur un même bus série TTL half-duplex."
+summary: "Les 12 servomoteurs Feetech STS3215-C001 de Chromapi, le câblage du bus TTL half-duplex et la fréquence de lecture."
 date: 2026-08-29
 lastmod: 2026-10-22
 draft: false
@@ -12,7 +12,7 @@ contributors: ["Ousmane THIONGANE"]
 
 seo:
    title: ""
-   description: "Les 12 servomoteurs Feetech STS3215-C001 de Chromapi, le câblage du bus RS485, et la fréquence de lecture des positions."
+   description: "Les 12 servomoteurs Feetech STS3215-C001 de Chromapi, le câblage du bus TTL half-duplex, et la fréquence de lecture des positions."
    canonical: "https://mowibox.github.io/chroma/fr/chromapi/specifications/actuators/"
    noindex: false
    robots: "index, follow"

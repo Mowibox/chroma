@@ -1,6 +1,6 @@
 ---
 title: "General specifications"
-description: "Two boards, one bridge protocol."
+description: "Overall description of Chromapi."
 summary: "The overall compute and control architecture of Chromapi: STM32 motherboard, Raspberry Pi, and how they split responsibilities."
 date: 2026-08-29
 lastmod: 2026-10-12
