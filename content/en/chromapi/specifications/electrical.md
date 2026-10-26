@@ -3,7 +3,7 @@ title: "Electrical characteristics"
 description: "From an 18650 pack to a working motherboard."
 summary: "Power source, charging, protection, and regulation on Chromapi's motherboard: 2S 18650 pack, USB-C charging, and the 5V/3.3V rails."
 date: 2026-08-29
-lastmod: 2026-10-12
+lastmod: 2026-10-26
 draft: false
 weight: 20
 toc: true
@@ -42,8 +42,8 @@ Chromapi has a USB-C charging port, directly on the motherboard. The board also 
 
 | Property | Value |
 | :--- | :--- |
-| Battery life | h |
-| Charging time | h |
+| Battery life | Around 2 h depending on use |
+| Charging time | 3 h |
 
 ## Power monitoring
 

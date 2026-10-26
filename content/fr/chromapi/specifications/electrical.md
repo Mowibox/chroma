@@ -3,7 +3,7 @@ title: "Caractéristiques électriques"
 description: "D'un pack 18650 à une carte mère qui fonctionne."
 summary: "Source d'alimentation, charge, protection et régulation sur la carte mère de Chromapi : pack 2S 18650, charge USB-C et rails 5V/3.3V."
 date: 2026-08-29
-lastmod: 2026-10-12
+lastmod: 2026-10-26
 draft: false
 weight: 20
 toc: true
@@ -42,8 +42,8 @@ Chromapi possède un port de charge USB-C, directement sur la carte mère. Cette
 
 | Propriété | Valeur |
 | :--- | :--- |
-| Autonomie | h |
-| Temps de charge | h |
+| Autonomie | Environ 2 h selon l'utilisation |
+| Temps de charge | 3 h |
 
 ## Mesure de puissance
 
