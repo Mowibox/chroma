@@ -18,7 +18,7 @@ seo:
    robots: "index, follow"
 ---
 
-Cette page présente les différentes pièces à acheter pour construire Chromapi soi-même. Pour le détail des composants montés sur la carte mère voir la [Liste de matériel du PCB]({{< relref "chromapi/bom/pcb_bom/" >}}).
+Cette page présente les différentes pièces à acheter pour construire Chromapi soi-même. Pour le détail des composants montés sur la carte mère voir la [Liste de matériel du PCB]({{< relref "chromapi/build/pcb-bom/" >}}).
 
 {{< callout context="note" title="Notes" >}}
 

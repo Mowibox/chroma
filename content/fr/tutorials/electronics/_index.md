@@ -1,5 +1,7 @@
 ---
 title: "Électronique"
+slug: "electronique"
+aliases: ["/tutorials/electronics/"]
 description: "Pour éviter de péter un ou plusieurs câbles"
 summary:
 type: "cardlist"
@@ -12,7 +14,7 @@ icon: "chip"
 
 seo:
    title: ""
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/electronics/"
+   canonical: ""
    noindex: false
    description: "Pour éviter de péter un ou plusieurs câbles. Tutoriels sur la programmation embarquée, la conception de PCB, l'ADC et les signaux PWM."
 

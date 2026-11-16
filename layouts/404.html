@@ -1,0 +1,12 @@
+{{- /* Restored from @thulite/doks-core (removed by the theme in 1.9.x), plus a link back home. */ -}}
+{{ define "main" }}
+<div class="row justify-content-center pt-3 pb-5">
+  <div class="col-md-12 col-lg-10 col-xl-8">
+    <article>
+      <h1 class="text-center">{{ i18n "404_title" }}</h1>
+      <p class="text-center">{{ i18n "404_text" }}</p>
+      <p class="text-center"><a class="btn btn-primary" style="color: #fff !important" href="{{ site.Home.RelPermalink }}">{{ i18n "404_back" }}</a></p>
+    </article>
+  </div>
+</div>
+{{ end }}

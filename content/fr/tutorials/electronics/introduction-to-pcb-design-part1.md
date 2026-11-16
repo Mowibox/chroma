@@ -1,5 +1,7 @@
 ---
 title: "Initiation à la conception de circuits imprimés – Partie 1"
+slug: "initiation-a-la-conception-de-circuits-imprimes-partie-1"
+aliases: ["/tutorials/electronics/introduction_to_pcb_design_part1/"]
 description: "Avec le logiciel KiCad - Schématique"
 summary: "Première partie d’une initiation à la conception de PCB avec KiCad : création du schéma électronique, placement des composants, labels, ERC et assignation des empreintes."
 date: 2025-06-22
@@ -15,7 +17,7 @@ tags: ["kicad", "schematique"]
 seo:
    title: "Schématique de PCB avec KiCad – Tutoriel (Partie 1)"
    description: "Apprenez à créer un schéma électronique avec KiCad : placement des composants, connexions, labels, vérification ERC et préparation pour le routage du PCB."
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/electronics/introduction_to_pcb_design_part1/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -40,22 +42,22 @@ _Pour toute remarque ou question, n'hésitez pas à m'envoyer un mail ([ousmane.
 Le but de cette initiation de réaliser un petit circuit imprimé avec des composants simples (LED, buzzers, résistances…) qui pourrait par la suite être branché et utilisé avec une carte à microcontrôleur :
 
 <p align="center">
-    <img src="/chroma/images/schematic1.png" alt="PCB example" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic1.png" alt="PCB example" class="w-full h-auto" />
 </p>
 
 Cette réalisation se fait en deux parties :
 
-* **Schématique :** C’est là qu'on réalise le schéma du montage, de la même manière que les montages qui sont proposés dans [l'initiation à la programmation embarquée.]({{< relref "tutorials/electronics/introduction_to_embedded_prog">}}) On peut retrouver ce genre de schémas dans des cours d'électronique.
+* **Schématique :** C’est là qu'on réalise le schéma du montage, de la même manière que les montages qui sont proposés dans [l'initiation à la programmation embarquée.]({{< relref "tutorials/electronics/introduction-to-embedded-prog">}}) On peut retrouver ce genre de schémas dans des cours d'électronique.
 * **Routage :** C’est là qu’on choisit la position des différents composants, que l’on connecte entre eux en les routant.
 
 ## Schématique
 
 <p align="center">
-    <img src="/chroma/images/schematic2_fr.png" alt="Schematic editor" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic2_fr.png" alt="Schematic editor" class="w-full h-auto" />
 </p>
 
 <p align="center">
-    <img src="/chroma/images/schematic3.jpg" alt="Schematic editor page" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic3.jpg" alt="Schematic editor page" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -76,11 +78,11 @@ Pour notre carte, nous allons avoir besoin de placer les composants nécessaires
 * 1 bouton poussoir (SW_Push)
 
 <p align="center">
-    <img src="/chroma/images/schematic4.jpg" alt="Components" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic4.jpg" alt="Components" class="w-full h-auto" />
 </p>
 
 <p align="center">
-    <img src="/chroma/images/schematic5.jpg" alt="Adding component" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic5.jpg" alt="Adding component" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -98,29 +100,29 @@ Nous allons maintenant connecter les composants entre eux avec des fils, mais au
 Un label local & global permettent de relier des composants sans avoir à les relier explicitement par un fil. C’est très pratique pour améliorer la lisibilité d’un schéma avec beaucoup de composants. Voici par exemple un schéma sans label :
 
 <p align="center">
-    <img src="/chroma/images/schematic6.jpg" alt="Without label" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic6.jpg" alt="Without label" class="w-full h-auto" />
 </p>
 
 Et le même schéma avec un label (les deux schémas sont équivalents !) :
 
 <p align="center">
-    <img src="/chroma/images/schematic7.jpg" alt="With label" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic7.jpg" alt="With label" class="w-full h-auto" />
 </p>
 
 * **Label local :** Label fonctionnel pour une seule page du projet (Ce qu'on va utiliser dans cette initiation, puisque nous n'utilisons qu'une seule page).
 
 <p align="center">
-    <img src="/chroma/images/schematic8.jpg" alt="Local label" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic8.jpg" alt="Local label" class="w-full h-auto" />
 </p>
 
 * **Label global :** Label fonctionnel pour toutes les pages d’un même projet.
 
 <p align="center">
-    <img src="/chroma/images/schematic9.jpg" alt="Global label" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic9.jpg" alt="Global label" class="w-full h-auto" />
 </p>
 
 <p align="center">
-    <img src="/chroma/images/schematic10.jpg" alt="Wired circuit" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic10.jpg" alt="Wired circuit" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -132,7 +134,7 @@ Pour éviter les erreurs plus tard lors de la vérification du schéma, il faut 
 {{< /callout >}}
 
 <p align="center">
-    <img src="/chroma/images/schematic11.jpg" alt="Power flags" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic11.jpg" alt="Power flags" class="w-full h-auto" />
 </p>
 
 ### Numérotation des composants
@@ -140,11 +142,11 @@ Pour éviter les erreurs plus tard lors de la vérification du schéma, il faut 
 Nous allons maintenant attribuer des numéros uniques à chacun des composants pour pouvoir les différencier.
 
 <p align="center">
-    <img src="/chroma/images/schematic12.jpg" alt="Annotate component symbol" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic12.jpg" alt="Annotate component symbol" class="w-full h-auto" />
 </p>
 
 <p align="center">
-    <img src="/chroma/images/schematic13_fr.png" alt="Annotate component window" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic13_fr.png" alt="Annotate component window" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -156,17 +158,17 @@ Nous allons maintenant attribuer des numéros uniques à chacun des composants p
 Votre schéma est maintenant terminé, mais il faut vérifier qu'il n'y a pas d'erreurs sur ce dernier. C'est le rôle du Contrôle des Règles Électriques (dit ERC en anglais pour Electrical Rules Checker).
 
 <p align="center">
-    <img src="/chroma/images/schematic20.jpg" alt="ERC stmbol" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic20.jpg" alt="ERC stmbol" class="w-full h-auto" />
 </p>
 
 <p align="center">
-    <img src="/chroma/images/schematic14_fr.png" alt="ERC with errors" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic14_fr.png" alt="ERC with errors" class="w-full h-auto" />
 </p>
 
 Dans l'exemple ci-dessus, il y'a eu un oubli de connexion entre la LED D1 et la masse. On rajoute alors le fil nécessaire et après relancement du l'ERC, les erreurs disparaissent :
 
 <p align="center">
-    <img src="/chroma/images/schematic15_fr.png" alt="ERC without errors" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic15_fr.png" alt="ERC without errors" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -178,11 +180,11 @@ Dans l'exemple ci-dessus, il y'a eu un oubli de connexion entre la LED D1 et la 
 Il faut maintenant donner à chacun des composants une empreinte qui va représenter sa forme et ses dimensions sur la carte électronique. Pour ce faire, on utilise l’outil d’affectation d’empreintes.
 
 <p align="center">
-    <img src="/chroma/images/schematic16.jpg" alt="Assign footprints symbol" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic16.jpg" alt="Assign footprints symbol" class="w-full h-auto" />
 </p>
 
 <p align="center">
-    <img src="/chroma/images/schematic17.jpg" alt="Assign footprints window" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic17.jpg" alt="Assign footprints window" class="w-full h-auto" />
 </p>
 
 L’outil est divisé en trois colonnes :
@@ -194,7 +196,7 @@ L’outil est divisé en trois colonnes :
 Pour éviter d'avoir un chercher une empreinte parmi toutes celles de KiCad, vous avez la possibilité d'appliquer 3 filtres de recherche :
 
 <p align="center">
-    <img src="/chroma/images/schematic18.jpg" alt="Footprint filters" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic18.jpg" alt="Footprint filters" class="w-full h-auto" />
 </p>
 
 1. Filtrage des empreintes définies pour le symbole sélectionné
@@ -204,7 +206,7 @@ Pour éviter d'avoir un chercher une empreinte parmi toutes celles de KiCad, vou
 _Dans cet exemple, vous pouvez activer les 3 filtres en même temps en cochant les cases associées._
 
 <p align="center">
-    <img src="/chroma/images/schematic19.jpg" alt="Footprint assignation" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/schematic19.jpg" alt="Footprint assignation" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}

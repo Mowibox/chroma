@@ -1,5 +1,6 @@
 ---
 title: "Miscellaneous"
+slug: "miscellaneous"
 description: "The category for the unclassifiable"
 summary:
 type: "cardlist"
@@ -12,7 +13,7 @@ icon: "other"
 
 seo:
    title: ""
-   canonical: "https://mowibox.github.io/chroma/en/tutorials/miscellaneous/"
+   canonical: ""
    noindex: false
    description: "The category for the unclassifiable: dual-boot setups, headless Raspberry Pi configs, and other useful tricks that didn't fit elsewhere."
 

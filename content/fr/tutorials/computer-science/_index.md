@@ -1,5 +1,7 @@
 ---
 title: "Informatique"
+slug: "informatique"
+aliases: ["/tutorials/computer_science/"]
 description: "Nous déclinons toute responsabilité en cas de crash !"
 summary:
 type: "cardlist"
@@ -12,7 +14,7 @@ icon: "computer"
 
 seo:
    title: ""
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/"
+   canonical: ""
    noindex: false
    description: "Nous déclinons toute responsabilité en cas de crash ! Tutoriels pratiques sur le terminal, Git, GitHub, Docker et les environnements virtuels Python."
 

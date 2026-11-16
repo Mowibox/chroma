@@ -1,5 +1,6 @@
 ---
 title: "Electronics"
+slug: "electronics"
 description: "So you don’t blow a fuse"
 summary:
 type: "cardlist"
@@ -12,7 +13,7 @@ icon: "chip"
 
 seo:
    title: ""
-   canonical: "https://mowibox.github.io/chroma/en/tutorials/electronics/"
+   canonical: ""
    noindex: false
    description: "So you don't blow a fuse. Tutorials on embedded programming, PCB design, ADC, and PWM signals for electronics projects that actually work."
 

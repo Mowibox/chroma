@@ -1,5 +1,7 @@
 ---
 title: "Configurer une Raspberry Pi sans écran"
+slug: "configurer-une-raspberry-pi-sans-ecran"
+aliases: ["/tutorials/miscellaneous/setup_headless_raspberry/"]
 description: "Avec le protocole SSH"
 summary: "Apprendre à installer et configurer une Raspberry Pi en mode headless avec Ubuntu Server et une connexion SSH."
 date: 2025-07-12
@@ -15,7 +17,7 @@ tags: ["raspberry-pi", "ssh"]
 seo:
    title: "Configurer une Raspberry Pi sans écran (Headless) avec SSH"
    description: "Guide pas à pas pour installer Ubuntu Server sur une Raspberry Pi et la configurer sans écran grâce au protocole SSH."
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/miscellaneous/setup_headless_raspberry/"
+   canonical: ""
    robots: "index, follow"
 ---
 
@@ -43,43 +45,43 @@ Voici la liste des différentes étapes à suivre pour préparer la carte SD à 
 * Connectez la carte SD à votre ordinateur et lancez le logiciel Raspberry Pi Imager. Vous devriez obtenir une interface similaire à celle ci-dessous :
 
 <p align="center">
-    <img src="/chroma/images/headless2.png" alt="Raspberry Pi Imager" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless2.png" alt="Raspberry Pi Imager" class="w-full h-auto" />
 </p>
 
 * Commencez par sélectionner le modèle de Raspberry Pi dont vous disposez en cliquant sur "Choosing Device" :
 
 <p align="center">
-    <img src="/chroma/images/headless3.png" alt="Choosing Device" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless3.png" alt="Choosing Device" class="w-full h-auto" />
 </p>
 
 * Cliquez sur "Choosing OS" pour choisir le système d'exploitation que vous allez flasher sur la carte SD. Cliquez sur "Other general-purpose OS" :
 
 <p align="center">
-    <img src="/chroma/images/headless4.png" alt="Choosing OS" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless4.png" alt="Choosing OS" class="w-full h-auto" />
 </p>
 
 * Parmi les différentes versions d'Ubuntu, sélectionnez une version "Server" : dans ces versions, les paquets et dépendances dédiés à l'interface graphique sont absents, ce qui est idéal dans notre situation où aucun écran n'est utilisé :
 
 <p align="center">
-    <img src="/chroma/images/headless5.png" alt="Choosing Ubuntu Server 24.04" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless5.png" alt="Choosing Ubuntu Server 24.04" class="w-full h-auto" />
 </p>
 
 * Sélectionnez ensuite l'emplacement de stockage de l'image. Si vous n'avez connecté que votre carte SD à votre ordinateur, cela devrait être facile de la retrouver.
 
 <p align="center">
-    <img src="/chroma/images/headless6.png" alt="Choosing Storage" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless6.png" alt="Choosing Storage" class="w-full h-auto" />
 </p>
 
 * En cliquant sur "Next" le logiciel vous demandera si vous souhaitez appliquer des paramètres spécifiques sur votre OS avant de flasher la carte SD. Cliquez alors sur "Edit Settings".
 
 <p align="center">
-    <img src="/chroma/images/headless7.png" alt="Editing Settings" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless7.png" alt="Editing Settings" class="w-full h-auto" />
 </p>
 
 * Vous devriez obtenir une interface similaire à celle-ci dessous :
 
 <p align="center">
-    <img src="/chroma/images/headless8.png" alt="General Settings" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless8.png" alt="General Settings" class="w-full h-auto" />
 </p>
 
 * Modifiez les paramètres suivants en fonction de vos besoins :
@@ -99,7 +101,7 @@ Quelque soit le réseau que vous choisissez, soyez sûrs qu'il est possible de l
 * Enfin, sélectionnez la section "Services" et cochez la case "Enable SSH" pour activer le service SSH. Laissez la sélection sur "Use password authentication".
 
 <p align="center">
-    <img src="/chroma/images/headless9.png" alt="Enabling SSH" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless9.png" alt="Enabling SSH" class="w-full h-auto" />
 </p>
 
 * Cliquez sur "Save", puis sur "Yes" pour lancer l'écriture de l'OS sur la carte SD. Une fois l'écriture terminée, vous pouvez retirer votre carte SD de votre ordinateur pour l'insérer dans votre Raspberry Pi.

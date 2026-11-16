@@ -1,5 +1,7 @@
 ---
 title: "Introduction à Docker – Partie 2"
+slug: "introduction-a-docker-partie-2"
+aliases: ["/tutorials/computer_science/introduction_to_docker_part2/"]
 description: "Images & conteneurs"
 summary: "Apprenez à gérer les images et les conteneurs Docker : création, lancement, arrêt, suppression et utilisation de plusieurs terminaux."
 date: 2025-06-22
@@ -15,7 +17,7 @@ tags: ["docker", "conteneurs"]
 seo:
    title: "Images et conteneurs Docker – Guide pratique sous Linux"
    description: "Tutoriel étape par étape pour créer, lancer et gérer vos conteneurs Docker ainsi que vos images Docker sur Linux."
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/introduction_to_docker_part2/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -75,7 +77,7 @@ ros           humble   168e1f658ab5   3 years ago    753MB
 ```
 
 {{< callout context="note" title="Note" icon="outline/info-circle" >}}
-Comme vous avez peut-être pu le constater avec l'image "hello-world" lors du [tutoriel précédent]({{< relref "tutorials/computer_science/introduction_to_docker_part1">}}) si l'on essaie de lancer le conteneur d'une image sans l'avoir ajoutée, Docker l'ajoutera automatiquement.
+Comme vous avez peut-être pu le constater avec l'image "hello-world" lors du [tutoriel précédent]({{< relref "tutorials/computer-science/introduction-to-docker-part1">}}) si l'on essaie de lancer le conteneur d'une image sans l'avoir ajoutée, Docker l'ajoutera automatiquement.
 {{< /callout >}}
 
 ### Suppression d'images

@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Docker – Part 2"
+aliases: ["/tutorials/computer_science/introduction_to_docker_part2/"]
 description: "Images & containers"
 summary: "Learn how to manage Docker images and containers: creating, launching, stopping, deleting, and using multiple terminals."
 date: 2025-06-22
@@ -15,7 +16,7 @@ tags: ["docker", "containers"]
 seo:
    title: "Docker images and containers – Practical guide for Linux"
    description: "Step-by-step tutorial for creating, launching, and managing your Docker containers and Docker images on Linux."
-   canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/introduction_to_docker_part2/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -73,7 +74,7 @@ ros           humble   168e1f658ab5   3 years ago    753MB
 ```
 
 {{< callout context="note" title="Note" icon="outline/info-circle" >}}
-As you may have seen with the "hello-world" image in the [previous tutorial]({{< relref "tutorials/computer_science/introduction_to_docker_part1" >}}), if you try to run a container from an image that hasn't been added, Docker will automatically download it.
+As you may have seen with the "hello-world" image in the [previous tutorial]({{< relref "tutorials/computer-science/introduction-to-docker-part1" >}}), if you try to run a container from an image that hasn't been added, Docker will automatically download it.
 {{< /callout >}}
 
 ### Removing images

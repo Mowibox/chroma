@@ -1,5 +1,6 @@
 ---
 title: "Using the ADC"
+aliases: ["/tutorials/electronics/adc_tutorial/"]
 description: "With STM32 Cube IDE software"
 summary: "Learn how to configure and program the ADC on an STM32 board with Cube IDE to convert analog signals into digital values and use them in your projects."
 date: 2025-06-22
@@ -15,7 +16,7 @@ tags: ["stm32", "adc"]
 seo:
    title: "STM32 ADC Tutorial with Cube IDE – From Analog to Digital"
    description: "Practical guide to using the ADC on STM32 Cube IDE: configuration, programming, and reading analog signals on an STM32 microcontroller."
-   canonical: "https://mowibox.github.io/chroma/en/tutorials/electronics/adc_tutorial/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -39,7 +40,7 @@ The Analog-to-Digital Converter (ADC) is a system that, as the name suggests, co
 ## How it works
 
 <p align="center">
-    <img src="/chroma/images/adc2.png" alt="Analog/Digital signal" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/adc2.png" alt="Analog/Digital signal" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Red signal: Analog, Blue signal: Digital</em>
 </p>
@@ -61,7 +62,7 @@ Generally, on STM32 boards, pins A0 to A5 have ADC capability (but it's always a
 To do this, connect one analog pin to +5V (here A0) and another to GND (here A1):
 
 <p align="center">
-    <img src="/chroma/images/adc3.png" alt="Wiring" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/adc3.png" alt="Wiring" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Wiring</em>
 </p>
@@ -87,7 +88,7 @@ Note that a pin may support multiple ADCs. I could’ve swapped ADC1 and ADC2 or
 In the "ADC" tab on the left, select ADC1 and configure as follows:
 
 <p align="center">
-    <img src="/chroma/images/adc4.png" alt="Configuration" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/adc4.png" alt="Configuration" class="w-full h-auto" />
     </br>
 </p>
 
@@ -156,12 +157,12 @@ while (1)
 Once compiled and uploaded to your board, if you display the values from A0 (`value_a0`) and A1 (`value_a1`) using the above method, you'll get `value_a0 = 4095` and `value_a1 = 0`, which matches the resolution. If you go further, you can send these values to a serial plotter to visualize the signal:
 
 <p align="center">
-    <img src="/chroma/images/adc5.png" alt="Serial plotter" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/adc5.png" alt="Serial plotter" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Blue signal: A0, Orange signal: A1</em>
 </p>
 
-To go further, you can try connecting connecting other components to these pins, like a potentiometer as shown in the [introduction to embedded programming.]({{< relref "tutorials/electronics/introduction_to_embedded_prog/">}})
+To go further, you can try connecting connecting other components to these pins, like a potentiometer as shown in the [introduction to embedded programming.]({{< relref "tutorials/electronics/introduction-to-embedded-prog/">}})
 
 ## Interpreting ADC values using sensitivity
 

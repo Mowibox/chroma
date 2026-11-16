@@ -1,5 +1,6 @@
 ---
 title: "PWM signal generation tutorial"
+aliases: ["/tutorials/electronics/pwm_tutorial/"]
 description: "With STM32 Cube IDE software"
 summary: "Learn how to generate a PWM signal with STM32 Cube IDE to control an SG90 servomotor."
 date: 2025-12-20
@@ -15,7 +16,7 @@ tags: ["stm32", "pwm"]
 seo:
    title: "Generating a PWM signal with STM32 Cube IDE – Complete tutorial"
    description: "Detailed guide to configuring a PWM signal on STM32 with CubeIDE: timers, frequency calculation, duty cycle, and control of an SG90 servomotor."
-   canonical: "https://mowibox.github.io/chroma/en/tutorials/electronics/pwm_tutorial/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -41,7 +42,7 @@ Pulse Width Modulation (PWM), is a technique used to control the power delivered
 In most digital systems, there are only two voltage levels: a high state (1) and a low state (0). There are no intermediate levels to vary the voltage (e.g., 0.5). To overcome this limitation, PWM works by varying the duration for which the signal is high while keeping the frequency constant.
 
 <p align="center">
-    <img src="/chroma/images/pwm2.png" alt="Duty cycle" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/pwm2.png" alt="Duty cycle" class="w-full h-auto" />
 </p>
 
 Over a given period, the proportion of time the signal is high is called the duty cycle. By changing the duty cycle, we modify the average voltage applied to the component, allowing us to control a device with variable power.
@@ -55,7 +56,7 @@ In the context of controlling a servo motor, the PWM signal determines the angul
 For this tutorial, we will use a [NUCLEO-L476RG](https://www.st.com/en/evaluation-tools/nucleo-l476rg.html) board. The circuit diagram for a servo motor is shown below:
 
 <p align="center">
-    <img src="/chroma/images/pwm4.png" alt="Wiring" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/pwm4.png" alt="Wiring" class="w-full h-auto" />
 </p>
 
 * Two wires connected to the servo's +5V and GND (usually red for power and brown or black for ground).
@@ -68,7 +69,7 @@ Identify which pin corresponds to D5. The mapping between "Dx" and "PAx" pins ca
 Configure the pin to use a timer and its available channel (in the form "TIMx_CHx"). For the NUCLEO L476RG, the only available configuration for D5 is TIM3_CH1.
 
 <p align="center">
-    <img src="/chroma/images/pwm5.png" alt="PWM pin assignment" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/pwm5.png" alt="PWM pin assignment" class="w-full h-auto" />
 </p>
 
 In the left panel, set the following parameters:
@@ -76,14 +77,14 @@ In the left panel, set the following parameters:
 * In the **"System Core"** section, select **RCC**.
   * Set the **High Speed Clock (HSE)** to **Crystal/Ceramic Resonator**.
   <p align="center">
-    <img src="/chroma/images/pwm6.png" alt="System core" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/pwm6.png" alt="System core" class="w-full h-auto" />
   </p>
 
 * In the **"Timers"** section, select the timer you configured.
   * Set the **Clock Source** to **Internal Clock**.
   * Set the chosen channel to **PWM Generation CHx** (here, PWM Generation CH1).
   <p align="center">
-    <img src="/chroma/images/pwm7.png" alt="Timer configuration" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/pwm7.png" alt="Timer configuration" class="w-full h-auto" />
   </p
 
 ## Frequency Parameters
@@ -91,7 +92,7 @@ In the left panel, set the following parameters:
 In the top **Clock Configuration** tab, you can see the frequencies at which the microcontroller timers operate. For the NUCLEO L476RG, it's 80 MHz.
 
 <p align="center">
-    <img src="/chroma/images/pwm8.png" alt="Clock configuration" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/pwm8.png" alt="Clock configuration" class="w-full h-auto" />
 </p>
 
 However, according to the [SG90 servo datasheet](http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf), the signal frequency should be around 50 Hz. The timer's current frequency is far from 50 Hz, but fortunately, it is possible to divide the timer frequency to reach the desired value.
@@ -120,7 +121,7 @@ Several combinations can achieve 50 Hz. Note that the higher the value of \(ARR\
 Once \(PSC\) and \(ARR\) are determined, enter these values in TIM3 under **Parameter Settings**:
 
 <p align="center">
-    <img src="/chroma/images/pwm9.png" alt="PSC & ARR assignment" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/pwm9.png" alt="PSC & ARR assignment" class="w-full h-auto" />
 </p>
 
 ## Duty Cycle
@@ -140,7 +141,7 @@ $$
 Enter this value in the timer parameters and generate the code:
 
 <p align="center">
-    <img src="/chroma/images/pwm10.png" alt="Pulse assignment" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/pwm10.png" alt="Pulse assignment" class="w-full h-auto" />
 </p>
 
 ## Code integration
@@ -169,7 +170,7 @@ If you compile and upload the code to the board, you will notice that the servom
 If you have an oscilloscope, you can still observe the PWM signal from your pin:
 
 <p align="center">
-    <img src="/chroma/images/pwm11.png" alt="Oscilloscope display" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/pwm11.png" alt="Oscilloscope display" class="w-full h-auto" />
 </p>
 
 Thanks to the display tiles, we can clearly see that the signal period is 20 ms (i.e., 50 Hz). The duty cycle is \(\frac{1}{2}\).
@@ -218,7 +219,7 @@ while(1)
 There you go!
 
 <p align="center">
-    <img src="/chroma/gifs/pwm.gif" alt="Moving servomotor" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/gifs/pwm.gif" alt="Moving servomotor" class="w-full h-auto" />
 </p>
 
 ## Going further

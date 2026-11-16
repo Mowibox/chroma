@@ -1,5 +1,7 @@
 ---
 title: "Comment contribuer à Chroma ?"
+slug: "comment-contribuer-a-chroma"
+aliases: ["/tutorials/miscellaneous/how_to_contribute/"]
 description: "Tout ce qu’il faut savoir pour contribuer à Chroma et partager vos tutoriels"
 summary: "Ce guide explique comment contribuer à Chroma : proposer des idées, signaler des bugs, rédiger des tutoriels et participer au développement du site via GitHub et Discord."
 date: 2026-03-01
@@ -15,7 +17,7 @@ tags: ["chroma", "contribution"]
 seo:
    title: "Contribuer à Chroma – Guide du contributeur"
    description: "Découvrez comment contribuer à Chroma : retours, rédaction de tutoriels, installation de l’environnement de développement et soumission de pull requests."
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/miscellaneous/how_to_contribute/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 
@@ -44,7 +46,7 @@ Si votre objectif de contribution est de rédiger un nouveau tutoriel, réécrir
 * Hugo — [version 0.161.1](https://github.com/gohugoio/hugo/releases/tag/v0.161.1)
 * Hugo extended — [version 0.161.1](https://github.com/gohugoio/hugo/releases/tag/v0.161.1)
 * Un IDE comme [Visual Studio Code.](https://code.visualstudio.com/)
-* Savoir utiliser GitHub (forks, issues, pull requests) — un [tutoriel]({{< relref "tutorials/computer_science/introduction_to_github_part1">}}) est disponible sur le site.
+* Savoir utiliser GitHub (forks, issues, pull requests) — un [tutoriel]({{< relref "tutorials/computer-science/introduction-to-github-part1">}}) est disponible sur le site.
 
 ### Mise en place de l'environnement de développement
 
@@ -108,14 +110,16 @@ Les différents dossiers et fichiers de Chroma sont organisés de la manière su
 ├── config/
 │   └──_default/
 │      ├── hugo.toml
-│      ├── menus.toml
+│      ├── languages.toml
+│      ├── markup.toml
+│      ├── menus/
 │      ├── module.toml
 │      └── params.toml
 ├── content/
 │   ├── en/
 │   └── fr/
 |       ├── blog/
-|       ├── computer_vision/
+|       ├── chromapi/
 |       └── tutorials/
 ├── i18n/
 ├── layouts/
@@ -131,7 +135,7 @@ Les différents dossiers et fichiers de Chroma sont organisés de la manière su
 * `i18n/` contient les fichiers de traduction.
 * `static/` contient les fichiers statiques du site (images, gifs, icônes, etc.).
 
-De manière générale, c'est le dossier `tutorials/` qui vous intéressera, lui-même contenant quatre dossiers en fonction du thème du tutoriel : Informatique (`computer_science/`), Électronique (`electronics/`), Conception & développement 3D (`design_3d_development/`), et Autres (`miscellaneous/`). Mais il n'est pas exclu que votre contribution puisse concerner d'autres parties du site, par exemple s'il y a des [issues connues.](https://github.com/Mowibox/chroma/issues)
+De manière générale, c'est le dossier `tutorials/` qui vous intéressera, lui-même contenant quatre dossiers en fonction du thème du tutoriel : Informatique (`computer-science/`), Électronique (`electronics/`), Conception & développement 3D (`design-3d-development/`), et Autres (`miscellaneous/`). Mais il n'est pas exclu que votre contribution puisse concerner d'autres parties du site, par exemple s'il y a des [issues connues.](https://github.com/Mowibox/chroma/issues)
 
 ### Écrire un tutoriel
 
@@ -140,7 +144,7 @@ La section suivante détaille les différentes étapes pour créer et mettre en 
 | Étape | Description |
 | ------ | ------------ |
 | [Extensions VSCode](#extensions-visual-studio-code-utiles-pour-le-développement-du-site) | Installer les extensions utiles pour le développement du site |
-| [Ajout du tutoriel](#ajout-du-tutoriel-dans-les-dossiers) | Créer le dossier et le fichier `index.md` de votre tutoriel |
+| [Ajout du tutoriel](#ajout-du-tutoriel-dans-les-dossiers) | Créer le fichier Markdown de votre tutoriel |
 | [Avant-propos](#avant-propos) | Renseigner le _front-matter_ (title, description, date, weight, etc.) |
 | [Convention des poids](#convention-des-poids-de-page) | Définir la position du tutoriel dans la liste grâce au champ `weight` |
 | [Mise en forme du contenu](#mise-en-forme-du-contenu) | Rédiger le tutoriel en Markdown avec la structure recommandée |
@@ -158,32 +162,32 @@ Si vous utilisez VSCode, voici une liste non-exhaustive d'extensions qui peuvent
 
 #### Ajout du tutoriel dans les dossiers
 
-Pour créer un tutoriel, vous devez créer un dossier contenant un fichier `index.md`. Identifiez d'abord le thème de votre tutoriel afin de le mettre dans le bon dossier (Informatique, Électronique, etc.). Pour faciliter la visibilité et la structure du site, deux points sont à respecter lors du nommage :
+Pour créer un tutoriel, vous devez créer un fichier Markdown portant le nom du tutoriel (par exemple `mon-tutoriel.md`). Identifiez d'abord le thème de votre tutoriel afin de le mettre dans le bon dossier (Informatique, Électronique, etc.). Pour faciliter la visibilité et la structure du site, trois points sont à respecter lors du nommage :
 
-* Le nom du dossier doit être en **anglais**. Cela facilite la gestion de l'internationalisation fr/en.
-* Le nom du dossier ne doit pas être trop long.
+* Le nom du fichier doit être en **anglais** et identique dans `fr/` et `en/`. C'est ce qui permet de relier les deux traductions d'un même tutoriel.
+* Le nom du fichier ne doit pas être trop long.
+* Le nom du fichier est en minuscules, les mots étant séparés par des tirets `-`.
 
-La commande `hugo new content content/<chemin_du_dossier>/index.md` vous permet de créer directement la page en spécifiant son chemin d'accès.
+La commande `hugo new content content/<chemin_du_dossier>/<nom_du_tutoriel>.md` vous permet de créer directement la page en spécifiant son chemin d'accès.
 
-**Exemple :** Le tutoriel "Initiation à la programmation embarquée" est un tutoriel en français d'électronique. Le dossier `introduction_to_embedded_prog/` et son fichier `index.md` ont été créés dans le dossier `content/fr/tutorials/electronics/` avec la commande :
+**Exemple :** Le tutoriel "Initiation à la programmation embarquée" est un tutoriel en français d'électronique. Le fichier `introduction-to-embedded-prog.md` a donc été créé dans le dossier `content/fr/tutorials/electronics/` avec la commande :
 
 ```bash {frame="none"}
-hugo new content content/fr/tutorials/electronics/introduction_to_embedded_prog/index.md
+hugo new content content/fr/tutorials/electronics/introduction-to-embedded-prog.md
 ```
 
-Le lien internet sera alors de la forme suivante : `https://mowibox.github.io/chroma/fr/tutorials/electronics/initiation-à-la-programmation-embarquée/`
+Le lien internet de la version anglaise reprend directement le nom du fichier : `https://mowibox.github.io/chroma/en/tutorials/electronics/introduction-to-embedded-prog/`. Pour la version française, il est traduit grâce au champ `slug` de l'[avant-propos](#avant-propos) : avec `slug: "initiation-a-la-programmation-embarquee"`, il sera de la forme `https://mowibox.github.io/chroma/fr/tutoriels/electronique/initiation-a-la-programmation-embarquee/`
 
 ```text {title="Arborescence du tutoriel"}
 .
 └── fr/
     ├── blog/
-    ├── computer_vision/
+    ├── chromapi/
     └── tutorials/
-        ├── computer_science/
-        ├── design_3d_development/
+        ├── computer-science/
+        ├── design-3d-development/
         └── electronics/
-            └── introduction_to_embedded_prog/
-                └── index.md
+            └── introduction-to-embedded-prog.md
 ```
 
 #### Avant-propos
@@ -193,6 +197,7 @@ Chaque page de tutoriel commence par un avant-propos (aussi appelé _front-matte
 ```md
 ---
 title: ""
+slug: ""
 description: ""
 summary: ""
 date:
@@ -216,6 +221,7 @@ seo:
 ```
 
 * `title` : C'est le titre de votre tutoriel. Je pense que c'est assez explicite, non ?
+* `slug` : **Uniquement dans la version française.** C'est la fin de l'adresse (URL) du tutoriel, traduite en français : en minuscules, **sans accents ni espaces**, les mots séparés par des tirets `-`. Par exemple `utilisation-du-terminal` pour le fichier `using-terminal.md`. Dans la version anglaise, ce champ n'est pas nécessaire : l'adresse reprend le nom du fichier.
 * `description` : Décrit votre contenu en **une courte phrase.** Utilisée notamment pour l'aperçu dans la liste des tutoriels.
 * `summary` : Décrit votre tutoriel avec un peu plus de détail, en 2-3 phrases.
 * `date` : La date à laquelle vous avez commencé à écrire votre tutoriel, **au format YYYY-MM-JJ.**
@@ -234,12 +240,12 @@ Attention, il faut que la couleur de l'icône soit **#a514e9** et doit être ajo
 
 * `seo.title` : Titre optimisé pour les moteurs de recherche. Il peut être différent de `title`.
 * `seo.description` : Description affichée dans les résultats de moteur de recherche.
-* `seo.canonical` : URL canonique de la page
+* `seo.canonical` : URL canonique de la page. Laissez ce champ vide (`""`), elle est calculée automatiquement.
 * `seo.noindex` : Gère l’indexation de la page par les moteurs de recherche. Activé par défaut (`false`).
 * `seo.robots` : Indique aux moteurs de recherche comment indexer la page.
 
 <p align="center">
-    <img src="/chroma/images/contribute2_fr.png" alt="Tutorial cardlist example" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/contribute2_fr.png" alt="Tutorial cardlist example" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Exemple d'aperçu de tutoriel dans la liste. Les champs title, description et icon, sont sollicités.</em>
 </p>
@@ -272,7 +278,7 @@ L'ensemble des images du site dédiées aux pages sont stockées dans le dossier
 
 ```html {title="Ajout d'images"}
 <p align="center">
-    <img src="/chroma/images/image1.jpg" alt="Image 1 short description" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/image1.jpg" alt="Image 1 short description" class="w-full h-auto" />
 </p>
 ```
 
@@ -289,14 +295,14 @@ Il est aussi possible d'ajouter une légende à votre image en utilisant le bloc
 
 ```html {title="Ajout d'images avec légende"}
 <p align="center">
-    <img src="/chroma/images/image2.jpg" alt="Image with caption" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/image2.jpg" alt="Image with caption" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Une image avec une légende.</em>
 </p>
 ```
 
 <p align="center">
-    <img src="/chroma/images/contribute3.jpg" alt="Image caption example" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/contribute3.jpg" alt="Image caption example" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Une image avec une légende.</em>
 </p>

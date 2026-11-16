@@ -1,5 +1,6 @@
 ---
 title: "How to contribute to Chroma?"
+aliases: ["/tutorials/miscellaneous/how_to_contribute/"]
 description: "Everything you need to know to contribute to Chroma and share your tutorials"
 summary: "This guide explains how to contribute to Chroma: suggest ideas, report bugs, write tutorials, and participate in the site's development via GitHub and Discord."
 date: 2026-03-01
@@ -15,7 +16,7 @@ tags: ["chroma", "contribution"]
 seo:
    title: "Contribute to Chroma – Contributor's Guide"
    description: "Learn how to contribute to Chroma: feedback, tutorial writing, setting up a development environment, and submitting pull requests."
-   canonical: "https://mowibox.github.io/chroma/en/tutorials/miscellaneous/how_to_contribute/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 
@@ -44,7 +45,7 @@ If your goal is to write a new tutorial, rewrite part of an existing one, or div
 * Hugo — [version 0.161.1](https://github.com/gohugoio/hugo/releases/tag/v0.161.1)
 * Hugo extended — [version 0.161.1](https://github.com/gohugoio/hugo/releases/tag/v0.161.1)
 * An IDE such as [Visual Studio Code.](https://code.visualstudio.com/)
-* Basic GitHub knowledge (forks, issues, pull requests) — a [tutorial]({{< relref "tutorials/computer_science/introduction_to_github_part1">}}) is available on the site.
+* Basic GitHub knowledge (forks, issues, pull requests) — a [tutorial]({{< relref "tutorials/computer-science/introduction-to-github-part1">}}) is available on the site.
 
 ### Setting Up the Development Environment
 
@@ -107,14 +108,16 @@ The Chroma folders and files are organized as follows:
 ├── config/
 │   └──_default/
 │      ├── hugo.toml
-│      ├── menus.toml
+│      ├── languages.toml
+│      ├── markup.toml
+│      ├── menus/
 │      ├── module.toml
 │      └── params.toml
 ├── content/
 │   ├── en/
 │   └── fr/
 |       ├── blog/
-|       ├── computer_vision/
+|       ├── chromapi/
 |       └── tutorials/
 ├── i18n/
 ├── layouts/
@@ -130,7 +133,7 @@ The Chroma folders and files are organized as follows:
 * `i18n/` contains translation files.
 * `static/` contains static files (images, gifs, icons, etc.).
 
-Generally, the `tutorials/` folder is the main focus, subdivided into four categories: Computer Science (`computer_science/`), Electronics (`electronics/`), 3D Design & Development (`design_3d_development/`), and Miscellaneous (`miscellaneous/`). Contributions may also involve other parts of the site, e.g., known [issues.](https://github.com/Mowibox/chroma/issues)
+Generally, the `tutorials/` folder is the main focus, subdivided into four categories: Computer Science (`computer-science/`), Electronics (`electronics/`), 3D Design & Development (`design-3d-development/`), and Miscellaneous (`miscellaneous/`). Contributions may also involve other parts of the site, e.g., known [issues.](https://github.com/Mowibox/chroma/issues)
 
 ### Writing a Tutorial
 
@@ -139,7 +142,7 @@ The following section details the steps to create and format a new tutorial:
 | Step                                                                            | Description                                                        |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | [VSCode Extensions](#vscode-extensions-useful-for-site-development)             | Install useful extensions for site development                     |
-| [Adding the Tutorial](#adding-the-tutorial-to-the-folders)                      | Create the folder and `index.md` file for your tutorial            |
+| [Adding the Tutorial](#adding-the-tutorial-to-the-folders)                      | Create the Markdown file for your tutorial                         |
 | [Front-Matter](#front-matter)                                                   | Fill out the front-matter (title, description, date, weight, etc.) |
 | [Weight Convention](#weight-convention)                                         | Define the tutorial's order using the `weight` field               |
 | [Content Formatting](#content-formatting)                                       | Write the tutorial in Markdown using the recommended structure     |
@@ -157,32 +160,32 @@ If you use VSCode, here is a non-exhaustive list of extensions that can help pro
 
 #### Adding the Tutorial to the Folders
 
-To create a tutorial, create a folder containing an `index.md` file. First identify the theme of your tutorial to place it in the correct folder (Computer Science, Electronics, etc.). The URL of your page will match the folder name. There is two rules for folder naming:
+To create a tutorial, create a Markdown file named after the tutorial (for example `my-tutorial.md`). First identify the theme of your tutorial to place it in the correct folder (Computer Science, Electronics, etc.). There are three rules for file naming:
 
-* The folder name must be in **English** to simplify fr/en localization.
-* Keep folder names reasonably short.
+* The file name must be in **English** and identical in `fr/` and `en/`. This is what links the two translations of a tutorial.
+* Keep file names reasonably short.
+* File names are lowercase, with words separated by hyphens `-`.
 
-You can use the command `hugo new content content/<folder_path>/index.md` to create the page directly with its path.
+You can use the command `hugo new content content/<folder_path>/<tutorial_name>.md` to create the page directly with its path.
 
-**Example:** The tutorial "Introduction to Embedded Programming" is a English electronics tutorial. The folder `introduction_to_embedded_prog/` and its `index.md` file were created in `content/en/tutorials/electronics/` using:
+**Example:** The tutorial "Introduction to Embedded Programming" is a English electronics tutorial. The file `introduction-to-embedded-prog.md` was therefore created in `content/en/tutorials/electronics/` using:
 
 ```bash {frame="none"}
-hugo new content content/en/tutorials/electronics/introduction_to_embedded_prog/index.md
+hugo new content content/en/tutorials/electronics/introduction-to-embedded-prog.md
 ```
 
-The URL will be: `https://mowibox.github.io/chroma/en/tutorials/electronics/introduction_to_embedded_prog/`
+The URL of the English version directly uses the file name: `https://mowibox.github.io/chroma/en/tutorials/electronics/introduction-to-embedded-prog/`. For the French version, it is translated through the `slug` field of the [front matter](#front-matter): with `slug: "initiation-a-la-programmation-embarquee"`, it will be `https://mowibox.github.io/chroma/fr/tutoriels/electronique/initiation-a-la-programmation-embarquee/`
 
 ```text {title="Tutorial Folder Structure"}
 .
 └── en/
     ├── blog/
-    ├── computer_vision/
+    ├── chromapi/
     └── tutorials/
-        ├── computer_science/
-        ├── design_3d_development/
+        ├── computer-science/
+        ├── design-3d-development/
         └── electronics/
-            └── introduction_to_embedded_prog/
-                └── index.md
+            └── introduction-to-embedded-prog.md
 ```
 
 #### Front-Matter
@@ -192,6 +195,7 @@ Each tutorial page starts with front-matter, enclosed by `---`. Fields are as fo
 ```md
 ---
 title: ""
+slug: ""
 description: ""
 summary: ""
 date:
@@ -215,6 +219,7 @@ seo:
 ```
 
 * `title`: This is the title of your tutorial. I think that's pretty self-explanatory, right?
+* `slug`: **French version only.** This is the end of the tutorial's address (URL), translated into French: lowercase, **no accents or spaces**, words separated by hyphens `-`. For example `utilisation-du-terminal` for the file `using-terminal.md`. In the English version, this field is not needed: the address uses the file name.
 * `description`: Describe your content in **one short sentence.** Used in particular for the preview in the list of tutorials.
 * `summary`: Describe your tutorial in a little more detail, in 2-3 sentences.
 * `date`: The date you started writing your tutorial, **in YYYY-MM-DD format.**
@@ -233,12 +238,12 @@ Please note that the icon color must be **#a514e9** and must be added to the `st
 
 * `seo.title`: Title optimized for search engines. It may differ from `title`.
 * `seo.description`: Description displayed in search engine results.
-* `seo.canonical`: Canonical URL of the page
+* `seo.canonical`: Canonical URL of the page. Leave it empty (`""`), it is computed automatically.
 * `seo.noindex`: Manages the indexing of the page by search engines. Enabled by default (`false`).
 * `seo.robots`: Tells search engines how to index the page.
 
 <p align="center">
-    <img src="/chroma/images/contribute2_en.png" alt="Tutorial cardlist example" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/contribute2_en.png" alt="Tutorial cardlist example" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Example of a tutorial preview in the list. Fields title, description, and icon are used.</em>
 </p>
@@ -271,7 +276,7 @@ All images on the site dedicated to pages are stored in the [`static/images/`.](
 
 ```html {title="Adding Images"}
 <p align="center">
-    <img src="/chroma/images/image1.jpg" alt="Image 1 short description" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/image1.jpg" alt="Image 1 short description" class="w-full h-auto" />
 </p>
 ```
 
@@ -288,14 +293,14 @@ You can also add a caption to your image using the HTML block below:
 
 ```html {title="Image with Caption"}
 <p align="center">
-    <img src="/chroma/images/image2.jpg" alt="Image with caption" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/image2.jpg" alt="Image with caption" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">An image with a caption.</em>
 </p>
 ```
 
 <p align="center">
-    <img src="/chroma/images/contribute3.jpg" alt="Image caption example" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/contribute3.jpg" alt="Image caption example" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">An image with a caption.</em>
 </p>

@@ -1,5 +1,7 @@
 ---
 title: "Tutoriel d'utilisation de l'ADC"
+slug: "tutoriel-d-utilisation-de-l-adc"
+aliases: ["/tutorials/electronics/adc_tutorial/"]
 description: "Avec le logiciel STM32 Cube IDE"
 summary: "Apprenez à configurer et programmer l'ADC sur une carte STM32 avec Cube IDE pour convertir des signaux analogiques en valeurs numériques et les exploiter dans vos projets."
 date: 2025-06-22
@@ -15,7 +17,7 @@ tags: ["stm32", "adc"]
 seo:
    title: "Tutoriel ADC STM32 avec Cube IDE – Convertir l'analogique en numérique"
    description: "Guide pratique pour utiliser l'ADC sur STM32 Cube IDE : configuration, programmation et lecture de signaux analogiques sur microcontrôleur STM32."
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/electronics/adc_tutorial/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -39,7 +41,7 @@ Le Convertisseur Analogique Numérique (CAN) ou en anglais Analog Digital Conver
 ## Étapes de fonctionnement
 
 <p align="center">
-    <img src="/chroma/images/adc2.png" alt="Analog/Digital signal" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/adc2.png" alt="Analog/Digital signal" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Signal rouge : Signal Analogique, Signal Bleu : Signal Numérique</em>
 </p>
@@ -61,7 +63,7 @@ Sur une carte de développement comme celle utilisée ici, ce sont généralemen
 Pour ce faire, je vais relier l'une des broches analogiques au +5V (ici A0) et une autre au GND (ici A1) :
 
 <p align="center">
-    <img src="/chroma/images/adc3.png" alt="Wiring" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/adc3.png" alt="Wiring" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Montage</em>
 </p>
@@ -82,7 +84,7 @@ Notez que pour une broche, plusieurs ADC sont parfois disponibles. J'aurais pu i
 Dans l'onglet "ADC" sur la gauche, sélectionnez ADC1 et définissez les paramètres suivants :
 
 <p align="center">
-    <img src="/chroma/images/adc4.png" alt="Configuration" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/adc4.png" alt="Configuration" class="w-full h-auto" />
     </br>
 </p>
 
@@ -152,12 +154,12 @@ while (1)
 Après compilation du code et téléversement du code sur la carte, si j'affiche les valeurs des broches A0 (stockées dans `value_a0`) et A1 (stockées par exemple dans `value_a1`) avec la méthode décrite ci-dessus, j'obtiendrai `value_a0 = 4095` et `value_a1 = 0`, ce qui est cohérent avec la résolution choisie. En poussant le code un peu plus loin, il est aussi possible d'envoyer ces valeurs à un traceur série pour afficher les valeurs :
 
 <p align="center">
-    <img src="/chroma/images/adc5.png" alt="Serial plotter" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/adc5.png" alt="Serial plotter" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Signal bleu : A0, Signal orange : A1</em>
 </p>
 
-Pour aller plus loin, vous pouvez essayer de brancher d'autres composants à ces broches, comme c'est présenté avec un potentiomètre dans [l'initiation à la programmation embarquée.]({{< relref "tutorials/electronics/introduction_to_embedded_prog/">}})
+Pour aller plus loin, vous pouvez essayer de brancher d'autres composants à ces broches, comme c'est présenté avec un potentiomètre dans [l'initiation à la programmation embarquée.]({{< relref "tutorials/electronics/introduction-to-embedded-prog/">}})
 
 ## Interpréter des valeurs connues avec la sensitivité
 

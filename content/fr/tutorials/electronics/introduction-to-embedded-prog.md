@@ -1,5 +1,7 @@
 ---
 title: "Initiation à la programmation embarquée"
+slug: "initiation-a-la-programmation-embarquee"
+aliases: ["/tutorials/electronics/introduction_to_embedded_prog/"]
 description: "Avec le logiciel Arduino"
 summary: "Découvrir les bases de la programmation embarquée avec Arduino à travers des montages simples et progressifs : LED, boutons, potentiomètre et buzzer."
 date: 2025-06-22
@@ -15,7 +17,7 @@ tags: ["arduino", "microcontroleur"]
 seo:
    title: "Initiation à la programmation embarquée avec Arduino"
    description: "Tutoriel d’initiation à la programmation embarquée avec Arduino : microcontrôleurs, montages électroniques et premiers programmes pas à pas."
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/electronics/introduction_to_embedded_prog/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -61,13 +63,13 @@ Les composants sont assez faciles à retrouver sur les sites de vente en ligne. 
 Pour chaque niveau, un montage sera proposé sous la forme ci-dessous :
 
 <p align="center">
-  <img src="/chroma/images/level1.png" alt="Exemple de montage" class="w-full h-auto" />
+  <img loading="lazy" decoding="async" src="/chroma/images/level1.png" alt="Exemple de montage" class="w-full h-auto" />
 </p>
 
 Essayez de réaliser le branchement du montage. Une fois fait, vous pourrez brancher votre carte Arduino à votre ordinateur et ouvrir le logiciel Arduino IDE. Explorons rapidement l'interface avec un code permettant d'allumer la LED rouge :
 
 <p align="center">
-  <img src="/chroma/images/ide.png" alt="IDE" class="w-full h-auto" />
+  <img loading="lazy" decoding="async" src="/chroma/images/ide.png" alt="IDE" class="w-full h-auto" />
 </p>
 
 * Le bouton de compilation :ballot_box_with_check: permet de vérifier le code pour détecter d’éventuelles erreurs avant de l’envoyer sur la carte.
@@ -110,7 +112,7 @@ Quelques conseils pour bien démarrer :
 #### Montage niveau 1
 
 <p align="center">
-  <img src="/chroma/images/level1.png" alt="Niveau 1" class="w-full h-auto" />
+  <img loading="lazy" decoding="async" src="/chroma/images/level1.png" alt="Niveau 1" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -148,7 +150,7 @@ void loop() {
 #### Montage niveau 2
 
 <p align="center">
-  <img src="/chroma/images/level2.png" alt="Niveau 2" class="w-full h-auto" />
+  <img loading="lazy" decoding="async" src="/chroma/images/level2.png" alt="Niveau 2" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -199,7 +201,7 @@ void loop() {
 #### Montage niveau 3
 
 <p align="center">
-  <img src="/chroma/images/level3.png" alt="Niveau 3" class="w-full h-auto" />
+  <img loading="lazy" decoding="async" src="/chroma/images/level3.png" alt="Niveau 3" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -249,7 +251,7 @@ void loop() {
 #### Montage niveau 4
 
 <p align="center">
-  <img src="/chroma/images/level4.png" alt="Niveau 4" class="w-full h-auto" />
+  <img loading="lazy" decoding="async" src="/chroma/images/level4.png" alt="Niveau 4" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -291,7 +293,7 @@ void loop() {
 #### Montage niveau 5
 
 <p align="center">
-  <img src="/chroma/images/level5.png" alt="Niveau 5" class="w-full h-auto" />
+  <img loading="lazy" decoding="async" src="/chroma/images/level5.png" alt="Niveau 5" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -309,7 +311,7 @@ void loop() {
 | f(Hz)  | 391 | 415  | 440 | 466 | 493 | 523 |
 
 <p align="center">
-  <img src="/chroma/images/happybirthday.png" alt="Happy Birthday" class="w-full h-auto" />
+  <img loading="lazy" decoding="async" src="/chroma/images/happybirthday.png" alt="Happy Birthday" class="w-full h-auto" />
 </p>
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
@@ -384,7 +386,7 @@ void happyBirthday(){
 Félicitations si vous êtes arrivé au bout des niveaux ! Si c'était trop facile pour vous, vous pouvez essayer de créer un projet à partir de tous les composants que vous possédez. Par exemple, pourquoi pas un feu tricolore à luminosité variable qui alerte les piétons d'un son lorsque le feu passe au rouge ? N'hésitez pas à parcourir Internet pour trouver des tutoriels qui pourraient vous intéresser.
 
 <p align="center">
-  <img src="/chroma/images/level6.png" alt="Niveau 6" class="w-full h-auto" />
+  <img loading="lazy" decoding="async" src="/chroma/images/level6.png" alt="Niveau 6" class="w-full h-auto" />
 </p>
 
 Arduino est une plateforme idéale pour pouvoir comprendre rapidement les bases de la programmation embarquée et réaliser de petits projets. Mais si vous voulez aller plus loin, il existe des plateformes plus puissantes comme les **microcontrôleurs STM32**. La prise en main est moins intuitive, mais cela permet de réaliser des projets plus complexes, c'est pourquoi il est utilisé au sein de beaucoup d’entreprises.

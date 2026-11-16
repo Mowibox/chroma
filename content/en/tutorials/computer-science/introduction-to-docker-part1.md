@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Docker – Part 1"
+aliases: ["/tutorials/computer_science/introduction_to_docker_part1/"]
 description: "Docker installation"
 summary: "Learn how to install Docker on Linux and configure your environment to create and run your first containers."
 date: 2025-06-22
@@ -15,7 +16,7 @@ tags: ["docker", "linux"]
 seo:
    title: "Installing and configuring Docker on Linux"
    description: "Detailed tutorial for installing Docker on Linux, creating the Docker group, and verifying that the installation is working properly."
-   canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/introduction_to_docker_part1/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---

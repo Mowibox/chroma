@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Git and GitHub – Part 2"
+aliases: ["/tutorials/computer_science/introduction_to_github_part2/"]
 description: "Putting theory into practice"
 summary: "Learn how to set up Git, create a repository on GitHub, clone locally, add, modify, and delete files, and push your changes."
 date: 2025-06-22
@@ -15,7 +16,7 @@ tags: ["git", "github", "ssh"]
 seo:
    title: "Git and GitHub Guide – Part 2"
    description: "Learn how to create a GitHub repository, configure SSH, clone it locally, and manage your files with Git, from your very first commit onward."
-   canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/introduction_to_github_part2/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -28,8 +29,8 @@ In this second part of the introductory tutorial on Git and GitHub, you will get
 
 ## Requirements
 
-* Have completed [Introduction to Git and GitHub – Part 1.]({{< relref "tutorials/computer_science/introduction_to_github_part1">}})
-* Have some basic knowledge of [using a terminal.]({{< relref "tutorials/computer_science/using_terminal">}})
+* Have completed [Introduction to Git and GitHub – Part 1.]({{< relref "tutorials/computer-science/introduction-to-github-part1">}})
+* Have some basic knowledge of [using a terminal.]({{< relref "tutorials/computer-science/using-terminal">}})
 
 ## Installing Git
 
@@ -42,7 +43,7 @@ Download Git by choosing the version appropriate for your OS (Windows, Linux, Ma
 ## Creating a New Repository on GitHub
 
 <p align="center">
-    <img src="/chroma/images/gitgithub2.jpg" alt="Repository mine" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub2.jpg" alt="Repository mine" class="w-full h-auto" />
 </p>
 
 Once Git is installed, the next step is to create an account on the GitHub platform. This will allow you to initialize your first repository.
@@ -56,7 +57,7 @@ This is where things start to get serious. I will first show you step by step th
 * To begin, I click on the "+" button located at the top left of the page. This allows me to select the "New repository" option.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub18.png" alt="New repository" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub18.png" alt="New repository" class="w-full h-auto" />
 </p>
 
 * I then fill in the different details of my repository:
@@ -68,7 +69,7 @@ This is where things start to get serious. I will first show you step by step th
   * **Its visibility:** On GitHub, you can choose to make a repository public or private. A public repository will be visible to anyone viewing your profile, while a private repository will only be accessible to you (or to people you authorize). For the purpose of this tutorial, I make mine public, but once again, you are free to choose the option that suits you.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub19.png" alt="Repository details" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub19.png" alt="Repository details" class="w-full h-auto" />
 </p>
 
 * Note that I also check the option to add a **README** to my repository. A README is a file containing a presentation of the project and essential information to understand its purpose and usage. I will go into more detail about it another time since it is not the core of this tutorial, but it is strongly recommended to check this option each time you create a repository.
@@ -76,7 +77,7 @@ This is where things start to get serious. I will first show you step by step th
 * Finally, all that’s left to do is click on "Create repository" and admire my brand new repository!
 
 <p align="center">
-    <img src="/chroma/images/gitgithub20.png" alt="A setup repository" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub20.png" alt="A setup repository" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -243,7 +244,7 @@ Configure GitHub authentication using SSH.
 ## Cloning the Repository Locally on Your Machine
 
 <p align="center">
-    <img src="/chroma/images/gitgithub3.jpg" alt="Local copy" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub3.jpg" alt="Local copy" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">The cart is equivalent to the local copy of the repository.</em>
 </p>
@@ -253,7 +254,7 @@ Now that everything is configured, go back to the repository. At the moment, you
 Regardless of your operating system, you can copy the GitHub link associated with your repository by clicking on the green "<> Code" button and then on the "copy" icon. Make sure the copied link is the "SSH" link.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub21.png" alt="Copy to clipboard" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub21.png" alt="Copy to clipboard" class="w-full h-auto" />
 </p>
 
 As in the previous section, the rest of this introduction is split into several parts where I show you how to clone `repository-mine` locally depending on the operating system used. You can therefore follow the sequence of steps corresponding to your OS.
@@ -263,7 +264,7 @@ As in the previous section, the rest of this introduction is split into several 
 * On my computer, I choose the location where I want to clone the project folder, for example in my "Documents" folder. Once the location is chosen, I right-click in the file explorer, select "More options", then "Git Bash Here":
 
 <p align="center">
-    <img src="/chroma/images/gitgithub22.png" alt="Git Bash Here" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub22.png" alt="Git Bash Here" class="w-full h-auto" />
 </p>
 
 * After clicking on the "Git Bash Here" option, a terminal opens, allowing me to use Git commands:
@@ -273,7 +274,7 @@ Mowibox@CHROMA MINGW64 ~/Documents
 $
 ```
 
-_Note: It is also possible to open Git Bash directly without going through the file explorer, and then manually navigate to the location of your choice using the [cd]({{< relref "tutorials/computer_science/using_terminal/#cd">}}) command._
+_Note: It is also possible to open Git Bash directly without going through the file explorer, and then manually navigate to the location of your choice using the [cd]({{< relref "tutorials/computer-science/using-terminal/#cd">}}) command._
 
 * With the Git console open, all that’s left is to run the `git clone` command followed by the SSH address copied earlier. In my case, it would look like this:
 
@@ -285,7 +286,7 @@ $ git clone git@github.com/repository-mine.git
 * All that’s left is to run the command and see the folder appear in my file explorer.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub23.png" alt="Your repository (Windows)" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub23.png" alt="Your repository (Windows)" class="w-full h-auto" />
 </p>
 
 {{< /details >}}
@@ -295,14 +296,14 @@ $ git clone git@github.com/repository-mine.git
 On my computer, I choose a dedicated location in the file explorer, for example in my "Documents" folder. With a right-click in the explorer, I select the "Open in terminal" option, which opens a terminal directly in the "Documents" location:
 
 <p align="center">
-    <img src="/chroma/images/gitgithub24.png" alt="Open in terminal" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub24.png" alt="Open in terminal" class="w-full h-auto" />
 </p>
 
 ```bash {title="mowibox@chroma:~/Documents"}
 mowibox@chroma:~/Documents$
 ```
 
-_Note: It is also possible to open a terminal directly without going through the file explorer using the shortcut "Ctrl + Alt + T" (or "Cmd + Alt + T"), and then manually navigate to the location of your choice using the [cd]({{< relref "tutorials/computer_science/using_terminal/#cd">}}) command._
+_Note: It is also possible to open a terminal directly without going through the file explorer using the shortcut "Ctrl + Alt + T" (or "Cmd + Alt + T"), and then manually navigate to the location of your choice using the [cd]({{< relref "tutorials/computer-science/using-terminal/#cd">}}) command._
 
 * With the terminal open, all that’s left is to run the `git clone` command followed by the SSH address copied earlier. In my case, it would look like this:
 
@@ -313,7 +314,7 @@ mowibox@chroma:~/Documents$ git clone git@github.com/repository-mine.git
 * All that’s left is to run the command and see the folder appear in my file explorer.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub25.png" alt="Your repository (Linux/Mac)" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub25.png" alt="Your repository (Linux/Mac)" class="w-full h-auto" />
 </p>
 
 {{< /details >}}
@@ -325,7 +326,7 @@ Clone your newly created repository locally on your machine.
 ## Making Changes to the Project
 
 <p align="center">
-    <img src="/chroma/images/gitgithub4.jpg" alt="Creating file A" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub4.jpg" alt="Creating file A" class="w-full h-auto" />
 </p>
 
 When entering the folder, you should see the "README.md" file. Inside this directory, you can create all the folders or files you need for your project. In mine, I will create a simple text file named `File_A.txt`, in which I write the following text:
@@ -349,7 +350,7 @@ To do this, I open a terminal inside the repository in the same way as explained
   The `git add .` command adds all created or modified files to the staging area. The `.` tells Git to include all changes present in the current directory and its subdirectories.
 
   <p align="center">
-    <img src="/chroma/images/gitgithub5.jpg" alt="Adding file A" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub5.jpg" alt="Adding file A" class="w-full h-auto" />
   </p>
 
 * ```bash {frame="none"}
@@ -363,7 +364,7 @@ To do this, I open a terminal inside the repository in the same way as explained
   ```
 
   <p align="center">
-    <img src="/chroma/images/gitgithub6.jpg" alt="Writing file A commit" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub6.jpg" alt="Writing file A commit" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">"Ajout du Fichier A" means Adding File A in French!.</em>
   </p>
@@ -375,17 +376,17 @@ To do this, I open a terminal inside the repository in the same way as explained
   The `git push` command sends the commits to the remote repository, i.e., GitHub.
 
   <p align="center">
-    <img src="/chroma/images/gitgithub8.jpg" alt="Push file A" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub8.jpg" alt="Push file A" class="w-full h-auto" />
   </p>
 
 After completing the steps illustrated above, I can finally see my `File_A.txt` file, the message commit and its content on GitHub:
 
 <p align="center">
-    <img src="/chroma/images/gitgithub26_en.png" alt="Repository after pushing" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub26_en.png" alt="Repository after pushing" class="w-full h-auto" />
 </p>
 
 <p align="center">
-    <img src="/chroma/images/gitgithub27_en.png" alt="File A" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub27_en.png" alt="File A" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -397,7 +398,7 @@ Don’t forget to specify a message with `-m "Message"` when committing!
 If someone has a local copy of your repository on their computer, they can retrieve the latest changes using the `git pull` command.
 When you open a repository, always run this command first to make sure you have the most up-to-date version.
 
-<p align="center"> <img src="/chroma/images/gitgithub10.jpg" alt="Pull" class="w-full h-auto" /> </br> </p> {{< /callout >}}
+<p align="center"> <img loading="lazy" decoding="async" src="/chroma/images/gitgithub10.jpg" alt="Pull" class="w-full h-auto" /> </br> </p> {{< /callout >}}
 
 ## Deleting Files from the Project
 
@@ -410,7 +411,7 @@ git rm nom_du_fichier
 allows you to delete a file from the project by specifying its name. As with `git add`, you must follow this command with `git commit`, then `git push`.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub28_en.png" alt="Repository after deleting" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub28_en.png" alt="Repository after deleting" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -433,7 +434,7 @@ This table summarizes all the functions seen throughout this tutorial and their 
 | [`git commit`](https://git-scm.com/docs/git-commit) | Records the added changes with a message (`-m "Message"`) describing the action performed. |
 | [`git push`](https://git-scm.com/docs/git-push) | Sends your commits to the remote repository. |
 
-In the [next part]({{< relref "tutorials/computer_science/introduction_to_github_part3">}}) of this introduction, we will explore in more depth the features offered by Git and GitHub by tackling a more complex but very practical concept when working with others on the same project: branches & pull requests.
+In the [next part]({{< relref "tutorials/computer-science/introduction-to-github-part3">}}) of this introduction, we will explore in more depth the features offered by Git and GitHub by tackling a more complex but very practical concept when working with others on the same project: branches & pull requests.
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 
 title: "Set up a headless Raspberry Pi"
+aliases: ["/tutorials/miscellaneous/setup_headless_raspberry/"]
 description: "Using SSH protocol"
 summary: "Learn how to install and configure a Raspberry Pi in headless mode with Ubuntu Server and an SSH connection."
 date: 2025-07-12
@@ -16,7 +17,7 @@ tags: ["raspberry-pi", "ssh"]
 seo:
    title: "Configure a Raspberry Pi without a screen (Headless) with SSH"
    description: "Step-by-step guide to installing Ubuntu Server on a Raspberry Pi and configuring it without a screen using the SSH protocol."
-   canonical: "https://mowibox.github.io/chroma/en/tutorials/miscellaneous/setup_headless_raspberry/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -45,43 +46,43 @@ Here’s the step-by-step guide to prepare your SD card:
 * Insert the SD card into your computer and launch Raspberry Pi Imager. You should see an interface similar to this:
 
 <p align="center">
-    <img src="/chroma/images/headless2.png" alt="Raspberry Pi Imager" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless2.png" alt="Raspberry Pi Imager" class="w-full h-auto" />
 </p>
 
 * Start by selecting your Raspberry Pi model via "Choose Device":
 
 <p align="center">
-    <img src="/chroma/images/headless3.png" alt="Choosing Device" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless3.png" alt="Choosing Device" class="w-full h-auto" />
 </p>
 
 * Click "Choose OS" to pick the operating system to flash onto the SD card. Select "Other general-purpose OS":
 
 <p align="center">
-    <img src="/chroma/images/headless4.png" alt="Choosing OS" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless4.png" alt="Choosing OS" class="w-full h-auto" />
 </p>
 
 * Among the available Ubuntu versions, pick a "Server" version — these don’t include graphical interface packages and dependencies, which is perfect since we won’t be using a screen:
 
 <p align="center">
-    <img src="/chroma/images/headless5.png" alt="Choosing Ubuntu Server 24.04" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless5.png" alt="Choosing Ubuntu Server 24.04" class="w-full h-auto" />
 </p>
 
 * Then select the SD card as your storage location. If it’s the only external storage connected, it should be easy to spot.
 
 <p align="center">
-    <img src="/chroma/images/headless6.png" alt="Choosing Storage" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless6.png" alt="Choosing Storage" class="w-full h-auto" />
 </p>
 
 * Click "Next" — the software will ask whether you want to configure settings before writing the OS. Click "Edit Settings".
 
 <p align="center">
-    <img src="/chroma/images/headless7.png" alt="Editing Settings" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless7.png" alt="Editing Settings" class="w-full h-auto" />
 </p>
 
 * You should see a window similar to this one:
 
 <p align="center">
-    <img src="/chroma/images/headless8.png" alt="General Settings" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless8.png" alt="General Settings" class="w-full h-auto" />
 </p>
 
 * Adjust the following settings according to your needs:
@@ -102,7 +103,7 @@ Make sure your chosen Wi-Fi network uses the 2.4 GHz band — Raspberry Pis cann
 * Finally, go to the "Services" section and enable SSH. Leave the authentication method set to "Use password authentication".
 
 <p align="center">
-    <img src="/chroma/images/headless9.png" alt="Enabling SSH" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/headless9.png" alt="Enabling SSH" class="w-full h-auto" />
 </p>
 
 * Click "Save", then "Yes" to begin flashing the OS to the SD card. Once the process is complete, remove the SD card and insert it into your Raspberry Pi.

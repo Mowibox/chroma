@@ -1,2 +1,8 @@
 [get_started]
 other = "Discover the site"
+
+[404_title]
+other = "Oops! Page not found 'w'"
+
+[404_back]
+other = "Back to Chroma"

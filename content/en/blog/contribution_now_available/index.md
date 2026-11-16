@@ -33,7 +33,7 @@ Whether you want to share ideas, suggest improvements, or add your own tutorials
 
 ## Complete guide
 
-A detailed guide on how to contribute is available here: [How to contribute to Chroma?]({{< relref "tutorials/miscellaneous/how_to_contribute/">}})
+A detailed guide on how to contribute is available here: [How to contribute to Chroma?]({{< relref "tutorials/miscellaneous/how-to-contribute/">}})
 🔴🟠🟡🟢🔵🟣
 
 **Thank you for reading!**

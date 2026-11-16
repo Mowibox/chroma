@@ -23,7 +23,7 @@
     {{- range .Translations }}
   <xhtml:link
     rel="alternate"
-    hreflang="{{ .Language.LanguageCode }}"
+    hreflang="{{ .Language.Locale }}"
     href="{{ .Permalink }}" />
     {{- end }}
   {{- end }}

@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Docker – Part 3"
+aliases: ["/tutorials/computer_science/introduction_to_docker_part3/"]
 description: "Dockerfile creation"
 summary: "Learn how to write a Dockerfile, build a custom Docker image, and launch ready-to-use containers on Linux."
 date: 2025-06-22
@@ -15,7 +16,7 @@ tags: ["docker", "dockerfile"]
 seo:
    title: "Dockerfile and custom images – Practical guide for Linux"
    description: "Complete tutorial for creating a Dockerfile, building a custom Docker image, and running containers on Linux, from source code to a working image."
-   canonical:  "https://mowibox.github.io/chroma/en/tutorials/computer_science/introduction_to_docker_part3/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -29,7 +30,7 @@ This tutorial series will show you how to use Docker on a Linux computer. This p
 
 ## The Dockerfile
 
-In the [previous tutorial]({{< relref "tutorials/computer_science/introduction_to_docker_part2">}}) we noticed that every time a new container is created, any changes made in previous containers based on the same image are lost, because the base image itself never changes.
+In the [previous tutorial]({{< relref "tutorials/computer-science/introduction-to-docker-part2">}}) we noticed that every time a new container is created, any changes made in previous containers based on the same image are lost, because the base image itself never changes.
 
 To make permanent changes, we create a custom image on top of the existing one. That is exactly what the Dockerfile is for.
 
@@ -260,13 +261,13 @@ nano my_python_file.py
 ```
 
 <p align="center">
-    <img src="/chroma/images/docker2_en.png" alt="Displaying nano" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/docker2_en.png" alt="Displaying nano" class="w-full h-auto" />
 </p>
 
 Add the modifications you want, save, and rerun:
 
 <p align="center">
-    <img src="/chroma/images/docker3_en.png" alt="Editing nano" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/docker3_en.png" alt="Editing nano" class="w-full h-auto" />
 </p>
 
 ```bash {title="root@3d18c90647a5:/"}

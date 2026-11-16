@@ -33,9 +33,9 @@ Everything shown here is meant to be **open source**: the idea is to share what 
 
 | I want to... | Go to |
 | :--- | :--- |
-| Know what's inside (MCU, servos, sensors, power) | [Specifications]({{< relref "chromapi/specifications/" >}}) |
-| Source the parts to build one | [Bill of Materials]({{< relref "chromapi/bom/" >}}) |
-| Flash the firmware, send commands, understand the protocol | [Documentation]({{< relref "chromapi/documentation/" >}}) |
+| Know what's inside (MCU, servos, sensors, power) | [Specifications]({{< relref "chromapi/hardware/" >}}) |
+| Source the parts to build one | [Bill of Materials]({{< relref "chromapi/build/" >}}) |
+| Flash the firmware, send commands, understand the protocol | [Documentation]({{< relref "chromapi/hardware/" >}}) |
 | Understand *why* Chromapi is built this way | [Design notes]({{< relref "chromapi/design/" >}}) |
 
 ## The repositories behind the project

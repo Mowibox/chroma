@@ -63,7 +63,7 @@ Les identifiants des servomoteurs sur le bus sont attribués patte par patte :
 | Débit | 1 Mbps |
 | Cycle du bus | 200 Hz (écriture synchronisée des consignes, puis lecture synchronisée des 12 servomoteurs) |
 
-Toutes les 5 ms, le STM32 envoie d'abord les consignes de position et de couple en attente aux 12 servomoteurs dans une seule trame d'écriture synchronisée, puis relit leur position, vitesse, charge, tension, température et courant en une seule trame de lecture synchronisée. L'état obtenu est ensuite transmis au Raspberry Pi à la fin de chaque cycle. Les autres commandes envoyées par le Raspberry Pi sont réencodées en trames Feetech et relayées sur le bus : voir le [protocole de communication]({{< relref "chromapi/documentation/protocol/" >}}) pour plus de détails sur le fonctionnement de la communication.
+Toutes les 5 ms, le STM32 envoie d'abord les consignes de position et de couple en attente aux 12 servomoteurs dans une seule trame d'écriture synchronisée, puis relit leur position, vitesse, charge, tension, température et courant en une seule trame de lecture synchronisée. L'état obtenu est ensuite transmis au Raspberry Pi à la fin de chaque cycle. Les autres commandes envoyées par le Raspberry Pi sont réencodées en trames Feetech et relayées sur le bus : voir le [protocole de communication]({{< relref "chromapi/hardware/protocol/" >}}) pour plus de détails sur le fonctionnement de la communication.
 
 ## Ressources
 

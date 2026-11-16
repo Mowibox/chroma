@@ -1,5 +1,7 @@
 ---
 title: "Création d'un environnement virtuel"
+slug: "creation-d-un-environnement-virtuel"
+aliases: ["/tutorials/computer_science/setting_up_virtual_environment/"]
 description: "Avec Python"
 summary: "Tutoriel pratique pour créer, activer, utiliser et supprimer des environnements virtuels Python avec virtualenvwrapper, tout en gérant différentes versions de Python."
 date: 2025-06-27
@@ -15,7 +17,7 @@ tags: ["python", "environnement-virtuel"]
 seo:
    title: "Guide complet pour créer un environnement virtuel Python"
    description: "Découvrez comment créer, activer et gérer des environnements virtuels Python avec virtualenvwrapper pour isoler vos projets et leurs dépendances."
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/setting_up_virtual_environment/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---

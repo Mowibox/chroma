@@ -18,7 +18,7 @@ seo:
    robots: "index, follow"
 ---
 
-This page lists the parts to buy to build Chromapi yourself. For details on the components mounted on the motherboard, see the [PCB Bill of Materials]({{< relref "chromapi/bom/pcb_bom/" >}}).
+This page lists the parts to buy to build Chromapi yourself. For details on the components mounted on the motherboard, see the [PCB Bill of Materials]({{< relref "chromapi/build/pcb-bom/" >}}).
 
 {{< callout context="note" title="Notes" >}}
 

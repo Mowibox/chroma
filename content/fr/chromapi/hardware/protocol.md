@@ -205,7 +205,7 @@ little-endian.
 `PING_SERVO`, `SET_SERVO_ID`, `WRITE_SERVO_REGISTER` et `READ_SERVO_REGISTER` ne s'arrêtent
 pas au STM32 — il les réencode en trames du protocole **Feetech STS3215** et les relaie sur
 le bus servo TTL half-duplex (USART2, 1 Mbps — voir les
-[spécifications des actionneurs]({{</* relref "chromapi/specifications/actuators/" */>}})). Ce protocole utilise un
+[spécifications des actionneurs]({{</* relref "chromapi/hardware/actuators/" */>}})). Ce protocole utilise un
 format de trame et une somme de contrôle différents de ceux du bridge décrit plus haut :
 
 ```text

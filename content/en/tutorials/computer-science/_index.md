@@ -1,5 +1,7 @@
 ---
 title: "Computer Science"
+slug: "computer-science"
+aliases: ["/tutorials/computer_science/"]
 description: "We take no responsibility in case of a crash!"
 summary:
 type: "cardlist"
@@ -12,7 +14,7 @@ icon: "computer"
 
 seo:
    title: ""
-   canonical: "https://mowibox.github.io/chroma/en/tutorials/computer_science/"
+   canonical: ""
    noindex: false
    description: "We take no responsibility in case of a crash! Hands-on tutorials covering the terminal, Git, GitHub, Docker, and Python virtual environments."
 

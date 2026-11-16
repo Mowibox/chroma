@@ -1,2 +1,8 @@
 [get_started]
 other = "Découvrir le site"
+
+[404_title]
+other = "Oups ! Page introuvable 'w'"
+
+[404_back]
+other = "Retourner sur Chroma"

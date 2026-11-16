@@ -1,5 +1,7 @@
 ---
 title: "Introduction à Git et GitHub – Partie 3"
+slug: "introduction-a-git-et-github-partie-3"
+aliases: ["/tutorials/computer_science/introduction_to_github_part3/"]
 description: "Issues, forks, branches et pull requests"
 summary: "Maîtrisez les fonctionnalités collaboratives avancées de GitHub : créer des issues, forker un repository, travailler sur des branches et proposer des pull requests."
 date: 2026-01-07
@@ -15,7 +17,7 @@ tags: ["git", "github", "collaboration"]
 seo:
    title: "Guide Git et GitHub – Partie 3"
    description: "Découvrez comment gérer des contributions collaboratives sur GitHub grâce aux issues, forks, branches et pull requests, socle des projets open source."
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/introduction_to_github_part3/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -28,14 +30,14 @@ Dans cette dernière partie du tutoriel d'introduction à Git et GitHub, vous ap
 
 ## Prérequis
 
-* Avoir complété [l'initiation à Git et GitHub – Partie 2.]({{< relref "tutorials/computer_science/introduction_to_github_part2">}})
+* Avoir complété [l'initiation à Git et GitHub – Partie 2.]({{< relref "tutorials/computer-science/introduction-to-github-part2">}})
 
-* Avoir quelques notions sur [l'utilisation d'un terminal.]({{< relref "tutorials/computer_science/using_terminal">}})
+* Avoir quelques notions sur [l'utilisation d'un terminal.]({{< relref "tutorials/computer-science/using-terminal">}})
 
 ## Objectif final : La mine aux trésors
 
 <p align="center">
-    <img src="/chroma/images/gitgithub2.jpg" alt="Repository mine" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub2.jpg" alt="Repository mine" class="w-full h-auto" />
 </p>
 
 Tout au long de cette introduction, nous avons illustré nos propos et nos manipulations via la `repository-mine`. De manière générale, une mine est créée pour en extraire des minerais, un filon, un trésor... Ne serait-ce pas une bonne idée d'ajouter un trésor à la `repository-mine` pour lui apporter de la valeur ? Dans cette optique, j'ai créé au sein du repository un fichier nommé [`Notre_Tresor.md`](https://github.com/Mowibox/repository-mine/blob/main/Notre_Tresor.md) :
@@ -57,7 +59,7 @@ Une issue est un espace de discussion associé à un repository. Concrètement, 
 Sur GitHub, il me suffit de cliquer sur l'onglet **"Issues"** de mon repository, puis sur **"New Issue"** :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub29_fr.png" alt="Issue description" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub29_fr.png" alt="Issue description" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;"><a href="https://github.com/Mowibox/repository-mine/issues/2">Voir l'issue sur GitHub.</a></em>
 </p>
@@ -75,7 +77,7 @@ La prochaine étape est donc de modifier les fichiers concernés afin d'enrichir
 Pour illustrer comment créer une fork, un nouveau contributeur est introduit : **Chromatistí.**
 
 <p align="center">
-    <img src="/chroma/images/gitgithub30.png" alt="Chromatisti" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub30.png" alt="Chromatisti" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Chromatistí !</em>
 </p>
@@ -83,7 +85,7 @@ Pour illustrer comment créer une fork, un nouveau contributeur est introduit : 
 "Forker" un repository consiste à créer une copie complète d'un repository sur votre propre compte GitHub. Cette copie, la fork, vous appartient : vous pouvez y effectuer toutes les modifications que vous souhaitez. C'est le mode de fonctionnement le plus courant pour contribuer à un projet sans en être propriétaire original.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub31.png" alt="Two mines" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub31.png" alt="Two mines" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Fork un repository, c'est comme avoir une mine identique à l'originale dans laquelle vous pouvez tout faire !</em>
 </p>
@@ -91,19 +93,19 @@ Pour illustrer comment créer une fork, un nouveau contributeur est introduit : 
 * Pour créer une fork, Chromatistí va se rendre sur mon repository et appuyer sur le bouton **"Fork"** :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub32.png" alt="Create a fork" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub32.png" alt="Create a fork" class="w-full h-auto" />
 </p>
 
 * Chromatistí vérifie ensuite les informations de sa fork. Les informations par défaut sont celles du repository de référence, mais elles peuvent aussi être modifiées à souhait :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub33.png" alt="Fork informations" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub33.png" alt="Fork informations" class="w-full h-auto" />
 </p>
 
 * Chromatistí appuie sur **"Create fork"** et obtient finalement une `repository-mine` identique à l'originale (c'est bien son icône qui est à côté du nom du repository) :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub34.png" alt="Fork repository" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub34.png" alt="Fork repository" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -133,7 +135,7 @@ une nouvelle branche nommée `mon-tresor` et créée et l'y positionne directeme
 ```
 
 <p align="center">
-    <img src="/chroma/images/gitgithub35_fr.png" alt="Branch creation" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub35_fr.png" alt="Branch creation" class="w-full h-auto" />
 </p>
 
 Pour que les modifications soient effectives dans Git, il faut utiliser les mêmes commandes que dans la partie précédente. La seule subtilité à prendre en compte est l'ajout du flag `--set-upstream origin <nom_de_branche>` à la commande `git push` :
@@ -147,13 +149,13 @@ git push --set-upstream origin mon-tresor
 La branche ainsi que ses modifications associées sont alors visibles sur Github.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub36_fr.png" alt="Branch selection" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub36_fr.png" alt="Branch selection" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Le changement de branche est directement disponible dans l'interface principale.</em>
 </p>
 
 <p align="center">
-    <img src="/chroma/images/gitgithub37_fr.png" alt="Branch my-treasure overview" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub37_fr.png" alt="Branch my-treasure overview" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Ici, on voit que la branche active est "mon-tresor" et que le commit a bien été pris en compte.</em>
 </p>
@@ -177,7 +179,7 @@ git switch main
 Vous verrez alors que le fichier `Notre_Tresor.md` est revenu à son état d'origine.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub38_fr.png" alt="Main branch" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub38_fr.png" alt="Main branch" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Vous êtes ici !</em>
 </p>
@@ -210,7 +212,7 @@ Les modifications effectuées dans la branche `mon-tresor` apparaissent désorma
 ```
 
 <p align="center">
-    <img src="/chroma/images/gitgithub39_fr.png" alt="Merging branches" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub39_fr.png" alt="Merging branches" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">De manière imagée : on fusionne les deux branches du train pour n'avoir qu'une seule mine.</em>
 </p>
@@ -238,7 +240,7 @@ Vous avez finalement votre trésor au sein de la mine ! Mais rappelez-vous, les 
 La pull request est un mécanisme fondamental de GitHub qui permet de proposer la fusion de changements d’une branche vers une autre, tout en offrant un espace de discussion et de validation avant leur intégration.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub40_fr.png" alt="Pull request on mines" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub40_fr.png" alt="Pull request on mines" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">C'est comme demander à relier les deux mines pour n'en avoir qu'une seule.</em>
 </p>
@@ -263,7 +265,7 @@ Tout le processus se passe sur GitHub :
 * Dans sa fork, Chromatistí appuie sur le bouton **"Contribute"**, puis sur **"Open pull request"**, ce qui ouvre une interface dans laquelle il peut écrire un titre et une description à sa proposition :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub41_fr.png" alt="Adding reference" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub41_fr.png" alt="Adding reference" class="w-full h-auto" />
 </p>
 
 Pour cet exercice, il peut se contenter d'écrire "Pull request pour l'issue ...". Pour quelle issue ? Il y a deux manières de le préciser :
@@ -274,7 +276,7 @@ Pour cet exercice, il peut se contenter d'écrire "Pull request pour l'issue ...
 Dans les deux cas, la liste des issues et des anciennes pull requests s'affiche, il suffit alors de sélectionner l'issue qui concerne les modifications (ici, l'issue #2).
 
 <p align="center">
-    <img src="/chroma/images/gitgithub42_fr.png" alt="Pull request pending" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub42_fr.png" alt="Pull request pending" class="w-full h-auto" />
 </p>
 
 Ajouter une description et des références permet d'ajouter du contexte aux modifications apportées, ce qui facilite la compréhension pour le propriétaire originel du repository.
@@ -282,11 +284,11 @@ Ajouter une description et des références permet d'ajouter du contexte aux mod
 Une fois la pull request créée (**"Create pull request"**), il ne reste plus qu'à attendre qu'un contributeur (en l'occurrence, moi) vienne la valider :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub43_fr.png" alt="Accepted pull request" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub43_fr.png" alt="Accepted pull request" class="w-full h-auto" />
 </p>
 
 <p align="center">
-    <img src="/chroma/images/gitgithub44_fr.png" alt="Final treasure" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub44_fr.png" alt="Final treasure" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Et voilà !</em>
 </p>
@@ -296,7 +298,7 @@ Réalisez une pull request pour intégrer vos modifications au repository princi
 {{< /callout >}}
 
 <p align="center">
-    <img src="/chroma/images/gitgithub40_fr.png" alt="Final graph" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub40_fr.png" alt="Final graph" class="w-full h-auto" />
 </p>
 
 ## Pour aller plus loin

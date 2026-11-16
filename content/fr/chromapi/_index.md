@@ -33,9 +33,9 @@ Tout ce qui est présenté ici est voulu **open source**: l’idée est de parta
 
 | Je veux... | Aller à |
 | :--- | :--- |
-| Savoir ce qu'il y a dedans (MCU, servos, capteurs, alimentation) | [Spécifications]({{< relref "chromapi/specifications/" >}}) |
-| Me procurer les pièces pour en construire un | [Listes de matériel]({{< relref "chromapi/bom/" >}}) |
-| Flasher le firmware, envoyer des commandes, comprendre le protocole | [Documentation]({{< relref "chromapi/documentation/" >}}) |
+| Savoir ce qu'il y a dedans (MCU, servos, capteurs, alimentation) | [Spécifications]({{< relref "chromapi/hardware/" >}}) |
+| Me procurer les pièces pour en construire un | [Listes de matériel]({{< relref "chromapi/build/" >}}) |
+| Flasher le firmware, envoyer des commandes, comprendre le protocole | [Documentation]({{< relref "chromapi/hardware/" >}}) |
 | Comprendre *pourquoi* Chromapi est construit ainsi | [Notes de conception]({{< relref "chromapi/design/" >}}) |
 
 ## Les différents repos associés au projet

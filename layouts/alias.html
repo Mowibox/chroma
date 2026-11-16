@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}">
+  <head>
+    <title>{{ .Permalink }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    <meta charset="utf-8">
+    {{- /* Site root only: send French-speaking browsers to the French home instead of the default language. */}}
+    {{- $fr := where hugo.Sites "Language.Lang" "fr" }}
+    {{- if and $fr (eq .Permalink site.Home.Permalink) }}
+    <script>if (/^fr\b/i.test(navigator.language || "")) location.replace({{ (index $fr 0).Home.Permalink }});</script>
+    {{- end }}
+    <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+  </head>
+</html>

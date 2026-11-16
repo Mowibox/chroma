@@ -1,5 +1,7 @@
 ---
 title: "Introduction à Docker – Partie 3"
+slug: "introduction-a-docker-partie-3"
+aliases: ["/tutorials/computer_science/introduction_to_docker_part3/"]
 description: "Création d'un Dockerfile"
 summary: "Apprenez à rédiger un Dockerfile, construire une image Docker personnalisée et lancer des conteneurs prêts à l'emploi sur Linux."
 date: 2025-06-22
@@ -15,7 +17,7 @@ tags: ["docker", "dockerfile"]
 seo:
    title: "Dockerfile et images personnalisées – Guide pratique sous Linux"
    description: "Tutoriel complet pour créer un Dockerfile, construire une image Docker personnalisée et exécuter des conteneurs sur Linux, du code à l'image finale."
-   canonical:  "https://mowibox.github.io/chroma/fr/tutorials/computer_science/introduction_to_docker_part3/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -28,7 +30,7 @@ Cette série de tutoriels vous illustrera comment utiliser Docker avec un ordina
 
 ## Le Dockerfile
 
-Dans le [tutoriel précédent]({{< relref "tutorials/computer_science/introduction_to_docker_part2">}}), nous avions constaté qu'à chaque nouvelle création de conteneur, on perdait toutes les modifications que l'on aurait pu faire dans un conteneur issu de la même image, puisque l'image de base restait inchangée.
+Dans le [tutoriel précédent]({{< relref "tutorials/computer-science/introduction-to-docker-part2">}}), nous avions constaté qu'à chaque nouvelle création de conteneur, on perdait toutes les modifications que l'on aurait pu faire dans un conteneur issu de la même image, puisque l'image de base restait inchangée.
 
 Pour faire des changements permanents à une image, l'idée est de créer une image customisée sur la base de l'image existante. C'est précisément le rôle du Dockerfile.
 
@@ -260,13 +262,13 @@ nano my_python_file.py
 ```
 
 <p align="center">
-    <img src="/chroma/images/docker2_fr.png" alt="Displaying nano" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/docker2_fr.png" alt="Displaying nano" class="w-full h-auto" />
 </p>
 
 Pour tester, je peux modifier le résultat de l'addition et relancer le code :
 
 <p align="center">
-    <img src="/chroma/images/docker3_fr.png" alt="Editing nano" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/docker3_fr.png" alt="Editing nano" class="w-full h-auto" />
 </p>
 
 ```bash {title="root@3d18c90647a5:/"}

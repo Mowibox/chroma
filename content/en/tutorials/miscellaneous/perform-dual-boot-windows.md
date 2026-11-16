@@ -1,5 +1,6 @@
 ---
 title: "Perform a dual-boot with Windows"
+aliases: ["/tutorials/miscellaneous/perform_dual_boot_windows/"]
 description: "To have Ubuntu and Windows on the same machine"
 summary: "Learn step by step how to install Ubuntu in dual-boot with Windows to enjoy both operating systems on a single machine."
 date: 2025-10-29
@@ -15,7 +16,7 @@ tags: ["dual-boot", "windows", "linux", "ubuntu"]
 seo:
    title: "Install Ubuntu in dual-boot with Windows 11 – Complete guide"
    description: "Detailed guide to creating a Windows and Ubuntu dual-boot: preparation, USB key, partitioning, and step-by-step installation."
-   canonical: "https://mowibox.github.io/chroma/en/tutorials/miscellaneous/perform_dual_boot_windows/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -52,7 +53,7 @@ First, you need to create an installation USB. Plugged into your computer, it wi
   * Leave the other settings as they are, as shown in the image below:
 
   <p align="center">
-    <img src="/chroma/images/dual_boot_2_en.png" alt="Rufus setup" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_2_en.png" alt="Rufus setup" class="w-full h-auto" />
   </p>
 
   * Click **"START"**, then select the recommended option **"Write in ISO Image mode"** and confirm. Once finished, your USB installation drive will be ready!
@@ -60,7 +61,7 @@ First, you need to create an installation USB. Plugged into your computer, it wi
 ## Creating a System Recovery Image
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_3_en.png" alt="Recovery Drive" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_3_en.png" alt="Recovery Drive" class="w-full h-auto" />
 </p>
 
 Before modifying your disk, it's **recommended to create a system recovery image**. This will give you a rollback point in case something goes wrong during installation. The procedure is detailed on the [official Microsoft website.](https://support.microsoft.com/en-us/windows/create-a-recovery-drive-abb4691b-5324-6d4a-8766-73fab304c246)
@@ -72,13 +73,13 @@ With your USB ready, restart your computer to start the Ubuntu installation. In 
 * Select **"System"**, then **"Recovery"**, and you should see an advanced startup option as shown below:
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_4_en.png" alt="Advanced startup settings" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_4_en.png" alt="Advanced startup settings" class="w-full h-auto" />
 </p>
 
 * Click **"Restart now"**. Your computer will restart (of course, you might say!) and display the advanced startup options:
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_5_en.png" alt="Choose an option" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_5_en.png" alt="Choose an option" class="w-full h-auto" />
 </p>
 
 * Choose **"Use a device"** and identify your USB drive from the list.
@@ -86,7 +87,7 @@ With your USB ready, restart your computer to start the Ubuntu installation. In 
 * Clicking the correct installation media will boot the computer into Ubuntu, showing a black screen with several options:
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_6.jpeg" alt="Ubuntu menu" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_6.jpeg" alt="Ubuntu menu" class="w-full h-auto" />
 </p>
 
 * Select **"Try or install Ubuntu"** and press **"Enter"**.
@@ -102,13 +103,13 @@ If you close the installation utility, you’ll be able to access a full Ubuntu 
 * Choose your system language:
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_7_en.png" alt="OS Language" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_7_en.png" alt="OS Language" class="w-full h-auto" />
 </p>
 
 * Then select your keyboard layout:
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_8_en.png" alt="Keyboard layout" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_8_en.png" alt="Keyboard layout" class="w-full h-auto" />
 </p>
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
@@ -118,23 +119,23 @@ Ubuntu offers the **"Detect"** Keyboard Layout option to find your configuration
 * Next, you can connect to the Internet (Ethernet or Wi-Fi), but it's not mandatory for the rest of the installation:
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_9_en.png" alt="Internet connection" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_9_en.png" alt="Internet connection" class="w-full h-auto" />
 </p>
 
 * Select **"Install Ubuntu"**, then **"Interactive Installation"**:
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_10_en.png" alt="Try or install Ubuntu" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_10_en.png" alt="Try or install Ubuntu" class="w-full h-auto" />
 </p>
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_11_en.png" alt="Type of installation" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_11_en.png" alt="Type of installation" class="w-full h-auto" />
 </p>
 
 * Choose either **"Default selection"** or **"Extented selection"**:
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_12_en.png" alt="Application" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_12_en.png" alt="Application" class="w-full h-auto" />
 </p>
 
   1. **Default selection** installs Ubuntu with default settings: a complete desktop environment, essential software and packages. It's usually the fastest and simplest option.
@@ -143,7 +144,7 @@ Ubuntu offers the **"Detect"** Keyboard Layout option to find your configuration
 * Optionally, check the boxes to install additional software for improved system performance:
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_13_en.png" alt="Optimize your computer" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_13_en.png" alt="Optimize your computer" class="w-full h-auto" />
 </p>
 
 {{< callout context="note" title="Note" icon="outline/info-circle" >}}
@@ -153,7 +154,7 @@ If you installed without Wi-Fi, the option **"Download and install support for a
 * To install Ubuntu alongside Windows, select **"Install Ubuntu alongside Windows Boot Manager"**:
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_14_en.png" alt="Disk setup" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_14_en.png" alt="Disk setup" class="w-full h-auto" />
 </p>
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
@@ -163,7 +164,7 @@ Notice the **"Erase disk and install Ubuntu"** option.  This option completely r
 * The next page shows a slider to allocate disk space to Ubuntu:
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_15_en.png" alt="Ubuntu alongside Windows" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_15_en.png" alt="Ubuntu alongside Windows" class="w-full h-auto" />
 </p>
 
 Here again, you can decide how much of your total storage you want to allocate to Ubuntu. For example, the computer used in this tutorial has 512 GB of storage. It would therefore be reasonable to allocate at least 100 GB to Ubuntu, in this case around 150 GB. But perhaps you will spend more time on Ubuntu and install a lot of heavy software compared to your Windows system, in which case the Windows partition would be smaller. It's up to you!
@@ -171,19 +172,19 @@ Here again, you can decide how much of your total storage you want to allocate t
 * Fill in your user account details: name, computer's name, username, and password:
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_16_en.png" alt="Create your account" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_16_en.png" alt="Create your account" class="w-full h-auto" />
 </p>
 
 * Set your time zone by selecting your city or clicking on the map:
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_17_en.png" alt="Select your timezone" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_17_en.png" alt="Select your timezone" class="w-full h-auto" />
 </p>
 
 * Double-check that the settings you specified throughout the installation are correct. Everything is good? Great! All you have to do now is click on the **“Install”** button and wait for everything to finish. _(If you're bored, you can always read the installation notes that scroll by as you wait. You might learn something new about Ubuntu, who knows?)_
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_18_en.png" alt="Ready to install" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_18_en.png" alt="Ready to install" class="w-full h-auto" />
 </p>
 
 Once finished, click **"Restart Now"**. Remove the installation medium when prompted then press **"Enter"**.
@@ -193,7 +194,7 @@ Once finished, click **"Restart Now"**. Remove the installation medium when prom
 After reboot, you will see **GRUB**, Ubuntu's boot manager:
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_19.jpeg" alt="GNU GRUB" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_19.jpeg" alt="GNU GRUB" class="w-full h-auto" />
 </p>
 
 This interface allows you to select whether to boot Ubuntu or Windows (Windows Boot Manager). If you wait 10 seconds without input, GRUB will boot Ubuntu by default.
@@ -201,7 +202,7 @@ This interface allows you to select whether to boot Ubuntu or Windows (Windows B
 Log in to your user account to start using Linux: **Welcome to Ubuntu!**
 
 <p align="center">
-    <img src="/chroma/images/dual_boot_20_en.png" alt="Ubuntu desktop" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/dual_boot_20_en.png" alt="Ubuntu desktop" class="w-full h-auto" />
 </p>
 
 ---

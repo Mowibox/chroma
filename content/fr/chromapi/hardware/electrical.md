@@ -108,4 +108,4 @@ flowchart TD
 
 * Schémas électriques (PDF) : [`hardware/schematic_pdf`](https://github.com/Mowibox/chromapi_motherboard/tree/main/hardware/schematic_pdf)
 * Fichiers de fabrication (Gerbers, BOM, CPL) : [`hardware/production`](https://github.com/Mowibox/chromapi_motherboard/tree/main/hardware/production)
-* Composants de la carte mère : [Liste de matériel du PCB]({{< relref "chromapi/bom/pcb_bom/" >}})
+* Composants de la carte mère : [Liste de matériel du PCB]({{< relref "chromapi/build/pcb-bom/" >}})

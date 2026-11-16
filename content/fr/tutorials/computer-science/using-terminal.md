@@ -1,5 +1,7 @@
 ---
 title: "Utilisation du Terminal"
+slug: "utilisation-du-terminal"
+aliases: ["/tutorials/computer_science/using_terminal/"]
 description: "Les commandes pratiques"
 summary: "Apprenez à maîtriser les commandes de base du terminal sur Linux, macOS ou Windows pour naviguer, gérer vos fichiers et contrôler votre système efficacement."
 date: 2025-06-30
@@ -15,7 +17,7 @@ tags: ["terminal", "linux", "windows"]
 seo:
    title: "Guide complet des commandes de terminal – Linux, macOS, Windows"
    description: "Tutoriel pratique pour apprendre le terminal : navigation, gestion des fichiers, droits d'accès et commandes essentielles pour tout système Unix."
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/using_terminal/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---

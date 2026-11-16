@@ -1,5 +1,7 @@
 ---
 title: "3D Design & Development"
+slug: "design-3d-development"
+aliases: ["/tutorials/design_3d_development/"]
 description: "In the kingdom of axes, the cube is king"
 summary:
 type: "cardlist"
@@ -12,7 +14,7 @@ icon: "cube3D"
 
 seo:
    title: ""
-   canonical: "https://mowibox.github.io/chroma/en/tutorials/design_3d_development/"
+   canonical: ""
    noindex: false
    description: "In the kingdom of axes, the cube is king. Tutorials on 3D design and development tools, for makers who like to model before they build."
 

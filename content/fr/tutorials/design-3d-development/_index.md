@@ -1,5 +1,7 @@
 ---
 title: "Conception & Développement 3D"
+slug: "conception-developpement-3d"
+aliases: ["/tutorials/design_3d_development/"]
 description: "Au royaume des axes, le cube est roi"
 summary:
 type: "cardlist"
@@ -12,7 +14,7 @@ icon: "cube3D"
 
 seo:
    title: ""
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/design_3d_development/"
+   canonical: ""
    noindex: false
    description: "Au royaume des axes, le cube est roi. Tutoriels sur la conception et le développement 3D, pour les makers qui aiment modéliser avant de construire."
 

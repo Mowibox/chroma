@@ -1,5 +1,7 @@
 ---
 title: "Introduction à Git et GitHub – Partie 1"
+slug: "introduction-a-git-et-github-partie-1"
+aliases: ["/tutorials/computer_science/introduction_to_github_part1/"]
 description: "Comprendre les bases avec des dessins"
 summary: "Explorez le fonctionnement de Git et GitHub à travers une histoire visuelle. Apprenez les concepts de repository, clone, add, commit, push et pull."
 date: 2025-06-22
@@ -15,7 +17,7 @@ tags: ["git", "github"]
 seo:
    title: "Guide Git et GitHub – Partie 1"
    description: "Introduction aux bases de Git et GitHub avec des illustrations et des exemples concrets. Comprenez repository, clone, add, commit, push et pull."
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/computer_science/introduction_to_github_part1/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -31,7 +33,7 @@ GitHub est un service web d'hébergement et de gestion de développement de logi
 Voici Chrome.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub1.png" alt="Chrome" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub1.png" alt="Chrome" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Chrome : Un charme à toute épreuve !</em>
 </p>
@@ -41,7 +43,7 @@ Chrome est un joyeux luron qui aime créer des fichiers et les partager avec ses
 Un beau jour, Chrome décida d'apporter une solution à son problème en créant une mine :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub2.jpg" alt="Repository mine" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub2.jpg" alt="Repository mine" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">La repository mine.</em>
 </p>
@@ -49,7 +51,7 @@ Un beau jour, Chrome décida d'apporter une solution à son problème en créant
 Cette mine permettrait à chacun de venir récupérer les fichiers que tous ceux qui contribuent au projet déposent et modifient, pour éviter les doublons dispersés un peu partout. Pour abréger le nom de la mine, appelons là uniquement le **repository**. Pour pouvoir faciliter les transferts du repository à chez lui, Chrome va se créer une copie locale des fichiers issus du repository, le tout sera mis dans un chariot :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub3.jpg" alt="Local copy" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub3.jpg" alt="Local copy" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Le chariot est une copie locale du contenu de la mine.</em>
 </p>
@@ -57,7 +59,7 @@ Cette mine permettrait à chacun de venir récupérer les fichiers que tous ceux
 Puisque Chrome vient de créer le repository, il n'a pas encore créé de fichier. Il est donc totalement normal que son chariot soit vide. L'objectif maintenant va être de le remplir. Par exemple, Chrome décide de créer un fichier A :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub4.jpg" alt="Creating file A class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub4.jpg" alt="Creating file A class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Chrome crée le fichier A, moi je trouve que c'est un super fichier, et vous ?</em>
 </p>
@@ -67,7 +69,7 @@ Satisfait de son fichier A, il va donc le partager dans sa mine pour que tous se
 Tout d'abord, il prépare le fichier A à l'envoi en **l'ajoutant (add)** à son chariot :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub5.jpg" alt="Adding file A" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub5.jpg" alt="Adding file A" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Chrome ajoute le fichier A.</em>
 </p>
@@ -75,13 +77,13 @@ Tout d'abord, il prépare le fichier A à l'envoi en **l'ajoutant (add)** à son
 Pour que ses amis ne soient pas perdus dans la mine, il décide de noter la modification qu'il a apporté sur une petite note qu'il va attacher au chariot. Cet **engagement (commit)** lui permet de valider officiellement le contenu de son chariot.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub6.jpg" alt="Writing file A commit" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub6.jpg" alt="Writing file A commit" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Chrome décrit la modification qu'il va apporter à la mine : "Ajout du fichier A".</em>
 </p>
 
 <p align="center">
-    <img src="/chroma/images/gitgithub7.jpg" alt="Commit file A" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub7.jpg" alt="Commit file A" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">En collant l'étiquette, il valide sa modification qui est prête à partir.</em>
 </p>
@@ -89,7 +91,7 @@ Pour que ses amis ne soient pas perdus dans la mine, il décide de noter la modi
 Une fois que tout est prêt, Chrome a juste à **pousser (push)** son chariot jusque dans la mine pour le partager, rien de plus simple !
 
 <p align="center">
-    <img src="/chroma/images/gitgithub8.jpg" alt="Push file A" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub8.jpg" alt="Push file A" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;"><b>PUSH</b></em>
 </p>
@@ -99,7 +101,7 @@ Une fois que tout est prêt, Chrome a juste à **pousser (push)** son chariot ju
 Voici maintenant Nickel.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub9.png" alt="Nickel" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub9.png" alt="Nickel" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Nickel : Pour différencier Chrome de Nickel, rien de tel qu'un chapeau melon aérodynamique !</em>
 </p>
@@ -109,7 +111,7 @@ Nickel est un grand ami de Chrome qui aime également créer des fichiers. Lorsq
 Pour récupérer le fichier A, Nickel doit aussi créer une copie locale du repository, qu'il mettra dans son chariot. Une fois ceci de fait, il pourra récupérer son fichier en **tirant (pull)** son chariot de la mine jusqu'à chez lui :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub10.jpg" alt="Pull" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub10.jpg" alt="Pull" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;"><b>PULL</b></em>
 </p>
@@ -117,7 +119,7 @@ Pour récupérer le fichier A, Nickel doit aussi créer une copie locale du repo
 Nickel décide d'apporter des améliorations au fichier A, et comme il est de bonne humeur, il crée également un nouveau fichier B :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub11.jpg" alt="Modifying files" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub11.jpg" alt="Modifying files" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Nickel modifie A et crée B, va-t-on faire tout l'alphabet ? Non ça serait trop long...</em>
 </p>
@@ -127,7 +129,7 @@ Nickel va donc suivre les mêmes étapes que son cher compère Chrome afin de pa
 Nickel prépare le fichier modifié A* et le fichier B en les **ajoutant (add)** à son chariot :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub12.jpg" alt="Add modifications" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub12.jpg" alt="Add modifications" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Ajout des fichier A* et B.</em>
 </p>
@@ -135,7 +137,7 @@ Nickel prépare le fichier modifié A* et le fichier B en les **ajoutant (add)**
 Il rédige ensuite une petite note qu'il attache à son chariot pour confirmer ses ajouts et modifications :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub13.jpg" alt="Commit modifications" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub13.jpg" alt="Commit modifications" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;">Nickel <b>engage (commit)</b> ses modifications.</em>
 </p>
@@ -143,7 +145,7 @@ Il rédige ensuite une petite note qu'il attache à son chariot pour confirmer s
 Nickel n'a plus qu'à **pousser (push)** son chariot dans la mine !
 
 <p align="center">
-    <img src="/chroma/images/gitgithub14.jpg" alt="Push modifications" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub14.jpg" alt="Push modifications" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;"><b>PUSH</b></em>
 </p>
@@ -151,7 +153,7 @@ Nickel n'a plus qu'à **pousser (push)** son chariot dans la mine !
 Enfin, si Chrome ou n'importe quel autre collaborateur du repository veut récupérer localement les modifications de Nickel, il a juste à **tirer (pull)** son chariot :
 
 <p align="center">
-    <img src="/chroma/images/gitgithub15.jpg" alt="Pull modifications" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub15.jpg" alt="Pull modifications" class="w-full h-auto" />
     </br>
     <em style="font-size: 0.95em;"><b>PULL</b></em>
 </p>
@@ -169,10 +171,10 @@ Un peu comme si GitHub vous donnait une représentation visuelle avec une interf
 * **Repository :** Le repository (dépôt) est l'élément fondamental de GitHub. C'est le dossier qui va contenir tous les éléments du projet. Comme on a pu le voir avec Chrome & Nickel, un repository peut avoir plusieurs collaborateurs, ils peuvent donc être publics ou privés.
 * **Clone :** Le clone est une copie locale du repository qui réside localement sur votre ordinateur plutôt qu'en ligne. Dans l'histoire, ça serait l'action de "Créer un chariot". C'est dans ce clone de votre repository qui vous pouvez faire vos modifications hors ligne.
 
-Les autres noms que vous avez pu voir en gras tout au long de l'histoire **(add, commit, push, pull)** sont des commandes Git qui permettent de gérer les fichiers. Pour mieux vous les illustrer, je propose de vous les expliquer dans la [partie suivante]({{< relref "tutorials/computer_science/introduction_to_github_part2">}}) de ce tutoriel où l'on va manipuler des fichiers en créant notre propre repository.
+Les autres noms que vous avez pu voir en gras tout au long de l'histoire **(add, commit, push, pull)** sont des commandes Git qui permettent de gérer les fichiers. Pour mieux vous les illustrer, je propose de vous les expliquer dans la [partie suivante]({{< relref "tutorials/computer-science/introduction-to-github-part2">}}) de ce tutoriel où l'on va manipuler des fichiers en créant notre propre repository.
 
 <p align="center">
-    <img src="/chroma/images/gitgithub16.jpg" alt="Push-Pull" class="w-full h-auto" />
+    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub16.jpg" alt="Push-Pull" class="w-full h-auto" />
     </br>
 </p>
 

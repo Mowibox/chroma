@@ -63,7 +63,7 @@ Servomotor IDs on the bus are assigned leg by leg:
 | Baud rate | 1 Mbps |
 | Bus cycle | 200 Hz (synchronized write of the targets, then synchronized read of the 12 servomotors) |
 
-Every 5 ms, the STM32 first sends the pending position and torque targets to the 12 servomotors in a single synchronized write frame, then reads their position, speed, load, voltage, temperature and current back with a single synchronized read frame. The resulting state is then streamed to the Raspberry Pi at the end of each cycle. Other commands sent by the Raspberry Pi are re-encoded into Feetech frames and relayed on the bus: see the [communication protocol]({{< relref "chromapi/documentation/protocol/" >}}) for more details on how communication works.
+Every 5 ms, the STM32 first sends the pending position and torque targets to the 12 servomotors in a single synchronized write frame, then reads their position, speed, load, voltage, temperature and current back with a single synchronized read frame. The resulting state is then streamed to the Raspberry Pi at the end of each cycle. Other commands sent by the Raspberry Pi are re-encoded into Feetech frames and relayed on the bus: see the [communication protocol]({{< relref "chromapi/hardware/protocol/" >}}) for more details on how communication works.
 
 ## Resources
 

@@ -1,5 +1,7 @@
 ---
 title: "Autres"
+slug: "autres"
+aliases: ["/tutorials/miscellaneous/"]
 description: "La catégorie des inclassables"
 summary:
 type: "cardlist"
@@ -12,7 +14,7 @@ icon: "other"
 
 seo:
    title: ""
-   canonical: "https://mowibox.github.io/chroma/fr/tutorials/miscellaneous/"
+   canonical: ""
    noindex: false
    description: "La catégorie des inclassables : dual-boot, configuration d'un Raspberry Pi headless, et autres astuces utiles qui ne rentraient nulle part ailleurs."
 

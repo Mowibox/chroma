@@ -1,0 +1,8 @@
+{{- /* Overrides @thulite/seo: tag, category and contributor listings are thin pages, keep them (and the 404 page) out of search results. */ -}}
+{{- if in (slice "taxonomy" "term" "404") .Kind }}
+  <meta name="robots" content="noindex, follow">
+{{- else }}
+{{- with .Params.seo.robots }}
+  <meta name="robots" content="{{ . }}">
+{{- end }}
+{{- end }}
