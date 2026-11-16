@@ -1,7 +1,7 @@
 # Hugo
 title = "Chroma"
 description = "Chroma is a website created to give a better view on how things work."
-images = ["cover.png"]
+images = ["cover.jpg"]
 
 # mainSections
 mainSections = ["tutorials", "chromapi", "blog"]
@@ -11,7 +11,7 @@ math = true # false (default) or true
 mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
 
 [social]
-  twitter = "getdoks"
+  twitter = "" # no Twitter/X account yet
 
 # Doks (@thulite/doks-core)
 [doks]
@@ -140,7 +140,7 @@ mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
     logo = "favicon-512x512.png" # Logo of Organization — favicon-512x512.png (default)
     name = "Mowibox" # Name of Organization or Person
     sameAs = [] # E.g. ["https://github.com/thuliteio/thulite", "https://fosstodon.org/@thulite"]
-    images = ["cover.png"] # ["cover.png"] (default)
+    images = ["cover.jpg"] # ["cover.png"] (default)
     article = [] # Article sections
     newsArticle = [] # NewsArticle sections
     blogPosting = ["blog"] # BlogPosting sections

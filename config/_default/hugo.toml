@@ -1,7 +1,7 @@
 title = "Chroma"
 baseurl = "https://mowibox.github.io/chroma/"
 canonifyURLs = false
-disableAliases = true
+disableAliases = false # aliases redirect the old tutorial URLs
 disableHugoGeneratorInject = true
 # disableKinds = ["taxonomy", "term"]
 enableEmoji = true
@@ -13,7 +13,6 @@ summarylength = 20 # 70 (default)
 
 # Multilingual
 defaultContentLanguage = "en"
-disableLanguages = ["de", "nl"]
 defaultContentLanguageInSubdir = true
 
 copyRight = "Copyright (c) 2026 Chroma"
@@ -75,9 +74,14 @@ copyRight = "Copyright (c) 2026 Chroma"
   category = "categories"
   tag = "tags"
 
-[permalinks]
+[permalinks.page]
   blog = "/blog/:slug/"
   docs = "/docs/:sections[1:]/:slug/"
+  tutorials = "/:sectionslugs/:slugorcontentbasename/"
+  chromapi = "/:sectionslugs/:slugorcontentbasename/"
+[permalinks.section]
+  tutorials = "/:sectionslugs/"
+  chromapi = "/:sectionslugs/"
 # docs = "/docs/1.0/:sections[1:]/:slug/"
 
 [minify.tdewolff.html]

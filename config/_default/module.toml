@@ -103,23 +103,13 @@
 [[mounts]]
   source = "content/en"
   target = "content"
-  lang = "en"
+  [mounts.sites.matrix]
+    languages = ["en"]
 
 [[mounts]]
   source = "content/fr"
   target = "content"
-  lang = "fr"
+  [mounts.sites.matrix]
+    languages = ["fr"]
 
-## content
-### Fill in the gaps in DE content with EN content
-[[mounts]]
-  source = "content/en"
-  target = "content"
-  lang = "de"
-
-### Fill in the gaps in NL content with EN content
-[[mounts]]
-  source = "content/en"
-  target = "content"
-  lang = "nl"
 
