@@ -23,7 +23,9 @@ const purgecss = purgeCSSPlugin({
         'size',
         'type'
     ],
-    safelist: [
+    safelist: {
+      greedy: [/DocSearch/], // injected by docsearch.js, absent from hugo_stats.json
+      standard: [
         'active',
         'btn-clipboard', // clipboards.js
         'clipboard', // clipboards.js
@@ -52,7 +54,8 @@ const purgecss = purgeCSSPlugin({
         'copy',
         'btn-copy',
         // ...whitelister(['./assets/scss/**/*.scss', './node_modules/@thulite/doks-core/assets/scss/components/_code.scss', './node_modules/@thulite/doks-core/assets/scss/components/_expressive-code.scss', './node_modules/@thulite/doks-core/assets/scss/common/_syntax.scss', "./node_modules/@docsearch/css/dist/modal.css"])
-    ]
+      ]
+    }
 });
 
 export default {

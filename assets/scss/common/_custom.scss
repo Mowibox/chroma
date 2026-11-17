@@ -161,7 +161,10 @@ html[data-bs-theme="dark"] .header-bar {
   max-width: 95%;
 }
 
-// DocSearch
+// DocSearch (v4 modal styles; the theme's app.scss does not import them)
+
+@import "@docsearch/css/dist/modal";
+@import "common/variables-docsearch";
 
 .DocSearch-Container {
   z-index: 2000 !important;

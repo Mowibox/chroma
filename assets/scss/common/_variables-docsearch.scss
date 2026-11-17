@@ -28,6 +28,7 @@
   --docsearch-hit-active-color: #fff;
   --docsearch-hit-background: #fff;
   --docsearch-hit-shadow: 0 1px 3px 0 rgb(212, 217, 225);
+  --docsearch-hit-highlight-color: rgba(151, 61, 202, 0.12); /* selected result background */
 
   /* key */
   --docsearch-key-gradient: linear-gradient(-225deg, rgb(213, 219, 228) 0%, rgb(248, 248, 248) 100%);
@@ -50,6 +51,7 @@ html[data-bs-theme="dark"] .DocSearch {
   --docsearch-hit-color: rgb(190, 195, 201);
   --docsearch-hit-shadow: none;
   --docsearch-hit-background: rgb(9, 10, 17);
+  --docsearch-hit-highlight-color: rgba(178, 84, 255, 0.2);
   --docsearch-key-gradient: linear-gradient(-26.5deg, rgb(86, 88, 114) 0%, rgb(49, 53, 91) 100%);
   --docsearch-key-shadow: inset 0 -2px 0 0 rgb(40, 45, 85), inset 0 0 1px 1px rgb(81, 87, 125), 0 2px 2px 0 rgba(3, 4, 9, 0.3);
   --docsearch-key-pressed-shadow: inset 0 -2px 0 0 #282d55, inset 0 0 1px 1px #51577d, 0 1px 1px 0 #0304094d;
