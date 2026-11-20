@@ -1,12 +1,14 @@
 ---
-title: "Specifications"
-description: "What's inside the motherboard."
-summary: "Electrical, actuator, audio, and sensor specifications for Chromapi's custom motherboard, plus links to the mechanical CAD."
+title: "Hardware"
+slug: "hardware"
+aliases: ["/chromapi/specifications/"]
+description: "What's inside the robot."
+summary: "Specifications of Chromapi (compute, power, actuators, sensors), CAD files and the communication protocol between the Raspberry Pi and the motherboard."
 type: "cardlist"
 date: 2026-08-29
 lastmod: 2026-08-29
 draft: false
-weight: 10
+weight: 40
 toc: true
 icon: "list-details"
 
@@ -15,8 +17,8 @@ sidebar:
 
 seo:
    title: ""
-   description: "Electrical, actuator, audio, and sensor specifications for Chromapi's custom motherboard, plus links to the mechanical CAD."
-   canonical: "https://mowibox.github.io/chroma/en/chromapi/specifications/"
+   description: "Specifications of Chromapi (compute, power, actuators, sensors), CAD files and the communication protocol between the Raspberry Pi and the motherboard."
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---

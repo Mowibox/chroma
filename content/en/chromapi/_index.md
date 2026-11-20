@@ -1,9 +1,10 @@
 ---
 title: "Chromapi"
+slug: "chromapi"
 description: "An open-source, 4-legged robot, built from scratch."
 summary: "Chromapi is an open-source, 4-legged robot: custom PCB, STM32 firmware, 3D-printed structure, locomotion, and — eventually — vision and reinforcement learning."
 date: 2026-08-29
-lastmod: 2026-08-30
+lastmod: 2026-11-08
 draft: false
 toc: true
 icon: "robot"
@@ -12,7 +13,7 @@ weight: 20
 seo:
    title: ""
    description: "Chromapi is an open-source, 4-legged robot: custom PCB, STM32 firmware, 3D-printed structure, locomotion, and eventually vision and RL."
-   canonical: "https://mowibox.github.io/chroma/en/chromapi/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -24,7 +25,7 @@ seo:
 **Chromapi** is a 4-legged robot I'm designing, building, and documenting from scratch, going from the electronic design to the software development, through 3D modeling and artificial intelligence. I think of it as a research platform to explore core robotics concepts, like locomotion, reinforcement learning, and human-robot interaction.
 
 <p align="center">
-    <img src="/chroma/gifs/chromapi.gif" alt="Chromapi Dance" />
+    <img loading="lazy" decoding="async" src="/chroma/gifs/chromapi.gif" alt="Chromapi Dance" />
 </p>
 
 Everything shown here is meant to be **open source**: the idea is to share what I learn and build as Chromapi's development progresses, so anyone can draw inspiration from it, experiment with it, or take it further. The only limit is your imagination (and maybe the hardware)!
@@ -33,9 +34,11 @@ Everything shown here is meant to be **open source**: the idea is to share what 
 
 | I want to... | Go to |
 | :--- | :--- |
-| Know what's inside (MCU, servos, sensors, power) | [Specifications]({{< relref "chromapi/hardware/" >}}) |
-| Source the parts to build one | [Bill of Materials]({{< relref "chromapi/build/" >}}) |
-| Flash the firmware, send commands, understand the protocol | [Documentation]({{< relref "chromapi/hardware/" >}}) |
+| Install the software and start my robot | [Getting started]({{< relref "chromapi/getting-started/" >}}) |
+| Source the parts and build one | [Build]({{< relref "chromapi/build/" >}}) |
+| Program it in Python, in simulation or on the robot | [Developing]({{< relref "chromapi/developing/" >}}) |
+| Know what's inside (MCU, servos, sensors, power) | [Hardware]({{< relref "chromapi/hardware/" >}}) |
+| Fix a problem or update the robot | [Help]({{< relref "chromapi/help/" >}}) |
 | Understand *why* Chromapi is built this way | [Design notes]({{< relref "chromapi/design/" >}}) |
 
 ## The repositories behind the project
@@ -66,6 +69,8 @@ Everything shown here is meant to be **open source**: the idea is to share what 
 ## Roadmap
 
 The roadmap shows the current progress of Chromapi's design stages, as well as the future steps ahead.
+
+{{< chromapi3d cartoon >}}
 
 <div class="chromapi-roadmap">
 <div class="timeline">
@@ -115,7 +120,7 @@ The roadmap shows the current progress of Chromapi's design stages, as well as t
     <div class="content">
       <h2>🎙️ Audio processing</h2>
       <p>Audio signal perception and processing.</p>
-      <p class="status status-planned">🔵 Planned</p>
+      <p class="status status-progress">🟠 In progress</p>
     </div>
   </div>
   <div class="container right">
@@ -265,5 +270,5 @@ Questions, feedback, and contributions are always welcome! Feel free to open an
 directly on the Chroma [Discord](https://discord.gg/SUQTs6QV3M).
 
 <p align="center">
-    <img src="/chroma/images/chroma_discord.png" alt="Chroma Discord" />
+    <img loading="lazy" decoding="async" src="/chroma/images/chroma_discord.png" alt="Chroma Discord" />
 </p>

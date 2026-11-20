@@ -1,9 +1,10 @@
 ---
 title: "Chromapi"
+slug: "chromapi"
 description: "Un robot quadrupède open-source, construit de zéro."
 summary: "Chromapi est un robot quadrupède open-source : PCB personnalisé, firmware STM32, structure imprimée en 3D, locomotion et, à terme, vision et apprentissage par renforcement."
 date: 2026-08-29
-lastmod: 2026-08-29
+lastmod: 2026-11-08
 draft: false
 toc: true
 icon: "robot"
@@ -12,7 +13,7 @@ weight: 20
 seo:
    title: ""
    description: "Chromapi est un robot quadrupède open-source : PCB, firmware STM32, structure imprimée en 3D, locomotion et, à terme, vision et RL."
-   canonical: "https://mowibox.github.io/chroma/fr/chromapi/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -24,7 +25,7 @@ seo:
 **Chromapi** est un robot quadrupède que je conçois, construis et documente de zéro, en allant de la conception électronique au développement logiciel, en passant par la modélisation 3D et l'intelligence artificielle. Je l'ai pensé comme une plateforme de recherche qui permet d'explorer les concepts fondamentaux en robotique, comme la locomotion, l'apprentissage par renforcement et l'interaction homme-machine.
 
 <p align="center">
-    <img src="/chroma/gifs/chromapi.gif" alt="Chromapi Dance" />
+    <img loading="lazy" decoding="async" src="/chroma/gifs/chromapi.gif" alt="Chromapi Dance" />
 </p>
 
 Tout ce qui est présenté ici est voulu **open source**: l’idée est de partager ce que j’apprends et construis au fil du développement de Chromapi, afin que chacun puisse s’en inspirer, expérimenter avec, ou aller plus loin. La seule limite est votre imagination (et peut-être le hardware) !
@@ -33,9 +34,11 @@ Tout ce qui est présenté ici est voulu **open source**: l’idée est de parta
 
 | Je veux... | Aller à |
 | :--- | :--- |
-| Savoir ce qu'il y a dedans (MCU, servos, capteurs, alimentation) | [Spécifications]({{< relref "chromapi/hardware/" >}}) |
-| Me procurer les pièces pour en construire un | [Listes de matériel]({{< relref "chromapi/build/" >}}) |
-| Flasher le firmware, envoyer des commandes, comprendre le protocole | [Documentation]({{< relref "chromapi/hardware/" >}}) |
+| Installer le logiciel et démarrer mon robot | [Premiers pas]({{< relref "chromapi/getting-started/" >}}) |
+| Me procurer les pièces et en construire un | [Construction]({{< relref "chromapi/build/" >}}) |
+| Le programmer en Python, en simulation ou sur le robot | [Développer]({{< relref "chromapi/developing/" >}}) |
+| Savoir ce qu'il y a dedans (MCU, servos, capteurs, alimentation) | [Matériel]({{< relref "chromapi/hardware/" >}}) |
+| Résoudre un problème ou mettre à jour le robot | [Aide]({{< relref "chromapi/help/" >}}) |
 | Comprendre *pourquoi* Chromapi est construit ainsi | [Notes de conception]({{< relref "chromapi/design/" >}}) |
 
 ## Les différents repos associés au projet
@@ -66,6 +69,8 @@ Tout ce qui est présenté ici est voulu **open source**: l’idée est de parta
 ## Feuille de route
 
 La feuille de route permet de présenter la progression actuelle des étapes de conception de Chromapi ainsi que les étapes futures à venir.
+
+{{< chromapi3d cartoon >}}
 
 <div class="chromapi-roadmap">
 <div class="timeline">
@@ -115,7 +120,7 @@ La feuille de route permet de présenter la progression actuelle des étapes de 
     <div class="content">
       <h2>🎙️ Traitement audio</h2>
       <p>Perception et traitement des signaux audio.</p>
-      <p class="status status-planned">🔵 Prévu</p>
+      <p class="status status-progress">🟠 En cours</p>
     </div>
   </div>
   <div class="container right">
@@ -265,5 +270,5 @@ une [issue](https://github.com/Mowibox/chromapi/issues) sur l'un des repository,
 en discuter directement sur le [Discord](https://discord.gg/SUQTs6QV3M) de Chroma.
 
 <p align="center">
-    <img src="/chroma/images/chroma_discord.png" alt="Chroma Discord" />
+    <img loading="lazy" decoding="async" src="/chroma/images/chroma_discord.png" alt="Chroma Discord" />
 </p>

@@ -1,11 +1,13 @@
 ---
 title: "Capteurs, audio & périphériques"
+slug: "capteurs"
+aliases: ["/chromapi/specifications/sensors/"]
 description: "IMU, caméra, LEDs, ventilateur: tout ce qui capte ou affiche."
 summary: "L'IMU, les contacteurs de pied, la caméra grand-angle, l'audio I2S, l'anneau de LEDs RGB et le ventilateur de Chromapi, avec leurs interfaces."
 date: 2026-08-29
-lastmod: 2026-10-22
+lastmod: 2026-11-08
 draft: false
-weight: 40
+weight: 440
 toc: true
 icon: "device-imac-cog"
 contributors: ["Ousmane THIONGANE"]
@@ -13,7 +15,7 @@ contributors: ["Ousmane THIONGANE"]
 seo:
    title: ""
    description: "L'IMU, les contacteurs de pied, la caméra grand-angle, l'audio I2S, l'anneau de LEDs RGB et le ventilateur de Chromapi, avec leurs interfaces."
-   canonical: "https://mowibox.github.io/chroma/fr/chromapi/specifications/sensors/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -44,10 +46,6 @@ Cette page liste l'ensemble des capteurs et périphériques embarqués sur Chrom
 | Fréquence de lecture | 400 Hz |
 | Filtre de fusion | Filtre de Mahony à 400 Hz |
 | Sortie | Accélération, vitesse angulaire brute et corrigée du biais, orientation (quaternion) |
-
-{{< callout context="note" title="Note" icon="outline/info-circle" >}}
-Au démarrage, le filtre de Mahony calibre les biais de l'accéléromètre et du gyroscope sur 500 échantillons : le robot doit donc rester immobile pendant l'initialisation.
-{{< /callout >}}
 
 ## Caméra
 

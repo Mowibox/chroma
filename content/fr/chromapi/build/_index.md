@@ -1,7 +1,9 @@
 ---
-title: "Listes de matériel"
-description: "Les listes de matériel du PCB et du robot complet."
-summary: "La liste de matériel interactive du PCB de Chromapi, et la liste de matériel générale pour construire tout le robot."
+title: "Construction"
+slug: "construction"
+aliases: ["/chromapi/bom/"]
+description: "Se procurer les pièces, imprimer, monter et câbler le robot."
+summary: "Tout pour construire un Chromapi : listes de matériel du robot et de son PCB, impression 3D, montage et câblage."
 type: "cardlist"
 date: 2026-08-29
 lastmod: 2026-08-29
@@ -15,11 +17,10 @@ sidebar:
 
 seo:
    title: ""
-   description: "La liste de matériel interactive du PCB de Chromapi, et la liste de matériel générale pour construire tout le robot."
-   canonical: "https://mowibox.github.io/chroma/fr/chromapi/bom/"
+   description: "Tout pour construire un Chromapi : listes de matériel du robot et de son PCB, impression 3D, montage et câblage."
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
 
-Deux listes de matériel : celle du PCB (interactive, générée depuis la conception KiCad) et
-la liste de matériel générale du robot.
+Les listes de matériel du robot et de son PCB, l'impression des pièces, puis le montage et le câblage.

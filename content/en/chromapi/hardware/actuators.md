@@ -1,11 +1,12 @@
 ---
 title: "Actuators specifications"
+aliases: ["/chromapi/specifications/actuators/"]
 description: "12 servomotors on a shared half-duplex TTL serial bus."
 summary: "Chromapi's 12 Feetech STS3215-C001 servomotors, the half-duplex TTL bus wiring between them, and the servo polling rate."
 date: 2026-08-29
-lastmod: 2026-10-22
+lastmod: 2026-11-08
 draft: false
-weight: 30
+weight: 430
 toc: true
 icon: "circuit-motor"
 contributors: ["Ousmane THIONGANE"]
@@ -13,7 +14,7 @@ contributors: ["Ousmane THIONGANE"]
 seo:
    title: ""
    description: "Chromapi's 12 Feetech STS3215-C001 servomotors, the half-duplex TTL bus wiring between them, and the servo polling rate."
-   canonical: "https://mowibox.github.io/chroma/en/chromapi/specifications/actuators/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -32,19 +33,15 @@ seo:
 | Position sensor | 12-bit magnetic encoder (4096 steps/rev, ≈ 0.088°/step) |
 | Available feedback | Position, speed, load, voltage, temperature, current |
 
-{{< callout context="tip" title="Tip" icon="outline/bulb" >}}
-Chromapi's architecture is permissive enough to use the 12V version of the STS3215 if you need more torque, provided the power supply is adapted accordingly.
-{{< /callout >}}
-
 ## Leg layout
 
 Each of Chromapi's legs has three joints, named according to the convention below:
 
 | Joint | Name | Axis | Range of motion |
 | :--- | :--- | :--- | :--- |
-| Hip | coxa (`*_1`) | Yaw | ±70° |
-| Hip | femur (`*_2`) | Pitch | ±90° |
-| Knee | tibia (`*_3`) | Pitch | ±90° |
+| Hip | coxa (`*_1`) | Yaw | ±75° |
+| Hip | femur (`*_2`) | Pitch | ±100° |
+| Knee | tibia (`*_3`) | Pitch | ±100° |
 
 Servomotor IDs on the bus are assigned leg by leg:
 

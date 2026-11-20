@@ -1,11 +1,13 @@
 ---
 title: "Liste de matériel du PCB"
+slug: "liste-materiel-pcb"
+aliases: ["/chromapi/bom/pcb_bom/"]
 description: "Chaque composant de la carte mère, généré depuis KiCad."
 summary: "Liste de matériel interactive de la carte mère Chromapi : composants, références fabricant, fiches techniques et informations d'approvisionnement."
 date: 2026-08-29
-lastmod: 2026-08-29
+lastmod: 2026-11-10
 draft: false
-weight: 70
+weight: 220
 toc: true
 icon: "chip"
 contributors: ["Ousmane THIONGANE"]
@@ -13,7 +15,7 @@ contributors: ["Ousmane THIONGANE"]
 seo:
    title: ""
    description: "Liste de matériel interactive de la carte mère Chromapi : composants, références fabricant, fiches techniques et informations d'approvisionnement."
-   canonical: "https://mowibox.github.io/chroma/fr/chromapi/bom/pcb_bom/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -35,13 +37,20 @@ Le tableau ci-dessous liste chaque composant de la [carte mère de Chromapi](htt
 | C25, C30, C41 | 3 | CAP, CERM, 10µF, 25V, ±10%, X5R, 0805 | CL21A106KAYNNNE | Samsung Electro-Mechanics |
 | C33, C34 | 2 | CAP, CERM, 220pF, 50V, ±10%, X7R, 0603 | CL10B221KB8NNNC | Samsung Electro-Mechanics |
 | D1, D2 | 2 | Diode, Schottky, 40V, 3A, SMA | [SS34](https://github.com/Mowibox/chromapi_motherboard/blob/main/docs/datasheets/ss34.pdf) | MDD |
-| D3 | 1 | LED, rouge, 0603 | KT-0603R | Hubei KENTO Elec |
-| D4 | 1 | LED, vert émeraude, 0603 | KT-0603G | Hubei KENTO Elec |
+| D3 | 1 | LED, vert émeraude (charge terminée), 0603 | KT-0603G | Hubei KENTO Elec |
+| D4 | 1 | LED, rouge (en charge), 0603 | KT-0603R | Hubei KENTO Elec |
 | D5 | 1 | LED, bleu, 0603 | KT-0603B | Hubei KENTO Elec |
 | D6 | 1 | LED RGB adressable, 800kbit/s, SMD 2.2x2mm | [WS2812B-2020](https://github.com/Mowibox/chromapi_motherboard/blob/main/docs/datasheets/WS2812B-2020_V10_EN_181106150240761.pdf) | Worldsemi |
 | FB1, FB2, FB3 | 3 | Perle de ferrite, 330Ω @ 100MHz, 2.5A, 0805 | MPZ2012S331AT000 | TDK |
+| J1, J4 | 2 | Connecteur, JST XH, 3 broches, 2.5mm, vertical, traversant | B3B-XH-A(LF)(SN) | JST |
+| J2, J10, J11, J12, J13 | 5 | Connecteur, JST XH, 2 broches, 2.5mm, vertical, traversant | B2B-XH-A(LF)(SN) | JST |
+| J3 | 1 | Connecteur, embase USB Type-C, USB 2.0, 16 broches, CMS | TYPE-C-31-M-12 | Korean Hroparts Elec |
+| J5, J6, J7, J8 | 4 | Connecteur, Mini-SPOX, 3 broches, 2.5mm, vertical, traversant (servos) | 5267-03A | Molex |
+| J9 | 1 | Connecteur, JST PH, 2 broches, 2.0mm, entrée latérale, traversant (haut-parleur) | S2B-PH-K-S(LF)(SN) | JST |
+| J14 | 1 | Connecteur femelle surélevé, 2x20, 2.54mm, traversant (Raspberry Pi) | ESQ-120-13-G-D | Samtec |
 | L1 | 1 | Inductance, 4.7µH, 5.5A, DCR 40mΩ, SMD | IHLP2525CZER4R7M01 | Vishay |
 | L2 | 1 | Inductance, 1.5µH, 14A, ±20%, DCR 5.3mΩ, taille 1040 | 7443552150 | Würth Elektronik |
+| M1 | 1 | Connecteur de ventilateur, 4 broches, 2.54mm, traversant | 47053-1000 | Molex |
 | MK1 | 1 | Microphone MEMS, I2S 24 bits, LGA-6 | [ICS-43434](https://github.com/Mowibox/chromapi_motherboard/blob/main/docs/datasheets/DS-000069-ICS-43434-v1.2.pdf) | TDK InvenSense |
 | Q1, Q2 | 2 | MOSFET canal N, 30V, 101A, VSON-8 | [CSD17581Q3A](https://github.com/Mowibox/chromapi_motherboard/blob/main/docs/datasheets/csd17581q3a.pdf) | Texas Instruments |
 | Q3 | 1 | MOSFET canal P, 30V, 12A, SOP-8 | [AO4435](https://github.com/Mowibox/chromapi_motherboard/blob/main/docs/datasheets/AO4435.pdf) | UMW |

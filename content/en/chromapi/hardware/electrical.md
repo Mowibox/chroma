@@ -1,11 +1,12 @@
 ---
 title: "Electrical characteristics"
+aliases: ["/chromapi/specifications/electrical/"]
 description: "From an 18650 pack to a working motherboard."
 summary: "Power source, charging, protection, and regulation on Chromapi's motherboard: 2S 18650 pack, USB-C charging, and the 5V/3.3V rails."
 date: 2026-08-29
-lastmod: 2026-10-26
+lastmod: 2026-11-08
 draft: false
-weight: 20
+weight: 420
 toc: true
 icon: "battery"
 contributors: ["Ousmane THIONGANE"]
@@ -13,7 +14,7 @@ contributors: ["Ousmane THIONGANE"]
 seo:
    title: ""
    description: "Power source, charging, protection, and regulation on Chromapi's motherboard: 2S 18650 pack, USB-C charging, and the 5V/3.3V rails."
-   canonical: "https://mowibox.github.io/chroma/en/chromapi/specifications/electrical/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -42,7 +43,7 @@ Chromapi has a USB-C charging port, directly on the motherboard. The board also 
 
 | Property | Value |
 | :--- | :--- |
-| Battery life | Around 2 h depending on use |
+| Battery life | Around 2 h depending on the application |
 | Charging time | 3 h |
 
 ## Power monitoring
@@ -58,15 +59,15 @@ The robot's power consumption is continuously measured by an INA226, placed righ
 | Interface | I2C at 400 kHz (address `0x40`) |
 | Reading rate | 10 Hz |
 
-The current voltage running through Chromapi is constantly displayed by a status LED on the motherboard.
+A status LED on the motherboard constantly shows the charge level, estimated from the voltage compensated for the drop under load, from green to red. Below 10%, it blinks together with the LEDs of the 12 servomotors.
 
 ## Regulation and distribution
 
 | Rail | Regulator | Type | Loads |
 | :--- | :--- | :--- | :--- |
 | V_SYS (6.0 - 8.4V) | — | Battery voltage, after protection and monitoring | Servomotors |
-| +5V | TPS51388 | Switching regulator (Buck), 600 kHz | Raspberry Pi, fan, RGB LED ring |
-| +3.3V | LD39050 | Linear regulator (LDO), powered by the +5V rail | STM32 MCU, IMU, power monitor, audio amplifier and microphone |
+| +5V | TPS51388 | Switching regulator (Buck), 600 kHz | Raspberry Pi, fan, RGB LED ring, audio amplifier |
+| +3.3V | LD39050 | Linear regulator (LDO), powered by the +5V rail | STM32 MCU, IMU, power monitor and microphone |
 
 ## Power architecture
 
@@ -77,8 +78,8 @@ flowchart TD
     CELLS -->|"B+/BM/B-"| HY["HY2120<br/>BMS protection"]
     HY -->|"B+"| SW[["Power switch"]]
 
-    SW -->|"V_BATT ≈ 7.2–8.4V"| SHUNT[["INA226 shunt sense<br/>2mΩ"]]
-    SHUNT -->|"V_SYS ≈ 7.2–8.4V"| REG5{{"Voltage regulation<br/>TPS51388 · Fsw=600kHz"}}
+    SW -->|"V_BATT ≈ 6.0–8.4V"| SHUNT[["INA226 shunt sense<br/>2mΩ"]]
+    SHUNT -->|"V_SYS ≈ 6.0–8.4V"| REG5{{"Voltage regulation<br/>TPS51388 · Fsw=600kHz"}}
     SHUNT -->|"V_SYS"| SERVOS(["Servomotors x12<br/>Feetech STS3215-C001"])
 
     REG5 -->|"+5V"| RPI["Raspberry Pi"]
@@ -89,7 +90,8 @@ flowchart TD
     REG33 -->|"+3.3V"| MCU["MCU<br/>STM32G431KBT6"]
     REG33 -->|"+3.3V"| IMU["IMU<br/>BMI088"]
     REG33 -->|"+3.3V"| INA["Power monitor<br/>INA226"]
-    REG33 -->|"+3.3V"| AUDIO["Speaker + Microphone<br/>MAX98357A / ICS-43434"]
+    REG5 -->|"+5V"| AMP["Speaker<br/>MAX98357A"]
+    REG33 -->|"+3.3V"| MIC["Microphone<br/>ICS-43434"]
 
     classDef power fill:#dd2757,color:#ffffff,stroke:none
     classDef voltreg fill:#ea684c,color:#ffffff,stroke:none
@@ -99,7 +101,7 @@ flowchart TD
 
     class CHG,CELLS,HY,SW power
     class REG5,REG33 voltreg
-    class MCU,RPI,AUDIO ic
+    class MCU,RPI,AMP,MIC ic
     class SERVOS,FANPWR,LEDPWR actuator
     class SHUNT,IMU,INA sensor
 ```

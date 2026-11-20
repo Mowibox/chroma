@@ -1,11 +1,13 @@
 ---
 title: "Spécifications générales"
+slug: "general"
+aliases: ["/chromapi/specifications/general/"]
 description: "La description globale de Chromapi."
 summary: "L'architecture globale de calcul et de contrôle de Chromapi : carte mère STM32, Raspberry Pi, et répartition des rôles."
 date: 2026-08-29
-lastmod: 2026-10-12
+lastmod: 2026-11-16
 draft: false
-weight: 10
+weight: 410
 toc: true
 icon: "chromapi"
 contributors: ["Ousmane THIONGANE"]
@@ -13,7 +15,7 @@ contributors: ["Ousmane THIONGANE"]
 seo:
    title: ""
    description: "L'architecture globale de calcul et de contrôle de Chromapi : carte mère STM32, Raspberry Pi, et répartition des rôles."
-   canonical: "https://mowibox.github.io/chroma/fr/chromapi/specifications/general/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -31,7 +33,7 @@ seo:
 * Batterie 2S 18650 rechargeable en USB-C directement sur le robot
 * IMU, caméra grand-angle et microphone pour la perception
 * Haut-parleur et anneau de 18 LEDs RGB pour l'expressivité
-* Structure entièrement imprimable en 3D (PLA & TPU), poids d'environ 1,5 kg
+* Structure entièrement imprimable en 3D (PLA & TPU), poids d'environ 1,9 kg
 * 100 % open source : matériel, firmware et logiciel
 
 ## Dimensions et masse
@@ -39,7 +41,7 @@ seo:
 | Propriété | Valeur |
 | :--- | :--- |
 | Dimensions en position debout (L × l × h) | ≈ 40 × 35 × 15 cm |
-| Masse totale | ≈ 1,5 kg |
+| Masse totale | ≈ 1,9 kg |
 | Longueur d'un segment coxa | 69 mm |
 | Longueur d'un segment fémur | 68 mm |
 | Longueur d'un segment tibia | 112 mm |

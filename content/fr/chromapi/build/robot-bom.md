@@ -1,11 +1,13 @@
 ---
 title: "Liste de matériel du robot"
+slug: "liste-materiel-robot"
+aliases: ["/chromapi/bom/robot_bom/"]
 description: "Ce qu'il faut acheter, au-delà du PCB, pour en construire un."
 summary: "Liste des pièces à acheter pour construire Chromapi au-delà du PCB : batterie, calcul, caméra, servomoteurs, prix, références et fournisseurs."
 date: 2026-08-29
-lastmod: 2026-08-29
+lastmod: 2026-11-16
 draft: false
-weight: 60
+weight: 210
 toc: true
 icon: "shopping-cart"
 contributors: ["Ousmane THIONGANE"]
@@ -13,7 +15,7 @@ contributors: ["Ousmane THIONGANE"]
 seo:
    title: ""
    description: "Liste des pièces à acheter pour construire Chromapi au-delà du PCB : batterie, calcul, caméra, servomoteurs, prix, références et fournisseurs."
-   canonical: "https://mowibox.github.io/chroma/fr/chromapi/bom/robot_bom/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -49,10 +51,12 @@ Cette page présente les différentes pièces à acheter pour construire Chromap
 | Écrous M2.5 | 6 | — | — | — | — | — |
 | Insert fileté M2 | 4 | — | 5,88 € | Insert fileté M2 (lot de 50) | Bolatus | [Amazon](https://www.amazon.fr/Bolatus-M2-filetage-plastique-dimprimante/dp/B0F2TGV78Y/ref=sr_1_10?sr=8-10) |
 | Insert fileté M3 | 7 | — | 6,88 € | Insert fileté M3 (lot de 50) | Bolatus | [Amazon](https://www.amazon.fr/Bolatus-M2-filetage-plastique-dimprimante/dp/B0F2TFB847/ref=sr_1_10?sr=8-10) |
-| Filament PLA (standard) | 542,84 g | — | — | — | — | — |
+| Filament PLA (standard) | 989,61 g | — | — | — | — | — |
 | Filament TPU | 14,44 g | — | — | — | — | — |
+
+{{< chromapi3d explode >}}
 
 [^1]: L'architecture logicielle a été conçue pour s'adapter aux Raspberry Pi 4, 5 et 2W. Il faut noter qu'actuellement, tous les tests ont été réalisés avec une Raspberry Pi 4 Model B 8Go RAM donc quelques adaptations sont à prévoir pour les autres modèles.
 [^2]: Cette caméra est vendue sans support (Raspberry Pi Camera Module v2) : vous pouvez acheter une caméra équipée d'un module équivalent et remplacer l'IMX219-D160 par celle-ci, ou ne pas acheter l'IMX219-D160 et directement utiliser la caméra de votre choix avec son support.
-[^3]: Veillez à bien choisir la version 7,4V. Si vous souhaitez des servomoteurs plus puissants, l'architecture de Chromapi est assez permissive pour utiliser la version 12V, sous réserve d'une alimentation adaptée. Les moteurs sont vendus par lot de 6 : il faut donc commander cette référence deux fois pour obtenir les 12 servomoteurs nécessaires.
+[^3]: Veillez à bien choisir la version 7,4V. Les moteurs sont vendus par lot de 6 : il faut donc commander cette référence deux fois pour obtenir les 12 servomoteurs nécessaires.
 [^4]: Veillez à bien choisir la version à 18 LED avec le diamètre de 27mm.

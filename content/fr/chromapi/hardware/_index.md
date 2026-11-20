@@ -1,12 +1,14 @@
 ---
-title: "Spécifications"
-description: "Ce qu'il y a dans la carte mère."
-summary: "Spécifications électriques, actionneurs, audio et capteurs de la carte mère personnalisée de Chromapi, avec des liens vers la CAO mécanique."
+title: "Matériel"
+slug: "materiel"
+aliases: ["/chromapi/specifications/"]
+description: "Ce qu'il y a dans le robot."
+summary: "Spécifications de Chromapi (calcul, alimentation, actionneurs, capteurs), fichiers CAO et protocole de communication entre le Raspberry Pi et la carte mère."
 type: "cardlist"
 date: 2026-08-29
 lastmod: 2026-08-29
 draft: false
-weight: 10
+weight: 40
 toc: true
 icon: "list-details"
 
@@ -15,15 +17,11 @@ sidebar:
 
 seo:
    title: ""
-   description: "Spécifications électriques, actionneurs, audio et capteurs de la carte mère personnalisée de Chromapi, avec des liens vers la CAO mécanique."
-   canonical: "https://mowibox.github.io/chroma/fr/chromapi/specifications/"
+   description: "Spécifications de Chromapi (calcul, alimentation, actionneurs, capteurs), fichiers CAO et protocole de communication entre le Raspberry Pi et la carte mère."
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
 
-Coming soon!
-
-<script type="text/plain" hidden>
 Spécifications techniques de la plateforme Chromapi, issues directement de la conception
 matérielle de [`chromapi_motherboard`](https://github.com/Mowibox/chromapi_motherboard).
-</script>

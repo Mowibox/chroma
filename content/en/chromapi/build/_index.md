@@ -1,7 +1,9 @@
 ---
-title: "Bill of Materials"
-description: "The PCB and full robot parts lists."
-summary: "The interactive PCB Bill of Materials for Chromapi's motherboard, and the general parts list for building the whole robot."
+title: "Build"
+slug: "build"
+aliases: ["/chromapi/bom/"]
+description: "Source the parts, print, assemble and wire the robot."
+summary: "Everything to build a Chromapi: Bills of Materials for the robot and its PCB, 3D printing, assembly and wiring."
 type: "cardlist"
 date: 2026-08-29
 lastmod: 2026-08-30
@@ -15,8 +17,8 @@ sidebar:
 
 seo:
    title: ""
-   description: "The interactive PCB Bill of Materials for Chromapi's motherboard, and the general parts list for building the whole robot."
-   canonical: "https://mowibox.github.io/chroma/en/chromapi/bom/"
+   description: "Everything to build a Chromapi: Bills of Materials for the robot and its PCB, 3D printing, assembly and wiring."
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---

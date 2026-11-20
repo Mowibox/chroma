@@ -1,11 +1,13 @@
 ---
 title: "Spécifications des actionneurs"
+slug: "actionneurs"
+aliases: ["/chromapi/specifications/actuators/"]
 description: "12 servomoteurs sur un même bus série TTL half-duplex."
 summary: "Les 12 servomoteurs Feetech STS3215-C001 de Chromapi, le câblage du bus TTL half-duplex et la fréquence de lecture."
 date: 2026-08-29
-lastmod: 2026-10-22
+lastmod: 2026-11-08
 draft: false
-weight: 30
+weight: 430
 toc: true
 icon: "circuit-motor"
 contributors: ["Ousmane THIONGANE"]
@@ -13,7 +15,7 @@ contributors: ["Ousmane THIONGANE"]
 seo:
    title: ""
    description: "Les 12 servomoteurs Feetech STS3215-C001 de Chromapi, le câblage du bus TTL half-duplex, et la fréquence de lecture des positions."
-   canonical: "https://mowibox.github.io/chroma/fr/chromapi/specifications/actuators/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -32,19 +34,15 @@ seo:
 | Capteur de position | Encodeur magnétique 12 bits (4096 pas/tour, ≈ 0,088°/pas) |
 | Retours disponibles | Position, vitesse, charge, tension, température, courant |
 
-{{< callout context="tip" title="Astuce" icon="outline/bulb" >}}
-L'architecture de Chromapi est assez permissive pour utiliser la version 12V du STS3215 si vous avez besoin de plus de couple, à condition d'adapter l'alimentation en conséquence.
-{{< /callout >}}
-
 ## Répartition sur les pattes
 
 Chaque patte de Chromapi comporte trois articulations, nommées selon la convention utilisée ci-dessous :
 
 | Articulation | Nom | Axe | Plage de mouvement |
 | :--- | :--- | :--- | :--- |
-| Hanche | coxa (`*_1`) | Lacet | ±70° |
-| Hanche | fémur (`*_2`) | Tangage | ±90° |
-| Genou | tibia (`*_3`) | Tangage | ±90° |
+| Hanche | coxa (`*_1`) | Lacet | ±75° |
+| Hanche | fémur (`*_2`) | Tangage | ±100° |
+| Genou | tibia (`*_3`) | Tangage | ±100° |
 
 Les identifiants des servomoteurs sur le bus sont attribués patte par patte :
 

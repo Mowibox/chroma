@@ -1,11 +1,12 @@
 ---
 title: "Robot Bill of Materials"
+aliases: ["/chromapi/bom/robot_bom/"]
 description: "What to buy, beyond the PCB, to build one."
 summary: "The parts to buy for building Chromapi: battery, compute, camera, servomotors, prices, references, and suppliers."
 date: 2026-08-29
-lastmod: 2026-09-25
+lastmod: 2026-11-16
 draft: false
-weight: 60
+weight: 210
 toc: true
 icon: "shopping-cart"
 contributors: ["Ousmane THIONGANE"]
@@ -13,7 +14,7 @@ contributors: ["Ousmane THIONGANE"]
 seo:
    title: ""
    description: "The parts to buy for building Chromapi: battery, compute, camera, servomotors, prices, references, and suppliers."
-   canonical: "https://mowibox.github.io/chroma/en/chromapi/bom/robot_bom/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -49,10 +50,12 @@ This page lists the parts to buy to build Chromapi yourself. For details on the 
 | M2.5 nuts | 6 | — | — | — | — | — |
 | M2 threaded insert | 4 | — | €5.88 | M2 threaded insert (pack of 50) | Bolatus | [Amazon](https://www.amazon.fr/Bolatus-M2-filetage-plastique-dimprimante/dp/B0F2TGV78Y/ref=sr_1_10?sr=8-10) |
 | M3 threaded insert | 7 | — | €6.88 | M3 threaded insert (pack of 50) | Bolatus | [Amazon](https://www.amazon.fr/Bolatus-M2-filetage-plastique-dimprimante/dp/B0F2TFB847/ref=sr_1_10?sr=8-10) |
-| PLA filament (standard) | 542.84 g | — | — | — | — | — |
+| PLA filament (standard) | 989.61 g | — | — | — | — | — |
 | TPU filament | 14.44 g | — | — | — | — | — |
+
+{{< chromapi3d explode >}}
 
 [^1]: The software architecture is designed to run on the Raspberry Pi 4, 5 and 2W. Note that all testing so far has been done on a Raspberry Pi 4 Model B with 8GB of RAM, so some adjustments are to be expected for the other models.
 [^2]: This camera is sold without a mount (Raspberry Pi Camera Module v2): you can either buy a camera fitted with an equivalent module and replace the IMX219-D160 with it, or skip the IMX219-D160 and directly use the camera of your choice with its mount.
-[^3]: Make sure to pick the 7.4V version. If you want more powerful servomotors, Chromapi's architecture is permissive enough to use the 12V version, provided the power supply is adapted accordingly. The motors are sold in packs of 6: you therefore need to order this reference twice to get the 12 required servomotors.
+[^3]: Make sure to pick the 7.4V version. The motors are sold in packs of 6: you therefore need to order this reference twice to get the 12 required servomotors.
 [^4]: Make sure to pick the 18-LED version with a 27mm diameter.

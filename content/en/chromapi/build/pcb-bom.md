@@ -1,11 +1,12 @@
 ---
 title: "PCB Bill of Materials"
+aliases: ["/chromapi/bom/pcb_bom/"]
 description: "Every component on the motherboard, straight from KiCad."
 summary: "Interactive Bill of Materials for the Chromapi motherboard: components, manufacturer part numbers, datasheets, and sourcing information."
 date: 2026-08-29
-lastmod: 2026-08-30
+lastmod: 2026-11-10
 draft: false
-weight: 70
+weight: 220
 toc: true
 icon: "chip"
 contributors: ["Ousmane THIONGANE"]
@@ -13,7 +14,7 @@ contributors: ["Ousmane THIONGANE"]
 seo:
    title: ""
    description: "Interactive Bill of Materials for the Chromapi motherboard: components, manufacturer part numbers, datasheets, and sourcing information."
-   canonical: "https://mowibox.github.io/chroma/en/chromapi/bom/pcb_bom/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -35,13 +36,20 @@ The table below lists every component on the [Chromapi motherboard](https://gith
 | C25, C30, C41 | 3 | CAP, CERM, 10µF, 25V, ±10%, X5R, 0805 | CL21A106KAYNNNE | Samsung Electro-Mechanics |
 | C33, C34 | 2 | CAP, CERM, 220pF, 50V, ±10%, X7R, 0603 | CL10B221KB8NNNC | Samsung Electro-Mechanics |
 | D1, D2 | 2 | Diode, Schottky, 40V, 3A, SMA | [SS34](https://github.com/Mowibox/chromapi_motherboard/blob/main/docs/datasheets/ss34.pdf) | MDD |
-| D3 | 1 | LED, red, 0603 | KT-0603R | Hubei KENTO Elec |
-| D4 | 1 | LED, emerald green, 0603 | KT-0603G | Hubei KENTO Elec |
+| D3 | 1 | LED, emerald green (charge done), 0603 | KT-0603G | Hubei KENTO Elec |
+| D4 | 1 | LED, red (charging), 0603 | KT-0603R | Hubei KENTO Elec |
 | D5 | 1 | LED, blue, 0603 | KT-0603B | Hubei KENTO Elec |
 | D6 | 1 | Addressable RGB LED, 800kbit/s, SMD 2.2x2mm | [WS2812B-2020](https://github.com/Mowibox/chromapi_motherboard/blob/main/docs/datasheets/WS2812B-2020_V10_EN_181106150240761.pdf) | Worldsemi |
 | FB1, FB2, FB3 | 3 | Ferrite bead, 330Ω @ 100MHz, 2.5A, 0805 | MPZ2012S331AT000 | TDK |
+| J1, J4 | 2 | Connector, JST XH, 3-pin, 2.5mm, vertical, THT | B3B-XH-A(LF)(SN) | JST |
+| J2, J10, J11, J12, J13 | 5 | Connector, JST XH, 2-pin, 2.5mm, vertical, THT | B2B-XH-A(LF)(SN) | JST |
+| J3 | 1 | Connector, USB Type-C receptacle, USB 2.0, 16-pin, SMD | TYPE-C-31-M-12 | Korean Hroparts Elec |
+| J5, J6, J7, J8 | 4 | Connector, Mini-SPOX, 3-pin, 2.5mm, vertical, THT (servos) | 5267-03A | Molex |
+| J9 | 1 | Connector, JST PH, 2-pin, 2.0mm, side entry, THT (speaker) | S2B-PH-K-S(LF)(SN) | JST |
+| J14 | 1 | Elevated socket, 2x20, 2.54mm, THT (Raspberry Pi) | ESQ-120-13-G-D | Samtec |
 | L1 | 1 | Inductor, 4.7µH, 5.5A, DCR 40mΩ, SMD | IHLP2525CZER4R7M01 | Vishay |
 | L2 | 1 | Inductor, 1.5µH, 14A, ±20%, DCR 5.3mΩ, size 1040 | 7443552150 | Würth Elektronik |
+| M1 | 1 | Fan header, 4-pin, 2.54mm, THT | 47053-1000 | Molex |
 | MK1 | 1 | MEMS microphone, 24-bit I2S, LGA-6 | [ICS-43434](https://github.com/Mowibox/chromapi_motherboard/blob/main/docs/datasheets/DS-000069-ICS-43434-v1.2.pdf) | TDK InvenSense |
 | Q1, Q2 | 2 | N-channel MOSFET, 30V, 101A, VSON-8 | [CSD17581Q3A](https://github.com/Mowibox/chromapi_motherboard/blob/main/docs/datasheets/csd17581q3a.pdf) | Texas Instruments |
 | Q3 | 1 | P-channel MOSFET, 30V, 12A, SOP-8 | [AO4435](https://github.com/Mowibox/chromapi_motherboard/blob/main/docs/datasheets/AO4435.pdf) | UMW |

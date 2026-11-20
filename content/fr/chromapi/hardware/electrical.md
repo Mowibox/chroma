@@ -1,11 +1,13 @@
 ---
 title: "Caractéristiques électriques"
+slug: "electrique"
+aliases: ["/chromapi/specifications/electrical/"]
 description: "D'un pack 18650 à une carte mère qui fonctionne."
 summary: "Source d'alimentation, charge, protection et régulation sur la carte mère de Chromapi : pack 2S 18650, charge USB-C et rails 5V/3.3V."
 date: 2026-08-29
-lastmod: 2026-10-26
+lastmod: 2026-11-08
 draft: false
-weight: 20
+weight: 420
 toc: true
 icon: "battery"
 contributors: ["Ousmane THIONGANE"]
@@ -13,7 +15,7 @@ contributors: ["Ousmane THIONGANE"]
 seo:
    title: ""
    description: "Source d'alimentation, charge, protection et régulation sur la carte mère de Chromapi : pack 2S 18650, charge USB-C et rails 5V/3.3V."
-   canonical: "https://mowibox.github.io/chroma/fr/chromapi/specifications/electrical/"
+   canonical: ""
    noindex: false
    robots: "index, follow"
 ---
@@ -42,7 +44,7 @@ Chromapi possède un port de charge USB-C, directement sur la carte mère. Cette
 
 | Propriété | Valeur |
 | :--- | :--- |
-| Autonomie | Environ 2 h selon l'utilisation |
+| Autonomie | Environ 2 h selon l'application |
 | Temps de charge | 3 h |
 
 ## Mesure de puissance
@@ -58,15 +60,15 @@ La consommation du robot est mesurée en permanence par un INA226, placé juste 
 | Interface | I2C à 400 kHz (adresse `0x40`) |
 | Fréquence de lecture | 10 Hz |
 
-La tension actuelle qui traverse Chromapi est constamment affichée grâce à une LED de statut sur la carte mère.
+Une LED de statut sur la carte mère affiche en permanence le niveau de charge estimé à partir de la tension compensée de la chute en charge, du vert au rouge. Sous 10 %, elle clignote en même temps que les LEDs des 12 servomoteurs.
 
 ## Régulation et distribution
 
 | Rail | Régulateur | Type | Consommateurs |
 | :--- | :--- | :--- | :--- |
 | V_SYS (6,0 - 8,4V) | — | Tension batterie, après protection et mesure | Servomoteurs |
-| +5V | TPS51388 | Régulateur à découpage (Buck), 600 kHz | Raspberry Pi, ventilateur, anneau de LEDs RGB |
-| +3,3V | LD39050 | Régulateur linéaire (LDO), alimenté par le +5V | MCU STM32, IMU, capteur de puissance, amplificateur audio et microphone |
+| +5V | TPS51388 | Régulateur à découpage (Buck), 600 kHz | Raspberry Pi, ventilateur, anneau de LEDs RGB, amplificateur audio |
+| +3,3V | LD39050 | Régulateur linéaire (LDO), alimenté par le +5V | MCU STM32, IMU, capteur de puissance et microphone |
 
 ## Architecture d'alimentation
 
@@ -77,8 +79,8 @@ flowchart TD
     CELLS -->|"B+/BM/B-"| HY["HY2120<br/>Protection BMS"]
     HY -->|"B+"| SW[["Interrupteur"]]
 
-    SW -->|"V_BATT ≈ 7,2–8,4V"| SHUNT[["Shunt INA226<br/>2mΩ"]]
-    SHUNT -->|"V_SYS ≈ 7,2–8,4V"| REG5{{"Régulation de tension<br/>TPS51388 · Fsw=600kHz"}}
+    SW -->|"V_BATT ≈ 6,0–8,4V"| SHUNT[["Shunt INA226<br/>2mΩ"]]
+    SHUNT -->|"V_SYS ≈ 6,0–8,4V"| REG5{{"Régulation de tension<br/>TPS51388 · Fsw=600kHz"}}
     SHUNT -->|"V_SYS"| SERVOS(["Servomoteurs x12<br/>Feetech STS3215-C001"])
 
     REG5 -->|"+5V"| RPI["Raspberry Pi"]
@@ -89,7 +91,8 @@ flowchart TD
     REG33 -->|"+3,3V"| MCU["MCU<br/>STM32G431KBT6"]
     REG33 -->|"+3,3V"| IMU["IMU<br/>BMI088"]
     REG33 -->|"+3,3V"| INA["Capteur de puissance<br/>INA226"]
-    REG33 -->|"+3,3V"| AUDIO["Haut-parleur + Microphone<br/>MAX98357A / ICS-43434"]
+    REG5 -->|"+5V"| AMP["Haut-parleur<br/>MAX98357A"]
+    REG33 -->|"+3,3V"| MIC["Microphone<br/>ICS-43434"]
 
     classDef power fill:#dd2757,color:#ffffff,stroke:none
     classDef voltreg fill:#ea684c,color:#ffffff,stroke:none
@@ -99,7 +102,7 @@ flowchart TD
 
     class CHG,CELLS,HY,SW power
     class REG5,REG33 voltreg
-    class MCU,RPI,AUDIO ic
+    class MCU,RPI,AMP,MIC ic
     class SERVOS,FANPWR,LEDPWR actuator
     class SHUNT,IMU,INA sensor
 ```
