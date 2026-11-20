@@ -7,3 +7,5 @@ resources
 /public/
 /resources/_gen/
 /.vscode/
+__pycache__/
+/chromapi-sdk/
