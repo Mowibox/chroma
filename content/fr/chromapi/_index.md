@@ -19,7 +19,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/chromapi/chromapi_logo.png" alt="Logo Chromapi" width="300" />
+    {{< img src="images/chromapi/chromapi_logo.png" alt="Logo Chromapi" width=300 sizes="300px" class="img-300" >}}
 </p>
 
 **Chromapi** est un robot quadrupède que je conçois, construis et documente de zéro, en allant de la conception électronique au développement logiciel, en passant par la modélisation 3D et l'intelligence artificielle. Je l'ai pensé comme une plateforme de recherche qui permet d'explorer les concepts fondamentaux en robotique, comme la locomotion, l'apprentissage par renforcement et l'interaction homme-machine.
@@ -32,39 +32,23 @@ Tout ce qui est présenté ici est voulu **open source**: l’idée est de parta
 
 ## Par où commencer?
 
-| Je veux... | Aller à |
-| :--- | :--- |
-| Installer le logiciel et démarrer mon robot | [Premiers pas]({{< relref "chromapi/getting-started/" >}}) |
-| Me procurer les pièces et en construire un | [Construction]({{< relref "chromapi/build/" >}}) |
-| Le programmer en Python, en simulation ou sur le robot | [Développer]({{< relref "chromapi/developing/" >}}) |
-| Savoir ce qu'il y a dedans (MCU, servos, capteurs, alimentation) | [Matériel]({{< relref "chromapi/hardware/" >}}) |
-| Résoudre un problème ou mettre à jour le robot | [Aide]({{< relref "chromapi/help/" >}}) |
-| Comprendre *pourquoi* Chromapi est construit ainsi | [Notes de conception]({{< relref "chromapi/design/" >}}) |
+{{< card-grid >}}
+{{< link-card src="outline/rocket" title="Premiers pas" description="Installer le logiciel et démarrer mon robot" href="/chromapi/getting-started" >}}
+{{< link-card src="outline/tool" title="Construction" description="Me procurer les pièces et en construire un" href="/chromapi/build" >}}
+{{< /card-grid >}}
+{{< card-grid >}}
+{{< link-card src="outline/code" title="Développer" description="Le programmer en Python, en simulation ou sur le robot" href="/chromapi/developing" >}}
+{{< link-card src="outline/cpu" title="Matériel" description="Savoir ce qu'il y a dedans (MCU, servos, capteurs, alimentation)" href="/chromapi/hardware" >}}
+{{< /card-grid >}}
+{{< card-grid >}}
+{{< link-card src="outline/lifebuoy" title="Aide" description="Résoudre un problème ou mettre à jour le robot" href="/chromapi/help" >}}
+{{< link-card src="outline/bulb" title="Notes de conception" description="Comprendre pourquoi Chromapi est construit ainsi" href="/chromapi/design" >}}
+{{< /card-grid >}}
 
 ## Les différents repos associés au projet
 
-<div class="space-y-6" style="text-align: left;">
-  <article class="cardbox rounded-lg overflow-hidden">
-    <a href="https://github.com/Mowibox/chromapi" class="block" target="_blank" rel="noopener">
-      <div class="p-4">
-        <div class="flex items-center gap-4 mb-2" style="display:flex; align-items:center;">
-          <h2 class="text-xl font-semibold m-0 p-0">chromapi</h2>
-        </div>
-        <p class="text-gray-400 text-sm">Code source principal du robot quadrupède : contrôle, locomotion et outils logiciels.</p>
-      </div>
-    </a>
-  </article>
-  <article class="cardbox rounded-lg overflow-hidden">
-    <a href="https://github.com/Mowibox/chromapi_motherboard" class="block" target="_blank" rel="noopener">
-      <div class="p-4">
-        <div class="flex items-center gap-4 mb-2" style="display:flex; align-items:center;">
-          <h2 class="text-xl font-semibold m-0 p-0">chromapi_motherboard</h2>
-        </div>
-        <p class="text-gray-400 text-sm">Conception électronique et firmware de la carte mère de Chromapi.</p>
-      </div>
-    </a>
-  </article>
-</div>
+{{< cardbox href="https://github.com/Mowibox/chromapi" title="chromapi" description="Code source principal du robot quadrupède : contrôle, locomotion et outils logiciels." icon="code" >}}
+{{< cardbox href="https://github.com/Mowibox/chromapi_motherboard" title="chromapi_motherboard" description="Conception électronique et firmware de la carte mère de Chromapi." icon="chip" >}}
 
 ## Feuille de route
 
@@ -270,5 +254,5 @@ une [issue](https://github.com/Mowibox/chromapi/issues) sur l'un des repository,
 en discuter directement sur le [Discord](https://discord.gg/SUQTs6QV3M) de Chroma.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/chroma_discord.png" alt="Chroma Discord" />
+    {{< img src="images/chroma_discord.png" alt="Chroma Discord" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>

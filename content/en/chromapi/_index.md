@@ -19,7 +19,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/chromapi/chromapi_logo.png" alt="Chromapi logo" width="300" />
+    {{< img src="images/chromapi/chromapi_logo.png" alt="Chromapi logo" width=300 sizes="300px" class="img-300" >}}
 </p>
 
 **Chromapi** is a 4-legged robot I'm designing, building, and documenting from scratch, going from the electronic design to the software development, through 3D modeling and artificial intelligence. I think of it as a research platform to explore core robotics concepts, like locomotion, reinforcement learning, and human-robot interaction.
@@ -32,39 +32,23 @@ Everything shown here is meant to be **open source**: the idea is to share what 
 
 ## Where to start?
 
-| I want to... | Go to |
-| :--- | :--- |
-| Install the software and start my robot | [Getting started]({{< relref "chromapi/getting-started/" >}}) |
-| Source the parts and build one | [Build]({{< relref "chromapi/build/" >}}) |
-| Program it in Python, in simulation or on the robot | [Developing]({{< relref "chromapi/developing/" >}}) |
-| Know what's inside (MCU, servos, sensors, power) | [Hardware]({{< relref "chromapi/hardware/" >}}) |
-| Fix a problem or update the robot | [Help]({{< relref "chromapi/help/" >}}) |
-| Understand *why* Chromapi is built this way | [Design notes]({{< relref "chromapi/design/" >}}) |
+{{< card-grid >}}
+{{< link-card src="outline/rocket" title="Getting started" description="Install the software and start my robot" href="/chromapi/getting-started" >}}
+{{< link-card src="outline/tool" title="Build" description="Source the parts and build one" href="/chromapi/build" >}}
+{{< /card-grid >}}
+{{< card-grid >}}
+{{< link-card src="outline/code" title="Developing" description="Program it in Python, in simulation or on the robot" href="/chromapi/developing" >}}
+{{< link-card src="outline/cpu" title="Hardware" description="Know what's inside (MCU, servos, sensors, power)" href="/chromapi/hardware" >}}
+{{< /card-grid >}}
+{{< card-grid >}}
+{{< link-card src="outline/lifebuoy" title="Help" description="Fix a problem or update the robot" href="/chromapi/help" >}}
+{{< link-card src="outline/bulb" title="Design notes" description="Understand why Chromapi is built this way" href="/chromapi/design" >}}
+{{< /card-grid >}}
 
 ## The repositories behind the project
 
-<div class="space-y-6" style="text-align: left;">
-  <article class="cardbox rounded-lg overflow-hidden">
-    <a href="https://github.com/Mowibox/chromapi" class="block" target="_blank" rel="noopener">
-      <div class="p-4">
-        <div class="flex items-center gap-4 mb-2" style="display:flex; align-items:center;">
-          <h2 class="text-xl font-semibold m-0 p-0">chromapi</h2>
-        </div>
-        <p class="text-gray-400 text-sm">Main source code of the quadruped robot: control, locomotion, and software tools.</p>
-      </div>
-    </a>
-  </article>
-  <article class="cardbox rounded-lg overflow-hidden">
-    <a href="https://github.com/Mowibox/chromapi_motherboard" class="block" target="_blank" rel="noopener">
-      <div class="p-4">
-        <div class="flex items-center gap-4 mb-2" style="display:flex; align-items:center;">
-          <h2 class="text-xl font-semibold m-0 p-0">chromapi_motherboard</h2>
-        </div>
-        <p class="text-gray-400 text-sm">Electronic design and firmware of Chromapi's motherboard.</p>
-      </div>
-    </a>
-  </article>
-</div>
+{{< cardbox href="https://github.com/Mowibox/chromapi" title="chromapi" description="Main source code of the quadruped robot: control, locomotion, and software tools." icon="code" >}}
+{{< cardbox href="https://github.com/Mowibox/chromapi_motherboard" title="chromapi_motherboard" description="Electronic design and firmware of Chromapi's motherboard." icon="chip" >}}
 
 ## Roadmap
 
@@ -270,5 +254,5 @@ Questions, feedback, and contributions are always welcome! Feel free to open an
 directly on the Chroma [Discord](https://discord.gg/SUQTs6QV3M).
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/chroma_discord.png" alt="Chroma Discord" />
+    {{< img src="images/chroma_discord.png" alt="Chroma Discord" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
