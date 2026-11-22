@@ -41,7 +41,7 @@ Tout ce qui est présenté ici est voulu **open source**: l’idée est de parta
 {{< link-card src="outline/cpu" title="Matériel" description="Savoir ce qu'il y a dedans (MCU, servos, capteurs, alimentation)" href="/chromapi/hardware" >}}
 {{< /card-grid >}}
 {{< card-grid >}}
-{{< link-card src="outline/lifebuoy" title="Aide" description="Résoudre un problème ou mettre à jour le robot" href="/chromapi/help" >}}
+{{< link-card src="outline/help-circle" title="Aide" description="Résoudre un problème ou mettre à jour le robot" href="/chromapi/help" >}}
 {{< link-card src="outline/bulb" title="Notes de conception" description="Comprendre pourquoi Chromapi est construit ainsi" href="/chromapi/design" >}}
 {{< /card-grid >}}
 
@@ -104,7 +104,7 @@ La feuille de route permet de présenter la progression actuelle des étapes de 
     <div class="content">
       <h2>🎙️ Traitement audio</h2>
       <p>Perception et traitement des signaux audio.</p>
-      <p class="status status-progress">🟠 En cours</p>
+      <p class="status status-planned">🔵 Prévu</p>
     </div>
   </div>
   <div class="container right">

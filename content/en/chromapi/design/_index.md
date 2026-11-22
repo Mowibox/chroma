@@ -1,8 +1,9 @@
 ---
 title: "Design notes"
+linkTitle: "Design"
 slug: "design"
-description: "Why the motherboard is built this way."
-summary: "Notes on why Chromapi's motherboard is architected the way it is: the power tree, and how the buses connect every component."
+description: "Architecture choices, experiments and loose notes."
+summary: "My notes on Chromapi, kept informal: architecture choices, experiments with the robot, and a bit of everything along the way."
 type: "blog"
 cascade:
   type: "blog" # the notes use the blog layouts too
@@ -18,7 +19,7 @@ sidebar:
 
 seo:
    title: ""
-   description: "Notes on why Chromapi's motherboard is architected the way it is: the power tree, and how the buses connect every component."
+   description: "My notes on Chromapi, kept informal: architecture choices, experiments with the robot, and a bit of everything along the way."
    canonical: ""
    noindex: false
    robots: "index, follow"

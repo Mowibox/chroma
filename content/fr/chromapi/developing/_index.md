@@ -1,5 +1,6 @@
 ---
 title: "Développer avec Chromapi"
+linkTitle: "Développement"
 slug: "developpement"
 description: "Simulation, SDK Python, mouvements et ligne de commande."
 summary: "Simulation, SDK Python, mouvements et ligne de commande."

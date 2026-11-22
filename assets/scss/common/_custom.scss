@@ -204,3 +204,50 @@ span.email b {
 blockquote {
   font-size: inherit;
 }
+
+// Header: keep each nav title on one line, and tighten the gaps on narrow desktops
+// (the Chromapi sub-pages show 6 section links next to the brand)
+.navbar-nav .nav-link {
+  white-space: nowrap;
+}
+
+// Chromapi sub-pages: 6 section links + search, theme, language and socials don't fit on one line
+// below ~1300px, so compact the bar there: language as icon only, tighter links and icons.
+@media (min-width: 992px) and (max-width: 1299.98px) {
+  .navbar-chromapi {
+    .navbar-brand {
+      flex-shrink: 0;
+    }
+    .navbar-nav .nav-item,
+    #socialMenu .nav-item {
+      margin-left: 0;
+    }
+    .navbar-nav .nav-link {
+      padding-left: 0.4rem;
+      padding-right: 0.4rem;
+    }
+    #socialMenu .social-link {
+      padding-left: 0.35rem;
+      padding-right: 0.35rem;
+    }
+    #doks-language-current {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-chromapi {
+    .navbar-brand {
+      margin-right: 0.5rem !important;
+    }
+    .navbar-nav {
+      align-self: center;
+    }
+    .navbar-nav .nav-link {
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+      font-size: 0.9rem;
+    }
+  }
+}

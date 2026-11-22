@@ -1,0 +1,10 @@
+{{- /* Overrides @thulite/seo: pages under /chromapi/ use "Chromapi" as the title suffix. */ -}}
+{{- $suffix := .Site.Params.seo.title.suffix | default .Site.Title }}
+{{- if eq .Section "chromapi" }}{{ $suffix = "Chromapi" }}{{ end }}
+{{- $title := "" }}
+{{- if .Params.seo.title }}
+	{{- $title = .Params.seo.title }}
+{{- else }}
+  {{- $title = printf "%s %s %s" .Title (.Site.Params.seo.title.separator | default "|") $suffix }}
+{{- end }}
+<title>{{ $title }}</title>

@@ -6,10 +6,17 @@
 }}
 {{/* Favicon generator */}}
 {{- $faviconName := default "favicon.png" .Site.Params.seo.favicons.icon }}
+{{- /* Chromapi pages get the Chromapi logo as their tab icon. */ -}}
+{{- if eq .Section "chromapi" }}
+  {{- with resources.Get "chromapi-favicon.png" }}
+    <link rel="icon" href="{{ (.Resize "32x32 png").RelPermalink }}" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="{{ (.Resize "180x180 png").RelPermalink }}" sizes="180x180">
+  {{- end }}
+{{- end }}
 {{- $svgIconName := default "favicon.svg" .Site.Params.seo.favicons.svgIcon }}
 {{- $favicon := resources.Get $faviconName }}
 {{- $svgIco := resources.Get $svgIconName }}
-{{- with $favicon }}
+{{- with and (ne .Section "chromapi") $favicon }}
   {{- if ne .MediaType.MainType "image" }}
     {{- warnf "[Thulite SEO] the assets/%s isn't an image, media type: %s." $faviconName .MediaType.Type }}
   {{- else if in (slice "svg") .MediaType.SubType }}
@@ -37,9 +44,9 @@
       >
     {{- end }}
   {{- end }}
-{{- else }}
+{{- else }}{{ if not $favicon }}
     {{- warnf "[Thulite SEO] assets/%s does not exist. Add a file that's at least 512x512 pixels." $faviconName }}
-{{- end }}
+{{- end }}{{ end }}
 
 {{- $templ := `
 {

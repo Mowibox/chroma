@@ -10,44 +10,22 @@
 <div class="header-bar"></div>
 {{ end -}}
 
-<header class="navbar navbar-expand-lg">
+{{- /* Chromapi sub-pages get the Chromapi brand and the chromapi sub-sections as top
+  navigation. The Chromapi home keeps the Chroma navigation, so it is the way back to the main site. */ -}}
+{{- $chromapi := and (eq .Section "chromapi") (site.GetPage "/chromapi") -}}
+{{- $chromapiNav := and $chromapi (ne $chromapi .) -}}
+{{- $brand := cond $chromapiNav "Chromapi" site.Title -}}
+
+<header class="navbar navbar-expand-lg{{ if $chromapiNav }} navbar-chromapi{{ end }}">
   {{ with site.Params.doks.containerBreakpoint -}}
     <div class="container-{{ . }}">
   {{ else -}}
     <div class="container">
   {{ end -}}
 
-    <!-- Site title -->
-    <a class="navbar-brand me-auto me-lg-3" href="{{ relLangURL "" }}">{{ .Site.Title }}</a>
-
-    <!-- FlexSearch mobile -->
-    {{ partial "main/showFlexSearch" . }}
-    {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
-    {{ if $showFlexSearch -}}
-    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <circle cx="10" cy="10" r="7"></circle>
-        <line x1="21" y1="21" x2="15" y2="15"></line>
-      </svg>
-    </button>
-    {{ end -}}
-
-    <!-- DocSearch mobile -->
-    {{ if site.Params.add_ons.docSearch -}}
-    <div id="docsearch" class="d-none" tabindex="-1" aria-disabled="true"></div>
-    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <circle cx="10" cy="10" r="7"></circle>
-        <line x1="21" y1="21" x2="15" y2="15"></line>
-      </svg>
-    </button>
-    {{ end -}}
-
     <!-- Section navigation -->
     {{ if (in site.Params.doks.sectionNav .Section) -}}
-    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+    <button class="btn btn-link nav-link ps-0 me-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
         <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
@@ -82,6 +60,41 @@
     </div>
     {{ end -}}
 
+    <!-- Site title -->
+    <a class="navbar-brand d-flex align-items-center me-auto me-lg-3" href="{{ if $chromapiNav }}{{ $chromapi.RelPermalink }}{{ else }}{{ relLangURL "" }}{{ end }}">
+      {{- /* No logo on the site home: it is already in the page content. */ -}}
+      {{- if not .IsHome -}}
+      {{- with resources.Get (cond $chromapiNav "chromapi-favicon.png" "favicon.png") -}}
+        <img src="{{ (.Resize "64x64 png").RelPermalink }}" alt="" width="32" height="32" class="me-2">
+      {{- end -}}
+      {{- end -}}
+      {{ $brand }}</a>
+
+    <!-- FlexSearch mobile -->
+    {{ partial "main/showFlexSearch" . }}
+    {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
+    {{ if $showFlexSearch -}}
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    {{ end -}}
+
+    <!-- DocSearch mobile -->
+    {{ if site.Params.add_ons.docSearch -}}
+    <div id="docsearch" class="d-none" tabindex="-1" aria-disabled="true"></div>
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    {{ end -}}
+
     <!-- Main navigation button -->
     <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -97,7 +110,7 @@
         <div class="header-bar d-lg-none"></div>
       {{ end -}}
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">{{ site.Title }}</h5>
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">{{ $brand }}</h5>
         <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -122,6 +135,16 @@
         <ul class="navbar-nav flex-grow-1">
           {{- $current := . -}}
           {{- $section := $current.Section -}}
+          {{ with $chromapiNav -}}
+            {{- with $chromapi -}}
+            {{ range .Sections.ByWeight -}}
+              {{- $active := or (eq $current .) ($current.IsDescendant .) -}}
+              <li class="nav-item">
+                <a class="nav-link{{ if $active }} active{{ end }}" href="{{ .RelPermalink }}"{{ if $active }} aria-current="true"{{ end }}>{{ .LinkTitle }}</a>
+              </li>
+            {{ end -}}
+            {{- end -}}
+          {{ else -}}
           {{ range .Site.Menus.main -}}
             {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
             {{- $active = or $active (eq .Name $current.Title) -}}
@@ -148,6 +171,7 @@
                 <a class="nav-link{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if and .Params (eq .Params.rel "external") }} target="_blank" rel="noopener noreferrer"{{ end }}{{ if $active }} aria-current="true"{{ end }}>{{ if .Pre }}<span class="nav-link-name-pre">{{ .Pre }}</span>{{ end }}{{ .Name }}{{ if .Post }}<span class="nav-link-name-post">{{ .Post }}</span>{{ end }}</a>
               </li>
             {{ end -}}
+          {{ end -}}
           {{ end -}}
         </ul>
 

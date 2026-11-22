@@ -6,7 +6,7 @@
 <div class="p-4">
 <div class="flex items-center gap-4 mb-2" style="display:flex; align-items:center;">
 {{- with .Get "icon" }}<img src="{{ printf "icons/%s.svg" . | relURL }}" alt="" style="width:2.5rem; height:2.5rem;" class="w-6 h-6 flex-shrink-0">{{ end -}}
-<h2 class="text-xl font-semibold m-0 p-0">{{ .Get "title" }}</h2>
+<h2 class="text-xl font-semibold m-0 p-0" style="min-width:0; overflow-wrap:anywhere;">{{ replace (.Get "title" | htmlEscape) "_" "_<wbr>" | safeHTML }}</h2>
 </div>
 <p class="text-gray-400 text-sm">{{ .Get "description" | markdownify }}</p>
 </div>

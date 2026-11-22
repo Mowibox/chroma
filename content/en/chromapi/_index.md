@@ -41,7 +41,7 @@ Everything shown here is meant to be **open source**: the idea is to share what 
 {{< link-card src="outline/cpu" title="Hardware" description="Know what's inside (MCU, servos, sensors, power)" href="/chromapi/hardware" >}}
 {{< /card-grid >}}
 {{< card-grid >}}
-{{< link-card src="outline/lifebuoy" title="Help" description="Fix a problem or update the robot" href="/chromapi/help" >}}
+{{< link-card src="outline/help-circle" title="Help" description="Fix a problem or update the robot" href="/chromapi/help" >}}
 {{< link-card src="outline/bulb" title="Design notes" description="Understand why Chromapi is built this way" href="/chromapi/design" >}}
 {{< /card-grid >}}
 
@@ -104,7 +104,7 @@ The roadmap shows the current progress of Chromapi's design stages, as well as t
     <div class="content">
       <h2>🎙️ Audio processing</h2>
       <p>Audio signal perception and processing.</p>
-      <p class="status status-progress">🟠 In progress</p>
+      <p class="status status-planned">🔵 Planned</p>
     </div>
   </div>
   <div class="container right">
