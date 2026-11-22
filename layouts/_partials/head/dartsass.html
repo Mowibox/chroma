@@ -1,0 +1,28 @@
+{{- /* Transpile SCSS to CSS with environment-aware options
+  * Uses Dart Sass for modern Sass language features
+  * Development: source maps enabled, expanded output for debugging
+  * Production: minified output, PostCSS processed, then fingerprinted with integrity hash
+  * IMPORTANT: PostCSS must run before fingerprint to ensure integrity hash matches final output
+  * Local override: silences Bootstrap/Doks deprecation warnings (as in the Doks v2 upgrade guide)
+  * Reference: https://gohugo.io/functions/css/sass/
+*/ -}}
+{{ with resources.Get . -}}
+  {{ $opts := dict
+    "enableSourceMap" hugo.IsDevelopment
+    "outputStyle" (cond hugo.IsDevelopment "expanded" "compressed")
+    "transpiler" "dartsass"
+    "includePaths" (slice "node_modules")
+    "silenceDeprecations" (slice "import" "if-function" "global-builtin" "color-functions")
+    "silenceDependencyDeprecations" true
+  -}}
+  {{ with . | css.Sass $opts -}}
+    {{ if hugo.IsDevelopment -}}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ else -}}
+      {{/* PostProcess defers PostCSS until hugo_stats.json is complete. */ -}}
+      {{ with . | postCSS (dict "config" "config/postcss.config.js") | fingerprint | resources.PostProcess -}}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{ end -}}
+    {{ end -}}
+  {{ end -}}
+{{ end -}}
