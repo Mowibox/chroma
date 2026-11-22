@@ -1,0 +1,9 @@
+{{- /* Local override of the Doks preview: caption translated via i18n ("preview") instead of hard-coded "Preview". */ -}}
+<figure class="preview-figure">
+  <div class="preview">
+    <figcaption>{{ i18n "preview" | default "Preview" }}</figcaption>
+    <div class="preview-content">
+      {{ .Page.RenderString (dict "display" "block") .Inner }}
+    </div>
+  </div>
+</figure>

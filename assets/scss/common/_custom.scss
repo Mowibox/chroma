@@ -184,3 +184,23 @@ html[data-bs-theme="dark"] .header-bar {
     position: fixed !important;
   }
 }
+
+// Email obfuscation (see layouts/shortcodes/email.html)
+span.email b {
+  display: none;
+}
+
+// Keep aspect ratio when .content img max-width shrinks an image with width/height attributes
+.content img {
+  height: auto;
+}
+
+// Fixed-width images ({{< img ... width=300 sizes="300px" class="img-300" >}})
+.content img.img-300 {
+  width: 300px;
+}
+
+// Doks sets blockquote to $font-size-lg; keep quotes at body text size
+blockquote {
+  font-size: inherit;
+}

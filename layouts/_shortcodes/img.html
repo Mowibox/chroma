@@ -1,0 +1,11 @@
+{{- /* Local override of @thulite/images img shortcode: same behaviour, but the <img> is emitted on ONE line.
+  The upstream partial outputs a multi-line tag with blank lines; shortcodes that re-render their inner
+  content as Markdown (Doks tab, step) then turn it into an indented code block. */ -}}
+{{- $formats := slice }}
+{{- with .Get "formats" }}
+  {{- range split (replaceRE `[\s,]+` "," (trim . " ")) "," }}
+    {{- $formats = $formats | append . }}
+  {{- end }}
+{{- end }}
+{{- $ctx := merge .Params (dict "page" .Page) (dict "formats" $formats) }}
+{{- partial "img.html" $ctx | replaceRE `\s*\n\s*` " " | safeHTML -}}

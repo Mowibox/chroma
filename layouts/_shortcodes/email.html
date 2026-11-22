@@ -1,0 +1,8 @@
+{{- /* Email obfuscation (https://docs.thulite.io/thulite/advanced/security/email-obfuscation/)
+  Renders local@host<b>.host</b>.tld; the <b> is hidden by CSS, so readers see local@host.tld but scrapers get a wrong address.
+  Usage: {{< email >}} (site.Params.defaultEmail) or {{< email "me@example.com" >}} */ -}}
+{{- $email := .Get 0 | default site.Params.defaultEmail -}}
+{{- $parts := split $email "@" -}}
+{{- $domain := split (index $parts 1) "." -}}
+{{- $host := delimit (first (sub (len $domain) 1) $domain) "." -}}
+<span class="email">{{ index $parts 0 }}@{{ $host }}<b>.{{ index $domain 0 }}</b>.{{ index (last 1 $domain) 0 }}</span>

@@ -90,6 +90,11 @@
   source = "assets"
   target = "assets"
 
+# Expose static images to Hugo's image pipeline (img/figure shortcodes); they stay served from /images/ too
+[[mounts]]
+  source = "static/images"
+  target = "assets/images"
+
 ## static
 [[mounts]]
   source = "node_modules/@thulite/doks-core/static"

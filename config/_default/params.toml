@@ -6,6 +6,9 @@ images = ["cover.jpg"]
 # mainSections
 mainSections = ["tutorials", "chromapi", "blog"]
 
+# Contact email, obfuscated by the {{< email >}} shortcode
+defaultEmail = "ousmane.thiongane@outlook.com"
+
 # Enable mathematical rendering on every page (unless you set the `math` parameter to `false` in front matter)
 math = true # false (default) or true
 mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
@@ -131,7 +134,7 @@ mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
     suffix = "" # title hugo.toml (default)
   [seo.description]
     summaryFallback = "" # "" (default)
-    lengthIgnores = ["^/tags", "^/categories", "^/contributors"] # auto-generated taxonomy pages have no content to describe
+    lengthIgnores = ["^/tags", "^/categories", "^/contributors", "^/404"] # auto-generated taxonomy pages have no content to describe
   [seo.favicons]
     icon = "favicon.png" # favicon.png (default)
     svgIcon = "favicon.svg" # favicon.svg (default)

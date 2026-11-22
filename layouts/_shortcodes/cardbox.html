@@ -1,0 +1,15 @@
+{{- /* A card in the site's cardlist style (same markup as layouts/cardlist/list.html), for links outside the site.
+  Usage: {{< cardbox href="https://github.com/..." title="repo" description="..." icon="github" >}}
+  icon = a file name in static/icons/ without .svg. Opens in a new tab. */ -}}
+<article class="cardbox rounded-lg overflow-hidden" style="text-align: left;">
+<a href="{{ .Get "href" }}" class="block" target="_blank" rel="noopener">
+<div class="p-4">
+<div class="flex items-center gap-4 mb-2" style="display:flex; align-items:center;">
+{{- with .Get "icon" }}<img src="{{ printf "icons/%s.svg" . | relURL }}" alt="" style="width:2.5rem; height:2.5rem;" class="w-6 h-6 flex-shrink-0">{{ end -}}
+<h2 class="text-xl font-semibold m-0 p-0">{{ .Get "title" }}</h2>
+</div>
+<p class="text-gray-400 text-sm">{{ .Get "description" | markdownify }}</p>
+</div>
+</a>
+</article>
+{{- /**/ -}}

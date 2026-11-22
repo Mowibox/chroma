@@ -74,6 +74,12 @@ jobs:
         run: |
           git -C chromapi-sdk checkout "$(git -C chromapi-sdk describe --tags --abbrev=0)"
           scripts/api-reference/build.sh chromapi-sdk
+      - name: Cache Hugo processed images
+        uses: actions/cache@v4
+        with:
+          path: resources/_gen
+          key: hugo-resources-${{ hashFiles('static/images/**', 'config/_default/params.toml') }}
+          restore-keys: hugo-resources-
       - name: Build production website
         env:
           # For maximum backward compatibility with Hugo modules
