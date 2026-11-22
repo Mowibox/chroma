@@ -1,6 +1,6 @@
-{{- /* Overrides @thulite/seo: pages under /chromapi/ use "Chromapi" as the title suffix. */ -}}
+{{- /* Overrides @thulite/seo: Chromapi sub-pages use "Chromapi" as the title suffix. */ -}}
 {{- $suffix := .Site.Params.seo.title.suffix | default .Site.Title }}
-{{- if eq .Section "chromapi" }}{{ $suffix = "Chromapi" }}{{ end }}
+{{- if and (eq .Section "chromapi") (ne . (site.GetPage "/chromapi")) }}{{ $suffix = "Chromapi" }}{{ end }}
 {{- $title := "" }}
 {{- if .Params.seo.title }}
 	{{- $title = .Params.seo.title }}
