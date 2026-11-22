@@ -24,7 +24,8 @@
   {{ end -}}
 
     <!-- Section navigation -->
-    {{ if (in site.Params.doks.sectionNav .Section) -}}
+    {{- /* No section menu on the Chromapi home: its cards already link every section. */ -}}
+    {{ if and (in site.Params.doks.sectionNav .Section) (ne . $chromapi) -}}
     <button class="btn btn-link nav-link ps-0 me-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
