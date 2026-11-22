@@ -6,7 +6,7 @@ summary: "Learn how to set up Git, create a repository on GitHub, clone locally,
 date: 2025-06-22
 lastmod: 2026-02-05
 draft: false
-weight: 1004
+weight: 30
 toc: true
 icon: "github"
 contributors: ["Ousmane THIONGANE"]
@@ -22,7 +22,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/gitgithub.png" alt="Git and GitHub part 2" class="w-full h-auto" />
+    {{< img src="images/gitgithub.png" alt="Git and GitHub part 2" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 In this second part of the introductory tutorial on Git and GitHub, you will get to the heart of the matter by manipulating the different theoretical concepts explained in the previous part.
@@ -43,7 +43,7 @@ Download Git by choosing the version appropriate for your OS (Windows, Linux, Ma
 ## Creating a New Repository on GitHub
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub2.jpg" alt="Repository mine" class="w-full h-auto" />
+    {{< img src="images/gitgithub2.jpg" alt="Repository mine" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Once Git is installed, the next step is to create an account on the GitHub platform. This will allow you to initialize your first repository.
@@ -57,7 +57,7 @@ This is where things start to get serious. I will first show you step by step th
 * To begin, I click on the "+" button located at the top left of the page. This allows me to select the "New repository" option.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub18.png" alt="New repository" class="w-full h-auto" />
+    {{< img src="images/gitgithub18.png" alt="New repository" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 * I then fill in the different details of my repository:
@@ -69,7 +69,7 @@ This is where things start to get serious. I will first show you step by step th
   * **Its visibility:** On GitHub, you can choose to make a repository public or private. A public repository will be visible to anyone viewing your profile, while a private repository will only be accessible to you (or to people you authorize). For the purpose of this tutorial, I make mine public, but once again, you are free to choose the option that suits you.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub19.png" alt="Repository details" class="w-full h-auto" />
+    {{< img src="images/gitgithub19.png" alt="Repository details" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 * Note that I also check the option to add a **README** to my repository. A README is a file containing a presentation of the project and essential information to understand its purpose and usage. I will go into more detail about it another time since it is not the core of this tutorial, but it is strongly recommended to check this option each time you create a repository.
@@ -77,7 +77,7 @@ This is where things start to get serious. I will first show you step by step th
 * Finally, all that’s left to do is click on "Create repository" and admire my brand new repository!
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub20.png" alt="A setup repository" class="w-full h-auto" />
+    {{< img src="images/gitgithub20.png" alt="A setup repository" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -86,12 +86,17 @@ Follow the steps detailed above to create a repository.
 
 ## SSH Configuration
 
-SSH (Secure Shell) is a secure protocol that allows encrypted communication with a remote server, in particular to interact with GitHub without having to enter your credentials for each operation. Since the way to configure SSH differs depending on whether you are on Windows or Linux/Mac, this section is broken down into several parts. In each of them, I show you how to configure SSH for the corresponding operating system. You can therefore follow the section adapted to your environment.
+SSH (Secure Shell) is a secure protocol that allows encrypted communication with a remote server, in particular to interact with GitHub without having to enter your credentials for each operation. Since the way to configure SSH differs depending on whether you are on Windows or Linux/Mac, this section is broken down into several tabs. In each of them, I show you how to configure SSH for the corresponding operating system. You can therefore follow the tab adapted to your environment.
 
-{{< details "Configure SSH on Windows" >}}
+{{< tabs "ssh" >}}
+{{< tab "Windows" >}}
 
-* Open the "Git Bash" application to access the command-line terminal.
-* Generate an SSH key by entering the following command:
+{{< steps >}}
+{{< step >}}
+Open the "Git Bash" application to access the command-line terminal.
+{{< /step >}}
+{{< step >}}
+Generate an SSH key by entering the following command:
 
 ```bash {title="MINGW64:/c/Users/Mowibox"}
 Mowibox@CHROMA MINGW64 ~
@@ -99,15 +104,17 @@ $ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
 You can press "Enter" two or three times to accept the default file location and not set a passphrase (optional).
-
-* Enable the SSH agent and add the SSH key with the following command:
+{{< /step >}}
+{{< step >}}
+Enable the SSH agent and add the SSH key with the following command:
 
 ```bash {title="MINGW64:/c/Users/Mowibox"}
 Mowibox@CHROMA MINGW64 ~
 $ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 ```
-
+{{< /step >}}
+{{< step >}}
 The next step is to add the key you just generated to GitHub. To do so, run the following command:
 
 ```bash {title="MINGW64:/c/Users/Mowibox"}
@@ -116,11 +123,14 @@ $ cat ~/.ssh/id_ed25519.pub
 ```
 
 You will get an output in your terminal corresponding to your key (it starts with ssh- and ends with your email address). Copy this output entirely.
-
-* On GitHub, click on your profile icon in the top-right corner and access the SSH settings by clicking on "Settings" then "SSH and GPG keys".
-
-* Then click on "New SSH Key". Give your key a title, set the key type to "Authentication Key", paste the previously copied output into the dedicated field, and add the key to GitHub.
-
+{{< /step >}}
+{{< step >}}
+On GitHub, click on your profile icon in the top-right corner and access the SSH settings by clicking on "Settings" then "SSH and GPG keys".
+{{< /step >}}
+{{< step >}}
+Then click on "New SSH Key". Give your key a title, set the key type to "Authentication Key", paste the previously copied output into the dedicated field, and add the key to GitHub.
+{{< /step >}}
+{{< step >}}
 And that’s it! You can also verify that the SSH connection is properly established with GitHub using the following command:
 
 ```bash {title="MINGW64:/c/Users/Mowibox"}
@@ -136,28 +146,33 @@ Hi Mowibox! You've successfully authenticated, but GitHub does not provide shell
 Mowibox@CHROMA MINGW64 ~
 $
 ```
+{{< /step >}}
+{{< /steps >}}
+{{< /tab >}}
+{{< tab "Linux" >}}
 
-{{< /details >}}
-
-{{< details "Configure SSH on Linux" >}}
-
-* Open a terminal using the shortcut "CTRL + Alt + T".
-
-* Generate an SSH key by entering the following command:
+{{< steps >}}
+{{< step >}}
+Open a terminal using the shortcut "CTRL + Alt + T".
+{{< /step >}}
+{{< step >}}
+Generate an SSH key by entering the following command:
 
 ```bash {title="mowibox@chroma: ~"}
 mowibox@chroma:~$ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
 You can press "Enter" two or three times to accept the default file location and not set a passphrase (optional).
-
-* Enable the SSH agent and add the SSH key with the following command:
+{{< /step >}}
+{{< step >}}
+Enable the SSH agent and add the SSH key with the following command:
 
 ```bash {title="mowibox@chroma: ~"}
 mowibox@chroma:~$ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 ```
-
+{{< /step >}}
+{{< step >}}
 The next step is to add the key you just generated to GitHub. To do so, run the following command:
 
 ```bash {title="mowibox@chroma: ~"}
@@ -165,16 +180,18 @@ mowibox@chroma:~$ cat ~/.ssh/id_ed25519.pub
 ```
 
 You will get an output in your terminal corresponding to your key (it starts with ssh- and ends with your email address). Copy this output entirely.
-
-* On GitHub, click on your profile icon in the top-right corner and access the SSH settings by clicking on "Settings" then "SSH and GPG keys".
-
-* Then click on "New SSH Key". Give your key a title, set the key type to "Authentication Key", paste the previously copied output into the dedicated field, then add the key to GitHub.
-
+{{< /step >}}
+{{< step >}}
+On GitHub, click on your profile icon in the top-right corner and access the SSH settings by clicking on "Settings" then "SSH and GPG keys".
+{{< /step >}}
+{{< step >}}
+Then click on "New SSH Key". Give your key a title, set the key type to "Authentication Key", paste the previously copied output into the dedicated field, then add the key to GitHub.
+{{< /step >}}
+{{< step >}}
 And that’s it! You can also verify that the SSH connection is properly established with GitHub using the following command:
 
 ```bash {title="mowibox@chroma: ~"}
-Mowibox@CHROMA MINGW64 ~
-$ ssh -T git@github.com
+mowibox@chroma:~$ ssh -T git@github.com
 ```
 
 You will then see a connection confirmation message. Enter “yes,” and if everything went well, you should see the following display:
@@ -182,31 +199,35 @@ You will then see a connection confirmation message. Enter “yes,” and if eve
 ```bash {title="mowibox@chroma: ~"}
 Hi Mowibox! You've successfully authenticated, but GitHub does not provide shell access.
 
-Mowibox@CHROMA MINGW64 ~
-$
+mowibox@chroma:~$
 ```
+{{< /step >}}
+{{< /steps >}}
+{{< /tab >}}
+{{< tab "macOS" >}}
 
-{{< /details >}}
-
-{{< details "Configure SSH on Mac" >}}
-
-* Open a terminal using the shortcut "Cmd + Alt + T".
-
-* Generate an SSH key by entering the following command:
+{{< steps >}}
+{{< step >}}
+Open a terminal using the shortcut "Cmd + Alt + T".
+{{< /step >}}
+{{< step >}}
+Generate an SSH key by entering the following command:
 
 ```bash {title="mowibox – -zsh – 81x21"}
 mowibox@chroma:~$ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
 You can press "Enter" two or three times to accept the default file location and not set a passphrase (optional).
-
-* Enable the SSH agent and add the SSH key with the following command:
+{{< /step >}}
+{{< step >}}
+Enable the SSH agent and add the SSH key with the following command:
 
 ```bash {title="mowibox – -zsh – 81x21"}
 mowibox@chroma:~$ eval "$(ssh-agent -s)"
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
-
+{{< /step >}}
+{{< step >}}
 The next step is to add the key you just generated to GitHub. To do so, run the following command:
 
 ```bash {title="mowibox – -zsh – 81x21"}
@@ -214,16 +235,18 @@ mowibox@chroma:~$ cat ~/.ssh/id_ed25519.pub
 ```
 
 You will get an output in your terminal corresponding to your key (it starts with ssh- and ends with your email address). Copy this output entirely.
-
-* On GitHub, click on your profile icon in the top-right corner and access the SSH settings by clicking on "Settings" then "SSH and GPG keys".
-
-* Then click on "New SSH Key". Give your key a title, set the key type to "Authentication Key", paste the previously copied output into the dedicated field, then add the key to GitHub.
-
+{{< /step >}}
+{{< step >}}
+On GitHub, click on your profile icon in the top-right corner and access the SSH settings by clicking on "Settings" then "SSH and GPG keys".
+{{< /step >}}
+{{< step >}}
+Then click on "New SSH Key". Give your key a title, set the key type to "Authentication Key", paste the previously copied output into the dedicated field, then add the key to GitHub.
+{{< /step >}}
+{{< step >}}
 And that’s it! You can also verify that the SSH connection is properly established with GitHub using the following command:
 
 ```bash {title="mowibox – -zsh – 81x21"}
-Mowibox@CHROMA MINGW64 ~
-$ ssh -T git@github.com
+mowibox@chroma:~$ ssh -T git@github.com
 ```
 
 You will then see a connection confirmation message. Enter “yes,” and if everything went well, you should see the following display:
@@ -231,11 +254,12 @@ You will then see a connection confirmation message. Enter “yes,” and if eve
 ```bash {title="mowibox – -zsh – 81x21"}
 Hi Mowibox! You've successfully authenticated, but GitHub does not provide shell access.
 
-Mowibox@CHROMA MINGW64 ~
-$
+mowibox@chroma:~$
 ```
-
-{{< /details >}}
+{{< /step >}}
+{{< /steps >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 Configure GitHub authentication using SSH.
@@ -244,7 +268,7 @@ Configure GitHub authentication using SSH.
 ## Cloning the Repository Locally on Your Machine
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub3.jpg" alt="Local copy" class="w-full h-auto" />
+    {{< img src="images/gitgithub3.jpg" alt="Local copy" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">The cart is equivalent to the local copy of the repository.</em>
 </p>
@@ -254,17 +278,18 @@ Now that everything is configured, go back to the repository. At the moment, you
 Regardless of your operating system, you can copy the GitHub link associated with your repository by clicking on the green "<> Code" button and then on the "copy" icon. Make sure the copied link is the "SSH" link.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub21.png" alt="Copy to clipboard" class="w-full h-auto" />
+    {{< img src="images/gitgithub21.png" alt="Copy to clipboard" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
-As in the previous section, the rest of this introduction is split into several parts where I show you how to clone `repository-mine` locally depending on the operating system used. You can therefore follow the sequence of steps corresponding to your OS.
+As in the previous section, the rest of this introduction is split into several tabs where I show you how to clone `repository-mine` locally depending on the operating system used. You can therefore pick the tab for your OS.
 
-{{< details "Clone a repository on Windows" >}}
+{{< tabs "clone" >}}
+{{< tab "Windows" >}}
 
 * On my computer, I choose the location where I want to clone the project folder, for example in my "Documents" folder. Once the location is chosen, I right-click in the file explorer, select "More options", then "Git Bash Here":
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub22.png" alt="Git Bash Here" class="w-full h-auto" />
+    {{< img src="images/gitgithub22.png" alt="Git Bash Here" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 * After clicking on the "Git Bash Here" option, a terminal opens, allowing me to use Git commands:
@@ -286,17 +311,16 @@ $ git clone git@github.com/repository-mine.git
 * All that’s left is to run the command and see the folder appear in my file explorer.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub23.png" alt="Your repository (Windows)" class="w-full h-auto" />
+    {{< img src="images/gitgithub23.png" alt="Your repository (Windows)" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
-{{< /details >}}
-
-{{< details "Clone a repository on Linux/Mac" >}}
+{{< /tab >}}
+{{< tab "Linux" >}}
 
 On my computer, I choose a dedicated location in the file explorer, for example in my "Documents" folder. With a right-click in the explorer, I select the "Open in terminal" option, which opens a terminal directly in the "Documents" location:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub24.png" alt="Open in terminal" class="w-full h-auto" />
+    {{< img src="images/gitgithub24.png" alt="Open in terminal" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 ```bash {title="mowibox@chroma:~/Documents"}
@@ -314,10 +338,38 @@ mowibox@chroma:~/Documents$ git clone git@github.com/repository-mine.git
 * All that’s left is to run the command and see the folder appear in my file explorer.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub25.png" alt="Your repository (Linux/Mac)" class="w-full h-auto" />
+    {{< img src="images/gitgithub25.png" alt="Your repository (Linux/Mac)" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
-{{< /details >}}
+{{< /tab >}}
+{{< tab "macOS" >}}
+
+On my computer, I choose a dedicated location in the file explorer, for example in my "Documents" folder. With a right-click in the explorer, I select the "Open in terminal" option, which opens a terminal directly in the "Documents" location:
+
+<p align="center">
+    {{< img src="images/gitgithub24.png" alt="Open in terminal" sizes="(max-width: 800px) 100vw, 800px" >}}
+</p>
+
+```bash {title="mowibox@chroma:~/Documents"}
+mowibox@chroma:~/Documents$
+```
+
+_Note: It is also possible to open a terminal directly without going through the file explorer using the shortcut "Ctrl + Alt + T" (or "Cmd + Alt + T"), and then manually navigate to the location of your choice using the [cd]({{< relref "tutorials/computer-science/using-terminal/#cd">}}) command._
+
+* With the terminal open, all that’s left is to run the `git clone` command followed by the SSH address copied earlier. In my case, it would look like this:
+
+```bash {title="mowibox@chroma:~/Documents"}
+mowibox@chroma:~/Documents$ git clone git@github.com/repository-mine.git
+```
+
+* All that’s left is to run the command and see the folder appear in my file explorer.
+
+<p align="center">
+    {{< img src="images/gitgithub25.png" alt="Your repository (Linux/Mac)" sizes="(max-width: 800px) 100vw, 800px" >}}
+</p>
+
+{{< /tab >}}
+{{< /tabs >}}
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 Clone your newly created repository locally on your machine.
@@ -326,7 +378,7 @@ Clone your newly created repository locally on your machine.
 ## Making Changes to the Project
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub4.jpg" alt="Creating file A" class="w-full h-auto" />
+    {{< img src="images/gitgithub4.jpg" alt="Creating file A" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 When entering the folder, you should see the "README.md" file. Inside this directory, you can create all the folders or files you need for your project. In mine, I will create a simple text file named `File_A.txt`, in which I write the following text:
@@ -350,7 +402,7 @@ To do this, I open a terminal inside the repository in the same way as explained
   The `git add .` command adds all created or modified files to the staging area. The `.` tells Git to include all changes present in the current directory and its subdirectories.
 
   <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub5.jpg" alt="Adding file A" class="w-full h-auto" />
+    {{< img src="images/gitgithub5.jpg" alt="Adding file A" sizes="(max-width: 800px) 100vw, 800px" >}}
   </p>
 
 * ```bash {frame="none"}
@@ -364,7 +416,7 @@ To do this, I open a terminal inside the repository in the same way as explained
   ```
 
   <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub6.jpg" alt="Writing file A commit" class="w-full h-auto" />
+    {{< img src="images/gitgithub6.jpg" alt="Writing file A commit" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">"Ajout du Fichier A" means Adding File A in French!.</em>
   </p>
@@ -376,17 +428,17 @@ To do this, I open a terminal inside the repository in the same way as explained
   The `git push` command sends the commits to the remote repository, i.e., GitHub.
 
   <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub8.jpg" alt="Push file A" class="w-full h-auto" />
+    {{< img src="images/gitgithub8.jpg" alt="Push file A" sizes="(max-width: 800px) 100vw, 800px" >}}
   </p>
 
 After completing the steps illustrated above, I can finally see my `File_A.txt` file, the message commit and its content on GitHub:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub26_en.png" alt="Repository after pushing" class="w-full h-auto" />
+    {{< img src="images/gitgithub26_en.png" alt="Repository after pushing" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub27_en.png" alt="File A" class="w-full h-auto" />
+    {{< img src="images/gitgithub27_en.png" alt="File A" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -398,7 +450,7 @@ Don’t forget to specify a message with `-m "Message"` when committing!
 If someone has a local copy of your repository on their computer, they can retrieve the latest changes using the `git pull` command.
 When you open a repository, always run this command first to make sure you have the most up-to-date version.
 
-<p align="center"> <img loading="lazy" decoding="async" src="/chroma/images/gitgithub10.jpg" alt="Pull" class="w-full h-auto" /> </br> </p> {{< /callout >}}
+<p align="center"> {{< img src="images/gitgithub10.jpg" alt="Pull" sizes="(max-width: 800px) 100vw, 800px" >}} </br> </p> {{< /callout >}}
 
 ## Deleting Files from the Project
 
@@ -411,7 +463,7 @@ git rm nom_du_fichier
 allows you to delete a file from the project by specifying its name. As with `git add`, you must follow this command with `git commit`, then `git push`.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub28_en.png" alt="Repository after deleting" class="w-full h-auto" />
+    {{< img src="images/gitgithub28_en.png" alt="Repository after deleting" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}

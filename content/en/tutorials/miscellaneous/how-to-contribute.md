@@ -6,7 +6,7 @@ summary: "This guide explains how to contribute to Chroma: suggest ideas, report
 date: 2026-03-01
 lastmod: 2026-03-01
 draft: false
-weight: 4001
+weight: 10
 toc: true
 icon: "heart-handshake"
 contributors: ["Ousmane THIONGANE"]
@@ -23,7 +23,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/contribute1.jpg" alt="Contributing to Chroma" class="w-full h-auto" />
+    {{< img src="images/contribute1.jpg" alt="Contributing to Chroma" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 This guide is designed to walk you step by step through the process of contributing to Chroma. Whether it’s suggesting ideas, identifying issues, or writing your own pages, there is always a way to lend a hand!
@@ -42,19 +42,22 @@ If your goal is to write a new tutorial, rewrite part of an existing one, or div
 ### Prerequisites
 
 * Node.js — [version 24.18.0 or higher (LTS).](https://nodejs.org/en/download)
-* Hugo — [version 0.161.1](https://github.com/gohugoio/hugo/releases/tag/v0.161.1)
-* Hugo extended — [version 0.161.1](https://github.com/gohugoio/hugo/releases/tag/v0.161.1)
+* Hugo extended — [version 0.164.0](https://github.com/gohugoio/hugo/releases/tag/v0.164.0)
+* Dart Sass — [latest version](https://sass-lang.com/install/) (e.g. `sudo snap install dart-sass` on Linux).
 * An IDE such as [Visual Studio Code.](https://code.visualstudio.com/)
 * Basic GitHub knowledge (forks, issues, pull requests) — a [tutorial]({{< relref "tutorials/computer-science/introduction-to-github-part1">}}) is available on the site.
 
 ### Setting Up the Development Environment
 
+{{< steps >}}
+{{< step >}}
 First, create a fork of the [Chroma repository](https://github.com/Mowibox/chroma). Then clone your fork to your machine with `git clone`. Inside a terminal in the project directory, run the following command to install the necessary dependencies:
 
 ```bash {frame="none"}
 npm install
 ```
-
+{{< /step >}}
+{{< step >}}
 This gives you access to a development server to preview the site. Still inside the project directory, run the command below to start the local development server:
 
 ```bash {frame="none"}
@@ -86,8 +89,11 @@ Serving pages from disk
 Web Server is available at http://localhost:1313/chroma/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
 ```
-
+{{< /step >}}
+{{< step >}}
 Click the link to browse the site in your browser. While the server is running, any saved changes will automatically update on the local preview.
+{{< /step >}}
+{{< /steps >}}
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
 If you encounter build or display issues, this command cleans previously generated files by Hugo (public, resources, etc.) to reset the environment before rerunning `npm run dev`:
@@ -102,30 +108,29 @@ npx shx rm -rf public resources hugo_stats.json .hugo_build.lock
 
 The Chroma folders and files are organized as follows:
 
-```text {title="Chroma Structure"}
-.
-├── assets/
-├── config/
-│   └──_default/
-│      ├── hugo.toml
-│      ├── languages.toml
-│      ├── markup.toml
-│      ├── menus/
-│      ├── module.toml
-│      └── params.toml
-├── content/
-│   ├── en/
-│   └── fr/
-|       ├── blog/
-|       ├── chromapi/
-|       └── tutorials/
-├── i18n/
-├── layouts/
-└── static/
-    ├── gifs/
-    ├── icons/
-    └── images/
-```
+{{< tree >}}
+- {folder} assets
+- {folder-open} config
+  - {folder-open} _default
+    - {settings} hugo.toml
+    - {settings} languages.toml
+    - {settings} markup.toml
+    - {folder} menus
+    - {settings} module.toml
+    - {settings} params.toml
+- {folder-open} content
+  - {folder-open} en
+    - {folder} blog
+    - {folder} chromapi
+    - {folder} tutorials
+  - {folder} fr
+- {folder} i18n
+- {folder} layouts
+- {folder-open} static
+  - {folder} gifs
+  - {folder} icons
+  - {folder} images
+{{< /tree >}}
 
 * `assets/` contains source resources (SCSS, JavaScript, styles, etc.) used by the site.
 * `config/` contains configuration files and general settings.
@@ -176,17 +181,16 @@ hugo new content content/en/tutorials/electronics/introduction-to-embedded-prog.
 
 The URL of the English version directly uses the file name: `https://mowibox.github.io/chroma/en/tutorials/electronics/introduction-to-embedded-prog/`. For the French version, it is translated through the `slug` field of the [front matter](#front-matter): with `slug: "initiation-a-la-programmation-embarquee"`, it will be `https://mowibox.github.io/chroma/fr/tutoriels/electronique/initiation-a-la-programmation-embarquee/`
 
-```text {title="Tutorial Folder Structure"}
-.
-└── en/
-    ├── blog/
-    ├── chromapi/
-    └── tutorials/
-        ├── computer-science/
-        ├── design-3d-development/
-        └── electronics/
-            └── introduction-to-embedded-prog.md
-```
+{{< tree >}}
+- {folder-open} en
+  - {folder} blog
+  - {folder} chromapi
+  - {folder-open} tutorials
+    - {folder} computer-science
+    - {folder} design-3d-development
+    - {folder-open} electronics
+      - {markdown} introduction-to-embedded-prog.md
+{{< /tree >}}
 
 #### Front-Matter
 
@@ -243,7 +247,7 @@ Please note that the icon color must be **#a514e9** and must be added to the `st
 * `seo.robots`: Tells search engines how to index the page.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/contribute2_en.png" alt="Tutorial cardlist example" class="w-full h-auto" />
+    {{< img src="images/contribute2_en.png" alt="Tutorial cardlist example" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">Example of a tutorial preview in the list. Fields title, description, and icon are used.</em>
 </p>
@@ -254,7 +258,7 @@ Do not hesitate to check existing tutorial front-matter to see how to fill yours
 
 #### Weight Convention
 
-Tutorial order is defined in the front-matter using the `weight` field. Currently, this value is manually managed (by myself). You can leave it empty, or launch the site locally, identify tutorials near your desired position, and adjust weights accordingly.
+Tutorial order is defined in the front-matter using the `weight` field: the smallest weight comes first. Weights only compare pages within the same folder, and go by steps of 10 (`10`, `20`, `30`, etc.). To insert your tutorial between two others, pick a value in between (e.g. `25` between `20` and `30`), or leave the field empty and I will set it.
 
 #### Content Formatting
 
@@ -272,15 +276,21 @@ Feel free to combine Markdown features and Doks shortcodes to give your tutorial
 
 #### Adding Images
 
-All images on the site dedicated to pages are stored in the [`static/images/`.](https://github.com/Mowibox/chroma/tree/main/static/images) folder. To integrate an image from the folder into your page, adapt the following HTML block to your needs:
+All images on the site dedicated to pages are stored in the [`static/images/`.](https://github.com/Mowibox/chroma/tree/main/static/images) folder. To integrate an image from the folder into your page, adapt the following block to your needs:
 
 ```html {title="Adding Images"}
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/image1.jpg" alt="Image 1 short description" class="w-full h-auto" />
+    {{</* img src="images/contribute3.jpg" alt="Image 1 short description" sizes="(max-width: 800px) 100vw, 800px" */>}}
 </p>
 ```
 
-Where `image1.jpg` is the name of the image. If you want to add a new image, simply add the image in question to the `static/images/` folder so that it can be used. As with the rest of the site, there are certain points to bear in mind when adding images:
+{{< preview >}}
+<p align="center">
+    {{< img src="images/contribute3.jpg" alt="Image 1 short description" sizes="(max-width: 800px) 100vw, 800px" >}}
+</p>
+{{< /preview >}}
+
+Where `contribute3.jpg` is the name of the image. If you want to add a new image, simply add the image in question to the `static/images/` folder so that it can be used. As with the rest of the site, there are certain points to bear in mind when adding images:
 
 * The image must **not exceed 2 MB.**
 * The image must be **your own, or published under a compatible license** (CC0, CC BY or CC BY-SA). Images under a NonCommercial (NC) or NoDerivatives (ND) license, or without a license, cannot be used. For a third-party image, add its author, source and license in the caption.
@@ -289,21 +299,23 @@ Where `image1.jpg` is the name of the image. If you want to add a new image, sim
 * If certain images can be used in several tutorials, you can give them a more generic name, while adding an underscore (`_`) at the beginning to distinguish them (e.g., `_buzzer.jpg`).
 * The `alt` field must contain a **very short description of the image content in English.**
 
-You can also add a caption to your image using the HTML block below:
+You can also add a caption to your image using the block below:
 
 ```html {title="Image with Caption"}
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/image2.jpg" alt="Image with caption" class="w-full h-auto" />
+    {{</* img src="images/contribute3.jpg" alt="Image with caption" sizes="(max-width: 800px) 100vw, 800px" */>}}
     </br>
     <em style="font-size: 0.95em;">An image with a caption.</em>
 </p>
 ```
 
+{{< preview >}}
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/contribute3.jpg" alt="Image caption example" class="w-full h-auto" />
+    {{< img src="images/contribute3.jpg" alt="Image with caption" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">An image with a caption.</em>
 </p>
+{{< /preview >}}
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
 Gifs and icons follow the same rules (`static/icons/`, `static/gifs/`).
@@ -321,6 +333,15 @@ At the end of each page of the site (such as this one), a section dedicated to p
 * **Writer:**
 * **Reviewer:**
 ```
+
+{{< preview >}}
+---
+
+## Credits {#credits-example}
+
+* **Writer:**
+* **Reviewer:**
+{{< /preview >}}
 
 * **Writer:** You! There may be several authors, separated by commas.
 * **Reviewer:** These are the people who proofread your tutorial and offered suggestions. There is no need to indicate this if you are the author. If you do not have proofreaders, the field can be left blank, but it must be present in all cases.

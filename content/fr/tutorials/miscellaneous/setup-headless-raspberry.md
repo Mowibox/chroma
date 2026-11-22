@@ -7,7 +7,7 @@ summary: "Apprendre à installer et configurer une Raspberry Pi en mode headless
 date: 2025-07-12
 lastmod: 2026-02-05
 draft: false
-weight: 4003
+weight: 30
 toc: true
 icon: "chip"
 contributors: ["Ousmane THIONGANE"]
@@ -22,7 +22,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/headless1.png" alt="Raspberry Pi Zero 2 W" class="w-full h-auto" />
+    {{< img src="images/headless1.png" alt="Raspberry Pi Zero 2 W" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Souvent, on configure une Raspberry Pi en y branchant un écran, un clavier et une souris. Mais peut-être que vous n’avez pas ce matériel sous la main — ou simplement que vous n’en avez pas besoin pour l’usage que vous souhaitez en faire. Par exemple, si votre projet n’utilise pas d’interface graphique, il est plus économe en ressources de se passer d’un écran.
@@ -42,53 +42,62 @@ Ce tutoriel vous propose une alternative de configuration de votre Raspberry Pi 
 
 Voici la liste des différentes étapes à suivre pour préparer la carte SD à l'emploi :
 
-* Connectez la carte SD à votre ordinateur et lancez le logiciel Raspberry Pi Imager. Vous devriez obtenir une interface similaire à celle ci-dessous :
+{{< steps >}}
+{{< step >}}
+Connectez la carte SD à votre ordinateur et lancez le logiciel Raspberry Pi Imager. Vous devriez obtenir une interface similaire à celle ci-dessous :
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless2.png" alt="Raspberry Pi Imager" class="w-full h-auto" />
+  {{< img src="images/headless2.png" alt="Raspberry Pi Imager" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* Commencez par sélectionner le modèle de Raspberry Pi dont vous disposez en cliquant sur "Choosing Device" :
+{{< /step >}}
+{{< step >}}
+Commencez par sélectionner le modèle de Raspberry Pi dont vous disposez en cliquant sur "Choosing Device" :
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless3.png" alt="Choosing Device" class="w-full h-auto" />
+  {{< img src="images/headless3.png" alt="Choosing Device" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* Cliquez sur "Choosing OS" pour choisir le système d'exploitation que vous allez flasher sur la carte SD. Cliquez sur "Other general-purpose OS" :
+{{< /step >}}
+{{< step >}}
+Cliquez sur "Choosing OS" pour choisir le système d'exploitation que vous allez flasher sur la carte SD. Cliquez sur "Other general-purpose OS" :
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless4.png" alt="Choosing OS" class="w-full h-auto" />
+  {{< img src="images/headless4.png" alt="Choosing OS" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* Parmi les différentes versions d'Ubuntu, sélectionnez une version "Server" : dans ces versions, les paquets et dépendances dédiés à l'interface graphique sont absents, ce qui est idéal dans notre situation où aucun écran n'est utilisé :
+{{< /step >}}
+{{< step >}}
+Parmi les différentes versions d'Ubuntu, sélectionnez une version "Server" : dans ces versions, les paquets et dépendances dédiés à l'interface graphique sont absents, ce qui est idéal dans notre situation où aucun écran n'est utilisé :
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless5.png" alt="Choosing Ubuntu Server 24.04" class="w-full h-auto" />
+  {{< img src="images/headless5.png" alt="Choosing Ubuntu Server 24.04" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* Sélectionnez ensuite l'emplacement de stockage de l'image. Si vous n'avez connecté que votre carte SD à votre ordinateur, cela devrait être facile de la retrouver.
+{{< /step >}}
+{{< step >}}
+Sélectionnez ensuite l'emplacement de stockage de l'image. Si vous n'avez connecté que votre carte SD à votre ordinateur, cela devrait être facile de la retrouver.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless6.png" alt="Choosing Storage" class="w-full h-auto" />
+  {{< img src="images/headless6.png" alt="Choosing Storage" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* En cliquant sur "Next" le logiciel vous demandera si vous souhaitez appliquer des paramètres spécifiques sur votre OS avant de flasher la carte SD. Cliquez alors sur "Edit Settings".
+{{< /step >}}
+{{< step >}}
+En cliquant sur "Next" le logiciel vous demandera si vous souhaitez appliquer des paramètres spécifiques sur votre OS avant de flasher la carte SD. Cliquez alors sur "Edit Settings".
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless7.png" alt="Editing Settings" class="w-full h-auto" />
+  {{< img src="images/headless7.png" alt="Editing Settings" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* Vous devriez obtenir une interface similaire à celle-ci dessous :
+{{< /step >}}
+{{< step >}}
+Vous devriez obtenir une interface similaire à celle-ci dessous :
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless8.png" alt="General Settings" class="w-full h-auto" />
+  {{< img src="images/headless8.png" alt="General Settings" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* Modifiez les paramètres suivants en fonction de vos besoins :
-  * Le nom d'hôte : Vous pouvez laisser le nom défini par défaut.
-  * Le nom d'utilisateur et le mot de passe pour se connecter à la Pi.
-  * Le Wi-Fi auquel la Pi cherchera à se connecter à chaque fois.
-  * Les paramètres locaux et la langue de votre clavier.
+{{< /step >}}
+{{< step >}}
+Modifiez les paramètres suivants en fonction de vos besoins :
+* Le nom d'hôte : Vous pouvez laisser le nom défini par défaut.
+* Le nom d'utilisateur et le mot de passe pour se connecter à la Pi.
+* Le Wi-Fi auquel la Pi cherchera à se connecter à chaque fois.
+* Les paramètres locaux et la langue de votre clavier.
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
 Plutôt que de connecter la Pi au Wi-Fi de votre box par exemple, vous pouvez configurer la Pi pour se connecter au partage Wi-Fi de votre téléphone. Ainsi, vous pourrez utiliser la Pi n'importe où !
@@ -97,16 +106,21 @@ Plutôt que de connecter la Pi au Wi-Fi de votre box par exemple, vous pouvez co
 {{< callout context="danger" title="Attention" icon="outline/alert-square-rounded" >}}
 Quelque soit le réseau que vous choisissez, soyez sûrs qu'il est possible de l'utiliser en bande 2,4 GHz : Les Raspberry Pi ne peuvent pas se connecter à des réseaux de bande 5 GHz.
 {{< /callout >}}
-
-* Enfin, sélectionnez la section "Services" et cochez la case "Enable SSH" pour activer le service SSH. Laissez la sélection sur "Use password authentication".
+{{< /step >}}
+{{< step >}}
+Enfin, sélectionnez la section "Services" et cochez la case "Enable SSH" pour activer le service SSH. Laissez la sélection sur "Use password authentication".
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless9.png" alt="Enabling SSH" class="w-full h-auto" />
+  {{< img src="images/headless9.png" alt="Enabling SSH" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* Cliquez sur "Save", puis sur "Yes" pour lancer l'écriture de l'OS sur la carte SD. Une fois l'écriture terminée, vous pouvez retirer votre carte SD de votre ordinateur pour l'insérer dans votre Raspberry Pi.
-
-* Branchez la Pi à une alimentation. Vous devriez voir un voyant vert clignoter. Essayons maintenant d'y accéder via notre ordinateur.
+{{< /step >}}
+{{< step >}}
+Cliquez sur "Save", puis sur "Yes" pour lancer l'écriture de l'OS sur la carte SD. Une fois l'écriture terminée, vous pouvez retirer votre carte SD de votre ordinateur pour l'insérer dans votre Raspberry Pi.
+{{< /step >}}
+{{< step >}}
+Branchez la Pi à une alimentation. Vous devriez voir un voyant vert clignoter. Essayons maintenant d'y accéder via notre ordinateur.
+{{< /step >}}
+{{< /steps >}}
 
 ## Connexion à la Rapsberry Pi
 

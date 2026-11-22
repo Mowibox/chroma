@@ -6,7 +6,7 @@ summary: "Learn how to manage Docker images and containers: creating, launching,
 date: 2025-06-22
 lastmod: 2026-02-05
 draft: false
-weight: 1008
+weight: 70
 toc: true
 icon: "docker"
 contributors: ["Ousmane THIONGANE"]
@@ -21,7 +21,7 @@ seo:
    robots: "index, follow"
 ---
 
-<p align="center"> <img src="/chroma/images/docker1.png" alt="Docker" class="w-full h-auto" /> </p>
+<p align="center"> {{< img src="images/docker1.png" alt="Docker" sizes="(max-width: 800px) 100vw, 800px" >}} </p>
 
 This tutorial series will show you how to use Docker on a Linux computer. This part focuses on Docker images and containers. The commands used in this section are those specified in the [official Docker documentation.](https://docs.docker.com/reference/cli/docker/)
 

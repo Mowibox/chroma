@@ -6,7 +6,7 @@ summary: "Master GitHub's advanced collaborative features: create issues, fork a
 date: 2026-01-07
 lastmod: 2026-02-05
 draft: false
-weight: 1005
+weight: 40
 toc: true
 icon: "git-branch"
 contributors: ["Ousmane THIONGANE"]
@@ -22,7 +22,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/gitgithub.png" alt="Git and GitHub part 3" class="w-full h-auto" />
+    {{< img src="images/gitgithub.png" alt="Git and GitHub part 3" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 In this final part of the Git and GitHub introduction tutorial, you will learn to master GitHub's advanced collaborative features, such as issues, branches, and pull requests, to effectively manage your contributions and those of others in a GitHub project.
@@ -35,7 +35,7 @@ In this final part of the Git and GitHub introduction tutorial, you will learn t
 ## Final Goal: The Treasure Mine
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub2.jpg" alt="Repository mine" class="w-full h-auto" />
+    {{< img src="images/gitgithub2.jpg" alt="Repository mine" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Throughout this introduction, we illustrated our explanations and manipulations using the `repository-mine`. In general, a mine is created to extract ores, veins, or treasures… Wouldn't it be a good idea to add a treasure to the `repository-mine` to give it value? With this in mind, I created a file in the repository called [`Our_Treasure.md`](https://github.com/Mowibox/repository-mine/blob/main/Our_Treasure.md):
@@ -57,7 +57,7 @@ An issue is a discussion space associated with a repository. Specifically, it al
 On GitHub, all I have to do is click on the **“Issues”** tab in my repository, then on **“New Issue”**:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub29_en.png" alt="Issue description" class="w-full h-auto" />
+    {{< img src="images/gitgithub29_en.png" alt="Issue description" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;"><a href="https://github.com/Mowibox/repository-mine/issues/1">See the issue on GitHub.</a></em>
 </p>
@@ -77,7 +77,7 @@ The next step is to modify the relevant files to enrich the shared treasure. How
 To illustrate how to create a fork, a new contributor is introduced: **Chromatistí.**
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub30.png" alt="Chromatisti" class="w-full h-auto" />
+    {{< img src="images/gitgithub30.png" alt="Chromatisti" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">Chromatistí!</em>
 </p>
@@ -85,7 +85,7 @@ To illustrate how to create a fork, a new contributor is introduced: **Chromatis
 "Forking" a repository means creating a complete copy of a repository in your own GitHub account. This copy, the fork, belongs to you: you can make any modifications you want. This is the most common way to contribute to a project without being the original owner.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub31.png" alt="Two mines" class="w-full h-auto" />
+    {{< img src="images/gitgithub31.png" alt="Two mines" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">Forking a repository is like having an identical mine where you can do anything!</em>
 </p>
@@ -93,19 +93,19 @@ To illustrate how to create a fork, a new contributor is introduced: **Chromatis
 * To create a fork, Chromatistí goes to my repository and clicks the **"Fork"** button:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub32.png" alt="Create a fork" class="w-full h-auto" />
+    {{< img src="images/gitgithub32.png" alt="Create a fork" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 * Chromatistí then checks the fork information. Default information comes from the original repository but can be modified:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub33.png" alt="Fork informations" class="w-full h-auto" />
+    {{< img src="images/gitgithub33.png" alt="Fork informations" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 * Chromatistí clicks **"Create fork"** and finally obtains a `repository-mine` identical to the original (notice the icon next to the repository name):
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub34.png" alt="Fork repository" class="w-full h-auto" />
+    {{< img src="images/gitgithub34.png" alt="Fork repository" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -135,7 +135,7 @@ a new branch called `my-treasure` is created and he places it there directly. Th
 ```
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub35_en.png" alt="Branch creation" class="w-full h-auto" />
+    {{< img src="images/gitgithub35_en.png" alt="Branch creation" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 To apply the changes in Git, you must use the same commands as in the previous part. The only difference is adding the `--set-upstream origin <branch_name>` flag to `git push`:
@@ -149,13 +149,13 @@ git push --set-upstream origin my-treasure
 The branch and its associated changes are now visible on GitHub.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub36_en.png" alt="Branch selection" class="w-full h-auto" />
+    {{< img src="images/gitgithub36_en.png" alt="Branch selection" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">Branch change is immediately visible in the main interface.</em>
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub37_en.png" alt="Branch my-treasure overview" class="w-full h-auto" />
+    {{< img src="images/gitgithub37_en.png" alt="Branch my-treasure overview" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">Here we see the active branch is "my-treasure" and the commit has been recorded.</em>
 </p>
@@ -179,7 +179,7 @@ git switch main
 You will then see that the `Our_Treasure.md` file has been restored to its original state.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub38_en.png" alt="Main branch" class="w-full h-auto" />
+    {{< img src="images/gitgithub38_en.png" alt="Main branch" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">You are here!</em>
 </p>
@@ -212,7 +212,7 @@ Changes from the `my-treasure` branch now appear on the `main` branch:
 ```
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub39_en.png" alt="Merging branches" class="w-full h-auto" />
+    {{< img src="images/gitgithub39_en.png" alt="Merging branches" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">Illustratively: merging the two train branches to have only one mine.</em>
 </p>
@@ -240,7 +240,7 @@ You now have your treasure in the mine! But remember, changes were made in your 
 A pull request is a key GitHub mechanism that proposes merging changes from one branch into another, while providing a space for discussion and review before integration.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub40_en.png" alt="Pull request on mines" class="w-full h-auto" />
+    {{< img src="images/gitgithub40_en.png" alt="Pull request on mines" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">It's like asking to merge the two mines into one.</em>
 </p>
@@ -264,7 +264,7 @@ The process happens on GitHub:
 * In his fork, Chromatistí clicks **"Contribute"**, then **"Open pull request"**, opening an interface to write a title and description:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub41_en.png" alt="Adding reference" class="w-full h-auto" />
+    {{< img src="images/gitgithub41_en.png" alt="Adding reference" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 For this exercise, he can write "Pull request for issue …". For which issue? There are two ways to specify:
@@ -275,7 +275,7 @@ For this exercise, he can write "Pull request for issue …". For which issue? T
 In both cases, a list of issues and previous pull requests appears; just select the relevant issue (here, issue #1).
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub42_en.png" alt="Pull request pending" class="w-full h-auto" />
+    {{< img src="images/gitgithub42_en.png" alt="Pull request pending" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Adding a description and references provides context for the changes made, making it easier for the original repository owner to understand them.
@@ -283,11 +283,11 @@ Adding a description and references provides context for the changes made, makin
 Once the pull request is created (**"Create pull request"**), just wait for a contributor (in this case, me) to approve it:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub43_en.png" alt="Accepted pull request" class="w-full h-auto" />
+    {{< img src="images/gitgithub43_en.png" alt="Accepted pull request" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub44_en.png" alt="Final treasure" class="w-full h-auto" />
+    {{< img src="images/gitgithub44_en.png" alt="Final treasure" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">And there you have it!</em>
 </p>
@@ -297,7 +297,7 @@ Create a pull request to merge your changes into the main repository. **Don’t 
 {{< /callout >}}
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/gitgithub40_en.png" alt="Final graph" class="w-full h-auto" />
+    {{< img src="images/gitgithub40_en.png" alt="Final graph" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 ## Going Further

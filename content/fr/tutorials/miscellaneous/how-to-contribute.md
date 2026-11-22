@@ -7,7 +7,7 @@ summary: "Ce guide explique comment contribuer à Chroma : proposer des idées, 
 date: 2026-03-01
 lastmod: 2026-03-01
 draft: false
-weight: 4001
+weight: 10
 toc: true
 icon: "heart-handshake"
 contributors: ["Ousmane THIONGANE"]
@@ -24,7 +24,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/contribute1.jpg" alt="Contributing to Chroma" class="w-full h-auto" />
+    {{< img src="images/contribute1.jpg" alt="Contributing to Chroma" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Ce guide a pour vocation de vous accompagner pas à pas dans le processus de contribution à Chroma. Que ce soit en proposant des idées, en identifiant des problèmes ou en rédigeant vos propres pages, il y a toujours un moyen de donner un coup de main !
@@ -43,13 +43,15 @@ Si votre objectif de contribution est de rédiger un nouveau tutoriel, réécrir
 ### Prérequis
 
 * Node.js — [version 24.18.0 ou supérieure (LTS).](https://nodejs.org/en/download)
-* Hugo — [version 0.161.1](https://github.com/gohugoio/hugo/releases/tag/v0.161.1)
-* Hugo extended — [version 0.161.1](https://github.com/gohugoio/hugo/releases/tag/v0.161.1)
+* Hugo extended — [version 0.164.0](https://github.com/gohugoio/hugo/releases/tag/v0.164.0)
+* Dart Sass — [dernière version](https://sass-lang.com/install/) (par ex. `sudo snap install dart-sass` sous Linux).
 * Un IDE comme [Visual Studio Code.](https://code.visualstudio.com/)
 * Savoir utiliser GitHub (forks, issues, pull requests) — un [tutoriel]({{< relref "tutorials/computer-science/introduction-to-github-part1">}}) est disponible sur le site.
 
 ### Mise en place de l'environnement de développement
 
+{{< steps >}}
+{{< step >}}
 Tout d'abord, créez une fork du [repository de Chroma](https://github.com/Mowibox/chroma). Clonez ensuite votre fork sur votre machine avec `git clone`. Dans un terminal au sein du répertoire du projet, exécutez la commande suivante pour installer les dépendances nécessaires :
 
 ```bash {frame="none"}
@@ -57,6 +59,8 @@ npm install
 ```
 
 Vous aurez ainsi accès à un serveur de développement qui vous permettra de prévisualiser le site.
+{{< /step >}}
+{{< step >}}
 Toujours au sein du répertoire du projet, exécutez la commande ci-dessous pour démarrer le serveur de développement en local :
 
 ```bash {frame="none"}
@@ -88,8 +92,11 @@ Serving pages from disk
 Web Server is available at http://localhost:1313/chroma/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
 ```
-
+{{< /step >}}
+{{< step >}}
 Cliquez sur ce lien pour parcourir le site sur votre navigateur. Tant que le serveur sera actif, chaque modification sauvegardée sera mise à jour automatiquement sur la prévisualisation du site.
+{{< /step >}}
+{{< /steps >}}
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
 En cas de problème de build ou d'affichage, cette commande permet de nettoyer les fichiers générés précédemment par Hugo (public, resources, etc.) afin d'avoir un environnement propre avant de relancer `npm run dev` :
@@ -104,30 +111,29 @@ npx shx rm -rf public resources hugo_stats.json .hugo_build.lock
 
 Les différents dossiers et fichiers de Chroma sont organisés de la manière suivante :
 
-```text {title="Structure de Chroma"}
-.
-├── assets/
-├── config/
-│   └──_default/
-│      ├── hugo.toml
-│      ├── languages.toml
-│      ├── markup.toml
-│      ├── menus/
-│      ├── module.toml
-│      └── params.toml
-├── content/
-│   ├── en/
-│   └── fr/
-|       ├── blog/
-|       ├── chromapi/
-|       └── tutorials/
-├── i18n/
-├── layouts/
-└── static/
-    ├── gifs/
-    ├── icons/
-    └── images/
-```
+{{< tree >}}
+- {folder} assets
+- {folder-open} config
+  - {folder-open} _default
+    - {settings} hugo.toml
+    - {settings} languages.toml
+    - {settings} markup.toml
+    - {folder} menus
+    - {settings} module.toml
+    - {settings} params.toml
+- {folder-open} content
+  - {folder} en
+  - {folder-open} fr
+    - {folder} blog
+    - {folder} chromapi
+    - {folder} tutorials
+- {folder} i18n
+- {folder} layouts
+- {folder-open} static
+  - {folder} gifs
+  - {folder} icons
+  - {folder} images
+{{< /tree >}}
 
 * `assets/` regroupe les ressources sources (SCSS, JavaScript, style, etc.) utilisées pour le site.
 * `config/` regroupe les fichiers de configuration et paramètres généraux du site.
@@ -178,17 +184,16 @@ hugo new content content/fr/tutorials/electronics/introduction-to-embedded-prog.
 
 Le lien internet de la version anglaise reprend directement le nom du fichier : `https://mowibox.github.io/chroma/en/tutorials/electronics/introduction-to-embedded-prog/`. Pour la version française, il est traduit grâce au champ `slug` de l'[avant-propos](#avant-propos) : avec `slug: "initiation-a-la-programmation-embarquee"`, il sera de la forme `https://mowibox.github.io/chroma/fr/tutoriels/electronique/initiation-a-la-programmation-embarquee/`
 
-```text {title="Arborescence du tutoriel"}
-.
-└── fr/
-    ├── blog/
-    ├── chromapi/
-    └── tutorials/
-        ├── computer-science/
-        ├── design-3d-development/
-        └── electronics/
-            └── introduction-to-embedded-prog.md
-```
+{{< tree >}}
+- {folder-open} fr
+  - {folder} blog
+  - {folder} chromapi
+  - {folder-open} tutorials
+    - {folder} computer-science
+    - {folder} design-3d-development
+    - {folder-open} electronics
+      - {markdown} introduction-to-embedded-prog.md
+{{< /tree >}}
 
 #### Avant-propos
 
@@ -245,7 +250,7 @@ Attention, il faut que la couleur de l'icône soit **#a514e9** et doit être ajo
 * `seo.robots` : Indique aux moteurs de recherche comment indexer la page.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/contribute2_fr.png" alt="Tutorial cardlist example" class="w-full h-auto" />
+    {{< img src="images/contribute2_fr.png" alt="Tutorial cardlist example" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">Exemple d'aperçu de tutoriel dans la liste. Les champs title, description et icon, sont sollicités.</em>
 </p>
@@ -256,7 +261,7 @@ N'hésitez pas à regarder les avant-propos des tutoriels déjà existants afin 
 
 #### Convention des poids de page
 
-L'ordre des tutoriels est défini dans l'avant-propos grâce au champ `weight`. Pour le moment, cette valeur est gérée manuellement (par moi-même). Vous pouvez soit laisser le champ vide, soit lancer le site en local, repérer les tutoriels situés à l’endroit où vous souhaitez ajouter le vôtre, puis adapter les poids des pages environnantes.
+L'ordre des tutoriels est défini dans l'avant-propos grâce au champ `weight` : le plus petit poids apparaît en premier. Les poids ne comparent que les pages d'un même dossier, et vont de 10 en 10 (`10`, `20`, `30`, etc.). Pour insérer votre tutoriel entre deux autres, choisissez une valeur intermédiaire (par ex. `25` entre `20` et `30`), ou laissez le champ vide et je m'en chargerai.
 
 #### Mise en forme du contenu
 
@@ -274,15 +279,21 @@ N’hésitez pas à combiner les fonctionnalités de Markdown et des shortcodes 
 
 #### Ajout d'images
 
-L'ensemble des images du site dédiées aux pages sont stockées dans le dossier [`static/images/`.](https://github.com/Mowibox/chroma/tree/main/static/images) Pour intégrer une image du dossier dans votre page, adaptez le bloc HTML suivant à votre besoin :
+L'ensemble des images du site dédiées aux pages sont stockées dans le dossier [`static/images/`.](https://github.com/Mowibox/chroma/tree/main/static/images) Pour intégrer une image du dossier dans votre page, adaptez le bloc suivant à votre besoin :
 
 ```html {title="Ajout d'images"}
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/image1.jpg" alt="Image 1 short description" class="w-full h-auto" />
+    {{</* img src="images/contribute3.jpg" alt="Image 1 short description" sizes="(max-width: 800px) 100vw, 800px" */>}}
 </p>
 ```
 
-Où `image1.jpg` est le nom de l'image. Si vous voulez rajouter une nouvelle image, il suffit donc de rajouter l'image en question dans le dossier `static/images/` pour qu'elle soit utilisable. Comme pour le reste du site, certains points sont à respecter lors de l'ajout d'images :
+{{< preview >}}
+<p align="center">
+    {{< img src="images/contribute3.jpg" alt="Image 1 short description" sizes="(max-width: 800px) 100vw, 800px" >}}
+</p>
+{{< /preview >}}
+
+Où `contribute3.jpg` est le nom de l'image. Si vous voulez rajouter une nouvelle image, il suffit donc de rajouter l'image en question dans le dossier `static/images/` pour qu'elle soit utilisable. Comme pour le reste du site, certains points sont à respecter lors de l'ajout d'images :
 
 * L’image ne doit **pas dépasser 2 MB.**
 * L’image doit être **de vous, ou publiée sous une licence compatible** (CC0, CC BY ou CC BY-SA). Les images sous licence Pas d'Utilisation Commerciale (NC), Pas de Modification (ND), ou sans licence, ne peuvent pas être utilisées. Pour une image tierce, indiquez son auteur, sa source et sa licence dans la légende.
@@ -291,21 +302,23 @@ Où `image1.jpg` est le nom de l'image. Si vous voulez rajouter une nouvelle ima
 * Si certaines images peuvent être utilisées dans plusieurs tutoriels, vous pouvez leur donner un nom plus générique, tout en ajoutant un tiret du bas (`_`) au début pour les distinguer (ex : `_buzzer.jpg`).
 * Le champ `alt` doit contenir une **très courte description du contenu de l’image en anglais.**
 
-Il est aussi possible d'ajouter une légende à votre image en utilisant le bloc HTML ci-dessous :
+Il est aussi possible d'ajouter une légende à votre image en utilisant le bloc ci-dessous :
 
 ```html {title="Ajout d'images avec légende"}
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/image2.jpg" alt="Image with caption" class="w-full h-auto" />
+    {{</* img src="images/contribute3.jpg" alt="Image with caption" sizes="(max-width: 800px) 100vw, 800px" */>}}
     </br>
     <em style="font-size: 0.95em;">Une image avec une légende.</em>
 </p>
 ```
 
+{{< preview >}}
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/contribute3.jpg" alt="Image caption example" class="w-full h-auto" />
+    {{< img src="images/contribute3.jpg" alt="Image with caption" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">Une image avec une légende.</em>
 </p>
+{{< /preview >}}
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
 Les gifs et les icônes suivent le même principe et ont leur dossier dédié (`static/icons/`, `static/gifs/`).
@@ -323,6 +336,15 @@ Les gifs et les icônes suivent le même principe et ont leur dossier dédié (`
 * **Rédacteur :**
 * **Relecteur :**
 ```
+
+{{< preview >}}
+---
+
+## Crédits {#credits-example}
+
+* **Rédacteur :**
+* **Relecteur :**
+{{< /preview >}}
 
 Tout d’abord, remarquez qu’il y a une ligne séparatrice (`---`) permettant de scinder le tutoriel et les crédits. Il y a ensuite les différents champs qui sont à compléter :
 

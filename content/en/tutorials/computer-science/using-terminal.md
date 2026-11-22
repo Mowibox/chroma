@@ -6,7 +6,7 @@ summary: "Learn how to master basic terminal commands on Linux, macOS, or Window
 date: 2025-06-30
 lastmod: 2026-02-05
 draft: false
-weight: 1001
+weight: 10
 toc: true
 icon: "terminal"
 contributors: ["Ousmane THIONGANE"]
@@ -22,7 +22,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/using_terminal.png" alt="Tchoo tchoo" class="w-full h-auto" />
+    {{< img src="images/using_terminal.png" alt="Tchoo tchoo" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 The terminal is a powerful tool for interacting with your operating system. Whether you’re on Linux, macOS, or Windows, learning the basic commands will help you better manage your environment and accomplish tasks more easily.

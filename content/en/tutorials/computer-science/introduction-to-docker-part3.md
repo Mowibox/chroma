@@ -6,7 +6,7 @@ summary: "Learn how to write a Dockerfile, build a custom Docker image, and laun
 date: 2025-06-22
 lastmod: 2026-02-05
 draft: false
-weight: 1009
+weight: 80
 toc: true
 icon: "docker"
 contributors: ["Ousmane THIONGANE"]
@@ -23,7 +23,7 @@ seo:
 
 
 <p align="center">
-    <img src="/chroma/images/docker1.png" alt="Docker" class="w-full h-auto" />
+    {{< img src="images/docker1.png" alt="Docker" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 This tutorial series will show you how to use Docker on a Linux computer. This part is dedicated to creating a Dockerfile.
@@ -78,12 +78,12 @@ print(f"{a} + {b} = {c}")
 
 Your tree should look like this:
 
-```plaintext
-docker_folder/
-├── Dockerfile
-└── my_folder/
-    └── my_python_file.py
-```
+{{< tree >}}
+- {folder-open} docker_folder
+  - {brand-docker} Dockerfile
+  - {folder-open} my_folder
+    - {brand-python} my_python_file.py
+{{< /tree >}}
 
 ## Dockerfile contents
 
@@ -261,13 +261,13 @@ nano my_python_file.py
 ```
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/docker2_en.png" alt="Displaying nano" class="w-full h-auto" />
+    {{< img src="images/docker2_en.png" alt="Displaying nano" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Add the modifications you want, save, and rerun:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/docker3_en.png" alt="Editing nano" class="w-full h-auto" />
+    {{< img src="images/docker3_en.png" alt="Editing nano" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 ```bash {title="root@3d18c90647a5:/"}

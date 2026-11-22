@@ -6,7 +6,7 @@ summary: "Discover the basics of embedded programming with Arduino through simpl
 date: 2025-06-22
 lastmod: 2026-02-05
 draft: false
-weight: 2001
+weight: 10
 toc: true
 icon: "laptop"
 contributors: ["Ousmane THIONGANE"]
@@ -22,14 +22,14 @@ seo:
 ---
 
 <p align="center">
-  <img src="/chroma/images/arduino.jpeg" alt="IDE" class="w-full h-auto" />
+  {{< img src="images/arduino.jpeg" alt="IDE" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Embedded programming involves programming microcontrollers, which are small integrated circuits that bring together the essential elements of a computer. Microcontrollers can be found in a variety of everyday objects (robots, computers, cars...).
 
 In this introductory course, you'll learn how to use an Arduino board and its associated software, in order to assimilate the basics of embedded programming for your future personal projects.
 
-_For any comments or questions, feel free to email me at [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com)._
+_For any comments or questions, feel free to email me at {{< email >}}._
 
 ## Requirements
 
@@ -62,13 +62,13 @@ Components are fairly easy to find on online sales sites. One piece of advice I 
 For each level, a circuit diagram will be proposed like the one below:
 
 <p align="center">
-  <img loading="lazy" decoding="async" src="/chroma/images/level1.png" alt="Circuit example" class="w-full h-auto" />
+  {{< img src="images/level1.png" alt="Circuit example" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Try to build the circuit as shown. Once done, you can connect your Arduino board to your computer and open the Arduino IDE software. Let's explore the interface quickly with a code to turn on the red LED:
 
 <p align="center">
-  <img loading="lazy" decoding="async" src="/chroma/images/ide.png" alt="IDE" class="w-full h-auto" />
+  {{< img src="images/ide.png" alt="IDE" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 * The verify button :ballot_box_with_check: allows you to check your code for errors before sending it to the board.
@@ -111,7 +111,7 @@ A few tips to get you started:
 #### Level 1 Wiring
 
 <p align="center">
-  <img loading="lazy" decoding="async" src="/chroma/images/level1.png" alt="Level 1" class="w-full h-auto" />
+  {{< img src="images/level1.png" alt="Level 1" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -149,7 +149,7 @@ void loop() {
 #### Level 2 Wiring
 
 <p align="center">
-  <img loading="lazy" decoding="async" src="/chroma/images/level2.png" alt="Level 2" class="w-full h-auto" />
+  {{< img src="images/level2.png" alt="Level 2" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -200,7 +200,7 @@ void loop() {
 #### Level 3 Wiring
 
 <p align="center">
-  <img loading="lazy" decoding="async" src="/chroma/images/level3.png" alt="Level 3" class="w-full h-auto" />
+  {{< img src="images/level3.png" alt="Level 3" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -250,7 +250,7 @@ void loop() {
 #### Level 4 Wiring
 
 <p align="center">
-  <img loading="lazy" decoding="async" src="/chroma/images/level4.png" alt="Level 4" class="w-full h-auto" />
+  {{< img src="images/level4.png" alt="Level 4" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -292,7 +292,7 @@ void loop() {
 #### Level 5 Wiring
 
 <p align="center">
-<img loading="lazy" decoding="async" src="/chroma/images/level5.png" alt="Level 5" class="w-full h-auto" />
+{{< img src="images/level5.png" alt="Level 5" sizes="(max-width: 800px) 100vw, 800px" >}}
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
 **Play “Happy Birthday” when the button is pressed.**
@@ -309,7 +309,7 @@ void loop() {
 | f(Hz)  | 391 | 415  | 440 | 466 | 493 | 523 |
 
 <p align="center">
-  <img loading="lazy" decoding="async" src="/chroma/images/happybirthday.png" alt="Happy Birthday" class="w-full h-auto" />
+  {{< img src="images/happybirthday.png" alt="Happy Birthday" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
@@ -387,7 +387,7 @@ For example: a variable brightness traffic light that beeps when it turns red to
 Feel free to search on the web for fun tutorials.
 
 <p align="center">
-  <img loading="lazy" decoding="async" src="/chroma/images/level6.png" alt="Niveau 6" class="w-full h-auto" />
+  {{< img src="images/level6.png" alt="Niveau 6" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Arduino is a great platform to learn embedded programming quickly and build small projects.

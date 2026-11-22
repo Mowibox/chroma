@@ -6,7 +6,7 @@ summary: "Learn how to configure and program the ADC on an STM32 board with Cube
 date: 2025-06-22
 lastmod: 2026-02-05
 draft: false
-weight: 2004
+weight: 40
 toc: true
 icon: "wave-square"
 contributors: ["Ousmane THIONGANE"]
@@ -22,7 +22,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/adc1.png" alt="ADC" class="w-full h-auto" />
+    {{< img src="images/adc1.png" alt="ADC" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 In this tutorial, we’ll learn how to use the ADC with STM32 Cube IDE.
@@ -40,7 +40,7 @@ The Analog-to-Digital Converter (ADC) is a system that, as the name suggests, co
 ## How it works
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/adc2.png" alt="Analog/Digital signal" class="w-full h-auto" />
+    {{< img src="images/adc2.png" alt="Analog/Digital signal" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">Red signal: Analog, Blue signal: Digital</em>
 </p>
@@ -62,7 +62,7 @@ Generally, on STM32 boards, pins A0 to A5 have ADC capability (but it's always a
 To do this, connect one analog pin to +5V (here A0) and another to GND (here A1):
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/adc3.png" alt="Wiring" class="w-full h-auto" />
+    {{< img src="images/adc3.png" alt="Wiring" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">Wiring</em>
 </p>
@@ -88,7 +88,7 @@ Note that a pin may support multiple ADCs. I could’ve swapped ADC1 and ADC2 or
 In the "ADC" tab on the left, select ADC1 and configure as follows:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/adc4.png" alt="Configuration" class="w-full h-auto" />
+    {{< img src="images/adc4.png" alt="Configuration" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
 </p>
 
@@ -157,7 +157,7 @@ while (1)
 Once compiled and uploaded to your board, if you display the values from A0 (`value_a0`) and A1 (`value_a1`) using the above method, you'll get `value_a0 = 4095` and `value_a1 = 0`, which matches the resolution. If you go further, you can send these values to a serial plotter to visualize the signal:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/adc5.png" alt="Serial plotter" class="w-full h-auto" />
+    {{< img src="images/adc5.png" alt="Serial plotter" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">Blue signal: A0, Orange signal: A1</em>
 </p>

@@ -6,7 +6,7 @@ summary: "Part 1 of an introduction to PCB design with KiCad: creating the elect
 date: 2025-06-22
 lastmod: 2026-02-05
 draft: false
-weight: 2002
+weight: 20
 toc: true
 icon: "chip"
 contributors: ["Ousmane THIONGANE"]
@@ -22,14 +22,14 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/pcb.png" alt="PCB image" class="w-full h-auto" />
+    {{< img src="images/pcb.png" alt="PCB image" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Printed Circuit Boards (PCB), are at the heart of modern electronics. They consist of layers of copper separated by an insulating material, often seen in green. They serve as a support to connect and hold components, with the goal of building an electronic board.
 
 In this tutorial, you will learn how to use KiCad software to design a simple PCB, from the electronic schematic to the board layout ready for fabrication.
 
-_For any comments or questions, feel free to email me at [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com)._
+_For any comments or questions, feel free to email me at {{< email >}}._
 
 ## Requirements
 
@@ -41,7 +41,7 @@ _For any comments or questions, feel free to email me at [ousmane.thiongane@outl
 The goal of this tutorial is to create a small PCB with simple components (LEDs, buzzers, resistors, etc.) that can later be connected and used with a microcontroller board:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic1.png" alt="PCB example" class="w-full h-auto" />
+    {{< img src="images/schematic1.png" alt="PCB example" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 This project is carried out in two parts:
@@ -52,11 +52,11 @@ This project is carried out in two parts:
 ## Schematic
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic2_en.png" alt="Schematic editor" class="w-full h-auto" />
+    {{< img src="images/schematic2_en.png" alt="Schematic editor" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic3.jpg" alt="Schematic editor page" class="w-full h-auto" />
+    {{< img src="images/schematic3.jpg" alt="Schematic editor page" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -77,11 +77,11 @@ For our board, we need to place the following components on the page:
 * 1 push-button switch (SW_Push)
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic4.jpg" alt="Components" class="w-full h-auto" />
+    {{< img src="images/schematic4.jpg" alt="Components" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic5.jpg" alt="Adding component" class="w-full h-auto" />
+    {{< img src="images/schematic5.jpg" alt="Adding component" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -99,29 +99,29 @@ Now we will connect the components together with wires, and also using what are 
 Local and global labels allow you to connect components without drawing wires between them. This is very useful for improving readability in a large schematic. Here is an example without labels:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic6.jpg" alt="Without label" class="w-full h-auto" />
+    {{< img src="images/schematic6.jpg" alt="Without label" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 And the same schematic with labels (both are equivalent!):
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic7.jpg" alt="With label" class="w-full h-auto" />
+    {{< img src="images/schematic7.jpg" alt="With label" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 * **Local label:** Functional for a single page of the project (what we will use in this tutorial since we only have one page).
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic8.jpg" alt="Local label" class="w-full h-auto" />
+    {{< img src="images/schematic8.jpg" alt="Local label" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 * **Global label:** Functional across all pages of the same project.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic9.jpg" alt="Global label" class="w-full h-auto" />
+    {{< img src="images/schematic9.jpg" alt="Global label" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic10.jpg" alt="Wired circuit" class="w-full h-auto" />
+    {{< img src="images/schematic10.jpg" alt="Wired circuit" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -133,7 +133,7 @@ To avoid errors later during the Electrical Rules Check, place a power flag (PWR
 {{< /callout >}}
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic11.jpg" alt="Power flags" class="w-full h-auto" />
+    {{< img src="images/schematic11.jpg" alt="Power flags" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 ### Annotating Components
@@ -141,11 +141,11 @@ To avoid errors later during the Electrical Rules Check, place a power flag (PWR
 Next, we will assign unique reference designators to each component so they can be distinguished.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic12.jpg" alt="Annotate component symbol" class="w-full h-auto" />
+    {{< img src="images/schematic12.jpg" alt="Annotate component symbol" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic13_en.png" alt="Annotate component window" class="w-full h-auto" />
+    {{< img src="images/schematic13_en.png" alt="Annotate component window" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -157,17 +157,17 @@ Next, we will assign unique reference designators to each component so they can 
 Your schematic is now complete, but you must verify that there are no errors. This is done with the Electrical Rules Checker (ERC).
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic20.jpg" alt="ERC symbol" class="w-full h-auto" />
+    {{< img src="images/schematic20.jpg" alt="ERC symbol" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic14_en.png" alt="ERC with errors" class="w-full h-auto" />
+    {{< img src="images/schematic14_en.png" alt="ERC with errors" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 In the example above, a connection between LED D1 and ground was missing. We add the required wire, rerun the ERC, and the errors disappear:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic15_en.png" alt="ERC without errors" class="w-full h-auto" />
+    {{< img src="images/schematic15_en.png" alt="ERC without errors" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -179,11 +179,11 @@ In the example above, a connection between LED D1 and ground was missing. We add
 Now we need to assign a footprint to each component, defining its shape and dimensions on the PCB. We do this with the "Assign Footprints" tool.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic16.jpg" alt="Assign footprints symbol" class="w-full h-auto" />
+    {{< img src="images/schematic16.jpg" alt="Assign footprints symbol" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic17.jpg" alt="Assign footprints window" class="w-full h-auto" />
+    {{< img src="images/schematic17.jpg" alt="Assign footprints window" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 The tool is divided into three columns:
@@ -195,7 +195,7 @@ The tool is divided into three columns:
 To avoid searching through all footprints, you can apply three filters:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic18.jpg" alt="Footprint filters" class="w-full h-auto" />
+    {{< img src="images/schematic18.jpg" alt="Footprint filters" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 1. Footprints defined for the selected symbol
@@ -205,7 +205,7 @@ To avoid searching through all footprints, you can apply three filters:
 _In this example, you can enable all three filters at once by checking their boxes._
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic19.jpg" alt="Footprint assignation" class="w-full h-auto" />
+    {{< img src="images/schematic19.jpg" alt="Footprint assignation" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}

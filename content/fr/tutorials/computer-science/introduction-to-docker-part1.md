@@ -7,7 +7,7 @@ summary: "Apprenez à installer Docker sur Linux et à configurer votre environn
 date: 2025-06-22
 lastmod: 2026-02-05
 draft: false
-weight: 1007
+weight: 60
 toc: true
 icon: "docker"
 contributors: ["Ousmane THIONGANE"]
@@ -23,7 +23,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/docker1.png" alt="Docker" class="w-full h-auto" />
+    {{< img src="images/docker1.png" alt="Docker" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Cette série de tutoriels vous illustrera comment utiliser Docker avec un ordinateur sous Linux. Cette partie est consacrée à l'installation de Docker.
@@ -50,6 +50,8 @@ Avec Docker, tout le monde utilise la même image, les mêmes versions et obtien
 La procédure d'installation présentée ci-dessous peut être retrouvée sur le [site officiel de Docker.](https://docs.docker.com/engine/install/ubuntu)
 {{< /callout >}}
 
+{{< steps >}}
+{{< step >}}
 Sur votre machine, ouvrez un terminal (Ctrl+Alt+T) et entrez les commandes suivantes :
 
 ```bash {frame="none"}
@@ -57,13 +59,15 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 ```
 
 Vous pouvez vérifier que vous avez bien récupéré le fichier get-docker.sh avec la commande `ls`.
-
+{{< /step >}}
+{{< step >}}
 Exécutez ensuite le fichier .sh pour lancer l'installation de Docker :
 
 ```bash {frame="none"}
 sudo sh ./get-docker.sh
 ```
-
+{{< /step >}}
+{{< step >}}
 Une fois Docker installé, il reste encore quelques commandes de post-installation à exécuter :
 
 Vérifiez que le groupe "docker" a bien été créé avec la commande `sudo groupadd docker` :
@@ -79,13 +83,15 @@ mowibox@chroma$ sudo groupadd docker
 [sudo] password for mowibox:
 groupadd: group 'docker' already exists
 ```
-
+{{< /step >}}
+{{< step >}}
 Ajoutez l'utilisateur (c'est vous !) au groupe docker :
 
 ```bash {frame="none"}
 sudo usermod -aG docker $USER
 ```
-
+{{< /step >}}
+{{< step >}}
 Vérifiez ensuite si le service docker est activé (enabled) :
 
 ```bash {frame="none"}
@@ -98,13 +104,15 @@ Si ce n'est pas le cas, vous pouvez l'activer en entrant les commandes suivantes
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
-
+{{< /step >}}
+{{< step >}}
 Une fois toutes les commandes saisies, vous pouvez redémarrer votre système pour que les modifications soient effectives :
 
 ```bash {frame="none"}
 reboot
 ```
-
+{{< /step >}}
+{{< step >}}
 Et voilà ! Votre Docker est prêt à l'emploi. Vous pouvez exécuter la commande `docker run hello-world` dans le terminal pour vous en assurer. Vous devriez obtenir le résultat ci-dessous :
 
 ```bash {title="Terminal"}
@@ -136,6 +144,8 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
+{{< /step >}}
+{{< /steps >}}
 
 Le tutoriel suivant explique le concept propre à Docker des images et des conteneurs et vous apprendra à les prendre en main.
 

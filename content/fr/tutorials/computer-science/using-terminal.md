@@ -7,7 +7,7 @@ summary: "Apprenez à maîtriser les commandes de base du terminal sur Linux, ma
 date: 2025-06-30
 lastmod: 2026-02-05
 draft: false
-weight: 1001
+weight: 10
 toc: true
 icon: "terminal"
 contributors: ["Ousmane THIONGANE"]
@@ -23,7 +23,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/using_terminal.png" alt="Tchoo tchoo" class="w-full h-auto" />
+    {{< img src="images/using_terminal.png" alt="Tchoo tchoo" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Le terminal est un outil puissant pour interagir avec son système d'exploitation. Que vous soyez sur Linux, macOS, ou Windows, apprendre à utiliser les commandes de base vous permettra de mieux gérer votre environnement et de réaliser plus aisément certaines tâches.

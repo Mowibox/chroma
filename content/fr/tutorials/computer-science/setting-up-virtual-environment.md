@@ -7,7 +7,7 @@ summary: "Tutoriel pratique pour créer, activer, utiliser et supprimer des envi
 date: 2025-06-27
 lastmod: 2026-02-05
 draft: false
-weight: 1006
+weight: 50
 toc: true
 icon: "laptop"
 contributors: ["Ousmane THIONGANE"]
@@ -23,7 +23,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/venv.png" alt="Virtual environment" class="w-full h-auto" />
+    {{< img src="images/venv.png" alt="Virtual environment" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Ce tutoriel vous apprendra en quelques lignes comment créer et utiliser un environnement virtuel avec Python.
@@ -43,31 +43,38 @@ C'est ce qu'on appelle **un environnement virtuel.**
 
 ## Procédure d'installation
 
-* Vérifiez que vous avez bien `pip` installé sur votre machine :
+{{< steps >}}
+{{< step >}}
+Vérifiez que vous avez bien `pip` installé sur votre machine :
 
 ```bash {frame="none"}
 sudo apt-get install python3-pip
 ```
-
-* Installez le module `virtualenvwrapper` :
+{{< /step >}}
+{{< step >}}
+Installez le module `virtualenvwrapper` :
 
 ```bash {frame="none"}
 sudo pip3 install virtualenvwrapper
 ```
-
-* Une fois le module installé, il faut rajouter des lignes de configuration à votre fichier `~/.bashrc` (fichier de configuration du terminal exécuté à chaque démarrage de session). Pour ce faire, ouvrez `~/.bashrc` avec un éditeur de texte, par exemple avec Visual Studio Code:
+{{< /step >}}
+{{< step >}}
+Une fois le module installé, il faut rajouter des lignes de configuration à votre fichier `~/.bashrc` (fichier de configuration du terminal exécuté à chaque démarrage de session). Pour ce faire, ouvrez `~/.bashrc` avec un éditeur de texte, par exemple avec Visual Studio Code:
 
 ```bash {frame="none"}
 sudo code ~/.bashrc
 ```
-
-* Après l'avoir ouvert, ajoutez-y les lignes suivantes :
+{{< /step >}}
+{{< step >}}
+Après l'avoir ouvert, ajoutez-y les lignes suivantes :
 
 ```bashrc {frame="none"}
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
+{{< /step >}}
+{{< /steps >}}
 
 Sauvegardez et fermez le fichier. Vous avez maintenant ce qu'il faut pour commencer à créer des environnements virtuels.
 

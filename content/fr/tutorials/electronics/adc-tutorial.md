@@ -7,7 +7,7 @@ summary: "Apprenez à configurer et programmer l'ADC sur une carte STM32 avec Cu
 date: 2025-06-22
 lastmod: 2026-02-05
 draft: false
-weight: 2004
+weight: 40
 toc: true
 icon: "wave-square"
 contributors: ["Ousmane THIONGANE"]
@@ -23,7 +23,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/adc1.png" alt="ADC" class="w-full h-auto" />
+    {{< img src="images/adc1.png" alt="ADC" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Dans ce tutoriel, vous apprendrez à utiliser l'ADC sur STM32 Cube IDE.
@@ -41,7 +41,7 @@ Le Convertisseur Analogique Numérique (CAN) ou en anglais Analog Digital Conver
 ## Étapes de fonctionnement
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/adc2.png" alt="Analog/Digital signal" class="w-full h-auto" />
+    {{< img src="images/adc2.png" alt="Analog/Digital signal" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">Signal rouge : Signal Analogique, Signal Bleu : Signal Numérique</em>
 </p>
@@ -63,7 +63,7 @@ Sur une carte de développement comme celle utilisée ici, ce sont généralemen
 Pour ce faire, je vais relier l'une des broches analogiques au +5V (ici A0) et une autre au GND (ici A1) :
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/adc3.png" alt="Wiring" class="w-full h-auto" />
+    {{< img src="images/adc3.png" alt="Wiring" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">Montage</em>
 </p>
@@ -84,7 +84,7 @@ Notez que pour une broche, plusieurs ADC sont parfois disponibles. J'aurais pu i
 Dans l'onglet "ADC" sur la gauche, sélectionnez ADC1 et définissez les paramètres suivants :
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/adc4.png" alt="Configuration" class="w-full h-auto" />
+    {{< img src="images/adc4.png" alt="Configuration" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
 </p>
 
@@ -154,7 +154,7 @@ while (1)
 Après compilation du code et téléversement du code sur la carte, si j'affiche les valeurs des broches A0 (stockées dans `value_a0`) et A1 (stockées par exemple dans `value_a1`) avec la méthode décrite ci-dessus, j'obtiendrai `value_a0 = 4095` et `value_a1 = 0`, ce qui est cohérent avec la résolution choisie. En poussant le code un peu plus loin, il est aussi possible d'envoyer ces valeurs à un traceur série pour afficher les valeurs :
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/adc5.png" alt="Serial plotter" class="w-full h-auto" />
+    {{< img src="images/adc5.png" alt="Serial plotter" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
     <em style="font-size: 0.95em;">Signal bleu : A0, Signal orange : A1</em>
 </p>

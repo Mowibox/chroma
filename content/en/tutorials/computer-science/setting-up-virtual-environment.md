@@ -6,7 +6,7 @@ summary: "Practical tutorial for creating, activating, using, and deleting Pytho
 date: 2025-06-27
 lastmod: 2026-02-05
 draft: false
-weight: 1006
+weight: 50
 toc: true
 icon: "laptop"
 contributors: ["Ousmane THIONGANE"]
@@ -22,7 +22,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/venv.png" alt="Virtual environment" class="w-full h-auto" />
+    {{< img src="images/venv.png" alt="Virtual environment" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 This tutorial will teach you in just a few steps how to create and use a virtual environment with Python.
@@ -42,31 +42,38 @@ This is known as a **virtual environment**.
 
 ## Installation steps
 
-* Check that `pip` is installed on your machine:
+{{< steps >}}
+{{< step >}}
+Check that `pip` is installed on your machine:
 
 ```bash {frame="none"}
 sudo apt-get install python3-pip
 ```
-
-* Install the `virtualenvwrapper` package:
+{{< /step >}}
+{{< step >}}
+Install the `virtualenvwrapper` package:
 
 ```bash {frame="none"}
 sudo pip3 install virtualenvwrapper
 ```
-
-* Once the module is installed, you need to add some configuration lines to your `~/.bashrc file` (a terminal configuration file executed at each session startup). To do this, open `~/.bashrc` with a text editor, for example using Visual Studio Code:
+{{< /step >}}
+{{< step >}}
+Once the module is installed, you need to add some configuration lines to your `~/.bashrc file` (a terminal configuration file executed at each session startup). To do this, open `~/.bashrc` with a text editor, for example using Visual Studio Code:
 
 ```bash {frame="none"}
 sudo code ~/.bashrc
 ```
-
-* After opening the file, add the following lines:
+{{< /step >}}
+{{< step >}}
+After opening the file, add the following lines:
 
 ```bashrc {frame="none"}
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
+{{< /step >}}
+{{< /steps >}}
 
 Save and close the file. You now have everything you need to start creating virtual environments.
 

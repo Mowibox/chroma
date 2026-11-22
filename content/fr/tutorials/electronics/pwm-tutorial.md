@@ -7,7 +7,7 @@ summary: "Apprendre à générer un signal PWM avec STM32 Cube IDE pour contrôl
 date: 2025-12-20
 lastmod: 2026-02-05
 draft: false
-weight: 2005
+weight: 50
 toc: true
 icon: "wave-square"
 contributors: ["Ousmane THIONGANE"]
@@ -23,7 +23,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/pwm1.jpg" alt="PWM tutorial" class="w-full h-auto" />
+    {{< img src="images/pwm1.jpg" alt="PWM tutorial" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Dans ce tutoriel, vous apprendrez à générer un signal PWM sur STM32 Cube IDE, afin de faire tourner un servomoteur.
@@ -42,7 +42,7 @@ La Modulation à Largeur d'Impulsion (MLI) ou en anglais Pulse Width Modulation 
 Dans la plupart des systèmes numériques, il n'existe que deux niveaux de tension : un état haut (1) et un état bas (0). Il n'y a donc pas de niveaux intermédiaires permettant de faire varier la tension (comme 0,5). Pour pallier à cela, l'idée du PWM consiste à faire varier la durée pendant laquelle le signal est à l'état haut, tout en maintenant la fréquence constante.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/pwm2.png" alt="Duty cycle" class="w-full h-auto" />
+    {{< img src="images/pwm2.png" alt="Duty cycle" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Sur une période donnée, la proportion de temps passée à l'état haut est appelée le rapport cyclique (duty cycle en anglais). En modifiant ce rapport cyclique, on change la valeur moyenne de la tension appliquée au composant, ce qui nous permet de contrôler un composant avec une puissance variable.
@@ -56,7 +56,7 @@ Dans le contexte de manipulation d'un servomoteur, le signal PWM est utilisé po
 Pour illustrer ce tutoriel, je vais utiliser une carte [NUCLEO-L476RG](https://www.st.com/en/evaluation-tools/nucleo-l476rg.html). Les branchements pour faire fonctionner un servomoteur sont les suivants :
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/pwm4.png" alt="Wiring" class="w-full h-auto" />
+    {{< img src="images/pwm4.png" alt="Wiring" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 * Deux câbles respectivement connectés au +5V et au GND du servomoteur (généralement, rouge pour l'alimentation et marron ou noir pour la masse).
@@ -69,7 +69,7 @@ Il faut identifier à quelle broche correspond D5. Les analogies entre les broch
 Configurez ensuite la broche avec un timer et son channel disponible (de la forme "TIMx_CHx"). Pour la NUCLEO L476RG, la seule configuration disponible sur D5 est TIM3_CH1.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/pwm5.png" alt="PWM pin assignment" class="w-full h-auto" />
+    {{< img src="images/pwm5.png" alt="PWM pin assignment" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Dans l'onglet à gauche, définissez les paramètres suivants :
@@ -77,14 +77,14 @@ Dans l'onglet à gauche, définissez les paramètres suivants :
 * Dans la section **"System Core"**, sélectionnez **RCC**.
   * Définissez **High Speed Clock (HSE)** sur **Crystal/Ceramic Resonator**.
   <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/pwm6.png" alt="System core" class="w-full h-auto" />
+    {{< img src="images/pwm6.png" alt="System core" sizes="(max-width: 800px) 100vw, 800px" >}}
   </p>
 
 * Dans la section **"Timers"**, sélectionnez le timer que vous avez configuré.
   * Définissez **Clock Source** sur **Internal Clock**.
   * Définissez le channel que vous avez choisi sur **PWM Generation CHx** (ici PWM Generation CH1).
   <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/pwm7.png" alt="Timer configuration" class="w-full h-auto" />
+    {{< img src="images/pwm7.png" alt="Timer configuration" sizes="(max-width: 800px) 100vw, 800px" >}}
   </p>
 
 ## Paramètres fréquentiels
@@ -92,7 +92,7 @@ Dans l'onglet à gauche, définissez les paramètres suivants :
 En se rendant dans l'onglet supérieur "Clock configuration", il est possible de voir les différentes fréquences auxquelles fonctionnent les timers du microcontrôleur, en l'occurrence 80 MHz pour la NUCLEO L476RG.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/pwm8.png" alt="Clock configuration" class="w-full h-auto" />
+    {{< img src="images/pwm8.png" alt="Clock configuration" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Or, en se basant sur la [documentation d'un servomoteur SG90](http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf), la fréquence du signal doit être d'environ 50 Hz. À priori, je suis bien loin des 50 Hz que je suis censé atteindre, pour que le servomoteur puisse tourner sans accros ! Mais comme la vie est bien faite, il est possible de diviser la fréquence d'un timer afin d'atteindre la fréquence voulue.
@@ -121,7 +121,7 @@ Plusieurs combinaisons peuvent fonctionner pour atteindre une fréquence de 50 H
 Une fois les valeurs de \(PSC\) et \(ARR\) déterminées, retournez dans les paramètres de TIM3 pour y intégrer leurs valeurs dans la section "Parameter Settings" :
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/pwm9.png" alt="PSC & ARR assignment" class="w-full h-auto" />
+    {{< img src="images/pwm9.png" alt="PSC & ARR assignment" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 ## Le rapport cyclique
@@ -141,7 +141,7 @@ $$
 Je n'ai plus qu'à ajouter ma valeur calculée dans les paramètres, puis générer le code :
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/pwm10.png" alt="Pulse assignment" class="w-full h-auto" />
+    {{< img src="images/pwm10.png" alt="Pulse assignment" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 ## Intégration dans le code
@@ -170,7 +170,7 @@ Si vous compilez et téléversez le code sur la carte, vous remarqurez que le se
 Si vous possédez un oscilloscope, vous pouvez quand même observer le signal PWM de votre broche :
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/pwm11.png" alt="Oscilloscope display" class="w-full h-auto" />
+    {{< img src="images/pwm11.png" alt="Oscilloscope display" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Grâce aux carreaux de l'affichage, on remarque bien que la période du signal est de 20 ms (soit, 50 Hz). Le rapport cyclique est de \(\frac{1}{2}\).

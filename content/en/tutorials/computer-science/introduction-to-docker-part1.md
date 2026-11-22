@@ -6,7 +6,7 @@ summary: "Learn how to install Docker on Linux and configure your environment to
 date: 2025-06-22
 lastmod: 2026-02-05
 draft: false
-weight: 1007
+weight: 60
 toc: true
 icon: "docker"
 contributors: ["Ousmane THIONGANE"]
@@ -22,7 +22,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/docker1.png" alt="Docker" class="w-full h-auto" />
+    {{< img src="images/docker1.png" alt="Docker" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 This tutorial series will show you how to use Docker on a Linux computer. This part is dedicated to installing Docker.
@@ -49,6 +49,8 @@ With Docker, everyone runs the same image, with the same tools, same versions, a
 The installation procedure below can also be found on the [official Docker site](https://docs.docker.com/engine/install/ubuntu)
 {{< /callout >}}
 
+{{< steps >}}
+{{< step >}}
 On your machine, open a terminal (Ctrl+Alt+T) and enter the following commands:
 
 ```bash {frame="none"}
@@ -56,13 +58,15 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 ```
 
 You can check that you have successfully downloaded the get-docker.sh file with the command `ls`.
-
+{{< /step >}}
+{{< step >}}
 Then execute the .sh file to start the Docker installation:
 
 ```bash {frame="none"}
 sudo sh ./get-docker.sh
 ```
-
+{{< /step >}}
+{{< step >}}
 Once Docker is installed, there are still some post-installation commands to run:
 
 Check that the "docker" group has been created with the command `sudo groupadd docker`:
@@ -78,13 +82,15 @@ mowibox@chroma$ sudo groupadd docker
 [sudo] password for mowibox:
 groupadd: group 'docker' already exists
 ```
-
+{{< /step >}}
+{{< step >}}
 Add your user (that's you!) to the docker group:
 
 ```bash {frame="none"}
 sudo usermod -aG docker $USER
 ```
-
+{{< /step >}}
+{{< step >}}
 Then check if the docker service is enabled:
 
 ```bash {frame="none"}
@@ -97,13 +103,15 @@ If it's not, you can enable it by entering the following commands:
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
-
+{{< /step >}}
+{{< step >}}
 After entering all the commands, you can reboot your system for the changes to take effect:
 
 ```bash {frame="none"}
 reboot
 ```
-
+{{< /step >}}
+{{< step >}}
 And there you go! Your Docker is ready to use. You can run the command `docker run hello-world` in the terminal to verify. You should get the output below:
 
 ```bash {title="Terminal"}
@@ -135,6 +143,8 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
+{{< /step >}}
+{{< /steps >}}
 
 The next tutorial explains the Docker concept of images and containers and teaches you how to handle them.
 

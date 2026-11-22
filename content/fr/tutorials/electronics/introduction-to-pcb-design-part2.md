@@ -7,7 +7,7 @@ summary: "Deuxième partie de l’initiation à la conception de PCB avec KiCad 
 date: 2025-07-22
 lastmod: 2026-02-05
 draft: false
-weight: 2003
+weight: 30
 toc: true
 icon: "chip"
 contributors: ["Ousmane THIONGANE"]
@@ -23,7 +23,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/pcb.png" alt="PCB image" class="w-full h-auto" />
+    {{< img src="images/pcb.png" alt="PCB image" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 ## Prérequis
@@ -33,7 +33,7 @@ seo:
 ## Objectif
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic1.png" alt="PCB example" class="w-full h-auto" />
+    {{< img src="images/schematic1.png" alt="PCB example" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Le but de cette initiation de réaliser un petit circuit imprimé avec des composants simples (LED, buzzers, résistances…) qui pourrait par la suite être branché et utilisé avec une carte électronique.
@@ -43,11 +43,11 @@ Dans la section précédente, nous avions déjà réalisé le circuit électroni
 ## Routage
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing1.jpg" alt="PCB editor" class="w-full h-auto" />
+    {{< img src="images/routing1.jpg" alt="PCB editor" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing2.jpg" alt="PCB editor page" class="w-full h-auto" />
+    {{< img src="images/routing2.jpg" alt="PCB editor page" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -57,11 +57,11 @@ Dans la section précédente, nous avions déjà réalisé le circuit électroni
 ### Importation des composants
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing3.jpg" alt="Import component symbol" class="w-full h-auto" />
+    {{< img src="images/routing3.jpg" alt="Import component symbol" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing4.jpg" alt="Page with components" class="w-full h-auto" />
+    {{< img src="images/routing4.jpg" alt="Page with components" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -71,11 +71,11 @@ Dans la section précédente, nous avions déjà réalisé le circuit électroni
 ### Contours du PCB
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing5.jpg" alt="Edges tools" class="w-full h-auto" />
+    {{< img src="images/routing5.jpg" alt="Edges tools" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing6.jpg" alt="PCB edges" class="w-full h-auto" />
+    {{< img src="images/routing6.jpg" alt="PCB edges" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -95,11 +95,11 @@ La masse est le signal le plus important du PCB, puisqu’elle se trouvera quasi
 * C’est plus écologique !
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing7.jpg" alt="Draw filled zones" class="w-full h-auto" />
+    {{< img src="images/routing7.jpg" alt="Draw filled zones" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing8.jpg" alt="Ground plane" class="w-full h-auto" />
+    {{< img src="images/routing8.jpg" alt="Ground plane" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -109,7 +109,7 @@ La masse est le signal le plus important du PCB, puisqu’elle se trouvera quasi
 ### Placement des composants
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing9.jpg" alt="Component placemen" class="w-full h-auto" />
+    {{< img src="images/routing9.jpg" alt="Component placemen" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -117,7 +117,7 @@ La masse est le signal le plus important du PCB, puisqu’elle se trouvera quasi
 {{< /callout >}}
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing10.jpg" alt="3D View" class="w-full h-auto" />
+    {{< img src="images/routing10.jpg" alt="3D View" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
@@ -125,7 +125,7 @@ Vous pouvez commencer à avoir un aperçu 3D de votre carte en allant sur le men
 {{< /callout >}}
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing11_fr.png" alt="Grid" class="w-full h-auto" />
+    {{< img src="images/routing11_fr.png" alt="Grid" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="tip" title="Le saviez-vous ?" icon="outline/message-dots" >}}
@@ -139,11 +139,11 @@ Avant de commencer le routage de la carte, il faut définir ce que l'on appelle 
 > _En électricité, l'équipotentielle est l'ensemble des conducteurs électriques soumis à la même tension électrique, et ne possédant donc pas de différence de potentiel électrique. Une liaison équipotentielle a pour but d'uniformiser le potentiel électrique sur un certain espace. [(Wikipedia)](https://fr.wikipedia.org/wiki/%C3%89quipotentielle#%C3%89lectricit%C3%A9)_
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing12.jpg" alt="Net classes symbol" class="w-full h-auto" />
+    {{< img src="images/routing12.jpg" alt="Net classes symbol" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing13_fr.png" alt="Net classes window" class="w-full h-auto" />
+    {{< img src="images/routing13_fr.png" alt="Net classes window" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -161,7 +161,7 @@ Ainsi, toutes les pistes des signaux avec la catégorie "Default" auront ces par
 Très souvent, les pistes qui vont faire passer l'alimentation du circuit peuvent faire passer des courants plus importants. Cela conduit à une puissance dissipée non négligeable. Pour y remédier, nous allons créer une équipotentielle dédiée aux signaux d'alimentation comme le +5V ou le GND. La largeur de ces pistes sera plus grande pour réduire l'impédance de ligne.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing14.jpg" alt="Plus symbol" class="w-full h-auto" />
+    {{< img src="images/routing14.jpg" alt="Plus symbol" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -174,11 +174,11 @@ Très souvent, les pistes qui vont faire passer l'alimentation du circuit peuven
 {{< /callout >}}
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing14.jpg" alt="Plus symbol" class="w-full h-auto" />
+    {{< img src="images/routing14.jpg" alt="Plus symbol" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing15_fr.png" alt="Net classes assignment" class="w-full h-auto" />
+    {{< img src="images/routing15_fr.png" alt="Net classes assignment" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -188,11 +188,11 @@ Très souvent, les pistes qui vont faire passer l'alimentation du circuit peuven
 ### Là où l'initiation "routage" prend tout son sens
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing16.jpg" alt="Track symbol" class="w-full h-auto" />
+    {{< img src="images/routing16.jpg" alt="Track symbol" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing17.jpg" alt="Routing" class="w-full h-auto" />
+    {{< img src="images/routing17.jpg" alt="Routing" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -208,7 +208,7 @@ Bon courage ! Si vous avez des difficultés à tous relier, il faudra peut-êtr
 {{< /callout >}}
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing18.jpg" alt="Track symbol" class="w-full h-auto" />
+    {{< img src="images/routing18.jpg" alt="Track symbol" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
@@ -216,7 +216,7 @@ Une autre alternative serait d’alterner entre les deux couches en passant par 
 {{< /callout >}}
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing19.jpg" alt="Text symbol" class="w-full h-auto" />
+    {{< img src="images/routing19.jpg" alt="Text symbol" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
@@ -224,7 +224,7 @@ Vous pouvez écrire du texte sur une des faces de votre PCB (Ctrl + Shift + T) e
 {{< /callout >}}
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing20.png" alt="Whole design" class="w-full h-auto" />
+    {{< img src="images/routing20.png" alt="Whole design" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 ### Analyse de la qualité du routage
@@ -232,11 +232,11 @@ Vous pouvez écrire du texte sur une des faces de votre PCB (Ctrl + Shift + T) e
 De la même manière qu'avec [l'ERC]({{< relref "tutorials/electronics/introduction-to-pcb-design-part1/#analyse-de-la-qualité-du-schéma">}}) dans le schématique, il faut vérifier que le routage ne contient aucune erreur : cela se fait avec le Contrôle des Règles de Conception (dit Design Rules Checker en anglais - DRC).
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing21.jpg" alt="DRC symbol" class="w-full h-auto" />
+    {{< img src="images/routing21.jpg" alt="DRC symbol" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/routing22_fr.png" alt="DRC window" class="w-full h-auto" />
+    {{< img src="images/routing22_fr.png" alt="DRC window" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 {{< callout context="note" title="Mission" icon="outline/target-arrow" >}}
@@ -246,7 +246,7 @@ De la même manière qu'avec [l'ERC]({{< relref "tutorials/electronics/introduct
 **Et voilà un PCB terminé !**
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/schematic1.png" alt="PCB finished" class="w-full h-auto" />
+    {{< img src="images/schematic1.png" alt="PCB finished" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 ## Pour aller plus loin

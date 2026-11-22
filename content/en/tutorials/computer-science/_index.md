@@ -8,7 +8,7 @@ type: "cardlist"
 date: 2025-05-21
 lastmod: 2026-02-05
 draft: false
-weight: 1000
+weight: 10
 toc: true
 icon: "computer"
 

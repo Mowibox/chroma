@@ -7,7 +7,7 @@ summary: "Learn how to install and configure a Raspberry Pi in headless mode wit
 date: 2025-07-12
 lastmod: 2026-02-05
 draft: false
-weight: 4003
+weight: 30
 toc: true
 icon: "chip"
 contributors: ["Ousmane THIONGANE"]
@@ -23,7 +23,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/headless1.png" alt="Raspberry Pi Zero 2 W" class="w-full h-auto" />
+    {{< img src="images/headless1.png" alt="Raspberry Pi Zero 2 W" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
 
 Usually, a Raspberry Pi is set up using a screen, a keyboard, and a mouse. But maybe you don’t have that equipment — or simply don’t need it for your project. For example, if your project doesn’t require a graphical interface, it's more resource-efficient to skip the screen altogether.
@@ -43,54 +43,63 @@ This tutorial offers an alternative method to configure your Raspberry Pi withou
 
 Here’s the step-by-step guide to prepare your SD card:
 
-* Insert the SD card into your computer and launch Raspberry Pi Imager. You should see an interface similar to this:
+{{< steps >}}
+{{< step >}}
+Insert the SD card into your computer and launch Raspberry Pi Imager. You should see an interface similar to this:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless2.png" alt="Raspberry Pi Imager" class="w-full h-auto" />
+  {{< img src="images/headless2.png" alt="Raspberry Pi Imager" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* Start by selecting your Raspberry Pi model via "Choose Device":
+{{< /step >}}
+{{< step >}}
+Start by selecting your Raspberry Pi model via "Choose Device":
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless3.png" alt="Choosing Device" class="w-full h-auto" />
+  {{< img src="images/headless3.png" alt="Choosing Device" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* Click "Choose OS" to pick the operating system to flash onto the SD card. Select "Other general-purpose OS":
+{{< /step >}}
+{{< step >}}
+Click "Choose OS" to pick the operating system to flash onto the SD card. Select "Other general-purpose OS":
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless4.png" alt="Choosing OS" class="w-full h-auto" />
+  {{< img src="images/headless4.png" alt="Choosing OS" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* Among the available Ubuntu versions, pick a "Server" version — these don’t include graphical interface packages and dependencies, which is perfect since we won’t be using a screen:
+{{< /step >}}
+{{< step >}}
+Among the available Ubuntu versions, pick a "Server" version — these don’t include graphical interface packages and dependencies, which is perfect since we won’t be using a screen:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless5.png" alt="Choosing Ubuntu Server 24.04" class="w-full h-auto" />
+  {{< img src="images/headless5.png" alt="Choosing Ubuntu Server 24.04" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* Then select the SD card as your storage location. If it’s the only external storage connected, it should be easy to spot.
+{{< /step >}}
+{{< step >}}
+Then select the SD card as your storage location. If it’s the only external storage connected, it should be easy to spot.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless6.png" alt="Choosing Storage" class="w-full h-auto" />
+  {{< img src="images/headless6.png" alt="Choosing Storage" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* Click "Next" — the software will ask whether you want to configure settings before writing the OS. Click "Edit Settings".
+{{< /step >}}
+{{< step >}}
+Click "Next" — the software will ask whether you want to configure settings before writing the OS. Click "Edit Settings".
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless7.png" alt="Editing Settings" class="w-full h-auto" />
+  {{< img src="images/headless7.png" alt="Editing Settings" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* You should see a window similar to this one:
+{{< /step >}}
+{{< step >}}
+You should see a window similar to this one:
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless8.png" alt="General Settings" class="w-full h-auto" />
+  {{< img src="images/headless8.png" alt="General Settings" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
+{{< /step >}}
+{{< step >}}
+Adjust the following settings according to your needs:
 
-* Adjust the following settings according to your needs:
-
-  * Hostname — you can leave the default value.
-  * Username and password for logging into the Pi.
-  * Wi-Fi credentials the Pi will use at boot.
-  * Locale and keyboard layout.
+* Hostname — you can leave the default value.
+* Username and password for logging into the Pi.
+* Wi-Fi credentials the Pi will use at boot.
+* Locale and keyboard layout.
 
 {{< callout context="caution" title="Tip" icon="outline/bulb" >}}
 Instead of connecting the Pi to your home Wi-Fi, you can connect it to your phone’s mobile hotspot. That way, you can use your Pi anywhere!
@@ -99,16 +108,21 @@ Instead of connecting the Pi to your home Wi-Fi, you can connect it to your phon
 {{< callout context="danger" title="Warning" icon="outline/alert-square-rounded" >}}
 Make sure your chosen Wi-Fi network uses the 2.4 GHz band — Raspberry Pis cannot connect to 5 GHz networks.
 {{< /callout >}}
-
-* Finally, go to the "Services" section and enable SSH. Leave the authentication method set to "Use password authentication".
+{{< /step >}}
+{{< step >}}
+Finally, go to the "Services" section and enable SSH. Leave the authentication method set to "Use password authentication".
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/headless9.png" alt="Enabling SSH" class="w-full h-auto" />
+  {{< img src="images/headless9.png" alt="Enabling SSH" sizes="(max-width: 800px) 100vw, 800px" >}}
 </p>
-
-* Click "Save", then "Yes" to begin flashing the OS to the SD card. Once the process is complete, remove the SD card and insert it into your Raspberry Pi.
-
-* Plug the Pi into a power source. A green LED should blink. Now, let’s try to connect to it from your computer.
+{{< /step >}}
+{{< step >}}
+Click "Save", then "Yes" to begin flashing the OS to the SD card. Once the process is complete, remove the SD card and insert it into your Raspberry Pi.
+{{< /step >}}
+{{< step >}}
+Plug the Pi into a power source. A green LED should blink. Now, let’s try to connect to it from your computer.
+{{< /step >}}
+{{< /steps >}}
 
 ## Connecting to the Raspberry Pi
 

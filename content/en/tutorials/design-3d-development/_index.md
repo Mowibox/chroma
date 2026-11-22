@@ -8,7 +8,7 @@ type: "cardlist"
 date: 2025-05-21
 lastmod: 2026-02-05
 draft: false
-weight: 3000
+weight: 30
 toc: true
 icon: "cube3D"
 
