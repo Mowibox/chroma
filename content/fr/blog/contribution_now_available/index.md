@@ -5,7 +5,6 @@ summary: "Bonne nouvelle : il est maintenant possible de contribuer à Chroma, q
 date:  2026-03-03
 lastmod:  2026-03-03
 draft: false
-weight: 48
 categories: []
 tags: ["contribution", "chroma"]
 contributors: ["Ousmane THIONGANE"]

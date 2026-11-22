@@ -5,7 +5,6 @@ summary: "Creation and launch of Chroma's official Discord server."
 date:  2025-07-01T01:16:05+02:00
 lastmod:  2025-07-01T01:16:05+02:00
 draft: false
-weight: 49
 categories: []
 tags: ["discord", "community", "chroma"]
 contributors: ["Ousmane THIONGANE"]
@@ -20,7 +19,7 @@ seo:
 ---
 
 <p align="center">
-    <img src="/chroma/images/discord.jpg" alt="Discord logo" class="w-full h-auto" />
+    {{< img src="images/discord.jpg" alt="Discord logo" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
 </p>
 

@@ -5,7 +5,6 @@ summary: "J'ai le plaisir aujourd'hui de vous annoncer le lancement de Chroma !"
 date:  2025-05-20T01:16:05+02:00
 lastmod:  2025-05-20T01:16:05+02:00
 draft: false
-weight: 50
 categories: []
 tags: ["lancement", "chroma", "tutoriels", "robotique", "blog"]
 contributors: ["Ousmane THIONGANE"]
@@ -24,7 +23,7 @@ Bonjour à vous qui lisez ces quelques lignes ! Aujourd'hui marque le **lancemen
 ## Qui suis-je ?
 
 <p align="center">
-    <img src="/chroma/images/pp.jpg" alt="Ousmane THIONGANE picture" class="w-full h-auto" />
+    {{< img src="images/pp.jpg" alt="Ousmane THIONGANE picture" sizes="(max-width: 800px) 100vw, 800px" >}}
     </br>
 </p>
 

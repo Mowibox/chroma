@@ -20,7 +20,7 @@ Nous sommes Chroma ("Société", "nous", "notre"). Nous exploitons le site web [
 
 Chroma est un site web destiné à documenter et partager des connaissances techniques en informatique, électronique et robotique.
 
-Vous pouvez nous contacter par email à [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com).
+Vous pouvez nous contacter par email à {{< email >}}.
 
 Ces Conditions Juridiques constituent un accord juridiquement contraignant entre vous, que ce soit à titre personnel ou au nom d'une entité ("vous"), et Chroma, concernant votre accès et votre utilisation des Services. Vous acceptez qu'en accédant aux Services, vous avez lu, compris et accepté d'être lié par l'ensemble de ces Conditions Juridiques. SI VOUS N'ÊTES PAS D'ACCORD AVEC TOUTES CES CONDITIONS JURIDIQUES, IL VOUS EST EXPRESSÉMENT INTERDIT D'UTILISER LES SERVICES ET VOUS DEVEZ CESSER IMMÉDIATEMENT TOUTE UTILISATION.
 
@@ -101,7 +101,7 @@ uniquement pour votre usage personnel, non commercial ou à des fins professionn
 
 Sauf disposition contraire dans cette section ou ailleurs dans nos Conditions Juridiques, aucune partie des Services et aucun Contenu ou Marque ne peut être copié, reproduit, agrégé, republié, téléchargé, affiché publiquement, encodé, traduit, transmis, distribué, vendu, concédé sous licence ou autrement exploité à des fins commerciales, sans notre autorisation écrite expresse préalable.
 
-Si vous souhaitez utiliser les Services, le Contenu ou les Marques d'une manière non prévue dans cette section ou ailleurs dans nos Conditions Juridiques, veuillez adresser votre demande à : [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com). Si nous vous accordons la permission de publier, reproduire ou afficher publiquement une partie de nos Services ou de notre Contenu, vous devez nous identifier comme les propriétaires ou concédants de licence des Services, du Contenu ou des Marques et veiller à ce qu'un avis de droit d'auteur ou de propriété apparaisse ou soit visible lors de la publication, de la reproduction ou de l'affichage de notre Contenu.
+Si vous souhaitez utiliser les Services, le Contenu ou les Marques d'une manière non prévue dans cette section ou ailleurs dans nos Conditions Juridiques, veuillez adresser votre demande à : {{< email >}}. Si nous vous accordons la permission de publier, reproduire ou afficher publiquement une partie de nos Services ou de notre Contenu, vous devez nous identifier comme les propriétaires ou concédants de licence des Services, du Contenu ou des Marques et veiller à ce qu'un avis de droit d'auteur ou de propriété apparaisse ou soit visible lors de la publication, de la reproduction ou de l'affichage de notre Contenu.
 
 Nous nous réservons tous les droits non expressément accordés dans les Services, le Contenu et les Marques.
 
@@ -241,7 +241,7 @@ Nous accordons de l'importance à la confidentialité. Consultez notre [Politiqu
 
 ## 11. VIOLATIONS DES DROITS D'AUTEUR
 
-Nous respectons les droits d'auteur. Pour signaler une violation, contactez-nous à [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com) avec :
+Nous respectons les droits d'auteur. Pour signaler une violation, contactez-nous à {{< email >}} avec :
 
 - Identification de l'œuvre protégée
 - Localisation du contenu incriminé
@@ -336,4 +336,4 @@ Pour toute question ou réclamation :
 
 **Chroma**
 
-Email : [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com)
+Email : {{< email >}}

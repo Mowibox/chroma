@@ -205,4 +205,4 @@ Nous vous encourageons à consulter régulièrement cette page.
 
 Si vous avez des questions sur cette Politique de Confidentialité, vous pouvez nous contacter :
 
-Par email : [ousmane.thiongane@outlook.com](mailto:ousmane.thiongane@outlook.com)
+Par email : {{< email >}}
