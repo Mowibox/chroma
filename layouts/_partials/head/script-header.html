@@ -1,2 +1,5 @@
 <!-- Insert scripts NOT needed by stylesheets here -->
-{{ template "_internal/google_analytics.html" . }}
+{{- /* Production only: local `npm run dev` visits must not count in analytics */}}
+{{ if hugo.IsProduction -}}
+  {{ template "_internal/google_analytics.html" . }}
+{{- end }}

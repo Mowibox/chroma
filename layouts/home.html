@@ -22,70 +22,19 @@
     <div class="bg-dots"></div>
   </div>
   {{ end -}}
-  {{ if eq $.Site.Language.Label "English" }}
   <section class="section section-md section-features">
     <div class="container">
       <div class="row justify-content-center text-center">
+        {{ range slice "tutorials" "chromapi" "blog" -}}
         <div class="col-lg-5">
-        <a class="text-decoration-none text-reset" href="{{ with site.GetPage "/tutorials" }}{{ .RelPermalink }}{{ end }}">
-          <h2 class="h4">A tutorial section</h2>
-        </a>
-          <p>To bring together and share all the know-how on electronics, computing and many other subjects</p>
-        </div>
-        <div class="col-lg-5">
-        <a class="text-decoration-none text-reset" href="{{ "chromapi/" | relLangURL }}">
-          <h2 class="h4">Chromapi robot</h2>
-        </a>
-          <p>To explore the hardware and software design of an open-source quadruped robot with 12 degrees of freedom</p>
-        </div>
-        <div class="col-lg-5">
-          <a class="text-decoration-none text-reset" href="{{ "blog/" | relLangURL }}">
-            <h2 class="h4">A blog section</h2>
+          <a class="text-decoration-none text-reset" href="{{ with site.GetPage . }}{{ .RelPermalink }}{{ end }}">
+            <h2 class="h4">{{ i18n (printf "home_%s_title" .) }}</h2>
           </a>
-          <p>To keep up to date with website news</p>
+          <p>{{ i18n (printf "home_%s_text" .) }}</p>
         </div>
+        {{ end -}}
       </div>
     </div>
   </section>
-  {{ end }}
-  {{ if eq $.Site.Language.Label "Français" }}
-  <section class="section section-md section-features">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-5">
-        <a class="text-decoration-none text-reset" href="{{ with site.GetPage "/tutorials" }}{{ .RelPermalink }}{{ end }}">
-          <h2 class="h4">Une section tutoriel</h2>
-        </a>
-          <p>Pour rassembler et partager tout le savoir-faire en électronique, informatique et bien d'autres domaines</p>
-        </div>
-        <div class="col-lg-5">
-        <a class="text-decoration-none text-reset" href="{{ "chromapi/" | relLangURL }}">
-          <h2 class="h4">Le robot Chromapi</h2>
-        </a>
-          <p>Pour explorer la conception matérielle et logicielle d'un robot open-source à 12 degrés de liberté</p>
-        </div>
-        <div class="col-lg-5">
-          <a class="text-decoration-none text-reset" href="{{ "blog/" | relLangURL }}">
-            <h2 class="h4">Une section blog</h2>
-          </a>
-          <p>Pour rester au courant des actualités du site</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  {{ end }}
-
 {{ end }}
 
-{{ define "sidebar-footer" }}
-{{ if site.Params.doks.sectionFooter -}}
-<section class="section section-md container-fluid bg-light">
-  <div class="row justify-content-center text-center">
-    <div class="col-lg-7">
-      <h2 class="mt-2">Start building with Doks today</h2>
-      <a class="btn btn-primary rounded-pill px-4 my-2" href="" role="button">{{ i18n "get-started" }}</a>
-    </div>
-  </div>
-</section>
-{{ end -}}
-{{ end }}

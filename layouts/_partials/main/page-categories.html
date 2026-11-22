@@ -1,0 +1,17 @@
+{{- /* Category buttons after the page footer meta (used by layouts/single.html) */ -}}
+{{ if .Params.categories -}}
+<div class="page-taxonomies mt-4">
+	{{ with .Params.categories -}}
+	<div class="tag-list-single mb-5">
+		{{ range $index, $category := . -}}
+			{{- $categoryPage := $.Site.GetPage "taxonomyTerm" (printf "categories/%s" (urlize $category)) -}}
+			{{ if $categoryPage -}}
+				<a class="btn btn-light" href="{{ $categoryPage.RelPermalink }}" role="button">{{ $category }}</a>
+			{{ else -}}
+				<a class="btn btn-light" href="{{ "/categories/" | relLangURL }}{{ $category | urlize }}/" role="button">{{ $category }}</a>
+			{{ end -}}
+		{{ end -}}
+	</div>
+	{{ end -}}
+</div>
+{{ end -}}

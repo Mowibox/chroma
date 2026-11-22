@@ -1,3 +1,4 @@
+{{- /* Doks single.html + local partials: main/page-meta (contributors, tags) and main/page-categories */ -}}
 {{ define "main" }}
 	<div class="row flex-xl-nowrap">
 		{{ if (in site.Params.doks.sectionNav .Section) -}}
@@ -38,36 +39,7 @@
 			<div class="page-header d-flex flex-row justify-content-between align-items-start">
 				<div>
 					<h1 class="mb-1">{{ .Title }}</h1>
-					<!-- <p class="lead">{{ .Params.lead | safeHTML }}</p> -->
-
-					{{ with .Params.contributors -}}
-					{{ $last := sub (len .) 1 -}}
-					<p class="text-muted small mt-0 mb-4">
-						{{ i18n "by" }}&nbsp;
-						{{- range $index, $contributor := . -}}
-							{{- if gt $index 0 }}{{ if eq $index $last }} and {{ else }}, {{ end }}{{ end -}}
-							{{- $contributorPage := $.Site.GetPage "taxonomyTerm" (printf "contributors/%s" (urlize $contributor)) -}}
-							{{ if $contributorPage -}}
-								<a href="{{ $contributorPage.RelPermalink }}">{{ $contributor }}</a>
-							{{ else -}}
-								<a href="{{ "/contributors/" | relLangURL }}{{ $contributor | urlize }}/">{{ $contributor }}</a>
-							{{ end -}}
-						{{ end -}}
-					</p>
-					{{ end -}}
-
-					{{ with .Params.tags -}}
-					<div class="tag-list-single mt-0 mb-3">
-						{{ range $index, $tag := . -}}
-							{{- $tagPage := $.Site.GetPage "taxonomyTerm" (printf "tags/%s" (urlize $tag)) -}}
-							{{ if $tagPage -}}
-								<a class="btn btn-light" href="{{ $tagPage.RelPermalink }}" role="button">{{ $tag }}</a>
-							{{ else -}}
-								<a class="btn btn-light" href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}/" role="button">{{ $tag }}</a>
-							{{ end -}}
-						{{ end -}}
-					</div>
-					{{ end -}}
+					{{ partial "main/page-meta.html" . }}
 				</div>
 				{{ if site.Params.doks.aiButtons -}}
 				<div>
@@ -88,31 +60,9 @@
 					{{ partial "main/edit-page.html" . }}
 				{{ end -}}
 			</div>
-			{{ if .Params.categories -}}
-			<div class="page-taxonomies mt-4">
-				{{ with .Params.categories -}}
-				<div class="tag-list-single mb-5">
-					{{ range $index, $category := . -}}
-						{{- $categoryPage := $.Site.GetPage "taxonomyTerm" (printf "categories/%s" (urlize $category)) -}}
-						{{ if $categoryPage -}}
-							<a class="btn btn-light" href="{{ $categoryPage.RelPermalink }}" role="button">{{ $category }}</a>
-						{{ else -}}
-							<a class="btn btn-light" href="{{ "/categories/" | relLangURL }}{{ $category | urlize }}/" role="button">{{ $category }}</a>
-						{{ end -}}
-					{{ end -}}
-				</div>
-				{{ end -}}
-			</div>
-			{{ end -}}
+			{{ partial "main/page-categories.html" . }}
 
 			{{ partial "main/docs-navigation.html" . }}
-			<!--
-			{{ if not .Site.Params.options.collapsibleSidebar -}}
-				{{ partial "main/docs-navigation.html" . }}
-			{{ else -}}
-				<div class="my-n3"></div>
-			{{ end -}}
-			-->
 		</main>
 		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
 			</div>

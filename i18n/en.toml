@@ -6,3 +6,25 @@ other = "Oops! Page not found 'w'"
 
 [404_back]
 other = "Back to Chroma"
+
+# Home page feature cards (layouts/home.html)
+[home_tutorials_title]
+other = "A tutorial section"
+
+[home_tutorials_text]
+other = "To bring together and share all the know-how on electronics, computing and many other subjects"
+
+[home_chromapi_title]
+other = "Chromapi robot"
+
+[home_chromapi_text]
+other = "To explore the hardware and software design of an open-source quadruped robot with 12 degrees of freedom"
+
+[home_blog_title]
+other = "A blog section"
+
+[home_blog_text]
+other = "To keep up to date with website news"
+
+[preview]
+other = "Preview"

@@ -6,3 +6,25 @@ other = "Oups ! Page introuvable 'w'"
 
 [404_back]
 other = "Retourner sur Chroma"
+
+# Home page feature cards (layouts/home.html)
+[home_tutorials_title]
+other = "Une section tutoriel"
+
+[home_tutorials_text]
+other = "Pour rassembler et partager tout le savoir-faire en électronique, informatique et bien d'autres domaines"
+
+[home_chromapi_title]
+other = "Le robot Chromapi"
+
+[home_chromapi_text]
+other = "Pour explorer la conception matérielle et logicielle d'un robot open-source à 12 degrés de liberté"
+
+[home_blog_title]
+other = "Une section blog"
+
+[home_blog_text]
+other = "Pour rester au courant des actualités du site"
+
+[preview]
+other = "Aperçu"

@@ -1,5 +1,6 @@
-{{/* Chromapi in 3D (static/js/chromapi3d.js). Context: dict "mode" (cartoon|cad|explode|pcb) "page" .Page. Several per page work: the repeated importmap is identical and the module runs once, over every element. */}}
-<div class="c3d c3d-{{ .mode }}" data-chromapi3d="{{ .mode }}" role="img" aria-label="{{ if eq .page.Language.Lang "fr" }}Modèle 3D interactif de Chromapi{{ else }}Interactive 3D model of Chromapi{{ end }}"></div>
+{{/* Chromapi in 3D (static/js/chromapi3d.js). Usage: {{< chromapi3d cartoon|cad|explode|pcb >}}. Several per page work: the repeated importmap is identical and the module runs once, over every element. */}}
+{{ $mode := .Get 0 -}}
+<div class="c3d c3d-{{ $mode }}" data-chromapi3d="{{ $mode }}" role="img" aria-label="{{ if eq .Page.Language.Lang "fr" }}Modèle 3D interactif de Chromapi{{ else }}Interactive 3D model of Chromapi{{ end }}"></div>
 <style>
   .c3d { position: relative; width: 100%; aspect-ratio: 16 / 9; margin: .25rem auto; }
   .c3d-cartoon { aspect-ratio: 800 / 451; max-width: 800px; margin: 0 auto; }
@@ -17,7 +18,7 @@
 </script>
 {{/* Fetched at once, side by side: the model, three.js and its addons (no waterfall of imports). */}}
 {{ $three := "https://cdn.jsdelivr.net/npm/three@0.181.2/" }}
-<link rel="preload" as="fetch" crossorigin href="{{ printf "models/%s" (cond (eq .mode "pcb") "chromapi_motherboard.glb" "chromapi.glb") | relURL }}">
+<link rel="preload" as="fetch" crossorigin href="{{ printf "models/%s" (cond (eq $mode "pcb") "chromapi_motherboard.glb" "chromapi.glb") | relURL }}">
 {{ range slice "build/three.module.js" "build/three.core.js" "examples/jsm/loaders/GLTFLoader.js" "examples/jsm/libs/meshopt_decoder.module.js" "examples/jsm/controls/OrbitControls.js" "examples/jsm/environments/RoomEnvironment.js" "examples/jsm/utils/BufferGeometryUtils.js" }}<link rel="modulepreload" href="{{ $three }}{{ . }}">
 {{ end }}<link rel="modulepreload" href="{{ "js/chromapi3d.js" | relURL }}">
 <script type="module" src="{{ "js/chromapi3d.js" | relURL }}"></script>

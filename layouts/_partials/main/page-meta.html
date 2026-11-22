@@ -1,0 +1,29 @@
+{{- /* Contributors and tags under the page title (used by layouts/single.html) */ -}}
+{{ with .Params.contributors -}}
+{{ $last := sub (len .) 1 -}}
+<p class="text-muted small mt-0 mb-4">
+	{{ i18n "by" }}&nbsp;
+	{{- range $index, $contributor := . -}}
+		{{- if gt $index 0 }}{{ if eq $index $last }} and {{ else }}, {{ end }}{{ end -}}
+		{{- $contributorPage := $.Site.GetPage "taxonomyTerm" (printf "contributors/%s" (urlize $contributor)) -}}
+		{{ if $contributorPage -}}
+			<a href="{{ $contributorPage.RelPermalink }}">{{ $contributor }}</a>
+		{{ else -}}
+			<a href="{{ "/contributors/" | relLangURL }}{{ $contributor | urlize }}/">{{ $contributor }}</a>
+		{{ end -}}
+	{{ end -}}
+</p>
+{{ end -}}
+
+{{ with .Params.tags -}}
+<div class="tag-list-single mt-0 mb-3">
+	{{ range $index, $tag := . -}}
+		{{- $tagPage := $.Site.GetPage "taxonomyTerm" (printf "tags/%s" (urlize $tag)) -}}
+		{{ if $tagPage -}}
+			<a class="btn btn-light" href="{{ $tagPage.RelPermalink }}" role="button">{{ $tag }}</a>
+		{{ else -}}
+			<a class="btn btn-light" href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}/" role="button">{{ $tag }}</a>
+		{{ end -}}
+	{{ end -}}
+</div>
+{{ end -}}
