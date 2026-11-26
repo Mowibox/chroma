@@ -7,7 +7,7 @@ summary: "Liste de matériel interactive de la carte mère Chromapi : composants
 date: 2026-08-29
 lastmod: 2026-11-10
 draft: false
-weight: 220
+weight: 20
 toc: true
 icon: "chip"
 contributors: ["Ousmane THIONGANE"]

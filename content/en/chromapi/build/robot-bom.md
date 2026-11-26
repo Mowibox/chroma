@@ -6,7 +6,7 @@ summary: "The parts to buy for building Chromapi: battery, compute, camera, serv
 date: 2026-08-29
 lastmod: 2026-11-16
 draft: false
-weight: 210
+weight: 10
 toc: true
 icon: "shopping-cart"
 contributors: ["Ousmane THIONGANE"]
@@ -42,16 +42,17 @@ This page lists the parts to buy to build Chromapi yourself. For details on the 
 | Fan | 1 | €15.90 | €15.90 | Noctua NF-A4x10 PWM | Noctua | [Amazon](https://www.amazon.fr/gp/product/B07DXRNYNX/ref=ox_sc_act_title_3?smid=A38F5RZ72I2JQ&psc=1) |
 | Speaker | 1 | €4.10 | €8.19 | 4R3W | Xevtrak | [Amazon](https://www.amazon.fr/Compatible-Performance-Haut-Parleur-Publicitaire-Haut-Parleurs/dp/B0GVJL8PCC/ref=sr_1_21?sr=8-21) |
 | LED ring[^4] | 1 | €4.09 | €4.09 | WS2812B COB Pixel Ring | Shenzhen Xinxuan Technology Co., Ltd. | [AliExpress](https://fr.aliexpress.com/item/1005010649384045.html) |
-| M2 screws | 4 | — | — | — | — | — |
-| Short M2.5 screws | 2 | — | — | — | — | — |
-| Long M2.5 screws | 4 | — | — | — | — | — |
-| M3 screws | 7 | — | — | — | — | — |
-| Short M3 screws | 2 | — | — | — | — | — |
-| M2.5 nuts | 6 | — | — | — | — | — |
-| M2 threaded insert | 4 | — | €5.88 | M2 threaded insert (pack of 50) | Bolatus | [Amazon](https://www.amazon.fr/Bolatus-M2-filetage-plastique-dimprimante/dp/B0F2TGV78Y/ref=sr_1_10?sr=8-10) |
-| M3 threaded insert | 7 | — | €6.88 | M3 threaded insert (pack of 50) | Bolatus | [Amazon](https://www.amazon.fr/Bolatus-M2-filetage-plastique-dimprimante/dp/B0F2TFB847/ref=sr_1_10?sr=8-10) |
-| PLA filament (standard) | 989.61 g | — | — | — | — | — |
-| TPU filament | 14.44 g | — | — | — | — | — |
+| M2×6 screw[^5] | 4 | — | €4.44 | M2×6 socket head cap, A2 stainless (DIN 912 / ISO 4762), pack of 10 | Vis Express | [Vis-Express](https://www.vis-express.fr/vis-metaux-chc-btr-filetage-total-inox-a2-din-912-iso-4762/36711-vis-metaux-inox-a2-chc-btr-cle-de-15-hc15-filetage-total-m2x6.html) |
+| M2.5×12 screw[^5] | 2 | — | €10.14 | M2.5×12 socket head cap, A2 stainless (DIN 912 / ISO 4762), pack of 10 | Vis Express | [Vis-Express](https://www.vis-express.fr/vis-metaux-chc-btr-filetage-total-inox-a2-din-912-iso-4762/36723-vis-metaux-inox-a2-chc-btr-cle-de-2-hc2-m25x12-filetage-total.html) |
+| M2.5×35 screw[^5] | 4 | — | €10.14 | M2.5×35 slotted cheese head, steel (DIN 84), pack of 10 | Vis Express | [Vis-Express](https://www.vis-express.fr/vis-metaux-tete-cylindrique-tc-fendue-din-84/374580-vis-metaux-tete-cylindrique-tc-fendue-m25x35-acier-brut.html) |
+| M3×8 screw[^5] | 7 | — | €4.44 | M3×8 socket head cap, A2 stainless (DIN 912 / ISO 4762), pack of 10 | Vis Express | [Vis-Express](https://www.vis-express.fr/vis-metaux-inox-a2-chc-btr-cle-de-8-hc8-filetage-total-din-912-din-912-iso-4762/36728-vis-metaux-inox-a2-chc-btr-cle-de-25-hc25-m3x8-filetage-total.html) |
+| M3×5 screw[^5] | 2 | — | €4.44 | M3×5 countersunk hex socket, A2 stainless (ISO 10642), pack of 10 | Vis Express | [Vis-Express](https://www.vis-express.fr/vis-metaux-inox-a2-fhc-tete-fraisee-empreinte-hexagonale-creuse-hexagonal-creux-filetage-total-din-7991/36658-vis-metaux-inox-a2-fhc-tete-fraisee-empreinte-hexagonale-creuse-cle-de-2-hc2-m3x5-filetage-total.html) |
+| M2.5 nut[^5] | 6 | — | €4.44 | M2.5 hex nut, A2 stainless (DIN 934), pack of 10 | Vis Express | [Vis-Express](https://www.vis-express.fr/ecrou-hexagonale-inox-a2-wax-lubrifie-din-934-din-934-vs0100/36812-ecrou-hexagonal-hu-m25-inox-a2-wax-lubrifie.html) |
+| M2 threaded insert | 4 | — | €5.88 | M2 threaded insert, pack of 50 | Bolatus | [Amazon](https://www.amazon.fr/Bolatus-M2-filetage-plastique-dimprimante/dp/B0F2TGV78Y/ref=sr_1_10?sr=8-10) |
+| M3 threaded insert | 7 | — | €6.88 | M3 threaded insert, pack of 50 | Bolatus | [Amazon](https://www.amazon.fr/Bolatus-M2-filetage-plastique-dimprimante/dp/B0F2TFB847/ref=sr_1_10?sr=8-10) |
+| PLA filament (colour no. 1) | 989.61 g | €11.99 | €11.99 | PolyTerra PLA 1.75 mm, 1 kg spool, any colour | Polymaker | [3DJake](https://www.3djake.fr/polymaker/polyterra-pla-charcoal-black) |
+| White PLA filament (colour no. 2) | 4 g | €11.99 | €11.99 | PolyTerra PLA 1.75 mm, 1 kg spool, a different colour from the first | Polymaker | [3DJake](https://www.3djake.fr/polymaker/polyterra-pla-cotton-white) |
+| TPU filament | 14.44 g | €13.49 | €13.49 | Black TPU 95A 1.75 mm, 1 kg spool | Geeetech | [3DJake](https://www.3djake.fr/geeetech/tpu-black-1) |
 
 {{< chromapi3d explode >}}
 
@@ -59,3 +60,4 @@ This page lists the parts to buy to build Chromapi yourself. For details on the 
 [^2]: This camera is sold without a mount (Raspberry Pi Camera Module v2): you can either buy a camera fitted with an equivalent module and replace the IMX219-D160 with it, or skip the IMX219-D160 and directly use the camera of your choice with its mount.
 [^3]: Make sure to pick the 7.4V version. The motors are sold in packs of 6: you therefore need to order this reference twice to get the 12 required servomotors.
 [^4]: Make sure to pick the 18-LED version with a 27mm diameter.
+[^5]: Buy packs of 10: they cost less than the same screws bought one by one. Prices are degressive, check them on the product page when ordering.
