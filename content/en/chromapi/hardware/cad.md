@@ -6,7 +6,7 @@ summary: "Where to find Chromapi's mechanical design: the public Onshape documen
 date: 2026-08-29
 lastmod: 2026-11-08
 draft: false
-weight: 450
+weight: 50
 toc: true
 icon: "cube3D"
 contributors: ["Ousmane THIONGANE"]

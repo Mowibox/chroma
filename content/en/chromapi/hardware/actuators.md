@@ -6,7 +6,7 @@ summary: "Chromapi's 12 Feetech STS3215-C001 servomotors, the half-duplex TTL bu
 date: 2026-08-29
 lastmod: 2026-11-08
 draft: false
-weight: 430
+weight: 30
 toc: true
 icon: "circuit-motor"
 contributors: ["Ousmane THIONGANE"]

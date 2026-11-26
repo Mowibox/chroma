@@ -6,7 +6,7 @@ summary: "Power source, charging, protection, and regulation on Chromapi's mothe
 date: 2026-08-29
 lastmod: 2026-11-08
 draft: false
-weight: 420
+weight: 20
 toc: true
 icon: "battery"
 contributors: ["Ousmane THIONGANE"]

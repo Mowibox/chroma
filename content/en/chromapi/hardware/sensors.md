@@ -6,7 +6,7 @@ summary: "Chromapi's IMU, foot contact switches, wide-angle camera, RGB LED ring
 date: 2026-08-29
 lastmod: 2026-11-08
 draft: false
-weight: 440
+weight: 40
 toc: true
 icon: "device-imac-cog"
 contributors: ["Ousmane THIONGANE"]

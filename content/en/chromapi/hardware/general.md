@@ -6,7 +6,7 @@ summary: "The overall compute and control architecture of Chromapi: STM32 mother
 date: 2026-08-29
 lastmod: 2026-11-16
 draft: false
-weight: 410
+weight: 10
 toc: true
 icon: "chromapi"
 contributors: ["Ousmane THIONGANE"]
@@ -60,7 +60,7 @@ Chromapi splits control between two boards, linked by a custom UART bridge proto
 
 ## Software
 
-| Components | Repository |
-| :--- | :--- |
-| Control framework, kinematics, locomotion and simulation models | [`chromapi`](https://github.com/Mowibox/chromapi) |
-| Motherboard firmware and PCB design | [`chromapi_motherboard`](https://github.com/Mowibox/chromapi_motherboard) |
+{{< card-grid >}}
+{{< link-card src="outline/code" title="chromapi" description="Control framework, kinematics, locomotion and simulation models" href="https://github.com/Mowibox/chromapi" target="_blank" rel="noopener" >}}
+{{< link-card src="outline/cpu" title="chromapi_motherboard" description="Motherboard firmware and PCB design" href="https://github.com/Mowibox/chromapi_motherboard" target="_blank" rel="noopener" >}}
+{{< /card-grid >}}

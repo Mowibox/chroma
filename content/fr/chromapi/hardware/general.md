@@ -7,7 +7,7 @@ summary: "L'architecture globale de calcul et de contrôle de Chromapi : carte m
 date: 2026-08-29
 lastmod: 2026-11-16
 draft: false
-weight: 410
+weight: 10
 toc: true
 icon: "chromapi"
 contributors: ["Ousmane THIONGANE"]
@@ -61,7 +61,7 @@ Chromapi répartit le contrôle entre deux cartes, reliées par un protocole de 
 
 ## Logiciels
 
-| Composants | Dépôt |
-| :--- | :--- |
-| Framework de contrôle, cinématique, locomotion et modèles de simulation | [`chromapi`](https://github.com/Mowibox/chromapi) |
-| Firmware de la carte mère et conception du PCB | [`chromapi_motherboard`](https://github.com/Mowibox/chromapi_motherboard) |
+{{< card-grid >}}
+{{< link-card src="outline/code" title="chromapi" description="Framework de contrôle, cinématique, locomotion et modèles de simulation" href="https://github.com/Mowibox/chromapi" target="_blank" rel="noopener" >}}
+{{< link-card src="outline/cpu" title="chromapi_motherboard" description="Firmware de la carte mère et conception du PCB" href="https://github.com/Mowibox/chromapi_motherboard" target="_blank" rel="noopener" >}}
+{{< /card-grid >}}
