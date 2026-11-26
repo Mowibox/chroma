@@ -1,6 +1,6 @@
 # Sphinx configuration of the API reference, see build.sh.
 import os
-# Same doc stack as Rhoban's bam and placo: Sphinx autodoc + napoleon (Google docstrings); Markdown out for Hugo.
+
 project = "chromapi"
 extensions = ["sphinx.ext.autodoc", "sphinx.ext.napoleon", "sphinx_markdown_builder"]
 napoleon_google_docstring = True

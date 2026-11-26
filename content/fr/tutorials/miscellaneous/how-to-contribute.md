@@ -234,14 +234,20 @@ seo:
 * `draft` : Rend le tutoriel visible ou non lors de la prévisualisation. Par défaut, il est visible (`false`).
 * `weight` : Définit l'ordre d'affichage de votre contenu dans la liste des tutoriels. La manière de le remplir est détaillée dans la [section suivante.](#convention-des-poids-de-page)
 * `toc` : Affiche la table des matières de la page. Par défaut, elle est affichée (`true`).
-* `icon` : Vous pouvez rajouter une nouvelle icône en allant dans [Tabler Icons](https://tabler.io/icons). Il s'agira de l'icône qui illustrera votre page dans la liste des tutoriels {{< callout context="danger" title="Attention" icon="outline/alert-square-rounded" >}}
-Attention, il faut que la couleur de l'icône soit **#a514e9** et doit être ajoutée dans le dossier `static/icons`.
-{{< /callout >}}
+* `icon` : Vous pouvez rajouter une nouvelle icône en allant dans [Tabler Icons](https://tabler.io/icons). Il s'agira de l'icône qui illustrera votre page dans la liste des tutoriels.
+
+  {{< callout context="danger" title="Attention" icon="outline/alert-square-rounded" >}}
+  L'icône doit être de couleur **#a514e9** et ajoutée dans le dossier `static/icons`.
+  {{< /callout >}}
+
 * `contributors` : Liste les personnes ayant rédigé ou participé à la page. Plusieurs contributeurs peuvent être renseignés, séparés par des virgules.
-* `categories` : Catégorie principale du tutoriel. Une seule catégorie est généralement suffisante : elle sert à regrouper les tutoriels par grand thème (ex : `systèmes-embarqués`, `devops`, `gestion-de-version`). {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
- Consultez les catégories déjà existantes avant d'en créer une nouvelle afin éviter les doublons !
-{{< /callout >}}
-* `tags` : Mots-clés plus précis liés au contenu du tutoriel, au format. Contrairement à `categories`, plusieurs tags peuvent être renseignés (au moins 2 ou 3) pour affiner la recherche par thématique.
+* `categories` : Catégorie principale du tutoriel. Une seule catégorie est généralement suffisante : elle sert à regrouper les tutoriels par grand thème (ex : `systèmes-embarqués`, `devops`, `gestion-de-version`).
+
+  {{< callout context="caution" title="Astuce" icon="outline/bulb" >}}
+  Consultez les catégories déjà existantes avant d'en créer une nouvelle afin d'éviter les doublons !
+  {{< /callout >}}
+
+* `tags` : Mots-clés plus précis liés au contenu du tutoriel. Contrairement à `categories`, plusieurs tags peuvent être renseignés (au moins 2 ou 3) pour affiner la recherche par thématique.
 
 * `seo.title` : Titre optimisé pour les moteurs de recherche. Il peut être différent de `title`.
 * `seo.description` : Description affichée dans les résultats de moteur de recherche.

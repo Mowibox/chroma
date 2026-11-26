@@ -5,9 +5,6 @@
 //   explode its parts taken apart as the view scrolls to the middle, labelled
 //   pcb     the motherboard turning, all the way round
 // Models: static/models (scripts/export-chromapi-glb.mjs), meshopt-compressed.
-// The cartoon look, the greeting wave and the callouts come from
-// chromapi-presentation-video; the emotes from chromapi (locomotion/emotes.py,
-// examples/dance.py).
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
@@ -374,16 +371,6 @@ async function explode(el) {
 }
 
 // ---- cartoon: the robot that looks at you ----
-
-// The cartoon look (chromapi-presentation-video's LOOK): the silhouette ringed
-// in a dark shade of each part's colour (a light one on the dark theme), and
-// halftone dots in the shade. A shaded face takes its dots over a section
-// only, as a ball's shade would (Kirby's), growing to a solid shade: each part
-// is lit, for the dots, as if rounded about its middle (`round`: 0 its true
-// normals .. 1 a ball's) from keyDir (towards the light, view space); they
-// start where that light falls under `key` and grow over `falloff`. `ink`
-// tints the dots (violet on the greys; a coloured part keeps its hue, darker);
-// `face` spares the faces turned to the camera.
 const LOOK = {
   width: { value: 7 }, light: { value: 0 }, halftone: { value: 1 }, cell: { value: 8 }, lit: { value: 0.9 },
   ink: { value: new THREE.Color(0.72, 0.58, 0.88) }, face: { value: 1 },
@@ -481,10 +468,7 @@ function toon(model) {
   }
 }
 
-// Emotes (chromapi: locomotion/emotes.py, examples/dance.py): a duration (s)
-// and, at t, the chassis pose over the planted feet [xyz m, roll pitch yaw rad]
-// in the feet frame (+X forward, +Y left, +Z up; roll > 0 right, pitch > 0 nose
-// down, yaw > 0 left); hello also lifts and waves a front leg.
+// Emotes
 const bump = s => Math.sin(Math.PI * clamp(s, 0, 1));
 const ZERO = [[0, 0, 0], [0, 0, 0]];
 // BodyGesture: the GESTURES pose over its duration, then GESTURE_SETTLE_S still.
@@ -514,7 +498,7 @@ const EMOTES = {
   },
   // Three little hops, swaying side to side.
   happy: () => gesture(1.5, s => [[0, 0, 0.012 * Math.abs(Math.sin(3 * Math.PI * s))], [-0.07 * Math.sin(3 * Math.PI * s) * bump(s), 0, 0]]),
-  // dance.py: roll and pitch trace a circle (8°, 2 s a turn), eased in over the
+  // roll and pitch trace a circle (8°, 2 s a turn), eased in over the
   // first turn (and out over the last second).
   dance: () => ({
     dur: 6,

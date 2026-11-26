@@ -3,19 +3,6 @@
 //
 //   node scripts/export-chromapi-glb.mjs ../chromapi-presentation-video
 //
-// In the GLB: each revolute joint is a node named after it (tl_1 .. br_3),
-// userData { axis, stand, lower, upper }; its parent is `<joint>_origin`;
-// each part is a node named after its mesh file (robot_case_top, speaker, ...),
-// its meshes merged by material; the feet are the empty nodes tl_foot .. br_foot.
-//   1. the robot, positions only (STL normals are per face: nothing would weld,
-//      nothing could be simplified), simplified by gltf-transform (meshoptimizer);
-//   2. each part's meshes merged by material (721 meshes and 356 materials, as
-//      Onshape repeats them, were as many draw calls), meshopt-compressed.
-// No normals: the site creases them on load (baked, they would quadruple the
-// file: a sharp edge splits its vertices).
-// In the robot, the motherboard is Onshape's coloured export (out/onshape, same
-// frame as the STL). Alone (static/models/chromapi_motherboard.glb), it is
-// KiCad's (assets/pcb, scripts/make-pcb.mjs there), meshopt-compressed.
 import { execFileSync } from 'node:child_process';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
