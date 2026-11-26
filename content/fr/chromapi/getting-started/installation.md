@@ -1,5 +1,5 @@
 ---
-title: "Installer le logiciel"
+title: "Installation du logiciel"
 slug: "installation"
 description: "Flasher l'image Chromapi OS sur la carte SD avec Raspberry Pi Imager."
 summary: "Flasher l'image Chromapi OS sur la carte SD avec Raspberry Pi Imager."

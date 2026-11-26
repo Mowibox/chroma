@@ -1,11 +1,11 @@
 ---
 title: "Update"
-description: "Update the SDK and the motherboard firmware."
-summary: "Update the SDK and the motherboard firmware."
+description: "Updating the SDK and the motherboard firmware."
+summary: "Updating the SDK and the motherboard firmware."
 date: 2026-11-12
 lastmod: 2026-11-12
 draft: false
-weight: 520
+weight: 20
 toc: true
 icon: "refresh"
 contributors: ["Ousmane THIONGANE"]
@@ -18,6 +18,4 @@ seo:
    robots: "index, follow"
 ---
 
-{{< callout context="note" title="Coming soon" icon="outline/clock" >}}
-This page is being written, it will be available soon!
-{{< /callout >}}
+Coming soon!

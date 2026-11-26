@@ -1,7 +1,7 @@
 ---
 title: "Communication protocol"
 aliases: ["/chromapi/documentation/protocol/"]
-description: "How the Raspberry Pi and the STM32 talk to each other."
+description: "How the Raspberry Pi and the STM32 communicate."
 summary: "How the Raspberry Pi and the STM32 motherboard talk to each other, and the Feetech servo bus protocol it proxies register access onto."
 date: 2026-08-29
 lastmod: 2026-11-26

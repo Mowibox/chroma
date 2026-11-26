@@ -1,7 +1,7 @@
 ---
 title: "Web app"
-description: "Drive the robot from a phone or a PC, with or without a gamepad."
-summary: "Drive the robot from a phone or a PC, with or without a gamepad."
+description: "Drive Chromapi from a phone or a PC, with or without a gamepad."
+summary: "Drive Chromapi from a phone or a PC, with or without a gamepad."
 date: 2026-11-12
 lastmod: 2026-11-21
 draft: false

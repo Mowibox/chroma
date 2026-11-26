@@ -1,8 +1,8 @@
 ---
 title: "Application web"
 slug: "application-web"
-description: "Piloter le robot depuis un téléphone ou un PC, avec ou sans manette."
-summary: "Piloter le robot depuis un téléphone ou un PC, avec ou sans manette."
+description: "Piloter Chromapi depuis un téléphone ou un PC, avec ou sans manette."
+summary: "Piloter Chromapi depuis un téléphone ou un PC, avec ou sans manette."
 date: 2026-11-12
 lastmod: 2026-11-21
 draft: false

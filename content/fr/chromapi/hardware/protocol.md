@@ -2,7 +2,7 @@
 title: "Protocole de communication"
 slug: "protocole"
 aliases: ["/chromapi/documentation/protocol/"]
-description: "Comment le Raspberry Pi et le STM32 se parlent."
+description: "Comment le Raspberry Pi et le STM32 communiquent."
 summary: "Le protocole de bridge UART entre le Raspberry Pi et la carte mère STM32, et le protocole de bus servo Feetech qu'il relaie."
 date: 2026-08-29
 lastmod: 2026-11-26

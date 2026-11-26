@@ -1,5 +1,5 @@
 ---
-title: "Install the software"
+title: "Software installation"
 description: "Flash the Chromapi OS image on the SD card with Raspberry Pi Imager."
 summary: "Flash the Chromapi OS image on the SD card with Raspberry Pi Imager."
 date: 2026-11-12

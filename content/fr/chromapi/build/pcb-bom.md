@@ -2,7 +2,7 @@
 title: "Liste de matériel du PCB"
 slug: "liste-materiel-pcb"
 aliases: ["/chromapi/bom/pcb_bom/"]
-description: "Chaque composant de la carte mère, généré depuis KiCad."
+description: "La liste des composants qui constituent la carte mère."
 summary: "Liste de matériel interactive de la carte mère Chromapi : composants, références fabricant, fiches techniques et informations d'approvisionnement."
 date: 2026-08-29
 lastmod: 2026-11-10

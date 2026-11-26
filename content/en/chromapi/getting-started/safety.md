@@ -1,7 +1,7 @@
 ---
 title: "Safety guidelines"
-description: "What to know before powering the robot: battery, moving legs, handling."
-summary: "What to know before powering the robot: battery, moving legs, handling."
+description: "Everything you need to know to use Chromapi safely."
+summary: "Everything you need to know to use Chromapi safely."
 date: 2026-11-12
 lastmod: 2026-11-13
 draft: false
@@ -42,7 +42,7 @@ The motherboard was designed to protect the batteries against over-discharge, ov
 * To carry Chromapi, **hold it by its sides**, never by a leg.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/chromapi/chromapi_safety1.png" alt="Chromapi held by its sides" width="480" />
+    <img loading="lazy" decoding="async" src="/chroma/images/chromapi/chromapi_safety1.jpg" alt="Chromapi held by its sides" width="480" />
 </p>
 
 ## Turning the robot off properly

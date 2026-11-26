@@ -5,9 +5,9 @@ summary: "Play, create and share moves."
 date: 2026-11-12
 lastmod: 2026-11-12
 draft: false
-weight: 340
+weight: 40
 toc: true
-icon: "walk"
+icon: "device-gamepad-3"
 contributors: ["Ousmane THIONGANE"]
 
 seo:
@@ -18,6 +18,4 @@ seo:
    robots: "index, follow"
 ---
 
-{{< callout context="note" title="Coming soon" icon="outline/clock" >}}
-This page is being written, it will be available soon!
-{{< /callout >}}
+Coming soon!

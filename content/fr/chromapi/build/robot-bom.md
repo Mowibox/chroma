@@ -2,7 +2,7 @@
 title: "Liste de matériel du robot"
 slug: "liste-materiel-robot"
 aliases: ["/chromapi/bom/robot_bom/"]
-description: "Ce qu'il faut acheter, au-delà du PCB, pour en construire un."
+description: "L'ensemble du matériel à acheter pour fabriquer Chromapi."
 summary: "Liste des pièces à acheter pour construire Chromapi au-delà du PCB : batterie, calcul, caméra, servomoteurs, prix, références et fournisseurs."
 date: 2026-08-29
 lastmod: 2026-11-16

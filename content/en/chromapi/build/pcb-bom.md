@@ -1,7 +1,7 @@
 ---
 title: "PCB Bill of Materials"
 aliases: ["/chromapi/bom/pcb_bom/"]
-description: "Every component on the motherboard, straight from KiCad."
+description: "The list of components that make up the motherboard."
 summary: "Interactive Bill of Materials for the Chromapi motherboard: components, manufacturer part numbers, datasheets, and sourcing information."
 date: 2026-08-29
 lastmod: 2026-11-10

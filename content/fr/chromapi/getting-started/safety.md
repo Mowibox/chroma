@@ -1,8 +1,8 @@
 ---
 title: "Consignes de sécurité"
 slug: "securite"
-description: "À savoir avant d'allumer le robot : batterie, pattes en mouvement, manipulation."
-summary: "À savoir avant d'allumer le robot : batterie, pattes en mouvement, manipulation."
+description: "Tout ce qu'il faut savoir pour utiliser Chromapi en toute sécurité."
+summary: "Tout ce qu'il faut savoir pour utiliser Chromapi en toute sécurité."
 date: 2026-11-12
 lastmod: 2026-11-13
 draft: false
@@ -43,7 +43,7 @@ La carte mère a été conçue pour protéger les batteries contre la décharge 
 * Pour porter Chromapi, il est conseillé de le **prendre par les flancs**, jamais par une patte.
 
 <p align="center">
-    <img loading="lazy" decoding="async" src="/chroma/images/chromapi/chromapi_safety1.png" alt="Chromapi tenu par les flancs" width="480" />
+    <img loading="lazy" decoding="async" src="/chroma/images/chromapi/chromapi_safety1.jpg" alt="Chromapi tenu par les flancs" width="480" />
 </p>
 
 ## Éteindre proprement le robot

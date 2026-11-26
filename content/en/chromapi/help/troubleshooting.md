@@ -1,11 +1,11 @@
 ---
 title: "Troubleshooting & FAQ"
-description: "Common problems and how to fix them."
-summary: "Common problems and how to fix them."
+description: "A solution for every problem."
+summary: "A solution for every problem."
 date: 2026-11-12
 lastmod: 2026-11-12
 draft: false
-weight: 510
+weight: 10
 toc: true
 icon: "first-aid-kit"
 contributors: ["Ousmane THIONGANE"]
@@ -18,6 +18,4 @@ seo:
    robots: "index, follow"
 ---
 
-{{< callout context="note" title="Coming soon" icon="outline/clock" >}}
-This page is being written, it will be available soon!
-{{< /callout >}}
+Coming soon!

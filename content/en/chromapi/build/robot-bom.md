@@ -1,7 +1,7 @@
 ---
 title: "Robot Bill of Materials"
 aliases: ["/chromapi/bom/robot_bom/"]
-description: "What to buy, beyond the PCB, to build one."
+description: "All the hardware to buy to build Chromapi."
 summary: "The parts to buy for building Chromapi: battery, compute, camera, servomotors, prices, references, and suppliers."
 date: 2026-08-29
 lastmod: 2026-11-16
